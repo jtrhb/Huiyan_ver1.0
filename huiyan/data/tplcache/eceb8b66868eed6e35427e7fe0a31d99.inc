@@ -1,0 +1,3 @@
+{dede:pagestyle maxwidth='800' pagepicnum='12' ddmaxwidth='200' row='3' col='4' value='1'/}
+{dede:img ddimg='/uploads/allimg/130809/1-130PZT218.jpg' text='2013年5月10日，马云如他此前承诺，卸下阿里巴巴CEO之职，交予在阿里工作13年之久的陆兆禧。马云曾在宣布新任CEO的信中说：“陆兆禧对新事务的欣赏和学习能力，对关键问题的判断和决断力，以及强大的执行力令人印象深刻……出任阿里巴巴集团CEO是个极具挑战和艰难的工作，特别是接任我这么一位创始人CEO的班，陆兆禧身上肩负的职责和各方压力可想而知，为此，我特别感谢老陆作出的巨大牺牲和投入。”' width='1024' height='782'} /uploads/allimg/130809/1-130PZT218.jpg {/dede:img}
+{dede:img ddimg='/uploads/allimg/130809/1-130PZT318.jpg' text='阿里首席数据官陆兆禧雀屏中选，成为马云接班人。这是一场世界级“八卦式”公关，也是上演柳传志当年分拆联想的经典桥段。至此，阿里形成了陆兆禧和彭蕾双头主政、马云居中策应的大格局。中国电子商务之王的资源配置和发力方向，亦将对整个行业产生影响。' width='659' height='401'} /uploads/allimg/130809/1-130PZT318.jpg {/dede:img}

@@ -1,0 +1,1 @@
+INSERT INTO `dede_member_msg` VALUES('1','1','ezhanku','127.0.0.1','1','1375839485','站酷源码：专业的织梦模板下载站');

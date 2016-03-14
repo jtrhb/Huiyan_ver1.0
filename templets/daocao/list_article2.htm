@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="gb2312">
+        <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+        <meta name="keywords" content="{dede:field name='keywords'/}" />
+        <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <!-- Le styles -->
+        <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/dede58/css/hx-2013.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">
+        <![endif]-->
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+	function CheckLogin(){
+	  var taget_obj = document.getElementById('_userlogin');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("{dede:global.cfg_cmspath/}/member/ajax_loginsta.php");
+	  DedeXHTTP = null;
+	}
+-->
+</script>         
+    </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+        <div class="container-hx">
+		{dede:include filename="head.htm"/}            
+            <div class="row-fluid-wrap-hx">
+                <div class="center-container-hx">
+                    <div class="clearfix row-fluid-hx">    <div class="center-ctr-wrap">
+        <div class="center-ctr-box">
+
+<div class="article-list idx-list">
+    {dede:list pagesize='10' noflag='h'}
+
+                <div class="clearfix article-box">
+                <a href="[field:arcurl/]" class="a-img" target="_blank"><img src="[field:litpic/]"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="[field:arcurl/]" target="_blank">[field:fulltitle/]</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=[field:mid runphp='yes']global $dsql;$sql='SELECT userid FROM dede_member WHERE mid='.@me;$spaceurl = $dsql->GetOne($sql);@me=$spaceurl['userid'];[/field:mid]" target="_blank">[field:writer/]</a></span>
+                        <time>[field:pubdate function="GetDateTimeMK(@me)"/]</time>
+                        <span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=[field:id/]" target="_blank"><script src="/plus/pls.php?aid=[field:id/]#odby" language="javascript"></script></a></span></div><div class="article-summary">[field:description/]</div><p class="tags-box">[field:id function=GetTags(@me)/]</p></div></div>
+                            
+    {/dede:list}       
+             </div>
+            <div class="clearfix pages">
+                <div class="pull-right pgs">
+    {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/}  </div>            
+    	       </div>        
+        </div>
+    </div>
+    <div class="side-container-hx">
+        
+{dede:include filename="right.htm"/}
+        
+    </div>
+    </div>
+	{dede:include filename="footer.htm"/}
+	</div>
+</div>
+</div>
+
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+<!-- 顶部登陆 -->
+    {dede:include filename="login.htm"/}
+
+
+<!--<div style="display: none">
+<script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " /");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F324368ef52596457d064ca5db8c6618e' type='text/javascript'%3E%3C/script%3E"));
+</script>-->
+</div>
+</body>
+</html>

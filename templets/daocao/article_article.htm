@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="gb2312">
+        <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+        <meta name="keywords" content="{dede:field.keywords/}" />
+        <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <!-- Le styles -->
+        <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/dede58/css/hx-2013.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">
+        <![endif]-->
+        <style>
+		.jiathis_style{
+			margin-top:8px;	
+		}
+		</style>
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function CheckLogin(){
+  var taget_obj = document.getElementById('_userlogin');
+  myajax = new DedeAjax(taget_obj,false,false,'','','');
+  myajax.SendGet2("{dede:global.cfg_cmspath/}/member/ajax_loginsta.php");
+  DedeXHTTP = null;
+}
+function CheckLogin2(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("{dede:global.cfg_cmsurl/}/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+	
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("{dede:field name='phpurl'/}/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "{dede:global.cfg_phpurl/}/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("{dede:global.cfg_phpurl/}/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>      
+    </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+        <div class="container-hx">
+		{dede:include filename="head.htm"/}         
+		<div class="row-fluid-wrap-hx">
+                <div class="center-container-hx">
+                    <div class="clearfix row-fluid-hx"><!--<script src="/dede58/js/swplay.js" ></script>-->
+    <div class="center-ctr-wrap">
+        <div class="center-ctr-box">
+                        <div class="clearfix neirong">
+                <h1>{dede:field.title/}</h1>
+                <div class="subtitle-h1">{dede:field.description/}</div>
+                <div class="neirong-other">
+                    <span class="recommenders">{dede:adminname/}</span>
+                    <time>{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</time>
+                    <span style="margin-right:10px;"><i class="icon-click"></i><em class="pl-num"><script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script></em></span><a href="#odby" class="pinglun-num"><i class="icon-comment"></i><em class="pl-num"><script src="/plus/pls.php?aid={dede:field.id/}" language="javascript"></script></em></a>
+                    <span class="tags">
+                       {dede:field.tags/}                   </span>
+                </div>
+
+                <div class="neirong-box" id="neirong_box">
+                    <table>
+                        <tr>
+                            <td>
+                                {dede:field.body/}                                                                <!-- 向作者提问-->
+                                <a href="#postform" class="a_self pull-right btn btn-primary askAuthor"  target="_self"><i class="icon-question-sign icon-white"></i>向作者提问</a>
+                                                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="clearfix pages">
+                    <div class="pull-right pgs"></div>                </div>
+                                
+                <!-- 分享 -->
+                <div class="share-wrap" id="share_wrap">
+                    <div class="share-wrap-box">
+    <div class="manage-box1" id="newdigg">
+        <div class="like-box">
+            <i class="pos-btn" title="喜欢" onClick="javascript:postDigg('good',{dede:field.id/})">{dede:field.goodpost/}</i>
+        </div>
+        <div class="favorite-box">
+            <i class="pos-btn" title="收藏" onClick="window.open('{dede:field name='phpurl'/}/stow.php?aid={dede:field.id/}')"><script src="/plus/scs.php?aid={dede:field.id/}" language="javascript"></script></i>
+        </div>
+        <div class="nolike-box">
+            <i class="pos-btn" title="没劲" onClick="javascript:postDigg('bad',{dede:field.id/})">{dede:field.badpost/}</i>
+        </div>
+    </div>
+  <script language="javascript" type="text/javascript">getDigg({dede:field.id/});</script>    
+    <div class="share-box side-share-box">
+        <span class="pos-top">分享：</span>
+         <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_xiaoyou"></a>
+	<a class="jiathis_button_cqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_fav"></a>
+	<a class="jiathis_button_copy"></a>
+	<a class="jiathis_button_print"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1375020427508565" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+    </div>
+</div>                </div>
+
+            </div>
+            
+            <div class="position-wrap" id="position_wrap">
+                            </div>
+            <div class="related-list"><h3 class="t-h2"><em>您可能感兴趣的文章</em></h3><ul>
+                {dede:likearticle row='5' titlelen='80'}
+                            <li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+                {/dede:likearticle}            
+
+            </ul><div id = "interest"></div></div>            <!-- 评论 -->
+            <a name='postform'></a>
+            <div class="pinglun" id="pinglun">
+                        <h3 class="t-h2" id="odby">
+            <a href="#odby" class="a-btn"><i class="icon-comment"></i><em class="pl-num"><script src="/plus/pls.php?aid={dede:field.id/}" language="javascript"></script></em></a>
+            <ul class="inline tab-pinglun-box">
+                <li class="active">最新评论</li>
+            </ul>
+        </h3>
+            <!-- 评论框框架 -->
+           
+{dede:include file='ajaxfeedback.htm' /}
+        
+<a href="{dede:field name='phpurl'/}/feedback.php?aid={dede:field.id/}" class="pinglun-more-a" target="_blank">全部评论</a>            </div>
+            <!-- 评论/ -->
+        </div>
+    </div>
+    <div class="side-container-hx">            
+    <div class="clearfix author-card3">         
+{dede:memberinfos}
+<div class="pull-left author-card-img">
+            <p class="p-1"><a href="[field:spaceurl /]" title="[field:uname/]" target="_blank"><img border="0" src="[field:face/]" /></a></p>
+        </div>
+<div class="author-card-box">
+            <p class="card-name-p"><a class="card-name" href="[field:spaceurl /]" target="_blank">[field:uname/]</a></p>
+            <p class="yijuhua" title="[field:sign/]">[field:sign/]</p>
+            <p class="p-btn"><a href="/member/index.php?action=guestbook&uid=[field:userid/]" act="add_author" class="dy-btn">给我留言</a>
+                <a href="/member/pm.php?dopost=send&uid=[field:userid/]" target="_blank">发送消息</a>
+
+            </p>
+        </div>
+ {/dede:memberinfos}
+                   
+        <div class="clearfix author-article"><h3><b>Ta的文章({dede:php}$uname = $refObj->Fields['writer'];$row = $dsql->GetOne("select count(id) from dede_archives where writer='$uname'");echo $row['count(id)'];{/dede:php})</b>{dede:memberinfos}<a href="/member/index.php?uid=[field:userid/]&action=archives" target="_blank">更多</a>{/dede:memberinfos}</h3><ul>
+
+{dede:sql sql="SELECT * FROM dede_archives WHERE writer=~writer~ limit 0,3"}
+        <li><a href="/plus/view.php?aid=[field:id/]" title="[field:title/]"  target="_blank">[field:title/]</a></li>
+{/dede:sql}        
+        </ul></div>    
+        </div>
+
+{dede:include filename="right.htm"/}
+    </div>
+ </div>
+{dede:include filename="footer.htm"/}
+</div>
+</div>
+</div>
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+
+    {dede:include filename="login.htm"/}
+
+
+</body>
+</html>

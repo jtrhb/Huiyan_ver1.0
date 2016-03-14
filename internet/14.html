@@ -1,0 +1,750 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="gb2312">
+        <title>淘宝：与其微信 不如微淘_魔客吧仿虎嗅网</title>
+        <meta name="keywords" content="淘宝,与其,微信,不如,微淘,科技,阿里,封杀,微信,消息," />
+        <meta name="description" content="对阿里来讲，微信的不确定因素太多，威胁太大，所以与其微信，不如趁早微淘。" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <!-- Le styles -->
+        <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/dede58/css/hx-2013.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">
+        <![endif]-->
+        <style>
+		.jiathis_style{
+			margin-top:8px;	
+		}
+		</style>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function CheckLogin(){
+  var taget_obj = document.getElementById('_userlogin');
+  myajax = new DedeAjax(taget_obj,false,false,'','','');
+  myajax.SendGet2("/member/ajax_loginsta.php");
+  DedeXHTTP = null;
+}
+function CheckLogin2(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+	
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>      
+    </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+        <div class="container-hx">
+		            <div class="top">
+    <div class="top-box">
+        <h1 class="logo"><a href="/" target="_blank"><img src="/dede58/img/top_logo.png"></a></h1>
+        <div class="login-box" id="_userlogin">
+            <div class="btn-group">
+                <a href="/member/article_add.php" class="contribute" title="投稿">投稿</a>
+            </div>
+
+            <div class="btn-group">
+                <a href="#lgnModal" data-toggle="modal">登录</a>
+                <a href="/member/index_do.php?fmdo=user&dopost=regnew">注册</a>
+            </div>
+
+            
+            <div class="btn-group">
+                <a href="/rss.php" title="RSS"><i class="icon-rss"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+     <script language="javascript" type="text/javascript">CheckLogin();</script> 
+<div class="side-menu-hx">
+    <div class="side-menu-top">
+        <ul class="side-menu-list">   
+        
+      	<li><a href='/'>首页</a></li>
+        
+      	
+      	<li><a href='/focus/'>看点</a></li>
+      	<li class='active'><a href='/internet/'>互联网</a></li>
+      	<li><a href='/invest/'>创投界</a></li>
+      	
+      	<li><a href='/ec/'>电商圈</a></li>
+      	
+      	<li><a href='/mobile/'>移动库</a></li>
+      	
+      	<li><a href='/photo/'>图说</a></li>
+      	
+            </ul>
+    </div>
+    <div class="search">
+        <form  name="formsearch" action="/plus/search.php" class="form-search">
+        <input type="hidden" name="kwtype" value="0" />
+        
+            <input type="text" name='q' id='s' class="input-text" placeholder="搜索" value="" />
+            <button class="search-btn"><i class="icon-search"></i></button>
+        </form>
+    </div>
+</div>          
+		<div class="row-fluid-wrap-hx">
+                <div class="center-container-hx">
+                    <div class="clearfix row-fluid-hx"><!--<script src="/dede58/js/swplay.js" ></script>-->
+    <div class="center-ctr-wrap">
+        <div class="center-ctr-box">
+                        <div class="clearfix neirong">
+                <h1>淘宝：与其微信 不如微淘</h1>
+                <div class="subtitle-h1">对阿里来讲，微信的不确定因素太多，威胁太大，所以与其微信，不如趁早微淘。
+</div>
+                <div class="neirong-other">
+                    <span class="recommenders">www.moke8.com</span>
+                    <time>2013-08-06 00:00</time>
+                    <span style="margin-right:10px;"><i class="icon-click"></i><em class="pl-num"><script src="/plus/count.php?view=yes&aid=14&mid=1" type='text/javascript' language="javascript"></script></em></span><a href="#odby" class="pinglun-num"><i class="icon-comment"></i><em class="pl-num"><script src="/plus/pls.php?aid=14" language="javascript"></script></em></a>
+                    <span class="tags">
+                                          </span>
+                </div>
+
+                <div class="neirong-box" id="neirong_box">
+                    <table>
+                        <tr>
+                            <td>
+                                
+        
+
+<p>【最科技讯】阿里封杀微信的消息一出，让很多微信淘客创业者功亏一篑沦为炮灰，腾讯与阿里之间的竞争再进一步。阿里赶在<a href="http://www.zuitech.com/30234.html" target="_blank">微信5.0</a>推出之前封杀微信的做法很明智，与其被微信给J了，不如先把它割了，这样还能霸气侧漏，掌握舆论主动。对阿里来讲，微信的不确定因素太多，威胁太大，所以与其微信，不如趁早微淘。</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><a href="http://www.zuitech.com//31132.html"><img class="aligncenter" title="淘宝：与其微信 不如微淘" alt="淘宝：与其微信 不如微淘" src="http://zuikeji.b0.upaiyun.com/wuyunlian/d5%20(2).jpg_a1" width="550" height="346" /></a></p>
+<p>&nbsp;</p>
+<p><strong>阿里两个漂亮的理由封杀了微信</strong></p>
+<p>阿里封杀微信给出两个漂亮的理由，一是为了保护用户消费安全，二是为了防止用户被骚扰，这两个理由都是以用户为前提，貌似这合情合理又有节操。不过拿用户、卖家们的利益说话是阿里公关的家常菜，其实这两个完美的理由后面则显露了阿里的私心。</p>
+<p>&nbsp;</p>
+<p>无论是安全问还是骚扰问题，都是腾讯应该关心的事，出了事最大的责任方是微信，就算会连带到阿里，但阿里要脱身很容易，毕竟问题是发生在微信平台上，阿里跟着瞎着急什么？说句腹黑的话，作为腾讯的竞争对手肯定乐于看微信出现重大事故。阿里封微信的目的绝不会是为了帮微信维护秩序，而是处于对自身发展的考虑，为了不让外界质疑，阿里才抛出了两个美其名曰的理由。</p>
+<p>&nbsp;</p>
+<p>阿里突如其来的封杀，让微信淘宝客瞬间被秒杀，但如果真是支付安全存在问题或者营销过度，那<a href="http://www.zuitech.com/31055.html" target="_blank">重新完善支付方式</a>，对营销过度做出调整之后，阿里会解除封杀么？所以说，弄清阿里封杀微信的本质目的很重要，虽然阿里声明称“暂时停止”与微信相关的应用在服务市场的订购，但基本上没有恢复的可能了。</p>
+<p>&nbsp;</p>
+<p><strong>与其被微信给J了?不如趁早割了它</strong></p>
+<p>微信5.0快出来了，微信营销功能将会被进一步限制，而近期关于微信封杀营销大号的消息更是被激烈讨论，微信封杀淘宝也将是不远的事情，与其被微信封杀掉，还不如抢占先机，占领舆论高点掌握主动权来的有力。</p>
+<p>&nbsp;</p>
+<p>阿里如此有节操的封杀微信，是对微信有些恐惧，从为卖家导流上讲，微信肯定是有帮助的，但对阿里的帮助不大，而且微信对阿里在移动电商领域的发展是巨大的潜在隐患，阿里现在也无法确定微信到底要做怎样涉足移动电商，但肯定不会是沦为阿里的淘宝客工具，很有可能是挖角淘宝卖家。如果卖家真在微信上做大，那被挖走的可能性就非常大了，所以阿里现在只有对微信淘宝客做出封杀，除掉威胁，以绝后患。</p>
+<p>&nbsp;</p>
+<p>阿里趁早摆脱微信是好事，不然很快就会被挖角了，一旦出现卖家大规模跨向微信，阿里的移动电商根基就被彻底的动摇了。封掉了微信之后，阿里要做的就是扶持微淘，微淘是自家产品，阿里想怎么玩都行。</p>
+<p>&nbsp;</p>
+<p><strong>卖家们需要明白淘宝的用意</strong></p>
+<p>不过还要弄清一个问题，阿里现在只是封杀了微信淘宝客，并没有对拿微信做CRM的卖家进行封杀，阿里还不想给竞争对手留个滥用市场支配地位的口实。封杀微信淘宝客可以做到有理有据有节，但封掉拿微信做CRM工具的卖家可就没有任何理由了，卖家们可以继续拿微信当CRM工具使用，不过要是还想在淘宝上过的好就得看看淘宝的政策了。在阿里放出封杀微信消息的同时，又借势推出了微淘内测三期的招募计划，微淘是为淘宝拉拢卖家和营销机构而生的，卖家们多少还是得给些面子。</p>
+<p>&nbsp;</p>
+<p>那些拿微信做营销获得成功的卖家们可以歇歇了，不要再出声了，自己偷偷赚钱就好，不然哪天惹恼了淘宝，人家再想个理由把你们都封了就可惜了。每一个卖家的微信营销案例都在为微信加分，而对淘宝是负分。</p>
+<p>&nbsp;</p>
+<p><strong>众人拾柴火焰高?微淘的利诱?归化营销大号</strong></p>
+<p>认真看看《微淘内测三期“生力军”招募计划》就什么都懂了，微淘给自己定位为“在手机购物场景下的新型电商服务平台”，又给卖家和营销机构们画了张大饼，“通过微淘，消费者可以随时随地淘我喜欢；卖家可以经营品牌消费文化、客户关系维系、促销通知、用户互动、以及开设微店；达人可以倡导消费时尚，晒单，自发团购等内容和服务。”这其中大部分的功能都是卖家和营销机构们希望通过微信可以获得的，现在微淘全部提供给你们了。</p>
+<p>&nbsp;</p>
+<p>天下没有白吃的午餐，淘宝费尽心思的封微信捧微淘，当然是有目的的。微淘现在缺用户、少内容，只凭借淘宝自身推是很难成功的，依照微信快速崛起的经验，淘宝意识到微淘需要拉拢卖家和营销机构去推动建设，众人拾柴火焰才高。所以淘宝对申请微淘内测申请提出了条件，让卖家和营销结构们尽可能多的用自己的资源去为微淘引用户、做内容。</p>
+<p>&nbsp;</p>
+<p>而在淘宝封掉了微信淘宝客之后，营销机构只有选择微淘这条船了，卖家们也只得积极响应淘宝的号召，淘宝怕你们不上道，给出了微淘用户已突破6000万的数据，又抛出两个非常吸引眼球的案例，“一些嗅觉敏感的商家，通过微淘使得手机成交占比超过了全店的60%；一些购物达人，通过微淘带动的成交一月内突破了100万元！”估计淘宝下一步会包装出更多微淘创收的案例了，当营销机构和卖家们上了淘宝微淘这条船，用户和内容慢慢都会有的。</p>
+<p>&nbsp;</p>
+<p><strong>结语</strong></p>
+<p>要想发展微淘，先封掉微信是必要的，在把微信这条路封死了之后，营销机构才会心甘情愿的走上微淘之路，而淘宝会鼓励卖家们积极参与微淘建设。营销机构的建设让微淘增加了媒体属性，卖家们也真正回归到了淘宝的CRM上，下一步就看用户们对微淘买不买账了。<a href="http://www.zuitech.com"><img style="display: inline; margin-left: 5px;" alt="" src="http://zuikeji.b0.upaiyun.com/lijuan/250.jpg" /></a></p>
+<p>&nbsp;</p>
+                                                                <!-- 向作者提问-->
+                                <a href="#postform" class="a_self pull-right btn btn-primary askAuthor"  target="_self"><i class="icon-question-sign icon-white"></i>向作者提问</a>
+                                                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="clearfix pages">
+                    <div class="pull-right pgs"></div>                </div>
+                                
+                <!-- 分享 -->
+                <div class="share-wrap" id="share_wrap">
+                    <div class="share-wrap-box">
+    <div class="manage-box1" id="newdigg">
+        <div class="like-box">
+            <i class="pos-btn" title="喜欢" onClick="javascript:postDigg('good',14)">0</i>
+        </div>
+        <div class="favorite-box">
+            <i class="pos-btn" title="收藏" onClick="window.open('/plus/stow.php?aid=14')"><script src="/plus/scs.php?aid=14" language="javascript"></script></i>
+        </div>
+        <div class="nolike-box">
+            <i class="pos-btn" title="没劲" onClick="javascript:postDigg('bad',14)">0</i>
+        </div>
+    </div>
+  <script language="javascript" type="text/javascript">getDigg(14);</script>    
+    <div class="share-box side-share-box">
+        <span class="pos-top">分享：</span>
+         <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_xiaoyou"></a>
+	<a class="jiathis_button_cqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_fav"></a>
+	<a class="jiathis_button_copy"></a>
+	<a class="jiathis_button_print"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1375020427508565" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+    </div>
+</div>                </div>
+
+            </div>
+            
+            <div class="position-wrap" id="position_wrap">
+                            </div>
+            <div class="related-list"><h3 class="t-h2"><em>您可能感兴趣的文章</em></h3><ul>
+                <li><a href="/internet/33.html" target="_blank">微信营销的5大优势</a></li>
+<li><a href="/internet/30.html" target="_blank">微信5.0涉嫌违规遭苹果拒绝审核上架</a></li>
+<li><a href="/internet/26.html" target="_blank">新浪阿里发布微博淘宝版 谋划社交购物新时代</a></li>
+<li><a href="/internet/22.html" target="_blank">微信和手Q同步更新 微信5.0详细评测</a></li>
+<li><a href="/internet/18.html" target="_blank">Android版微信5.0开放内测</a></li>
+            
+
+            </ul><div id = "interest"></div></div>            <!-- 评论 -->
+            <a name='postform'></a>
+            <div class="pinglun" id="pinglun">
+                        <h3 class="t-h2" id="odby">
+            <a href="#odby" class="a-btn"><i class="icon-comment"></i><em class="pl-num"><script src="/plus/pls.php?aid=14" language="javascript"></script></em></a>
+            <ul class="inline tab-pinglun-box">
+                <li class="active">最新评论</li>
+            </ul>
+        </h3>
+            <!-- 评论框框架 -->
+           
+<div class="pl-kuang-box">
+            <!-- 头像 -->
+            <div class="pull-left pl-img" id="_ajax_feedback">                       
+                <a target="_blank" href="#"><img border="0" src="/member/templets/images/dfboy.png"></a>
+                
+游客    
+                            
+            </div>
+            <!-- 头像/ -->
+            <!-- 评论框 -->
+            <div class="pl-kuang">
+        <form action="#" method="post" name="feedback" onsubmit="return false;">
+          <input type="hidden" name="dopost" value="send" />
+          <input type="hidden" name="comtype" value="comments">
+          <input type="hidden" name="aid" value="14" />
+          <input type="hidden" name="fid" id='feedbackfid' value="0" />
+          <input type="hidden" name="feedbacktype" value="feedback" />          
+			<div class="textarea-box"><textarea class="textarea-txt" id="msg" name="msg"></textarea></div>
+          <!-- /dcmp-content -->
+          <div class="dcmp-post">
+            <!--未登陆-->
+            <div class="dcmp-userinfo" id="_ajax_feedback"> 
+              <input type="hidden" name="username" value="游客"/>
+              验证码:
+              <input type="text" name="validate" size="4" class="ipt-txt" style="text-transform:uppercase;"/>
+              <img src= "/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换图片" alt="点击我更换图片"  class="vdimg"/>
+              <input type="hidden" name="notuser" id="dcmp-submit-guest" />
+
+            </div>
+            
+            <script language="javascript" type="text/javascript">CheckLogin2();</script>
+            
+            <button class="pull-right subscribe-btn" type="button" onClick='PostComment()'>回复</button>
+          </div>
+        </form>
+            </div>
+       <!-- 评论框 -->
+        </div> 
+    <dd id='commetcontentNew'></dd>
+    <div class="pinglun-list" id="commetcontent">
+	</div>
+
+<!--
+//由于评论载入时使用异步传输，因此必须在最后一步加载（DIGG和评论框须放在评论内容前面）
+//如果一定需要提前的把myajax.SendGet改为myajax.SendGet2，但可能会引起页面阻滞
+-->
+<script language='javascript'>
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontent');
+		var waithtml = "<div style='line-height:50px'><img src='/images/loadinglit.gif' />评论加载中...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("/plus/feedback_ajax.php?dopost=getlist&aid=14&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		var f = document.feedback;
+		var msg = document.getElementById("msg").value;
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+		if(msg.length < 10)
+		{
+			alert("请至少输入10个字！");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("请填写验证码！");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(msg.length > 500)
+		{
+			alert("你的评论是不是太长了？请填写500字以内的评论。");
+			return;
+		}
+		if(f.feedbacktype) {
+			for(var i=0; i < f.feedbacktype.length; i++)
+				if(f.feedbacktype[i].checked) nfeedbacktype = f.feedbacktype[i].value;
+		}
+		/*
+		if(f.face) {
+			for(var j=0; j < f.face.length; j++)
+				if(f.face[j].checked) nface = f.face[j].value;
+		}
+		*/
+		if(f.notuser.checked) nnotuser = '1';
+		if(f.username) nusername = f.username.value;
+		if(f.pwd) npwd = f.pwd.value;
+		if(f.msg) msg = f.msg.value;
+		
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'gb2312';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '14');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', msg);
+		myajax.SendPost2('/plus/feedback_ajax.php');
+		//msg = '';
+		CKEDITOR.instances.msg.setData('');
+		//taget_obj.removeAttribute('id');
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+}
+function quoteCommet(fid)
+{
+	    document.feedback.fid.value = fid;
+}
+  
+function ajaxFeedback(aid, fid, type)
+{
+	
+	var taget_obj = $DE('ajaxfeedback_'+fid);
+	if(taget_obj.innerHTML == '')
+	{
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x');
+		myajax.SendGet2("/plus/feedback.php?aid="+aid+"&fid="+fid+"&action=quote&type=ajax");
+		eval('var result = typeof CKEDITOR.instances.msg_'+fid);
+		if(result != 'undefined')
+		{
+			// 删除实例
+			eval('var edit = CKEDITOR.instances.msg_'+fid);
+			CKEDITOR.remove(edit);
+		}
+		CKEDITOR.replace(document.getElementById('msg_'+fid) , CKEDITOR.instances.msg.config);
+		scroll(0, taget_obj.offsetTop - 120);
+		var formname = 'f = document.ajaxfeedback_'+fid;
+		eval(formname);
+		if(f.validate)
+		{
+			if($DE('vdimg_'+fid)) $DE('vdimg_'+fid).src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+		DedeXHTTP = null;
+	}
+}
+
+
+
+function ajaxQuotePost(fid)
+{
+	var formname = 'f = document.ajaxfeedback_'+fid;
+	eval(formname);
+	//var f = document.formname;
+	//var f = f[0];
+	var nvalidate = '';
+	var nnotuser = '';
+	var nusername = '';
+	var npwd = '';
+	var taget_obj = $DE('commetcontentNew');
+	var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+	eval('var msg = CKEDITOR.instances.msg_'+fid+'.getData()');
+
+	if(f.validate)
+	{
+		if(f.validate.value=='') {
+			alert("请填写验证码！");
+			return;
+		}
+		else {
+			nvalidate = f.validate.value;
+		}
+	}
+	var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+	
+	if(f.notuser.checked) nnotuser = '1';
+	if(f.username) nusername = f.username.value;
+	if(f.pwd) npwd = f.pwd.value;
+	
+	myajax.sendlang = 'gb2312';
+	myajax.AddKeyN('dopost', 'send');
+	myajax.AddKeyN('aid', '14');
+	myajax.AddKeyN('fid', f.fid.value);
+	myajax.AddKeyN('type', 'ajax');
+	myajax.AddKeyN('comtype', f.comtype.value);
+	myajax.AddKeyN('isconfirm','yes');
+	
+	myajax.AddKeyN('typeid', f.typeid.value);
+	myajax.AddKeyN('quotemsg', f.quotemsg.value);
+	myajax.AddKeyN('validate', nvalidate);
+	myajax.AddKeyN('notuser', nnotuser);
+	myajax.AddKeyN('username', nusername);
+	myajax.AddKeyN('pwd', npwd);
+	myajax.AddKeyN('msg', msg);
+	myajax.SendPost2('/plus/feedback_ajax.php');
+	//alert(f.quotemsg.value);
+	if($DE('ajaxfeedback_'+fid).innerHTML != null)
+	{
+		$DE('ajaxfeedback_'+fid).innerHTML = '';
+	}
+	scroll(0, taget_obj.offsetTop);
+}
+LoadCommets(1);
+</script>
+<!-- //评论内容区结束 -->
+
+        
+<a href="/plus/feedback.php?aid=14" class="pinglun-more-a" target="_blank">全部评论</a>            </div>
+            <!-- 评论/ -->
+        </div>
+    </div>
+    <div class="side-container-hx">            
+    <div class="clearfix author-card3">         
+<div class="pull-left author-card-img">
+            <p class="p-1"><a href="localhost/huiyan/member/index.php?uid=newsche" title="www.moke8.com" target="_blank"><img border="0" src="/uploads/userup/1/myface.png" /></a></p>
+        </div>
+<div class="author-card-box">
+            <p class="card-name-p"><a class="card-name" href="localhost/huiyan/member/index.php?uid=newsche" target="_blank">www.moke8.com</a></p>
+            <p class="yijuhua" title="稻草 - 专业的织梦模板下载站">稻草 - 专业的织梦模板下载站</p>
+            <p class="p-btn"><a href="/member/index.php?action=guestbook&uid=newsche" act="add_author" class="dy-btn">给我留言</a>
+                <a href="/member/pm.php?dopost=send&uid=newsche" target="_blank">发送消息</a>
+
+            </p>
+        </div>
+                   
+        <div class="clearfix author-article"><h3><b>Ta的文章(143)</b><a href="/member/index.php?uid=newsche&action=archives" target="_blank">更多</a></h3><ul>
+
+<li><a href="/plus/view.php?aid=140" title="杜琪峰电影不够大卖，是犯了电影工业的什么忌？"  target="_blank">杜琪峰电影不够大卖，是犯了电影工业的什么忌？</a></li><li><a href="/plus/view.php?aid=141" title="库克又访华来了！来回顾下他三次访华都给苹果做什么"  target="_blank">库克又访华来了！来回顾下他三次访华都给苹果做什么</a></li><li><a href="/plus/view.php?aid=142" title="拼儿子才是王道：“江南Style”让Psy老爸的股票翻了八倍"  target="_blank">拼儿子才是王道：“江南Style”让Psy老爸的股票翻了八倍</a></li>        
+        </ul></div>    
+        </div>
+
+    <div class="hot-view">
+        <h3 class="t-h2"><em>热门文章</em></h3>
+        <div class="view-list idx-view">
+        
+      <div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/internet/28.html" target="_blank"><img src="/uploads/allimg/130806/20.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/internet/28.html" target="_blank">面对2500万的估值，你淡定一个给我看看？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-06 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=28" target="_blank"><script src="/plus/pls.php?aid=28" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/internet/14.html" target="_blank"><img src="/uploads/allimg/130806/5.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/internet/14.html" target="_blank">淘宝：与其微信 不如微淘</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-06 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=14" target="_blank"><script src="/plus/pls.php?aid=14" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/internet/36.html" target="_blank"><img src="/uploads/allimg/130806/27.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/internet/36.html" target="_blank">Moto X正式发布 创新能否扭转颓势</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-06 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=36" target="_blank"><script src="/plus/pls.php?aid=36" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/internet/17.html" target="_blank"><img src="/uploads/allimg/130806/6.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/internet/17.html" target="_blank">红米手机能为小米带来什么？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-06 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=17" target="_blank"><script src="/plus/pls.php?aid=17" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/internet/38.html" target="_blank"><img src="/uploads/allimg/130806/24.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/internet/38.html" target="_blank">揭秘：你所不了解的苏宁</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-06 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=38" target="_blank"><script src="/plus/pls.php?aid=38" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+
+              
+        </div>
+    </div>
+
+	    <div class="hot-author-face">
+        <h3 class="t-h2"><em>广告位1</em></h3>
+<a href='#'><img src='/dede58/img/ad2.jpg'></a>
+    </div>
+
+
+    <div class="hot-view">
+        <h3 class="t-h2"><em>推荐文章</em></h3>
+        <div class="view-list idx-view">
+      <div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/internet/37.html" target="_blank"><img src="/uploads/141226/1-1412261531123a.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/internet/37.html" target="_blank">魔客吧-建站资源共享学习平台</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">织梦58</a></span>
+                        <p><time>2014-12-26 15:32</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=37" target="_blank"><script src="/plus/pls.php?aid=37" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/internet/10.html" target="_blank"><img src="/uploads/allimg/130806/3.png"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/internet/10.html" target="_blank">Wifi之争，无线之浪潮</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-06 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=10" target="_blank"><script src="/plus/pls.php?aid=10" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/internet/14.html" target="_blank"><img src="/uploads/allimg/130806/5.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/internet/14.html" target="_blank">淘宝：与其微信 不如微淘</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-06 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=14" target="_blank"><script src="/plus/pls.php?aid=14" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/internet/38.html" target="_blank"><img src="/uploads/allimg/130806/24.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/internet/38.html" target="_blank">揭秘：你所不了解的苏宁</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-06 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=38" target="_blank"><script src="/plus/pls.php?aid=38" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+
+              
+        
+          </div>
+    </div>
+    <div class="hot-author-face">
+        <h3 class="t-h2"><em>热门作者</em></h3>
+        <ul class="clearfix author-face-list">
+
+<li><p class="author-img"><a href="/member/index.php?uid=newsche" target="_blank" title="www.moke8.com"><img src="/uploads/userup/1/myface.png"/></a></p><p class="name"><a href="/member/index.php?uid=newsche" target="_blank">www.moke8.com</a></p><li><p class="author-img"><a href="/member/index.php?uid=jay" target="_blank" title="悠悠草"><img src="/uploads/userup/5/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=jay" target="_blank">悠悠草</a></p><li><p class="author-img"><a href="/member/index.php?uid=884358" target="_blank" title="884358"><img src="/uploads/userup/2/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=884358" target="_blank">884358</a></p><li><p class="author-img"><a href="/member/index.php?uid=lhc" target="_blank" title="古天乐"><img src="/uploads/userup/6/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=lhc" target="_blank">古天乐</a></p><li><p class="author-img"><a href="/member/index.php?uid=wxb" target="_blank" title="康师傅"><img src="/uploads/userup/8/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=wxb" target="_blank">康师傅</a></p><li><p class="author-img"><a href="/member/index.php?uid=lurenjia" target="_blank" title="路人甲"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=lurenjia" target="_blank">路人甲</a></p><li><p class="author-img"><a href="/member/index.php?uid=jason19905" target="_blank" title="测试账号"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=jason19905" target="_blank">测试账号</a></p>
+        </ul>
+    </div>
+
+		    <div class="hot-author-face">
+        <h3 class="t-h2"><em>广告位2</em></h3>
+<a href='#'><img src='/dede58/img/ad2.jpg'></a>
+    </div>
+    </div>
+ </div>
+<footer class="footer">
+    <div class="about-links">
+                    
+    </div>
+            <div class="footer-copy">
+        Copyright &copy; 2002-2014 织梦系统 版权所有 <a href=http://www.moke8.com target='_blank'>Power by moke8</a> ( <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备11000986号</a>)
+    </div>
+    <!-- 返回顶部 -->
+    <div class="go-top">
+        <i class="pos-btn" onclick="window.scrollTo('0', '0')">^</i>
+    </div>
+    <!-- /返回顶部 -->
+
+</footer>
+</div>
+</div>
+</div>
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+
+    <script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript" src="/images/js/j.js" ></script>
+
+
+<div id="lgnModal" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">登录</h3>
+        </div>
+        <div class="float-box">
+            <div class="float-login-box">
+                <div class="login-info">帐号登录：</div>
+                <form id="float_form_lgn" name="userlogin" action="/member/index_do.php" method="POST" class="form-horizontal">
+        <input type="hidden" name="fmdo" value="login" />
+        <input type="hidden" name="dopost" value="login" />
+        <input type="hidden" name="keeptime" value="604800" />                
+                
+                    <div class="control-group control-name">
+                        <label class="control-label" for="inputName">用户名：</label>
+                        <div class="controls">
+                            <input type="text" id="userid" name="userid" tabindex="1">
+                            <span class="help-inline"><a href="/member/index_do.php?fmdo=user&dopost=regnew" target="_blank">还未注册?</a></span>
+                        </div>
+                    </div>
+                    <div class="control-group control-pwd">
+                        <label class="control-label" for="inputPassword">密　码：</label>
+                        <div class="controls">
+                            <input type="password" id="pwd" name="pwd" tabindex="2">
+                            <span class="help-inline"><a href="/member/resetpassword.php" target="_blank">忘记密码?</a></span>
+                        </div>
+                    </div>                  
+                    <div class="control-group control-pwd" style="margin-top:15px;">
+                        <label class="control-label" for="inputName">验证码：</label>
+                        <div class="controls">
+                            <input type="text" id="vdcode" name="vdcode" tabindex="3" size="4" style="text-transform:uppercase;" maxlength="4">
+                            <span class="help-inline"><img id="vdimgck" align="absmiddle" onclick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="../include/vdimgck.php"/></span>
+                        </div>
+                    </div>                    
+                    <div class="control-group" style="margin-top:15px; margin-left:10px;">
+                        <div class="controls">
+                            <button type="submit" class="btn lgn-btn" tabindex="4" onclick="this.form.submit();">登录</button>
+                            <a href="/member/index_do.php?fmdo=user&dopost=regnew" class="lgn-reg-btn">注册</a>
+                            
+                      </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

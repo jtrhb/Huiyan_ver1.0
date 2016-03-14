@@ -1,0 +1,4 @@
+INSERT INTO `dede_mytag` VALUES('1','0','调用通用头部','0','1375533991','1378125991','{dede:include filename=\"head2.htm\"/}','');
+INSERT INTO `dede_mytag` VALUES('2','0','调用通用右侧','0','1375534046','1378126046','{dede:include filename=\"right.htm\"/}','');
+INSERT INTO `dede_mytag` VALUES('3','0','调用通用底部','0','1375534079','1378126079','{dede:include filename=\"footer.htm\"/}','');
+INSERT INTO `dede_mytag` VALUES('4','0','调用通用注册登陆框','0','1375534107','1378126107','{dede:include filename=\"login.htm\"/}','');

@@ -1,0 +1,745 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="gb2312">
+        <title>嗨聊不嗨 SNS创业死路一条_魔客吧仿虎嗅网</title>
+        <meta name="keywords" content="嗨聊,不嗨,SNS,创业,死路一条,科技,嗨聊,是什么,一个" />
+        <meta name="description" content="嗨聊是什么？一个草根创业者在SNS领域中挣扎的创业项目，当初笔者再三劝阻此勿要选择这条不归路，而其抱着拼死决心的坚决杀入SNS市� �" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <!-- Le styles -->
+        <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/dede58/css/hx-2013.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">
+        <![endif]-->
+        <style>
+		.jiathis_style{
+			margin-top:8px;	
+		}
+		</style>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function CheckLogin(){
+  var taget_obj = document.getElementById('_userlogin');
+  myajax = new DedeAjax(taget_obj,false,false,'','','');
+  myajax.SendGet2("/member/ajax_loginsta.php");
+  DedeXHTTP = null;
+}
+function CheckLogin2(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+	
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>      
+    </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+        <div class="container-hx">
+		            <div class="top">
+    <div class="top-box">
+        <h1 class="logo"><a href="/" target="_blank"><img src="/dede58/img/top_logo.png"></a></h1>
+        <div class="login-box" id="_userlogin">
+            <div class="btn-group">
+                <a href="/member/article_add.php" class="contribute" title="投稿">投稿</a>
+            </div>
+
+            <div class="btn-group">
+                <a href="#lgnModal" data-toggle="modal">登录</a>
+                <a href="/member/index_do.php?fmdo=user&dopost=regnew">注册</a>
+            </div>
+
+            
+            <div class="btn-group">
+                <a href="/rss.php" title="RSS"><i class="icon-rss"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+     <script language="javascript" type="text/javascript">CheckLogin();</script> 
+<div class="side-menu-hx">
+    <div class="side-menu-top">
+        <ul class="side-menu-list">   
+        
+      	<li><a href='/'>首页</a></li>
+        
+      	
+      	<li><a href='/focus/'>看点</a></li>
+      	
+      	<li><a href='/internet/'>互联网</a></li>
+      	<li class='active'><a href='/invest/'>创投界</a></li>
+      	<li><a href='/ec/'>电商圈</a></li>
+      	
+      	<li><a href='/mobile/'>移动库</a></li>
+      	
+      	<li><a href='/photo/'>图说</a></li>
+      	
+            </ul>
+    </div>
+    <div class="search">
+        <form  name="formsearch" action="/plus/search.php" class="form-search">
+        <input type="hidden" name="kwtype" value="0" />
+        
+            <input type="text" name='q' id='s' class="input-text" placeholder="搜索" value="" />
+            <button class="search-btn"><i class="icon-search"></i></button>
+        </form>
+    </div>
+</div>          
+		<div class="row-fluid-wrap-hx">
+                <div class="center-container-hx">
+                    <div class="clearfix row-fluid-hx"><!--<script src="/dede58/js/swplay.js" ></script>-->
+    <div class="center-ctr-wrap">
+        <div class="center-ctr-box">
+                        <div class="clearfix neirong">
+                <h1>嗨聊不嗨 SNS创业死路一条</h1>
+                <div class="subtitle-h1">嗨聊是什么？一个草根创业者在SNS领域中挣扎的创业项目，当初笔者再三劝阻此勿要选择这条不归路，而其抱着拼死决心的坚决杀入SNS市场。
+</div>
+                <div class="neirong-other">
+                    <span class="recommenders">admin</span>
+                    <time>2013-08-07 00:00</time>
+                    <span style="margin-right:10px;"><i class="icon-click"></i><em class="pl-num"><script src="/plus/count.php?view=yes&aid=51&mid=5" type='text/javascript' language="javascript"></script></em></span><a href="#odby" class="pinglun-num"><i class="icon-comment"></i><em class="pl-num"><script src="/plus/pls.php?aid=51" language="javascript"></script></em></a>
+                    <span class="tags">
+                                          </span>
+                </div>
+
+                <div class="neirong-box" id="neirong_box">
+                    <table>
+                        <tr>
+                            <td>
+                                
+        
+
+<p>【最科技讯】嗨聊是什么？一个草根创业者在SNS领域中挣扎的创业项目，当初笔者再三劝阻此勿要选择这条不归路，而其抱着拼死决心的坚决杀入<a href="http://www.zuitech.com/29878.html" target="_blank">SNS市场</a>。其实对于其在不足一年的时间在河南地区取得200万注册用户的成就已属可喜，但在QQ、微博、微信等几座SNS大山压力下毫无疑问的遭遇了市场瓶颈，不知还有多少怀揣SNS梦的创业者也是如此情景。</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><a href="http://www.zuitech.com//30655.html"><img class="aligncenter" title="嗨聊不嗨 SNS创业死路一条" alt="嗨聊不嗨 SNS创业死路一条" src="http://zuikeji.b0.upaiyun.com/wuyunlian/a5.jpg_a1" width="560" height="361" /></a></p>
+<p>&nbsp;</p>
+<p><strong>嗨聊不嗨?理想很丰满?现实很骨干</strong></p>
+<p>嗨聊分为PC和移动端，是一款同时覆盖互联网与移动互联网的IM类交友工具，与QQ类似；整体定位在陌生人交友，主打“于千万人之中找到对的TA”，移动端主打LBS交友，立足点为“发现附近的精彩”，这看起来又与陌陌异曲同工。</p>
+<p>&nbsp;</p>
+<p>嗨聊最大的功能特点在于“诉求匹配”交友，通过用户提供的即时情绪（如空虚、抑郁等）或目的（如运动、游戏等）与周围有相同诉求的用户相匹配建立社交联系，是一款结合QQ、微信等功能，与<a href="http://www.zuitech.com/28432.html" target="_blank">陌陌定位</a>相类似的SNS应用，不同点在于嗨聊更专注于LBS服务的升级。</p>
+<p>&nbsp;</p>
+<p>嗨聊在探索SNS+LBS结构框架下的SoLoMo模式，力图把陌生人社交做精做深，把网络社交与线下社交相融合，做到让腾讯无法复制。嗨聊母公司是一家河南科技公司（为避嫌，这里就不做指名了），他们第一步选择集中发力公司所在地河南地区SNS市场，选择从一个地区发力的好处在于可以组织周边用户进行线下活动，若选择全国性大范围SNS市场，用户分布比较零散，根本无力与QQ、微信竞争，选择一个地区一个地区集中精力地逐步开发市场，把网络社交与线下社交相融合算是一种更靠谱的SNS创新。此方式可绕开腾讯寻找发展空间，把网络社交做“活”，是活生生的实体社交，而不单单是智能设备的社交。</p>
+<p>&nbsp;</p>
+<p>嗨聊的创业经验是：第一勿贪全国市场，集中兵力逐一地区攻占；第二是注重线下与线上相结合，避开腾讯寻找出路。关于嗨聊的介绍不说太多，感兴趣的可以百度下，下面分享下嗨聊目前的运营情况供其他SNS创业者参考对比。</p>
+<p>&nbsp;</p>
+<p>嗨聊PC端于去年8月上线，移动端在今年3月推出苹果APP，经过近1年的发展，嗨聊共获得近200万注册用户，活跃用户有30万，18~25岁用户占比93%，在郑州地区颇具名气，已可与陌陌分庭抗礼。目前该团队有30多人，技术25人，运营7人，已烧掉600万，基础设备与研发成本300万，营销推广费用150万，常规工本费用150万。公司只有少量进账，由线下活动产出，运营状况整体还算良好，账面总还有2000万资金，足够公司下一步拓展市场使用。不过面对与微信、陌陌等的直面竞争，创始人也颇感有压力。</p>
+<p>&nbsp;</p>
+<p>笔者曾慰其言：“要是没有陌陌，你的创业项目兴许早已大展拳脚，但既生陌陌，你又何必嗨聊下去？”他坚持认为既然选择了这条创业路，就要一路走到黑，况且模式上与陌陌是神似而形不似，实质有很大不同，同时他也对目前公司的发展现状感到满意，对未来很有信心，并称迫不得已时会考虑卖房继续坚持下去，坚信SNS仍有非常大的创业空间。</p>
+<p>&nbsp;</p>
+<p><strong>SNS创业是否还有机会？移动互联网或许可以</strong></p>
+<p>虽然腾讯巨无霸摆在眼前，但SNS创业仍有机会。因为在腾讯一统社交网络时代，也出现了微博、阿里旺旺、YY、人人、飞信等亿计用户的SNS类应用，同时世纪佳缘、9158、若邻等较为边缘的SNS类应用也有不错的市场，移动互联网更是创造了陌陌、米聊、啪啪、Path等百万千万级用户的SNS应用。</p>
+<p>&nbsp;</p>
+<p>目前国内网民总数达5.91亿，如此多的网民也就产生了众多不同的社交需求，微博、YY、陌陌等都从不同的用户需求角度开辟属于自己的市场，虽然腾讯是SNS领域的庞然大物，让人心生恐惧，但市场上永远不缺那些天不怕地不怕敢于挑战的创业者，又恰逢赶上如今的移动互联网浪潮，SNS创业再度迎来热潮。不过腾讯已将其在PC端的统治地位延续到了移动端，目前已手握两大移动社交应用，微信和手Q，移动社交领域是否还能创造奇迹，在腾讯这庞然大物面前崛起？</p>
+<p>&nbsp;</p>
+<p>如今，移动社交领域竞争非常激烈，微信动了运营商的奶酪，迫使运营商不得不加入到移动社交领域的市场竞争中，移动、联通、电信都推出了属于自己的移动社交应用飞聊、沃友、翼聊等，360代理日本移动社交应用Line并汉化为连我，阿里投了稍有气候的陌陌，最近又有消息传出电信与网易合作出了一款类微信产品“易信”。如今的移动社交市场虽说不至于饱和，但也烽烟四起。而啪啪、Path的脱颖而出也给SNS的创业者们树立了一定信心。</p>
+<p>&nbsp;</p>
+<p>移动互联网强调本地化，被认为是本地生活服务市场最好的载体，其实移动互联网同样也是本地社交的载体。移动互联网的发展时间还很短，还有非常多的用户在移动端的本质需求未被真正挖掘出来，随着整个移动互联网的发展，这些机会将会逐渐显现，移动创业者们仍有机会获得成功。国内的社交市场空间非常大，努力做好产品才是最重要的，不过与巨头们相比，草根创业者的成长路会更为坎坷，在没有充足的资源做支撑，没有足够的资金做运营，草根创业者们加强运营是关键，如何突围是难事。</p>
+<p>&nbsp;</p>
+<p>再回到嗨聊创业上来，2000万的账面资金，对于发展移动社交来讲远远不够，前期的产品建设已初步完成，接下来准备拿出500万用于下一步走出河南时的营销推广，再之后可能会根据发展情况寻找投资，毕竟社交产品的营销推广费用消耗巨大，要想进一步壮大依靠自身的资金能力很难维持，目前已与一些投资机构有过前期接触。</p>
+<p>&nbsp;</p>
+<p>在河南地区取得的成就给了嗨聊创始人一些信心，他准备孤注一掷的在这条路上坚持下去，下一步要向华北地区的二三线城市扩张，目前陌陌的用户主要集中在一线城市，嗨聊在三四线城市有很大的市场空间，在这片市场他根本无惧陌陌，嗨聊对三四线城市的屌丝用户的需求掌握要胜于陌陌，但使用率仍远不及手Q。不过嗨聊选择在陌陌薄弱的三四线城市发展还算明智，笔者对嗨聊接下来的表现有担忧更有期待。</p>
+<p>&nbsp;</p>
+<p><strong>结语</strong></p>
+<p>移动社交领域创业仍属热门方向，但对于没有背景资源的做支撑的草根创业者来讲是否还有机会呢？三大运营商拿腾讯素手无策，草根创业者逆袭的可能性更小，不过小范围的做做屌丝市场有可为，其中9158、六间房这些类SNS应用的盈利能力非常强。有微信、手Q、微博在前，移动社交领域创业不能贪大，在SoLoMo上再结合9158的模式，或许会有出路。<a href="http://www.zuitech.com"><img style="display: inline; margin-left: 5px;" alt="" src="http://zuikeji.b0.upaiyun.com/lijuan/250.jpg" /></a></p>
+<p>&nbsp;</p>
+                                                                <!-- 向作者提问-->
+                                <a href="#postform" class="a_self pull-right btn btn-primary askAuthor"  target="_self"><i class="icon-question-sign icon-white"></i>向作者提问</a>
+                                                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="clearfix pages">
+                    <div class="pull-right pgs"></div>                </div>
+                                
+                <!-- 分享 -->
+                <div class="share-wrap" id="share_wrap">
+                    <div class="share-wrap-box">
+    <div class="manage-box1" id="newdigg">
+        <div class="like-box">
+            <i class="pos-btn" title="喜欢" onClick="javascript:postDigg('good',51)">0</i>
+        </div>
+        <div class="favorite-box">
+            <i class="pos-btn" title="收藏" onClick="window.open('/plus/stow.php?aid=51')"><script src="/plus/scs.php?aid=51" language="javascript"></script></i>
+        </div>
+        <div class="nolike-box">
+            <i class="pos-btn" title="没劲" onClick="javascript:postDigg('bad',51)">0</i>
+        </div>
+    </div>
+  <script language="javascript" type="text/javascript">getDigg(51);</script>    
+    <div class="share-box side-share-box">
+        <span class="pos-top">分享：</span>
+         <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_xiaoyou"></a>
+	<a class="jiathis_button_cqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_fav"></a>
+	<a class="jiathis_button_copy"></a>
+	<a class="jiathis_button_print"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1375020427508565" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+    </div>
+</div>                </div>
+
+            </div>
+            
+            <div class="position-wrap" id="position_wrap">
+                            </div>
+            <div class="related-list"><h3 class="t-h2"><em>您可能感兴趣的文章</em></h3><ul>
+                            
+
+            </ul><div id = "interest"></div></div>            <!-- 评论 -->
+            <a name='postform'></a>
+            <div class="pinglun" id="pinglun">
+                        <h3 class="t-h2" id="odby">
+            <a href="#odby" class="a-btn"><i class="icon-comment"></i><em class="pl-num"><script src="/plus/pls.php?aid=51" language="javascript"></script></em></a>
+            <ul class="inline tab-pinglun-box">
+                <li class="active">最新评论</li>
+            </ul>
+        </h3>
+            <!-- 评论框框架 -->
+           
+<div class="pl-kuang-box">
+            <!-- 头像 -->
+            <div class="pull-left pl-img" id="_ajax_feedback">                       
+                <a target="_blank" href="#"><img border="0" src="/member/templets/images/dfboy.png"></a>
+                
+游客    
+                            
+            </div>
+            <!-- 头像/ -->
+            <!-- 评论框 -->
+            <div class="pl-kuang">
+        <form action="#" method="post" name="feedback" onsubmit="return false;">
+          <input type="hidden" name="dopost" value="send" />
+          <input type="hidden" name="comtype" value="comments">
+          <input type="hidden" name="aid" value="51" />
+          <input type="hidden" name="fid" id='feedbackfid' value="0" />
+          <input type="hidden" name="feedbacktype" value="feedback" />          
+			<div class="textarea-box"><textarea class="textarea-txt" id="msg" name="msg"></textarea></div>
+          <!-- /dcmp-content -->
+          <div class="dcmp-post">
+            <!--未登陆-->
+            <div class="dcmp-userinfo" id="_ajax_feedback"> 
+              <input type="hidden" name="username" value="游客"/>
+              验证码:
+              <input type="text" name="validate" size="4" class="ipt-txt" style="text-transform:uppercase;"/>
+              <img src= "/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换图片" alt="点击我更换图片"  class="vdimg"/>
+              <input type="hidden" name="notuser" id="dcmp-submit-guest" />
+
+            </div>
+            
+            <script language="javascript" type="text/javascript">CheckLogin2();</script>
+            
+            <button class="pull-right subscribe-btn" type="button" onClick='PostComment()'>回复</button>
+          </div>
+        </form>
+            </div>
+       <!-- 评论框 -->
+        </div> 
+    <dd id='commetcontentNew'></dd>
+    <div class="pinglun-list" id="commetcontent">
+	</div>
+
+<!--
+//由于评论载入时使用异步传输，因此必须在最后一步加载（DIGG和评论框须放在评论内容前面）
+//如果一定需要提前的把myajax.SendGet改为myajax.SendGet2，但可能会引起页面阻滞
+-->
+<script language='javascript'>
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontent');
+		var waithtml = "<div style='line-height:50px'><img src='/images/loadinglit.gif' />评论加载中...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("/plus/feedback_ajax.php?dopost=getlist&aid=51&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		var f = document.feedback;
+		var msg = document.getElementById("msg").value;
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+		if(msg.length < 10)
+		{
+			alert("请至少输入10个字！");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("请填写验证码！");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(msg.length > 500)
+		{
+			alert("你的评论是不是太长了？请填写500字以内的评论。");
+			return;
+		}
+		if(f.feedbacktype) {
+			for(var i=0; i < f.feedbacktype.length; i++)
+				if(f.feedbacktype[i].checked) nfeedbacktype = f.feedbacktype[i].value;
+		}
+		/*
+		if(f.face) {
+			for(var j=0; j < f.face.length; j++)
+				if(f.face[j].checked) nface = f.face[j].value;
+		}
+		*/
+		if(f.notuser.checked) nnotuser = '1';
+		if(f.username) nusername = f.username.value;
+		if(f.pwd) npwd = f.pwd.value;
+		if(f.msg) msg = f.msg.value;
+		
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'gb2312';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '51');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', msg);
+		myajax.SendPost2('/plus/feedback_ajax.php');
+		//msg = '';
+		CKEDITOR.instances.msg.setData('');
+		//taget_obj.removeAttribute('id');
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+}
+function quoteCommet(fid)
+{
+	    document.feedback.fid.value = fid;
+}
+  
+function ajaxFeedback(aid, fid, type)
+{
+	
+	var taget_obj = $DE('ajaxfeedback_'+fid);
+	if(taget_obj.innerHTML == '')
+	{
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x');
+		myajax.SendGet2("/plus/feedback.php?aid="+aid+"&fid="+fid+"&action=quote&type=ajax");
+		eval('var result = typeof CKEDITOR.instances.msg_'+fid);
+		if(result != 'undefined')
+		{
+			// 删除实例
+			eval('var edit = CKEDITOR.instances.msg_'+fid);
+			CKEDITOR.remove(edit);
+		}
+		CKEDITOR.replace(document.getElementById('msg_'+fid) , CKEDITOR.instances.msg.config);
+		scroll(0, taget_obj.offsetTop - 120);
+		var formname = 'f = document.ajaxfeedback_'+fid;
+		eval(formname);
+		if(f.validate)
+		{
+			if($DE('vdimg_'+fid)) $DE('vdimg_'+fid).src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+		DedeXHTTP = null;
+	}
+}
+
+
+
+function ajaxQuotePost(fid)
+{
+	var formname = 'f = document.ajaxfeedback_'+fid;
+	eval(formname);
+	//var f = document.formname;
+	//var f = f[0];
+	var nvalidate = '';
+	var nnotuser = '';
+	var nusername = '';
+	var npwd = '';
+	var taget_obj = $DE('commetcontentNew');
+	var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+	eval('var msg = CKEDITOR.instances.msg_'+fid+'.getData()');
+
+	if(f.validate)
+	{
+		if(f.validate.value=='') {
+			alert("请填写验证码！");
+			return;
+		}
+		else {
+			nvalidate = f.validate.value;
+		}
+	}
+	var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+	
+	if(f.notuser.checked) nnotuser = '1';
+	if(f.username) nusername = f.username.value;
+	if(f.pwd) npwd = f.pwd.value;
+	
+	myajax.sendlang = 'gb2312';
+	myajax.AddKeyN('dopost', 'send');
+	myajax.AddKeyN('aid', '51');
+	myajax.AddKeyN('fid', f.fid.value);
+	myajax.AddKeyN('type', 'ajax');
+	myajax.AddKeyN('comtype', f.comtype.value);
+	myajax.AddKeyN('isconfirm','yes');
+	
+	myajax.AddKeyN('typeid', f.typeid.value);
+	myajax.AddKeyN('quotemsg', f.quotemsg.value);
+	myajax.AddKeyN('validate', nvalidate);
+	myajax.AddKeyN('notuser', nnotuser);
+	myajax.AddKeyN('username', nusername);
+	myajax.AddKeyN('pwd', npwd);
+	myajax.AddKeyN('msg', msg);
+	myajax.SendPost2('/plus/feedback_ajax.php');
+	//alert(f.quotemsg.value);
+	if($DE('ajaxfeedback_'+fid).innerHTML != null)
+	{
+		$DE('ajaxfeedback_'+fid).innerHTML = '';
+	}
+	scroll(0, taget_obj.offsetTop);
+}
+LoadCommets(1);
+</script>
+<!-- //评论内容区结束 -->
+
+        
+<a href="/plus/feedback.php?aid=51" class="pinglun-more-a" target="_blank">全部评论</a>            </div>
+            <!-- 评论/ -->
+        </div>
+    </div>
+    <div class="side-container-hx">            
+    <div class="clearfix author-card3">         
+<div class="pull-left author-card-img">
+            <p class="p-1"><a href="localhost/huiyan/member/index.php?uid=jay" title="悠悠草" target="_blank"><img border="0" src="/uploads/userup/5/myface.jpg" /></a></p>
+        </div>
+<div class="author-card-box">
+            <p class="card-name-p"><a class="card-name" href="localhost/huiyan/member/index.php?uid=jay" target="_blank">悠悠草</a></p>
+            <p class="yijuhua" title="哎哟，不错哦~">哎哟，不错哦~</p>
+            <p class="p-btn"><a href="/member/index.php?action=guestbook&uid=jay" act="add_author" class="dy-btn">给我留言</a>
+                <a href="/member/pm.php?dopost=send&uid=jay" target="_blank">发送消息</a>
+
+            </p>
+        </div>
+                   
+        <div class="clearfix author-article"><h3><b>Ta的文章(143)</b><a href="/member/index.php?uid=jay&action=archives" target="_blank">更多</a></h3><ul>
+
+<li><a href="/plus/view.php?aid=140" title="杜琪峰电影不够大卖，是犯了电影工业的什么忌？"  target="_blank">杜琪峰电影不够大卖，是犯了电影工业的什么忌？</a></li><li><a href="/plus/view.php?aid=141" title="库克又访华来了！来回顾下他三次访华都给苹果做什么"  target="_blank">库克又访华来了！来回顾下他三次访华都给苹果做什么</a></li><li><a href="/plus/view.php?aid=142" title="拼儿子才是王道：“江南Style”让Psy老爸的股票翻了八倍"  target="_blank">拼儿子才是王道：“江南Style”让Psy老爸的股票翻了八倍</a></li>        
+        </ul></div>    
+        </div>
+
+    <div class="hot-view">
+        <h3 class="t-h2"><em>热门文章</em></h3>
+        <div class="view-list idx-view">
+        
+      <div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/invest/67.html" target="_blank"><img src="/uploads/allimg/130807/29.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/invest/67.html" target="_blank">谷歌地图再出新招 苹果如何应对？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=67" target="_blank"><script src="/plus/pls.php?aid=67" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/invest/54.html" target="_blank"><img src="/uploads/allimg/130807/20.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/invest/54.html" target="_blank">海银资本王煜全：云上创业正当时</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=54" target="_blank"><script src="/plus/pls.php?aid=54" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/invest/66.html" target="_blank"><img src="/uploads/allimg/130807/28.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/invest/66.html" target="_blank">创业找投资 需警惕的那些事</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=66" target="_blank"><script src="/plus/pls.php?aid=66" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/invest/61.html" target="_blank"><img src="/uploads/allimg/130807/23.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/invest/61.html" target="_blank">创业新手：建立你的媒体人脉圈</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=61" target="_blank"><script src="/plus/pls.php?aid=61" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/invest/64.html" target="_blank"><img src="/uploads/allimg/130807/26.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/invest/64.html" target="_blank">触宝号码助手v4.7.2：“单手+拦截骚扰”双管齐下</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=64" target="_blank"><script src="/plus/pls.php?aid=64" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+
+              
+        </div>
+    </div>
+
+	    <div class="hot-author-face">
+        <h3 class="t-h2"><em>广告位1</em></h3>
+<a href='#'><img src='/dede58/img/ad2.jpg'></a>
+    </div>
+
+
+    <div class="hot-view">
+        <h3 class="t-h2"><em>推荐文章</em></h3>
+        <div class="view-list idx-view">
+      <div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/invest/42.html" target="_blank"><img src="/uploads/allimg/130807/4.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/invest/42.html" target="_blank">面对2500万的估值，你淡定一个给我看看？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=42" target="_blank"><script src="/plus/pls.php?aid=42" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/invest/48.html" target="_blank"><img src="/uploads/allimg/130807/12.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/invest/48.html" target="_blank">华人首富李嘉诚的投资逻辑</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=48" target="_blank"><script src="/plus/pls.php?aid=48" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/invest/49.html" target="_blank"><img src="/uploads/allimg/130807/9.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/invest/49.html" target="_blank">浅谈移动互联网公司的盈利模式</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=49" target="_blank"><script src="/plus/pls.php?aid=49" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/invest/52.html" target="_blank"><img src="/uploads/allimg/130807/11.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/invest/52.html" target="_blank">百度收购91无线 19亿美元值得吗？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=52" target="_blank"><script src="/plus/pls.php?aid=52" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+
+              
+        
+          </div>
+    </div>
+    <div class="hot-author-face">
+        <h3 class="t-h2"><em>热门作者</em></h3>
+        <ul class="clearfix author-face-list">
+
+<li><p class="author-img"><a href="/member/index.php?uid=newsche" target="_blank" title="www.moke8.com"><img src="/uploads/userup/1/myface.png"/></a></p><p class="name"><a href="/member/index.php?uid=newsche" target="_blank">www.moke8.com</a></p><li><p class="author-img"><a href="/member/index.php?uid=jay" target="_blank" title="悠悠草"><img src="/uploads/userup/5/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=jay" target="_blank">悠悠草</a></p><li><p class="author-img"><a href="/member/index.php?uid=884358" target="_blank" title="884358"><img src="/uploads/userup/2/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=884358" target="_blank">884358</a></p><li><p class="author-img"><a href="/member/index.php?uid=lhc" target="_blank" title="古天乐"><img src="/uploads/userup/6/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=lhc" target="_blank">古天乐</a></p><li><p class="author-img"><a href="/member/index.php?uid=wxb" target="_blank" title="康师傅"><img src="/uploads/userup/8/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=wxb" target="_blank">康师傅</a></p><li><p class="author-img"><a href="/member/index.php?uid=lurenjia" target="_blank" title="路人甲"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=lurenjia" target="_blank">路人甲</a></p><li><p class="author-img"><a href="/member/index.php?uid=jason19905" target="_blank" title="测试账号"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=jason19905" target="_blank">测试账号</a></p>
+        </ul>
+    </div>
+
+		    <div class="hot-author-face">
+        <h3 class="t-h2"><em>广告位2</em></h3>
+<a href='#'><img src='/dede58/img/ad2.jpg'></a>
+    </div>
+    </div>
+ </div>
+<footer class="footer">
+    <div class="about-links">
+                    
+    </div>
+            <div class="footer-copy">
+        Copyright &copy; 2002-2014 织梦系统 版权所有 <a href=http://www.moke8.com target='_blank'>Power by moke8</a> ( <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备11000986号</a>)
+    </div>
+    <!-- 返回顶部 -->
+    <div class="go-top">
+        <i class="pos-btn" onclick="window.scrollTo('0', '0')">^</i>
+    </div>
+    <!-- /返回顶部 -->
+
+</footer>
+</div>
+</div>
+</div>
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+
+    <script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript" src="/images/js/j.js" ></script>
+
+
+<div id="lgnModal" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">登录</h3>
+        </div>
+        <div class="float-box">
+            <div class="float-login-box">
+                <div class="login-info">帐号登录：</div>
+                <form id="float_form_lgn" name="userlogin" action="/member/index_do.php" method="POST" class="form-horizontal">
+        <input type="hidden" name="fmdo" value="login" />
+        <input type="hidden" name="dopost" value="login" />
+        <input type="hidden" name="keeptime" value="604800" />                
+                
+                    <div class="control-group control-name">
+                        <label class="control-label" for="inputName">用户名：</label>
+                        <div class="controls">
+                            <input type="text" id="userid" name="userid" tabindex="1">
+                            <span class="help-inline"><a href="/member/index_do.php?fmdo=user&dopost=regnew" target="_blank">还未注册?</a></span>
+                        </div>
+                    </div>
+                    <div class="control-group control-pwd">
+                        <label class="control-label" for="inputPassword">密　码：</label>
+                        <div class="controls">
+                            <input type="password" id="pwd" name="pwd" tabindex="2">
+                            <span class="help-inline"><a href="/member/resetpassword.php" target="_blank">忘记密码?</a></span>
+                        </div>
+                    </div>                  
+                    <div class="control-group control-pwd" style="margin-top:15px;">
+                        <label class="control-label" for="inputName">验证码：</label>
+                        <div class="controls">
+                            <input type="text" id="vdcode" name="vdcode" tabindex="3" size="4" style="text-transform:uppercase;" maxlength="4">
+                            <span class="help-inline"><img id="vdimgck" align="absmiddle" onclick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="../include/vdimgck.php"/></span>
+                        </div>
+                    </div>                    
+                    <div class="control-group" style="margin-top:15px; margin-left:10px;">
+                        <div class="controls">
+                            <button type="submit" class="btn lgn-btn" tabindex="4" onclick="this.form.submit();">登录</button>
+                            <a href="/member/index_do.php?fmdo=user&dopost=regnew" class="lgn-reg-btn">注册</a>
+                            
+                      </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

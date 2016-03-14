@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST</title>
+    <style type="text/css">
+        #chartView {
+            width:1000px;
+            height:400px;
+        }
+    </style>
+</head>
+<body>
+<div id="chartView">
+<!-- TradingView Widget BEGIN -->
+<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
+    new TradingView.widget({
+        "autosize": true,
+        "symbol": "FX:EURUSD",
+        "interval": "1",
+        "timezone": "Asia/Shanghai",
+        "theme": "Black",
+        "style": "1",
+        "locale": "zh",
+        "toolbar_bg": "rgba(241, 243, 246, 1)",
+        "hide_top_toolbar": true,
+        "allow_symbol_change": true,
+        "save_image": false,
+        "hideideas": true
+    });
+</script>
+<!-- TradingView Widget END -->
+</div>
+</body>
+</html>

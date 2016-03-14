@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="gb2312">
+		<title>空间设置 - <?php echo $cfg_webname; ?></title>
+
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <!-- Le styles -->
+        <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/dede58/css/hx-2013.css" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+        <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">
+        <![endif]-->
+       <link rel="stylesheet" type="text/css" href="/dede58/css/style.css" />      
+<style type="text/css" media="screen">
+
+.ucnav {background:none;margin:0;border:none;overflow:hidden;}
+.ucnav a {width:120px;height: 31px;line-height: 31px;display: block;background-color:#999;text-align:center;color:#fff;font-size:12px;margin:0;border:none;padding:0;}
+.ucnav a.ucontype {background-color:#555;color:#fff;height:31px;line-height:31px;border:none;}
+.ucnav a.sendpmontype,.ucnav a.sendpm {display:block;width:80px;height:31px;line-height:31px;overflow: hidden;background:#008c23;color:#fff;padding:0;}
+.ucnav a.sendpmontype,.ucnav a:hover {text-decoration:none;border:none;}
+.ucinfo {border:none;padding:0;}
+button {width: 80px;background: #333;color: #fff;overflow: hidden;font-size: 12px;border-radius: 0;display: inline-block;padding: 4px 12px;margin-bottom: 0;line-height: 20px;text-align: center;text-shadow: 0 1px 1px rgba(255,255,255,0.75);vertical-align: middle;cursor: pointer;height:auto;}
+td button {margin-left:5px;}
+.pmlist td, .pmlist th, .newpm td, .newpm th {border-bottom: 1px dashed #ccc;}
+.pages {border:none;float:right;}
+.pages a, .pages strong, .pages em, .pages kbd, #multipage .pages em {width:24px;height: 24px;line-height:24px;padding:0;display: inline-block;background-color: #555;text-align: center;float: left;margin-right:5px;color: #fff;cursor: pointer;}
+.pages a:hover {background-color:#ccc;text-decoration:none;}
+.pages a.next {padding:0;}
+.pages strong {background-color:#999;}
+tr.onset td, tr.ontouser td {background:#f4f4f4;}
+.navinfo {display:none;}
+.ucinfo h1 {display:none;}
+.newpm {margin-bottom:10px;}
+.editor {display:none;}
+.pmsubmit {background: #333;}
+.title p {font-weight: normal;}
+tr.ontouser td {background:none;border:none;}
+.ucinfo td {background:none;border:none;}
+.ucinfo .title {padding:15px;}
+.ucinfo .title h3 {padding:0 0 5px;margin:0;font-weight:normal;}
+.ucinfo .title time {color:#ccc;}
+.ucinfo .title p {margin:5px 0;}
+.ucinfo .pm-ava img {border:1px solid #ccc;border-radius:5px;box-shadow:0 0 2px #ccc;margin-bottom:5px;}
+.ucinfo .pm-ava .pm-ava-name {margin:5px 0;}
+.ucinfo .pm-box {border:1px solid #ccc;border-radius:2px;box-shadow:0 0 1px #ccc;padding:10px;margin:0 10px 10px 10px;font-size:14px;position:relative;background-color:#f1f1f1;line-height:24px;}
+.ucinfo .pm-box br {line-height:24px;}
+.ucinfo .pm-box:before,
+.ucinfo .pm-box:after {content:'';display:block;width:0;height:0;border:8px solid transparent;border-left:10px solid #f1f1f1;position:absolute;top:5px;}
+.ucinfo .pm-box:before {right:-18px;z-index:3;}
+.ucinfo .pm-box:after {right:-19px;z-index:2;border-left:10px solid #ccc;}
+.ucinfo .ontouser .pm-box:before,
+.ucinfo .ontouser .pm-box:after {right:auto;border-left:8px solid transparent;border-right:10px solid #f1f1f1;}
+.ucinfo .ontouser .pm-box:before {left:-18px;z-index:3;}
+.ucinfo .ontouser .pm-box:after {left:-19px;z-index:2;border-right:10px solid #ccc;}
+.ucinfo .pm-box p {font-size:12px;color:#999;margin-bottom:5px;}
+.ucinfo .pm-data-box a {margin:0 5px;font-size:14px;}
+.ucinfo .imgcode {position:relative;top:6px;}
+.ucinfo .pm-per {padding:10px;font-size:14px;}
+.ucinfo .pm-per p {font-size:12px;margin-top:5px;color:#999;}
+.ucinfo .quote, .ucinfo .blockcode {padding: 5px 15px 5px 48px;border: 1px solid #eee;margin:10px 20px 10px 0;border-radius:2px;box-shadow:inset 0 0 1px #fff;background-position:8px 8px;}
+.ucinfo .sel {padding-left:10px;}
+.ucinfo td.ava,
+.ucinfo .sel,
+.ucinfo td.per {vertical-align:top;padding-top:20px;}
+.ucinfo .onset {border-top:1px solid #f9f9f9;border-bottom:1px solid #ddd;}
+.ucinfo .onset td {background:#fff2d8;font-weight:bold;border-bottom:1px solid #ffe4af;}
+.ucinfo .onset td time {color:#444;}
+td.ava img {border-radius:2px;box-shadow:0 0 1px #eee;}
+</style>  
+<script type="text/javascript" src="templets/js/j.js"></script>
+<script type="text/javascript" src='templets/js/main.js'></script>
+<script type="text/javascript" src="templets/js/load.js"></script>
+<script type="text/javascript" src="templets/js/leftmenu.js"></script> 
+    </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+        <div class="container-hx">
+
+            <?php include(DEDEMEMBER."/templets/login_box.htm"); ?>     
+		<script src="/plus/mytag_js.php?aid=1" language="javascript"></script>
+           <div class="row-fluid-wrap-hx">
+                <div class="center-container-hx">
+                    <div class="clearfix row-fluid-hx">    <div class="clearfix row-fluid-hx">
+
+        <div class="clearfix individual-center">
+            <div class="center-ctr-wrap">
+                <div class="center-ctr-box">
+                    <div class="individual-center-box">
+<div class="ucbody">
+
+<div class="ucnav">
+<a href="edit_baseinfo.php">基本资料</a>
+<a href="edit_fullinfo.php">详细资料</a>
+<a href="edit_face.php">头像设置</a>
+<a class="ucontype" href="edit_space_info.php">空间设置</a>
+
+</div>
+<div class="ucinfo">
+<form action="edit_space_info.php" method="post" enctype="multipart/form-data" name="form1">
+          <input type="hidden" name="dopost" value="save" />
+      <div id="mainCp">
+        
+        <div class="postForm">
+          <p class="cellBg">
+            <label>空间名称：</label>
+            <input name="spacename" type="text" id="spacename" value="<?php echo $spacename; ?>" maxlength="100" class="intxt"/>
+          </p>
+          <p>
+            <label>每页文档数：</label>
+            <input name="pagesize" type="text" id="pagesize" value="<?php echo $pagesize; ?>" maxlength="100" class="intxt"/>
+          </p>
+          <p class="cellBg">
+            <label>个人签名：</label>
+            <textarea name="sign" cols="50" id="sign"><?php echo $sign; ?></textarea> 少于50中文字
+          </p>
+          <p style="display:none">
+            <label style="width:90px">空间Logo上传：</label>
+            <input name="oldspacelogo" type="hidden" value="<?php echo $spacelogo; ?>" />
+            <input name="spacelogo" type="file" id="spacelogo" maxlength="100" class="intxt" />
+          </p>
+          <p class="cellBg" style="display:none">
+            <label>原有Logo：</label>
+            <?php
+      			if($spacelogo!='') $logo = $spacelogo;
+     		    else $logo = 'templets/images/mylogo.jpg';
+      			echo "<img src='$logo' style='margin-top:5px;width:200px;height: 50px;'/> (规格为：200x50像素)\r\n";
+      		?>
+            </p>
+          <p style="display:none">
+            <label>空间公告：</label>
+            <?php GetEditor("spacenews",$spacenews,250,"MemberLit"); ?>
+          </p>
+          <p class="cellBg">
+            <button class="button2" type="submit">更新</button>
+            <button class="button2 ml10" type="reset">重设</button>
+          </p>
+    </div>
+      </div>
+      </form>
+</div>
+
+</div>
+
+                    </div>
+
+               </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script src="/plus/mytag_js.php?aid=3" language="javascript"></script></div>
+</div>
+</div>
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+
+
+
+</body>
+</html>

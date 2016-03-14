@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="gb2312">
+<title>{dede:global.arcrow[title] /} - {dede:var.spacename /}</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="author" content="{dede:var.uname /}"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <!-- Le styles -->
+        <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/dede58/css/hx-2013.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">
+        <![endif]-->
+        <style>
+		.feedbackface ul li{ float:left; list-style:none;}
+
+.comment dl {
+	border:1px solid #fff;
+	margin-top:8px;
+	padding:3px;
+}
+
+.comment-pic {
+	float:left;
+	padding-right:6px;
+}
+
+.post-comment {
+	margin-top:10px;
+}
+
+.feedbackface {
+	line-height:36px;
+}
+
+.feedbackface li {
+	float:left;
+	margin-right:5px;
+}
+
+.post-comment h5 {
+	float:left; margin-right:10px;
+}		
+		</style>
+    </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+        <div class="container-hx">
+            <div class="row-fluid-wrap-hx">
+                <div class="center-container-hx">
+                    <div class="clearfix row-fluid-hx"><script src="/dede58/js/swplay.js" ></script>
+    <div class="center-ctr-wrap">
+        <div class="center-ctr-box">
+                        <div class="clearfix neirong">
+                <h1>{dede:global.arcrow[title] /}</h1>
+                <div class="subtitle-h1">{dede:global.arcrow[description] /}</div>
+                <div class="neirong-other">
+                    <div class="setFont"><span id="font_small" class="noclose">A<sup>-</sup></span><span id="font_big">A<sup>+</sup></span></div>
+                    <span class="recommenders"><a href="index.php?uid={dede:var.userid/}" target="_blank">{dede:global.arcrow[writer] /}</a></span>
+                    <time>{dede:global.arcrow[pubdate] function="MyDate('y-m-d h:i',@me)" /}</time>
+                    <a href="#odby" class="pinglun-num"><i class="icon-comment"></i><em class="pl-num"><?php echo count($msgs);?></em></a>
+
+                </div>
+                                <!--文章备注信息-->
+                                <!-- 管理2 -->
+ <script src="/dede58/js/jquery.js" ></script>                               <!-- /管理2 -->
+<script>
+var jQ = jQuery.noConflict(); 
+		jQ(document).on('click','#font_big,#font_small',function(){
+			var cttBox = jQ('#neirong_box');
+			if(jQ(this).attr('id')=='font_big'){
+				if(cttBox.css('font-size')=='14px'){
+					cttBox.css({'font-size':'16px','line-height':'26px'});
+				}else if(cttBox.css('font-size')=='16px'){
+					cttBox.css({'font-size':'18px','line-height':'28px'});
+				}
+			}else{
+				if(cttBox.css('font-size')=='16px'){
+					cttBox.css({'font-size':'14px','line-height':'24px'})
+				}else if(cttBox.css('font-size')=='18px'){
+					cttBox.css({'font-size':'16px','line-height':'26px'})
+				}
+				
+			}
+			jQ(this).addClass('noclose').siblings().removeClass('noclose');
+		})
+	
+
+</script>
+                <div class="neirong-box" id="neirong_box">
+                    <table>
+                        <tr>
+                            <td>
+                             {dede:global.arcrow[body] /}                                                                <!-- 向作者提问-->                              
+
+                                <a href="index.php?action=guestbook&uid={dede:var.userid/}" class="a_self pull-right btn btn-primary askAuthor"  title="点击向作者(@{dede:global.arcrow[writer] /})提问" name="#向作者提问# @{dede:global.arcrow[writer] /} " style="float:right"><i class="icon-question-sign icon-white"></i>向作者提问</a>
+                              
+                                                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="clearfix pages">
+                    <div class="pull-right pgs"></div>                </div>
+                                
+
+
+                <!-- 分享 -->
+                <div class="share-wrap" id="share_wrap">
+                    <div class="share-wrap-box">
+    
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=1288694" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+    
+</div>                </div>
+                <!-- /分享 -->
+                <!-- 管理2 -->
+                       
+                <!-- /管理2 -->
+
+                <div class="neirong-btm">
+                    <div class="hx-erweima">
+                        <a href="/weixin.html" target="_blank" class="pull-right hx-erweima-img"><img border="0" src="/dede58/img/nr_erweima_weixin.png" /></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 管理 -->
+            <div class="position-wrap" id="position_wrap">
+                            </div>
+            <!-- /管理 -->
+                        <!-- 评论 -->
+<div class="comment" style="padding-left:6px;">
+<?php if (count($msgs)>0)  { ?>
+<h5 id="cdisplay" style="display:;">一共有 <span id="sums"><?php echo count($msgs);?></span> 条评论</h5>
+<?php
+//原有评论（取其前50条）
+foreach ($msgs as $msg)
+{
+?>
+<dl id="<?php echo $msg['id']; ?>">
+	<dd class="comment-pic left">
+		<img src="<?php echo $msg['mface']=='' ? 'templets/images/dfboy.png' : $msg['mface']; ?>" width="40" height="40" style="width:40px; height:40px;" />
+	</dd>
+	<dd>
+	<?php
+		if ($msg['username']=='匿名' || $msg['userid']=='') {
+				echo $msg['username'];
+		}
+		else {
+	?>
+	<a href="index.php?uid=<?php echo urlencode($msg['userid']); ?>" class="big b"><?php echo $msg['username']; ?></a>
+	<?php } ?>
+	<span class="gray"><?php echo MyDate('m-d H:i',$msg['dtime']);?></span> Says:
+	</dd>
+	<dd class="comment-content" >
+		<span id="s_<?php echo $msg['id']; ?>"></span>
+		<div id="r_<?php echo $msg['id']; ?>">
+			<div class="re-comment" style="display:none;">
+				<b><?php echo $msg['username']; ?> 于 <?php echo MyDate('m-d H:i',$msg['dtime']);?> 回复：</b>
+				<div id="r_content_<?php echo $msg['id']; ?>"></div>
+			</div>
+			<div>
+				<img src="{dede:global.cfg_templets_skin/}/images/mood/<?php echo 'ico-mood-'.($msg['face']>0 ? $msg['face'] : 6).'.gif'; ?>" /><?php echo $msg['msg']; ?>
+			</div>
+		</div>
+	</dd>
+</dl>
+<?php
+} }
+?>
+	<div class="big"></div>
+<form action="feedback.php" method="post" name="feedback">
+	<div class="post-comment">
+	<h5>发表评论</h5>
+	<div>
+		{dede:var.uname /}：
+		<input type="hidden" name="action" value="send" />
+		<input type="hidden" name="comtype" value="comments">
+		<input type="hidden" name="aid" value="<?php echo $aid; ?>" />
+		<input type="hidden" name="isconfirm" value="yes" />
+		<input type="hidden" name="cmtuser" value="{dede:var.userid/}">
+	</div>
+	<div>
+		<textarea class="ip" id="cmtcontent" name="msg" style="width:90%;height:60px" ></textarea>
+	</div>
+	<div class="c"></div>
+	<div class="feedbackface"> 
+		<strong style="FLOAT:left;">表情:</strong>
+			<ul>
+				<li><input type="radio" name='face' value='6' checked="1" /><img src="templets/images/smiley/6.gif" /></li>
+				<li><input type="radio" name='face' value='4'/><img src="templets/images/smiley/4.gif" /></li>
+				<li><input type="radio" name='face' value='3'/><img src="templets/images/smiley/3.gif" /></li>
+				<li><input type="radio" name='face' value='5'/><img src="templets/images/smiley/5.gif" /></li>
+				<li><input type="radio" name='face' value='2'/><img src="templets/images/smiley/2.gif" /></li>
+				<li><input type="radio" name='face' value='1'/><img src="templets/images/smiley/1.gif" /></li>
+				<li><input type="radio" name='face' value='7'/><img src="{dede:global.cfg_templets_skin/}/images/mood/ico-mood-7.gif" /></li>
+			</ul>
+		</div>
+		<div class="c" style="clear:both;"></div>
+		<table>
+				<tr>
+				<td>验证码：</td>
+			 	<td><input name="validate" type="text" id="validate" size="10" style="height:16px;width:60px;" class="ip" /></td>
+			 	<td><img src='../include/vdimgck.php' width='60px' height='20px'  /></td>
+       	<td>&nbsp;<input name="sbbt" type="submit" value="发送" style="width:60px;height:22px"  /></td>
+			 	<td><input name="notuser" type="checkbox" id="notuser" value="1" />匿名评论</td>
+			 </tr>
+		</table>
+	</div>
+</form>
+	<div class="c" style="height:30px;"></div>
+</div>            
+            <!-- 评论/ -->
+        </div>
+    </div>
+    <div class="side-container-hx">
+            {dede:include file='login.htm'/}
+    
+    
+    <div class="clearfix author-card3">
+          
+        <div class="pull-left author-card-img">
+            <p class="p-1"><a href="index.php?uid={dede:var.userid/}" title="{dede:var.writer/}" target="_blank"><img border="0" src="{dede:var.face/}" /></a></p>
+        </div>
+        <div class="author-card-box">
+            <p class="card-name-p"><a class="card-name" href="index.php?uid={dede:var.userid/}" target="_blank">{dede:var.uname/}</a><?php if($_vars['mtype']=='认证'){ ?><img src="templets/images/rz.png" style="margin-top:-1px;" /><?php } ?>&nbsp;【{dede:var.mtype /}用户】</p>
+            <p class="yijuhua">{dede:php}$mid = $_vars['mid'];$row = $dsql->GetOne("select sign from dede_member_space where mid='$mid'");echo $row['sign'];{/dede:php}</p>
+            <p class="p-btn"><a href="index.php?action=guestbook&uid={dede:var.userid/}" class="dy-btn">给我留言</a>
+                <a href="pm.php?dopost=send&uid={dede:var.userid/}" target="_blank">发送消息</a>
+                <a href="index.php?action=newfriend&uid={dede:var.userid/}" target="_blank" title="查看悟网不欢的微博">加为好友</a>
+            </p>
+        </div>
+        <div class="clearfix author-article"><h3><b>Ta的文章({dede:php}$uname = $_vars['uname'];$row = $dsql->GetOne("select count(id) from dede_archives where writer='$uname'");echo $row['count(id)'];{/dede:php})</b><a href="index.php?uid={dede:var.userid/}&action=archives" target="_blank">更多</a></h3><ul>
+
+{dede:spacenewart row=3 titlelen=38 }
+<?php
+	if($fields['channel']==1) {
+			$fields['arcurl'] = "index.php?uid={$_vars['userid_e']}&action=viewarchives&aid={$fields['id']}";
+	}
+?>
+        <li><a href="{dede:field.arcurl/}" title="{dede:field.fulltitle/}"  target="_blank">{dede:field.title/}</a></li>
+{/dede:spacenewart}
+</ul></div>    </div>
+    
+
+
+    <div class="hot-view">
+        <h3 class="t-h2"><em>热门文章</em><a href="#" class="more">更多…</a></h3>
+        <div class="view-list idx-view">
+{dede:php}
+$dsql->SetQuery("select id,litpic,title,writer,pubdate,click from dede_archives order by click desc limit 8");
+$dsql->Execute();
+while($arr = $dsql->getArray()){
+$arr['title'] = cn_substr($arr['title'],16);
+$arr['pubdate'] = MyDate('Y-m-d H:i',$arr['pubdate']);
+$arcurl = GetOneArchive($arr['id']);
+if(empty($arr['litpic'])) $arr['litpic']='/images/defaultpic.gif';
+echo '<div class="clearfix view-box"><div class="pull-left img-box">';
+echo '<p><a href="'.$arcurl['arcurl'].'" target="_blank"><img src="'.$arr['litpic'].'" width="100px" height="66px"/></a></p></div>';
+echo '<div class="view-box-ctt">';
+echo '<h4><a href="'.$arcurl['arcurl'].'" target="_blank">'.$arr['title'].'</a></h4>';
+echo '<div class="box-other">';
+echo '<span class="source-quote"><a href="'.$arcurl['arcurl'].'" target="_blank">'.$arr['writer'].'</a></span>';
+echo '<p><time>'.$arr['pubdate'].'</time><span class="comment-box"><i class="icon-comment"></i><a href="'.$arcurl['arcurl'].'" target="_blank">'.$arr['click'].'</a></span></p>';
+echo '</div></div></div>';
+
+}
+{/dede:php}
+
+        </div>
+    </div>
+
+
+    <div class="hot-author-face">
+        <h3 class="t-h2"><em>本站作者</em><a href="#" class="more">更多…</a></h3>
+        <ul class="clearfix author-face-list">
+            <?php
+            
+        $sql = "SELECT * FROM `#@__member` ORDER BY mid DESC LIMIT 12";
+        $newfriends = array();
+        $dsql->SetQuery($sql);
+        $dsql->Execute();
+        while ($row = $dsql->GetArray()) {
+            $newfriends[] = $row;
+        }            
+				foreach ($newfriends as $newfriend)
+				{
+			 ?>
+             <li><p class="author-img"><a href="<?php echo $cfg_cmsurl;?>/member/index.php?uid=<?php echo $newfriend['userid'];?>" target="_blank" title="<?php echo $newfriend['uname'];?>">
+
+            <?php
+            if(!$newfriend['face']==""){
+             echo "<img src=".$newfriend['face']." width='50' height='50' />";
+            }else{
+             if($newfriend['sex']=='女') echo "<img src='templets/images/dfgirl.png' width='50' height='50' />";
+             else echo "<img src='templets/images/dfboy.png' width='50' height='50' />";
+            }
+            ?>
+            </a></p> <p class="name"><a href="<?php echo $cfg_cmsurl;?>/member/index.php?uid=<?php echo $newfriend['userid'];?>" target="_blank"><?php echo $newfriend['uname'];?></a></p>
+                </li>
+
+             <?php
+                }
+              ?>        </ul>
+    </div>
+        
+
+
+
+
+
+    </div>
+        
+</div>
+{dede:include file='footer.htm'/}
+
+</div>
+</div>
+
+{dede:include file='header.htm'/}
+</div>
+
+
+
+
+</body>
+</html>

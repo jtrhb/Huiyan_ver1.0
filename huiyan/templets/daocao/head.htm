@@ -1,0 +1,41 @@
+            <div class="top">
+    <div class="top-box">
+        <h1 class="logo"><a href="/" target="_blank"><img src="/dede58/img/top_logo.png"></a></h1>
+        <div class="login-box" id="_userlogin">
+            <div class="btn-group">
+                <a href="/member/article_add.php" class="contribute" title="Í¶¸å">Í¶¸å</a>
+            </div>
+
+            <div class="btn-group">
+                <a href="#lgnModal" data-toggle="modal">µÇÂ¼</a>
+                <a href="/member/index_do.php?fmdo=user&dopost=regnew">×¢²á</a>
+            </div>
+
+            
+            <div class="btn-group">
+                <a href="/rss.php" title="RSS"><i class="icon-rss"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+     <script language="javascript" type="text/javascript">CheckLogin();</script> 
+<div class="side-menu-hx">
+    <div class="side-menu-top">
+        <ul class="side-menu-list">   
+        
+      	<li><a href='/'>Ê×Ò³</a></li>
+        
+      	{dede:channel type='top' row='10' currentstyle="<li class='active'><a href='~typelink~'>~typename~</a></li>"}
+      	<li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+      	{/dede:channel}
+            </ul>
+    </div>
+    <div class="search">
+        <form  name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php" class="form-search">
+        <input type="hidden" name="kwtype" value="0" />
+        
+            <input type="text" name='q' id='s' class="input-text" placeholder="ËÑË÷" value="" />
+            <button class="search-btn"><i class="icon-search"></i></button>
+        </form>
+    </div>
+</div> 

@@ -1,0 +1,800 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="gb2312">
+        <title>360和有道，在一起，真的有意义？_魔客吧仿虎嗅网</title>
+        <meta name="keywords" content="投稿,奇虎360,有道,网易" />
+        <meta name="description" content="有道与360合作，从资金、渠道和技术上来看并无太大意义。有道之于网易形同鸡肋，而且并没有完全开放给360。至于后者，一味强调流量和渠道，既不治标，也不治本。" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <!-- Le styles -->
+        <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/dede58/css/hx-2013.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">
+        <![endif]-->
+        <style>
+		.jiathis_style{
+			margin-top:8px;	
+		}
+		</style>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function CheckLogin(){
+  var taget_obj = document.getElementById('_userlogin');
+  myajax = new DedeAjax(taget_obj,false,false,'','','');
+  myajax.SendGet2("/member/ajax_loginsta.php");
+  DedeXHTTP = null;
+}
+function CheckLogin2(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+	
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>      
+    </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+        <div class="container-hx">
+		            <div class="top">
+    <div class="top-box">
+        <h1 class="logo"><a href="/" target="_blank"><img src="/dede58/img/top_logo.png"></a></h1>
+        <div class="login-box" id="_userlogin">
+            <div class="btn-group">
+                <a href="/member/article_add.php" class="contribute" title="投稿">投稿</a>
+            </div>
+
+            <div class="btn-group">
+                <a href="#lgnModal" data-toggle="modal">登录</a>
+                <a href="/member/index_do.php?fmdo=user&dopost=regnew">注册</a>
+            </div>
+
+            
+            <div class="btn-group">
+                <a href="/rss.php" title="RSS"><i class="icon-rss"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+     <script language="javascript" type="text/javascript">CheckLogin();</script> 
+<div class="side-menu-hx">
+    <div class="side-menu-top">
+        <ul class="side-menu-list">   
+        
+      	<li><a href='/'>首页</a></li>
+        
+      	<li class='active'><a href='/focus/'>看点</a></li>
+      	<li><a href='/internet/'>互联网</a></li>
+      	
+      	<li><a href='/invest/'>创投界</a></li>
+      	
+      	<li><a href='/ec/'>电商圈</a></li>
+      	
+      	<li><a href='/mobile/'>移动库</a></li>
+      	
+      	<li><a href='/photo/'>图说</a></li>
+      	
+            </ul>
+    </div>
+    <div class="search">
+        <form  name="formsearch" action="/plus/search.php" class="form-search">
+        <input type="hidden" name="kwtype" value="0" />
+        
+            <input type="text" name='q' id='s' class="input-text" placeholder="搜索" value="" />
+            <button class="search-btn"><i class="icon-search"></i></button>
+        </form>
+    </div>
+</div>          
+		<div class="row-fluid-wrap-hx">
+                <div class="center-container-hx">
+                    <div class="clearfix row-fluid-hx"><!--<script src="/dede58/js/swplay.js" ></script>-->
+    <div class="center-ctr-wrap">
+        <div class="center-ctr-box">
+                        <div class="clearfix neirong">
+                <h1>360和有道，在一起，真的有意义？</h1>
+                <div class="subtitle-h1">有道与360合作，从资金、渠道和技术上来看并无太大意义。有道之于网易形同鸡肋，而且并没有完全开放给360。至于后者，一味强调流量和渠道，既不治标，也不治本。</div>
+                <div class="neirong-other">
+                    <span class="recommenders">www.moke8.com</span>
+                    <time>2013-08-09 10:44</time>
+                    <span style="margin-right:10px;"><i class="icon-click"></i><em class="pl-num"><script src="/plus/count.php?view=yes&aid=158&mid=1" type='text/javascript' language="javascript"></script></em></span><a href="#odby" class="pinglun-num"><i class="icon-comment"></i><em class="pl-num"><script src="/plus/pls.php?aid=158" language="javascript"></script></em></a>
+                    <span class="tags">
+                       <a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <a href='/tags.php?/%C6%E6%BB%A2360/' target='_blank'>奇虎360</a> <a href='/tags.php?/%D3%D0%B5%C0/' target='_blank'>有道</a> <a href='/tags.php?/%CD%F8%D2%D7/' target='_blank'>网易</a>                    </span>
+                </div>
+
+                <div class="neirong-box" id="neirong_box">
+                    <table>
+                        <tr>
+                            <td>
+                                <span class="span-img" style="word-wrap: break-word; float: none; min-height: 1px; margin: 5px auto 15px; text-align: center; display: block; overflow: hidden; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei', '冬青黑体简体中文 w3', 宋体; font-size: 16px; line-height: 26px; background-color: rgb(250, 250, 252);"><img alt="360和有道，在一起，真的有意义？" data-pinit="registered" src="http://u.img.huxiu.com/portal/201308/06/1032547zwvzz77favlhkk5.jpg" style="word-wrap: break-word; max-width: 628px; vertical-align: middle; border: 0px;" /></span>
+<div style="word-wrap: break-word; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei', '冬青黑体简体中文 w3', 宋体; font-size: 16px; line-height: 26px; background-color: rgb(250, 250, 252);">
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		流光前几天刚刚发文章说，未来一些规模小的搜索引擎将进一步边缘化，直至被寡头吃掉或是挤开，有道搜索就很给面子被360给&ldquo;笑纳&rdquo;了。</div>
+	<div style="word-wrap: break-word;">
+		网易方面说是战略转移，重点开发移动业务。而360则激动地表示这是对自己技术的最大认可。两家的发言都很是积极向上，前者仿佛是大手一挥，挥师南下，开拓新战场去了。后者则仿佛得到了广大人民群众的认可，眼前的革命曙光更加光明了。但话说回来，仔细想想，这次合作真的那么有意义吗？</div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		<b style="word-wrap: break-word;"><font size="3" style="word-wrap: break-word;">意义何在？</font></b></div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		先说网易，对于网易来说，这一次有道搜索在公司的优先级安排上本身就已经排到了后面，就算是不把有道扔给360&ldquo;托管&rdquo;，网易的战略重心也早就转向移动端了。<span style="word-wrap: break-word; line-height: 1.8em;">门户网站做搜索很大程度上就是一种防御式的产品，大家都知道搜索赚钱，都想去分一杯羹，嘴上都嚷嚷着在几年内做成第一、第二的（&ldquo;在未来三年时间里有道能够成为中国第一的中文搜索引擎&rdquo;丁磊07年语），但却又不肯真正地去拼命下注，更况且他们也没有多少赌注可下。</span></div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		<span style="word-wrap: break-word; line-height: 1.8em;"><b style="word-wrap: break-word;">拼资金</b>，搜搜在烧掉二十多亿后还是放弃了通用搜索，而微软为Bing烧的钱都够买好几个雅虎了，即便是游戏业务做得不错的网易，哪里会有这么多的资金投在一个还不知道什么时候能把百度拉下马的搜索业务上呢。估计在丁总眼里，养猪尚且能够快速致富，凭啥为搜索继续花钱呢？</span></div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		<b style="word-wrap: break-word;">而拼渠道</b>，门户网站做搜索很大程度上都是起步于门户当道的Web1.0时代，那时候基本上各家各户的浏览器主页都是这几大门户，顺道把搜索引擎摆在那里，畅想着美好未来，这自然再正常不过了。只是有道推出的时候已是06年，正式版上线更是07年，起了个大早，赶了个晚集。后来的事情大家都看到了，渠道入口成了到浏览器+导航页的天下，门户网站都已经称不上门户了，网易做搜索的渠道优势早就不复存在了。</div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		<b style="word-wrap: break-word;">至于技术</b>，基本上等同于上面说的资金，技术很大程度上是需要资金来支撑的，没有足够的投入，技术水平自然一般了。更何况，无论是网易，还是已经退场的腾讯搜搜，都是长于大公司内部，不像是搜狗，它们本身缺少了创新的土壤和成长的环境，受到的限制实在是太多了。</div>
+	<div style="word-wrap: break-word;">
+		总而言之，对于网易来说，有道已经成了一块食之无味、弃之一点都不可惜的鸡肋产品，给关系一向不错的360送个顺水人情，也让有道搜索的最终结果不至于是黯然离场。或许有道对于网易最大的意义不在于它做成了什么，而是通过它，网易做成了有道翻译、有道云笔记这些未来在移动端可以施展拳脚的应用。</div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		<b style="word-wrap: break-word;"><font size="3" style="word-wrap: break-word;">食之无味，弃之360</font></b></div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		至于收了有道的360呢？有道0.25%的搜索份额恐怕很多还是来自有道词典等产品的导入，这么小的市场份额对于拥有赶超百度这一宏大愿望的360来说，实在是小得够可以的了。<span style="word-wrap: break-word; line-height: 1.8em;">罗超老师说这一次合作的意义在于360获得了有道0.25%背后的流量，可这个意义真的很大么？</span></div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		15%和15.25%，在亟待希望获取更高份额从而形成规模优势、拉高议价权的360来说，区别并不算大，对市场的影响也是微乎其微的。<span style="word-wrap: break-word; line-height: 1.8em;">而我想，合作的意义或许更多在于为360自己的技术实力做了一次很好的公关，向外界证明自己的搜索技术还是很给力的。</span><span style="word-wrap: break-word; line-height: 1.8em;">只是，这个在我看来，这个意义依旧不大。<b style="word-wrap: break-word;">有道之于网易如同鸡肋，给谁都没有太大区别。因为有道并没有完全开放给360，其广告系统还是在网易那边，用来送人情的有道只是一个流量管道而已。</b>份额在压缩到0.25%之后，受限于固有的门户导入的流量，份额继续往下走的可能也不大，技术水平的高低显然不是网易在选择合作方时重点考虑的问题。在这一点上，360多少有点刻意拿出来进行公关的意思。</span></div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		<span style="word-wrap: break-word; line-height: 1.8em;"><b style="word-wrap: break-word;"><font size="3" style="word-wrap: break-word;">搜索非一朝一夕之功</font></b></span></div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		当然，这里并不是说360搜索技术不行。360搜索旗下确实有一批技术大牛，但搜索技术的进步显然不是一朝一夕能够完成的。360从11年开始招募团队，到现在不过3年，整体还是缺乏深度积累，想用3年的时间赶超谷歌、百度研究了十几年的搜索技术，显然还是有些着急了，远的有微软这个例子，近的有腾讯搜搜的例子，搜搜挖来了吴军等3个谷歌高级工程师，但最后的结果却只能呵呵了。这也就是为什么在后台技术上360还是在和谷歌合作的原因。</div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		Hitwise的数据也摆在那里，奇虎82%的流量还是来自渠道。而如今搜索体验上没有太过失分，很大程度上是来自于商业化还没有完全起步，广告少，页面干净。单纯就搜索技术和品牌影响来讲，360需要走的路太长了。<b style="word-wrap: break-word;">和有道合作既不治标，也不治本，倒有点像是扯大旗作虎皮，壮自己的声势</b>，或许360自己心里也很清楚这一点。</div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		这一次360真的是在团结一切可以团结的力量，只是似乎能够不花代价就团结来的盟友，实在是太难寻找了。网易虽然将有道交给360&ldquo;代管&rdquo;，但是显然还只是一个流量渠道上的合作，谈不上深层次。要是真的有一天两家深层次合作了，有态度的网易碰上自诩屌丝小白的360，或许也会让人感到有些不搭调吧。</div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		<b style="word-wrap: break-word;"><font size="3" style="word-wrap: break-word;">方向不对，意义不大</font></b></div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		对于360来说，从0到10%几乎是一夜间的事情，从10%到15%，360走了将近一年。小白用户们继续习惯性的在搜索框里搜索着，抵触百度的用户也被360和搜狗收编的差不多了。在渠道潜力的挖掘越发接近极限的情况下，360继续强调流量和渠道很可能会走向一个误区，正所谓薅羊毛也不能总照着一只羊去薅啊。</div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		<b style="word-wrap: break-word;">360缺的不是有道这样的小合作伙伴，也不是市场对于其技术能力的信任，</b>而是一条与众不同的道路。一个市场的后来者，想要挑战原有的市场格局，就必须提供足够吸引用户或是客户的价值。就如同，当初360以免费颠覆杀毒软件市场一般。现在的360与其扯网易这张不算大的虎皮来为自己打气，倒不如真真正正地去做用户体验，寻找更好的商业化路线，寻找那个可以颠覆市场的需求点。</div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		有些时候，就算是真的在一起了，意义也大不了多少。</div>
+</div>
+<br />
+                                                                <!-- 向作者提问-->
+                                <a href="#postform" class="a_self pull-right btn btn-primary askAuthor"  target="_self"><i class="icon-question-sign icon-white"></i>向作者提问</a>
+                                                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="clearfix pages">
+                    <div class="pull-right pgs"></div>                </div>
+                                
+                <!-- 分享 -->
+                <div class="share-wrap" id="share_wrap">
+                    <div class="share-wrap-box">
+    <div class="manage-box1" id="newdigg">
+        <div class="like-box">
+            <i class="pos-btn" title="喜欢" onClick="javascript:postDigg('good',158)">0</i>
+        </div>
+        <div class="favorite-box">
+            <i class="pos-btn" title="收藏" onClick="window.open('/plus/stow.php?aid=158')"><script src="/plus/scs.php?aid=158" language="javascript"></script></i>
+        </div>
+        <div class="nolike-box">
+            <i class="pos-btn" title="没劲" onClick="javascript:postDigg('bad',158)">0</i>
+        </div>
+    </div>
+  <script language="javascript" type="text/javascript">getDigg(158);</script>    
+    <div class="share-box side-share-box">
+        <span class="pos-top">分享：</span>
+         <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_xiaoyou"></a>
+	<a class="jiathis_button_cqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_fav"></a>
+	<a class="jiathis_button_copy"></a>
+	<a class="jiathis_button_print"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1375020427508565" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+    </div>
+</div>                </div>
+
+            </div>
+            
+            <div class="position-wrap" id="position_wrap">
+                            </div>
+            <div class="related-list"><h3 class="t-h2"><em>您可能感兴趣的文章</em></h3><ul>
+                <li><a href="/focus/168.html" target="_blank">腾讯开放两年都做了啥？看看腾讯的自我表扬贴</a></li>
+<li><a href="/focus/166.html" target="_blank">乐视面前的三座大山</a></li>
+<li><a href="/focus/165.html" target="_blank">腾讯O2O这些年：做好了入口做好支付，就是缺商户</a></li>
+<li><a href="/focus/162.html" target="_blank">三星真正的死穴是什么？</a></li>
+<li><a href="/focus/161.html" target="_blank">PC游戏转手游，实战案例分析</a></li>
+            
+
+            </ul><div id = "interest"></div></div>            <!-- 评论 -->
+            <a name='postform'></a>
+            <div class="pinglun" id="pinglun">
+                        <h3 class="t-h2" id="odby">
+            <a href="#odby" class="a-btn"><i class="icon-comment"></i><em class="pl-num"><script src="/plus/pls.php?aid=158" language="javascript"></script></em></a>
+            <ul class="inline tab-pinglun-box">
+                <li class="active">最新评论</li>
+            </ul>
+        </h3>
+            <!-- 评论框框架 -->
+           
+<div class="pl-kuang-box">
+            <!-- 头像 -->
+            <div class="pull-left pl-img" id="_ajax_feedback">                       
+                <a target="_blank" href="#"><img border="0" src="/member/templets/images/dfboy.png"></a>
+                
+游客    
+                            
+            </div>
+            <!-- 头像/ -->
+            <!-- 评论框 -->
+            <div class="pl-kuang">
+        <form action="#" method="post" name="feedback" onsubmit="return false;">
+          <input type="hidden" name="dopost" value="send" />
+          <input type="hidden" name="comtype" value="comments">
+          <input type="hidden" name="aid" value="158" />
+          <input type="hidden" name="fid" id='feedbackfid' value="0" />
+          <input type="hidden" name="feedbacktype" value="feedback" />          
+			<div class="textarea-box"><textarea class="textarea-txt" id="msg" name="msg"></textarea></div>
+          <!-- /dcmp-content -->
+          <div class="dcmp-post">
+            <!--未登陆-->
+            <div class="dcmp-userinfo" id="_ajax_feedback"> 
+              <input type="hidden" name="username" value="游客"/>
+              验证码:
+              <input type="text" name="validate" size="4" class="ipt-txt" style="text-transform:uppercase;"/>
+              <img src= "/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换图片" alt="点击我更换图片"  class="vdimg"/>
+              <input type="hidden" name="notuser" id="dcmp-submit-guest" />
+
+            </div>
+            
+            <script language="javascript" type="text/javascript">CheckLogin2();</script>
+            
+            <button class="pull-right subscribe-btn" type="button" onClick='PostComment()'>回复</button>
+          </div>
+        </form>
+            </div>
+       <!-- 评论框 -->
+        </div> 
+    <dd id='commetcontentNew'></dd>
+    <div class="pinglun-list" id="commetcontent">
+	</div>
+
+<!--
+//由于评论载入时使用异步传输，因此必须在最后一步加载（DIGG和评论框须放在评论内容前面）
+//如果一定需要提前的把myajax.SendGet改为myajax.SendGet2，但可能会引起页面阻滞
+-->
+<script language='javascript'>
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontent');
+		var waithtml = "<div style='line-height:50px'><img src='/images/loadinglit.gif' />评论加载中...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("/plus/feedback_ajax.php?dopost=getlist&aid=158&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		var f = document.feedback;
+		var msg = document.getElementById("msg").value;
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+		if(msg.length < 10)
+		{
+			alert("请至少输入10个字！");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("请填写验证码！");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(msg.length > 500)
+		{
+			alert("你的评论是不是太长了？请填写500字以内的评论。");
+			return;
+		}
+		if(f.feedbacktype) {
+			for(var i=0; i < f.feedbacktype.length; i++)
+				if(f.feedbacktype[i].checked) nfeedbacktype = f.feedbacktype[i].value;
+		}
+		/*
+		if(f.face) {
+			for(var j=0; j < f.face.length; j++)
+				if(f.face[j].checked) nface = f.face[j].value;
+		}
+		*/
+		if(f.notuser.checked) nnotuser = '1';
+		if(f.username) nusername = f.username.value;
+		if(f.pwd) npwd = f.pwd.value;
+		if(f.msg) msg = f.msg.value;
+		
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'gb2312';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '158');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', msg);
+		myajax.SendPost2('/plus/feedback_ajax.php');
+		//msg = '';
+		CKEDITOR.instances.msg.setData('');
+		//taget_obj.removeAttribute('id');
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+}
+function quoteCommet(fid)
+{
+	    document.feedback.fid.value = fid;
+}
+  
+function ajaxFeedback(aid, fid, type)
+{
+	
+	var taget_obj = $DE('ajaxfeedback_'+fid);
+	if(taget_obj.innerHTML == '')
+	{
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x');
+		myajax.SendGet2("/plus/feedback.php?aid="+aid+"&fid="+fid+"&action=quote&type=ajax");
+		eval('var result = typeof CKEDITOR.instances.msg_'+fid);
+		if(result != 'undefined')
+		{
+			// 删除实例
+			eval('var edit = CKEDITOR.instances.msg_'+fid);
+			CKEDITOR.remove(edit);
+		}
+		CKEDITOR.replace(document.getElementById('msg_'+fid) , CKEDITOR.instances.msg.config);
+		scroll(0, taget_obj.offsetTop - 120);
+		var formname = 'f = document.ajaxfeedback_'+fid;
+		eval(formname);
+		if(f.validate)
+		{
+			if($DE('vdimg_'+fid)) $DE('vdimg_'+fid).src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+		DedeXHTTP = null;
+	}
+}
+
+
+
+function ajaxQuotePost(fid)
+{
+	var formname = 'f = document.ajaxfeedback_'+fid;
+	eval(formname);
+	//var f = document.formname;
+	//var f = f[0];
+	var nvalidate = '';
+	var nnotuser = '';
+	var nusername = '';
+	var npwd = '';
+	var taget_obj = $DE('commetcontentNew');
+	var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+	eval('var msg = CKEDITOR.instances.msg_'+fid+'.getData()');
+
+	if(f.validate)
+	{
+		if(f.validate.value=='') {
+			alert("请填写验证码！");
+			return;
+		}
+		else {
+			nvalidate = f.validate.value;
+		}
+	}
+	var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+	
+	if(f.notuser.checked) nnotuser = '1';
+	if(f.username) nusername = f.username.value;
+	if(f.pwd) npwd = f.pwd.value;
+	
+	myajax.sendlang = 'gb2312';
+	myajax.AddKeyN('dopost', 'send');
+	myajax.AddKeyN('aid', '158');
+	myajax.AddKeyN('fid', f.fid.value);
+	myajax.AddKeyN('type', 'ajax');
+	myajax.AddKeyN('comtype', f.comtype.value);
+	myajax.AddKeyN('isconfirm','yes');
+	
+	myajax.AddKeyN('typeid', f.typeid.value);
+	myajax.AddKeyN('quotemsg', f.quotemsg.value);
+	myajax.AddKeyN('validate', nvalidate);
+	myajax.AddKeyN('notuser', nnotuser);
+	myajax.AddKeyN('username', nusername);
+	myajax.AddKeyN('pwd', npwd);
+	myajax.AddKeyN('msg', msg);
+	myajax.SendPost2('/plus/feedback_ajax.php');
+	//alert(f.quotemsg.value);
+	if($DE('ajaxfeedback_'+fid).innerHTML != null)
+	{
+		$DE('ajaxfeedback_'+fid).innerHTML = '';
+	}
+	scroll(0, taget_obj.offsetTop);
+}
+LoadCommets(1);
+</script>
+<!-- //评论内容区结束 -->
+
+        
+<a href="/plus/feedback.php?aid=158" class="pinglun-more-a" target="_blank">全部评论</a>            </div>
+            <!-- 评论/ -->
+        </div>
+    </div>
+    <div class="side-container-hx">            
+    <div class="clearfix author-card3">         
+<div class="pull-left author-card-img">
+            <p class="p-1"><a href="localhost/huiyan/member/index.php?uid=newsche" title="www.moke8.com" target="_blank"><img border="0" src="/uploads/userup/1/myface.png" /></a></p>
+        </div>
+<div class="author-card-box">
+            <p class="card-name-p"><a class="card-name" href="localhost/huiyan/member/index.php?uid=newsche" target="_blank">www.moke8.com</a></p>
+            <p class="yijuhua" title="稻草 - 专业的织梦模板下载站">稻草 - 专业的织梦模板下载站</p>
+            <p class="p-btn"><a href="/member/index.php?action=guestbook&uid=newsche" act="add_author" class="dy-btn">给我留言</a>
+                <a href="/member/pm.php?dopost=send&uid=newsche" target="_blank">发送消息</a>
+
+            </p>
+        </div>
+                   
+        <div class="clearfix author-article"><h3><b>Ta的文章(143)</b><a href="/member/index.php?uid=newsche&action=archives" target="_blank">更多</a></h3><ul>
+
+<li><a href="/plus/view.php?aid=140" title="杜琪峰电影不够大卖，是犯了电影工业的什么忌？"  target="_blank">杜琪峰电影不够大卖，是犯了电影工业的什么忌？</a></li><li><a href="/plus/view.php?aid=141" title="库克又访华来了！来回顾下他三次访华都给苹果做什么"  target="_blank">库克又访华来了！来回顾下他三次访华都给苹果做什么</a></li><li><a href="/plus/view.php?aid=142" title="拼儿子才是王道：“江南Style”让Psy老爸的股票翻了八倍"  target="_blank">拼儿子才是王道：“江南Style”让Psy老爸的股票翻了八倍</a></li>        
+        </ul></div>    
+        </div>
+
+    <div class="hot-view">
+        <h3 class="t-h2"><em>热门文章</em></h3>
+        <div class="view-list idx-view">
+        
+      <div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/169.html" target="_blank"><img src="/uploads/allimg/130809/1-130P9115633127-lp.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/169.html" target="_blank">齐齐封杀令背后：阿里与腾讯的“社交电商”博弈</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-09 20:10</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=169" target="_blank"><script src="/plus/pls.php?aid=169" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/165.html" target="_blank"><img src="/uploads/allimg/130809/5-130P91114330-L.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/165.html" target="_blank">腾讯O2O这些年：做好了入口做好支付，就是缺商户</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-09 11:14</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=165" target="_blank"><script src="/plus/pls.php?aid=165" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/148.html" target="_blank"><img src="/uploads/allimg/130809/8-130P91016270-L.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/148.html" target="_blank">苹果避税功力不输金融大鳄，亚马逊纳税老实本分？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=wxb" target="_blank">韦小宝</a></span>
+                        <p><time>2013-08-09 10:16</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=148" target="_blank"><script src="/plus/pls.php?aid=148" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/147.html" target="_blank"><img src="/uploads/allimg/130809/8-130P91015090-L.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/147.html" target="_blank">大型日企坠落全因做得太过头？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=wxb" target="_blank">韦小宝</a></span>
+                        <p><time>2013-08-09 10:15</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=147" target="_blank"><script src="/plus/pls.php?aid=147" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/139.html" target="_blank"><img src="/uploads/allimg/130809/1-130PZZ9180-L.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/139.html" target="_blank">80、90后技术宅：网络文化一代崛起，告密时代即将来临？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-09 09:10</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=139" target="_blank"><script src="/plus/pls.php?aid=139" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+
+              
+        </div>
+    </div>
+
+	    <div class="hot-author-face">
+        <h3 class="t-h2"><em>广告位1</em></h3>
+<a href='#'><img src='/dede58/img/ad2.jpg'></a>
+    </div>
+
+
+    <div class="hot-view">
+        <h3 class="t-h2"><em>推荐文章</em></h3>
+        <div class="view-list idx-view">
+      <div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/172.html" target="_blank"><img src="/uploads/allimg/c140820/140U0349A20-34209_lit.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/172.html" target="_blank">传媒政策变革红利已至，视频网站社群化将是大势所趋</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank"></a></span>
+                        <p><time>2014-08-20 11:02</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=172" target="_blank"><script src="/plus/pls.php?aid=172" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/176.html" target="_blank"><img src="/uploads/allimg/c140820/140U03505020-25b7_lit.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/176.html" target="_blank">拉勾网创立一年估值过亿美金：背后那些“道道”</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank"></a></span>
+                        <p><time>2014-08-20 11:02</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=176" target="_blank"><script src="/plus/pls.php?aid=176" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/180.html" target="_blank"><img src="/uploads/allimg/c140820/140U03515H0-19556_lit.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/180.html" target="_blank">信奉平等主义的人，大概不会赞赏这种高调而另类的慈善主张</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank"></a></span>
+                        <p><time>2014-08-20 10:58</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=180" target="_blank"><script src="/plus/pls.php?aid=180" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/173.html" target="_blank"><img src="/uploads/allimg/c140820/140U034b5P-49C2_lit.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/173.html" target="_blank">目前大多数IP运作都停留在收割变现的初级阶段，而非真正的“运作</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank"></a></span>
+                        <p><time>2014-08-20 10:58</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=173" target="_blank"><script src="/plus/pls.php?aid=173" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/168.html" target="_blank"><img src="/uploads/allimg/130809/5-130P91122040-L.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/168.html" target="_blank">腾讯开放两年都做了啥？看看腾讯的自我表扬贴</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2014-04-27 17:01</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=168" target="_blank"><script src="/plus/pls.php?aid=168" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+
+              
+        
+          </div>
+    </div>
+    <div class="hot-author-face">
+        <h3 class="t-h2"><em>热门作者</em></h3>
+        <ul class="clearfix author-face-list">
+
+<li><p class="author-img"><a href="/member/index.php?uid=newsche" target="_blank" title="www.moke8.com"><img src="/uploads/userup/1/myface.png"/></a></p><p class="name"><a href="/member/index.php?uid=newsche" target="_blank">www.moke8.com</a></p><li><p class="author-img"><a href="/member/index.php?uid=jay" target="_blank" title="悠悠草"><img src="/uploads/userup/5/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=jay" target="_blank">悠悠草</a></p><li><p class="author-img"><a href="/member/index.php?uid=884358" target="_blank" title="884358"><img src="/uploads/userup/2/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=884358" target="_blank">884358</a></p><li><p class="author-img"><a href="/member/index.php?uid=lhc" target="_blank" title="古天乐"><img src="/uploads/userup/6/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=lhc" target="_blank">古天乐</a></p><li><p class="author-img"><a href="/member/index.php?uid=wxb" target="_blank" title="康师傅"><img src="/uploads/userup/8/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=wxb" target="_blank">康师傅</a></p><li><p class="author-img"><a href="/member/index.php?uid=lurenjia" target="_blank" title="路人甲"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=lurenjia" target="_blank">路人甲</a></p><li><p class="author-img"><a href="/member/index.php?uid=jason19905" target="_blank" title="测试账号"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=jason19905" target="_blank">测试账号</a></p>
+        </ul>
+    </div>
+
+		    <div class="hot-author-face">
+        <h3 class="t-h2"><em>广告位2</em></h3>
+<a href='#'><img src='/dede58/img/ad2.jpg'></a>
+    </div>
+    </div>
+ </div>
+<footer class="footer">
+    <div class="about-links">
+                    
+    </div>
+            <div class="footer-copy">
+        Copyright &copy; 2002-2014 织梦系统 版权所有 <a href=http://www.moke8.com target='_blank'>Power by moke8</a> ( <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备11000986号</a>)
+    </div>
+    <!-- 返回顶部 -->
+    <div class="go-top">
+        <i class="pos-btn" onclick="window.scrollTo('0', '0')">^</i>
+    </div>
+    <!-- /返回顶部 -->
+
+</footer>
+</div>
+</div>
+</div>
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+
+    <script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript" src="/images/js/j.js" ></script>
+
+
+<div id="lgnModal" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">登录</h3>
+        </div>
+        <div class="float-box">
+            <div class="float-login-box">
+                <div class="login-info">帐号登录：</div>
+                <form id="float_form_lgn" name="userlogin" action="/member/index_do.php" method="POST" class="form-horizontal">
+        <input type="hidden" name="fmdo" value="login" />
+        <input type="hidden" name="dopost" value="login" />
+        <input type="hidden" name="keeptime" value="604800" />                
+                
+                    <div class="control-group control-name">
+                        <label class="control-label" for="inputName">用户名：</label>
+                        <div class="controls">
+                            <input type="text" id="userid" name="userid" tabindex="1">
+                            <span class="help-inline"><a href="/member/index_do.php?fmdo=user&dopost=regnew" target="_blank">还未注册?</a></span>
+                        </div>
+                    </div>
+                    <div class="control-group control-pwd">
+                        <label class="control-label" for="inputPassword">密　码：</label>
+                        <div class="controls">
+                            <input type="password" id="pwd" name="pwd" tabindex="2">
+                            <span class="help-inline"><a href="/member/resetpassword.php" target="_blank">忘记密码?</a></span>
+                        </div>
+                    </div>                  
+                    <div class="control-group control-pwd" style="margin-top:15px;">
+                        <label class="control-label" for="inputName">验证码：</label>
+                        <div class="controls">
+                            <input type="text" id="vdcode" name="vdcode" tabindex="3" size="4" style="text-transform:uppercase;" maxlength="4">
+                            <span class="help-inline"><img id="vdimgck" align="absmiddle" onclick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="../include/vdimgck.php"/></span>
+                        </div>
+                    </div>                    
+                    <div class="control-group" style="margin-top:15px; margin-left:10px;">
+                        <div class="controls">
+                            <button type="submit" class="btn lgn-btn" tabindex="4" onclick="this.form.submit();">登录</button>
+                            <a href="/member/index_do.php?fmdo=user&dopost=regnew" class="lgn-reg-btn">注册</a>
+                            
+                      </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,3 @@
+INSERT INTO `dede_member_stow` VALUES('1','1','142','拼儿子才是王道：“江南Style”让Psy老爸的股票翻了八倍','1376127082','');
+INSERT INTO `dede_member_stow` VALUES('2','1','140','杜琪峰电影不够大卖，是犯了电影工业的什么忌？','1376127093','');
+INSERT INTO `dede_member_stow` VALUES('3','1','169','齐齐封杀令背后：阿里与腾讯的“社交电商”博弈','1376138575','');

@@ -1,0 +1,1 @@
+INSERT INTO `dede_pwd_tmp` VALUES('2','884358','23f363d7d43a04ca274ca6f5c6a186be','1376126032');

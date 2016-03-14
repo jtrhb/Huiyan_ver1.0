@@ -1,0 +1,7 @@
+<div class="author-lsit-menu">
+                        <ul class="clearfix inline"><li><a href="index.php?uid={dede:var.userid/}&action=archives"  <?php if($action == "archives" || empty($action)) echo 'class="on"'; ?>>TA的文章<sup>{dede:php}$mid = $_vars['mid'];$row = $dsql->GetOne("select count(id) from dede_archives where mid='$mid'");echo $row['count(id)'];{/dede:php}</sup></a></li><li><a href="index.php?uid={dede:var.userid/}&action=comment"  <?php if($action == "comment") echo 'class="on"'; ?>>TA的评论<sup>{dede:php}$mid = $_vars['mid'];$row = $dsql->GetOne("select count(id) from dede_feedback where mid='$mid'");echo $row['count(id)'];{/dede:php}</sup></a></li>
+                        <li><a href="index.php?uid={dede:var.userid_e /}&action=infos"  <?php if($action == "infos") echo 'class="on"'; ?>>TA的资料</a></li>
+                        
+                        <li><a href="index.php?uid={dede:var.userid_e /}&action=guestbook" <?php if($action == "guestbook") echo 'class="on"'; ?>>给TA留言<sup>{dede:php}$mid = $_vars['mid'];$row = $dsql->GetOne("select count(aid) from dede_member_guestbook where mid='$mid'");echo $row['count(aid)'];{/dede:php}</sup></a></li>                        
+                        </ul>
+                    </div>

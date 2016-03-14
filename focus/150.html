@@ -1,0 +1,875 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="gb2312">
+        <title>从内购无底线的《植物大战僵尸2》看海外手游的“本土化改造“_魔客吧仿虎嗅网</title>
+        <meta name="keywords" content="游戏" />
+        <meta name="description" content="一款来自海外的游戏，为适应中国市场的特殊环境而进行本土化改造——按照常理这对中国的消费者来说是一件好事——但是宝开（PopCap）这次对《植物大战僵尸2》的本土化改造已经超越了"常理"的下限" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <!-- Le styles -->
+        <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/dede58/css/hx-2013.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">
+        <![endif]-->
+        <style>
+		.jiathis_style{
+			margin-top:8px;	
+		}
+		</style>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function CheckLogin(){
+  var taget_obj = document.getElementById('_userlogin');
+  myajax = new DedeAjax(taget_obj,false,false,'','','');
+  myajax.SendGet2("/member/ajax_loginsta.php");
+  DedeXHTTP = null;
+}
+function CheckLogin2(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+	
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>      
+    </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+        <div class="container-hx">
+		<!--
+<div id="myCarousel" class="carousel slide">
+   
+   <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+   </ol>   
+   
+   <div id="chartCarousel" class="carousel-inner">
+      <div class="item active">
+         <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+           <script type="text/javascript">
+         new TradingView.widget({
+        "autosize": true,
+        "symbol": "FX:EURUSD",
+        "interval": "1",
+        "timezone": "Asia/Shanghai",
+        "theme": "White",
+        "style": "1",
+        "locale": "zh",
+        "toolbar_bg": "rgba(241, 243, 246, 1)",
+        "hide_top_toolbar": true,
+        "allow_symbol_change": true,
+        "save_image": false,
+        "hideideas": true
+    });
+          </script>
+      </div>
+      <div class="item">
+         <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
+    new TradingView.widget({
+        "autosize": true,
+        "symbol": "FX:USDCHF",
+        "interval": "1",
+        "timezone": "Asia/Shanghai",
+        "theme": "White",
+        "style": "1",
+        "locale": "zh",
+        "toolbar_bg": "rgba(241, 243, 246, 1)",
+        "hide_top_toolbar": true,
+        "allow_symbol_change": true,
+        "save_image": false,
+        "hideideas": true
+    });
+</script>
+      </div>
+      <div class="item">
+         <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
+    new TradingView.widget({
+        "autosize": true,
+        "symbol": "FX:USDJPY",
+        "interval": "1",
+        "timezone": "Asia/Shanghai",
+        "theme": "White",
+        "style": "1",
+        "locale": "zh",
+        "toolbar_bg": "rgba(241, 243, 246, 1)",
+        "hide_top_toolbar": true,
+        "allow_symbol_change": true,
+        "save_image": false,
+        "hideideas": true
+    });
+</script>
+      </div>
+   </div>
+   
+   <a class="carousel-control left" href="#myCarousel" 
+      data-slide="prev">&#8249;</a>
+   <a class="carousel-control right" href="#myCarousel" 
+      data-slide="next">&#8250;</a>
+</div>
+-->            
+<div class="top" id="nav">
+    <div class="top-box">
+        <h1 class="logo"><a href="/" target="_blank"><img src="/dede58/img/top_logo.png"></a></h1>
+        <div class="login-box" id="_userlogin">
+            <div class="btn-group">
+                <a href="/member/article_add.php" class="contribute" title="投稿">投稿</a>
+            </div>
+
+            <div class="btn-group">
+                <a href="#lgnModal" data-toggle="modal">登录</a>
+                <a href="/member/index_do.php?fmdo=user&dopost=regnew">注册</a>
+            </div>
+
+            
+            <div class="btn-group">
+                <a href="/rss.php" title="RSS"><i class="icon-rss"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+     <script language="javascript" type="text/javascript">CheckLogin();</script>
+<div class="special-topic" id="specialTopicTop">
+</div>
+<div class="side-menu-outer-container" id="horizontalMenuOuterContainer">
+<div class="side-menu-hx">
+    <div class="side-menu-top">
+      <nav class="menu menu--valentine">
+        <ul class='side-menu-list'>   
+        
+      	<li class='menu__item menu__item--current'><a href='/' class='menu__link'>首页</a></li>
+        
+      	<li class='active'><a href='/focus/'>资讯</a></li>
+      	<li class='menu__item'><a href='/mobile/' class='menu__link'>移动库</a></li>
+      	
+      	<li class='menu__item'><a href='/photo/' class='menu__link'>专题</a></li>
+      	
+            </ul>
+       </nav>
+    </div>
+    <!--
+    <div class="search">
+        <form  name="formsearch" action="/plus/search.php" class="form-search">
+        <input type="hidden" name="kwtype" value="0" />
+        
+            <input type="text" name='q' id='s' class="input-text" placeholder="搜索" value="" />
+            <button class="search-btn"><i class="icon-search"></i></button>
+        </form>
+    </div>
+    -->
+</div>
+</div>         
+		<div class="row-fluid-wrap-hx">
+                <div class="center-container-hx">
+                    <div class="clearfix row-fluid-hx"><!--<script src="/dede58/js/swplay.js" ></script>-->
+    <div class="center-ctr-wrap">
+        <div class="center-ctr-box">
+                        <div class="clearfix neirong">
+                <h1>从内购无底线的《植物大战僵尸2》看海外手游的“本土化改造“</h1>
+                <div class="subtitle-h1">一款来自海外的游戏，为适应中国市场的特殊环境而进行本土化改造——按照常理这对中国的消费者来说是一件好事——但是宝开（PopCap）这次对《植物大战僵尸2》的本土化改造已经超越了"常理"的下限</div>
+                <div class="neirong-other">
+                    <span class="recommenders">www.moke8.com</span>
+                    <time>2016-03-02 13:38</time>
+                    <span style="margin-right:10px;"><i class="icon-click"></i><em class="pl-num"><script src="/plus/count.php?view=yes&aid=150&mid=6" type='text/javascript' language="javascript"></script></em></span><a href="#odby" class="pinglun-num"><i class="icon-comment"></i><em class="pl-num"><script src="/plus/pls.php?aid=150" language="javascript"></script></em></a>
+                    <span class="tags">
+                       <a href='/tags.php?/%D3%CE%CF%B7/' target='_blank'>游戏</a>                    </span>
+                </div>
+
+                <div class="neirong-box" id="neirong_box">
+                    <table>
+                        <tr>
+                            <td>
+                                <span class="span-img" style="word-wrap: break-word; float: none; min-height: 1px; margin: 5px auto 15px; text-align: center; display: block; overflow: hidden; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei', '冬青黑体简体中文 w3', 宋体; font-size: 16px; line-height: 26px; background-color: rgb(250, 250, 252);"><img alt="从内购无底线的《植物大战僵尸2》看海外手游的“本土化改造“" data-pinit="registered" src="/uploads/allimg/130809/10310QE5-0.png" style="word-wrap: break-word; max-width: 628px; vertical-align: middle; border: 0px;" /></span>
+<div style="word-wrap: break-word; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei', '冬青黑体简体中文 w3', 宋体; font-size: 16px; line-height: 26px; background-color: rgb(250, 250, 252);">
+	<div style="word-wrap: break-word;">
+		<span style="word-wrap: break-word; line-height: 1.8em;"><font face="楷体" style="word-wrap: break-word;">一款来自海外的游戏，为适应中国市场的特殊环境而进行本土化改造&mdash;&mdash;按照常理这对中国的消费者来说是一件好事&mdash;&mdash;但是上海宝开（PopCap）这次对《植物大战僵尸2》的中国本土化改造已经超越了&quot;常理&quot;的下限。</font></span></div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		<font face="楷体" style="word-wrap: break-word;">前两日虎嗅看到《植物大战僵尸 2 奇妙时空之旅》在中国商店上架的消息，马上前去围观宝开&ldquo;本土化&rdquo;重要一役的战果如何。简单体验一下后发现：这不是植物大战僵尸，这是玩家大战茫茫内购。</font></div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		<font face="楷体" style="word-wrap: break-word;">这篇刊登在<a href="http://game.chinanews.com/review/201308/0226889.html" style="word-wrap: break-word; color: rgb(0, 136, 204); text-decoration: none;" target="_blank">中新网</a>的文章对《植物大战僵尸 2奇妙时空之旅》进行了深度评测，并对上海宝开在中国的&ldquo;本土化&rdquo;行动进行了分析，<i style="word-wrap: break-word;">文章大意如下</i>：</font></div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		上海宝开的领军人物J<span style="word-wrap: break-word; line-height: 1.8em;">ames Gwertzman在GDC 2013现场的演讲中充满信心地对全世界阐述了他所认识的中国市场：一个创新的巨大沙盒，低品质产品遍布其中的现实反而创造出了罕见的机遇。当产品在西方市场得到认可之前，可以在中国提前投入一个&ldquo;最低限度可行&rdquo;（</span>minimum viable）<span style="word-wrap: break-word; line-height: 1.8em;">，并以此窥见市场反响。</span></div>
+	<div style="word-wrap: break-word;">
+		<span style="word-wrap: break-word; line-height: 1.8em;">&nbsp;</span></div>
+	<div style="word-wrap: break-word;">
+		从《植物大战僵尸长城版》的问世到《植物大战僵尸》中文版在iOS平台的变质，上海宝开一直在出色地刷新着&ldquo;最低限度可行&rdquo;的底限&mdash;&mdash;中国的玩家究竟能忍受到何种程度？一个音画品质不断随着&ldquo;减小体积&rdquo;的需求发生劣化的Android版本反而受到了更多&ldquo;低端用户&rdquo;的欢迎，而将付费版游戏内容通过未经提示的版本更新与免费版同步的iOS版本亦被视为成功的组成部分&mdash;&mdash;既然中国玩家能够忍受自己付费购买的《植物大战僵尸》中凭空多出三倍僵尸与大批破坏游戏体验的内购项目，那么他们还有什么不能忍受的呢？</div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		《植物大战僵尸2》曾于2013年7月上旬先行登陆澳大利亚及新西兰地区的App Store，该版本被用于&ldquo;测试游戏网络服务器的稳定性与玩家的消费习惯&rdquo;其目的是为在北美市场正式上架而铺路，与其在中国市场的表现毫无关联。<span style="word-wrap: break-word; line-height: 1.8em;">如果你因此对于《植物大战僵尸2》的游戏品质产生了信心或好感，并放下了基于免费模式打造可能对游戏造成不利影响的担忧&hellip;&hellip;在下载官方中文版之前，请放弃一切希望：从根本上讲，《植物大战僵尸2&mdash;&mdash;奇妙时空之旅》只能算是《植物大战僵尸长城版》的续作&mdash;&mdash;一为部分缺乏知情权和选择权的低端用户量身定制的敛财工具。</span></div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		<font color="#800000" style="word-wrap: break-word;"><b style="word-wrap: break-word;">苛刻的关卡以及道具设置</b></font></div>
+	<div style="word-wrap: break-word;">
+		<font color="#800000" style="word-wrap: break-word;"><b style="word-wrap: break-word;">&nbsp;</b></font></div>
+	<div style="word-wrap: break-word;">
+		《植物大战僵尸2》原版的三星关卡挑战机制利用各种苛刻的达成条件营造出了解谜游戏的氛围，玩家需要通过审时度势搭配植物、避免误操作，严格控制资源消耗、按指定式布局等方式完成挑战；与此同时，消耗金币（可通过内购获得，亦可通过游戏流程掉落积累）购买能量豆以临时强化植物，或利用新增的三种触控能力阻碍敌人的攻势有助于减轻挑战的难度。但<span style="word-wrap: break-word; line-height: 1.8em;">遗憾的是上海宝开在官方中文版中只原封不动地继承了原版&mdash;&mdash;&ldquo;出色的难度设计&rdquo;，对后者的处理则一如既往地简单粗暴：原版消耗1000金币即可购买（随购买数量价格递增）的能量豆在官方中文版中被限制为只能通过付费（钻石）购买，三种在原版中可消耗金币实现的触控能力在官方中文版中也成为了付费项目，地位等同于《长城版》中&ldquo;元宝&rdquo;的钻石一如既往地万能：除了能量豆与触控能力之外，还可以无限购买阳光资源。</span></div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		但这些只是该产品盈利的基础：游戏现有的难度不足以与《长城版》中的三倍僵尸媲美。针对这一问题，上海宝开&ldquo;勇敢&rdquo;地跃出了关卡设计的微观视角，对整个游戏的进程进行了大刀阔斧的改造&mdash;&mdash;官方中文版颠覆了绝大多数植物的解锁方式：部分植物需要通过积攒击杀雪人僵尸随机掉落的拼图（平均每个解锁需要5-10张拼图，而雪人随机出现，且每日最多击杀5次。换取雪人击杀机会需要消耗大量金币且拼图随机掉落）；部分植物需要通过支付天价金币（10-60万）解锁，且攒钱过程与击杀雪人消耗的成本冲突。</div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		<font color="#800000" style="word-wrap: break-word;"><b style="word-wrap: break-word;">上海宝开：虽然是糟糕透顶的设计，但只要能迂回赚钱就没有问题</b></font></div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		<span style="word-wrap: break-word; line-height: 1.8em;">继三倍僵尸之后，上海宝开又发明了新的增加难度方式：由于无法像原版那样&ldquo;正常&rdquo;地解锁各种植物，官方中文版玩家会在攻略挑战过程中频繁遭遇有必要依赖更多能量豆（数量大于关卡中掉落总数），甚至有必要多次利用触控能力的窘境，减少玩家的能量豆储备槽（原版3个，中文版2个）与初始植物栏位（原版6个，中文版5个）的做法也是基于相同的原则：打乱重要资源储备节奏与战术安排，增加玩家遭遇到手忙脚乱或手足无措状况的概率，以此引导玩家求助于付费项目。</span></div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		而作为精神与血统的双重继承者，《植物大战僵尸2&mdash;&mdash;奇妙时空之旅》与《植物大战僵尸长城版》的付费（内购）理念一脉相承：即便是付费，玩家也无法购买任何永久性增益效果&mdash;&mdash;永久性增益只意味着难度永久性降低，而这不利于消耗品的可持续贩卖&mdash;&mdash;与之相称的是：玩家在游戏中购买的一切都是非永久性消耗品，玩家投入游戏中的沉没成本（sunk cost）：《长城版》中的元宝，《奇妙时空之旅》中的钻石，在刻意的难度设置与货币的多用途背景下，这些特殊货币非常容易被消耗殆尽，由现金变为沉没成本的心态改变更易加剧消耗过程。</div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		在种种限制下，玩家如何才能克服这些不利因素，享受到游戏的乐趣？上海宝开给出的标准答案非常简单：请付费&mdash;&mdash;就好像免费地在一款免费游戏中体验到乐趣是不正当的行为。</div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		<b style="word-wrap: break-word;"><font color="#800000" style="word-wrap: break-word;">为什么中国玩家要付出更多的钱才能体验到更少的内容？</font></b></div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		为什么中国玩家要为体验更少的内容付出更多的钱？为什么只有中国的玩家不能通过从游戏中收集金币，只能以内购方式实现原版游戏中的诸多功能？<span style="word-wrap: break-word; line-height: 1.8em;">原版游戏中&ldquo;海盗港湾&rdquo;场景只需开启一扇门即可解锁的樱桃炸弹（Cherry Bomb），在官方中文版中被上海宝开限制为只能通过一次性充值68元解锁；而原版游戏中仅有的6种付费植物只需108元人民币即可全部解锁，而官方中文版中仅8种只能通过钻石（或希望渺茫的拼图）解锁的植物的总价就高达256元人民币&mdash;&mdash;原版游戏中全部一次性内购项目（含植物和永久增益效果）加起来才需要180元人民币，此外的一切皆可通过流程正常获取。</span></div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		到底是哪里出了差错，为什么上海宝开要把一部在免费之路上走得战战兢兢，生怕惹得国外玩家不满的《植物大战僵尸2》以如此的面貌呈现在中国玩家面前？一如既往地贪得无厌，一如既往不遗余力地为玩家营造险象环生的艰难局面，为什么这种行为会在中国市场，且只能在中国市场出现？</div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		《植物大战僵尸》曾经是一款休闲游戏领域的传奇作品，塔防类游戏中的里程碑，《植物大战僵尸长城版》则是倍增游戏难度，毁灭休闲精髓，面向低端用户的拙劣敛财工具；《植物大战僵尸2》原版是一款意图以最低限度的内容维持最高限度的游戏时间，力求同时为休闲玩家提供通关的可能性，为核心玩家提供挑战性，并指望双方多看内购商城一眼的诚意之作，而《植物大战僵尸2&mdash;&mdash;奇妙时空之旅》的官方中文版仍是倍增游戏难度，毁灭游戏体验，面向低端用户的拙劣敛财工具。</div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		海宝开所面向的市场，正是那片由他们所蔑视的大批侵权、仿冒、盗版、粗制滥造的产品所占据的市场，一个毫无道理可讲，人傻钱多&mdash;&mdash;人人都对此心知肚明只是碍于情面说不出口的低端市场，一个由低端产品制造，又不断制造低端产品的市场，但它同时也在以最低廉的成本，最无需动脑的方式创造着最廉价的成功神话。</div>
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		这并非山寨行为，但对于品牌造成的伤害却不亚于任何一部山寨产品：再低端的用户也是因受到《植物大战僵尸》品牌的吸引而加入其中的，但他们迟早会意识到这根本就不是自己所熟知或所期望得到的《植物大战僵尸》，系列首部作品营造的良好口碑迟早会被遗忘或被恶名所覆盖。上海宝开在以比玩家更高的效率消化《植物大战僵尸》这一品牌，他们已经成功地通过《长城版》毁灭了一款家喻户晓的休闲游戏的形象，接下来的《植物大战僵尸2》官方中文版也会毁掉大量玩家曾经期待的奇妙时空之旅：只需稍作对比，每个中国玩家都能意识到自己遭遇到了何种程度的区别对待，以及这区别对于自己所重视的游戏体验是多么的不利。</div>
+</div>
+<br />
+                                                                <!-- 向作者提问-->
+                                <a href="#postform" class="a_self pull-right btn btn-primary askAuthor"  target="_self"><i class="icon-question-sign icon-white"></i>向作者提问</a>
+                                                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="clearfix pages">
+                    <div class="pull-right pgs"></div>                </div>
+                                
+                <!-- 分享 -->
+                <div class="share-wrap" id="share_wrap">
+                    <div class="share-wrap-box">
+    <div class="manage-box1" id="newdigg">
+        <div class="like-box">
+            <i class="pos-btn" title="喜欢" onClick="javascript:postDigg('good',150)">0</i>
+        </div>
+        <div class="favorite-box">
+            <i class="pos-btn" title="收藏" onClick="window.open('/plus/stow.php?aid=150')"><script src="/plus/scs.php?aid=150" language="javascript"></script></i>
+        </div>
+        <div class="nolike-box">
+            <i class="pos-btn" title="没劲" onClick="javascript:postDigg('bad',150)">0</i>
+        </div>
+    </div>
+  <script language="javascript" type="text/javascript">getDigg(150);</script>    
+    <div class="share-box side-share-box">
+        <span class="pos-top">分享：</span>
+         <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_xiaoyou"></a>
+	<a class="jiathis_button_cqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_fav"></a>
+	<a class="jiathis_button_copy"></a>
+	<a class="jiathis_button_print"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1375020427508565" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+    </div>
+</div>                </div>
+
+            </div>
+            
+            <div class="position-wrap" id="position_wrap">
+                            </div>
+            <div class="related-list"><h3 class="t-h2"><em>您可能感兴趣的文章</em></h3><ul>
+                <li><a href="/focus/161.html" target="_blank">PC游戏转手游，实战案例分析</a></li>
+            
+
+            </ul><div id = "interest"></div></div>            <!-- 评论 -->
+            <a name='postform'></a>
+            <div class="pinglun" id="pinglun">
+                        <h3 class="t-h2" id="odby">
+            <a href="#odby" class="a-btn"><i class="icon-comment"></i><em class="pl-num"><script src="/plus/pls.php?aid=150" language="javascript"></script></em></a>
+            <ul class="inline tab-pinglun-box">
+                <li class="active">最新评论</li>
+            </ul>
+        </h3>
+            <!-- 评论框框架 -->
+           
+<div class="pl-kuang-box">
+            <!-- 头像 -->
+            <div class="pull-left pl-img" id="_ajax_feedback">                       
+                <a target="_blank" href="#"><img border="0" src="/member/templets/images/dfboy.png"></a>
+                
+游客    
+                            
+            </div>
+            <!-- 头像/ -->
+            <!-- 评论框 -->
+            <div class="pl-kuang">
+        <form action="#" method="post" name="feedback" onsubmit="return false;">
+          <input type="hidden" name="dopost" value="send" />
+          <input type="hidden" name="comtype" value="comments">
+          <input type="hidden" name="aid" value="150" />
+          <input type="hidden" name="fid" id='feedbackfid' value="0" />
+          <input type="hidden" name="feedbacktype" value="feedback" />          
+			<div class="textarea-box"><textarea class="textarea-txt" id="msg" name="msg"></textarea></div>
+          <!-- /dcmp-content -->
+          <div class="dcmp-post">
+            <!--未登陆-->
+            <div class="dcmp-userinfo" id="_ajax_feedback"> 
+              <input type="hidden" name="username" value="游客"/>
+              验证码:
+              <input type="text" name="validate" size="4" class="ipt-txt" style="text-transform:uppercase;"/>
+              <img src= "/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换图片" alt="点击我更换图片"  class="vdimg"/>
+              <input type="hidden" name="notuser" id="dcmp-submit-guest" />
+
+            </div>
+            
+            <script language="javascript" type="text/javascript">CheckLogin2();</script>
+            
+            <button class="pull-right subscribe-btn" type="button" onClick='PostComment()'>回复</button>
+          </div>
+        </form>
+            </div>
+       <!-- 评论框 -->
+        </div> 
+    <dd id='commetcontentNew'></dd>
+    <div class="pinglun-list" id="commetcontent">
+	</div>
+
+<!--
+//由于评论载入时使用异步传输，因此必须在最后一步加载（DIGG和评论框须放在评论内容前面）
+//如果一定需要提前的把myajax.SendGet改为myajax.SendGet2，但可能会引起页面阻滞
+-->
+<script language='javascript'>
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontent');
+		var waithtml = "<div style='line-height:50px'><img src='/images/loadinglit.gif' />评论加载中...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("/plus/feedback_ajax.php?dopost=getlist&aid=150&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		var f = document.feedback;
+		var msg = document.getElementById("msg").value;
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+		if(msg.length < 10)
+		{
+			alert("请至少输入10个字！");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("请填写验证码！");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(msg.length > 500)
+		{
+			alert("你的评论是不是太长了？请填写500字以内的评论。");
+			return;
+		}
+		if(f.feedbacktype) {
+			for(var i=0; i < f.feedbacktype.length; i++)
+				if(f.feedbacktype[i].checked) nfeedbacktype = f.feedbacktype[i].value;
+		}
+		/*
+		if(f.face) {
+			for(var j=0; j < f.face.length; j++)
+				if(f.face[j].checked) nface = f.face[j].value;
+		}
+		*/
+		if(f.notuser.checked) nnotuser = '1';
+		if(f.username) nusername = f.username.value;
+		if(f.pwd) npwd = f.pwd.value;
+		if(f.msg) msg = f.msg.value;
+		
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'gb2312';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '150');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', msg);
+		myajax.SendPost2('/plus/feedback_ajax.php');
+		//msg = '';
+		CKEDITOR.instances.msg.setData('');
+		//taget_obj.removeAttribute('id');
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+}
+function quoteCommet(fid)
+{
+	    document.feedback.fid.value = fid;
+}
+  
+function ajaxFeedback(aid, fid, type)
+{
+	
+	var taget_obj = $DE('ajaxfeedback_'+fid);
+	if(taget_obj.innerHTML == '')
+	{
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x');
+		myajax.SendGet2("/plus/feedback.php?aid="+aid+"&fid="+fid+"&action=quote&type=ajax");
+		eval('var result = typeof CKEDITOR.instances.msg_'+fid);
+		if(result != 'undefined')
+		{
+			// 删除实例
+			eval('var edit = CKEDITOR.instances.msg_'+fid);
+			CKEDITOR.remove(edit);
+		}
+		CKEDITOR.replace(document.getElementById('msg_'+fid) , CKEDITOR.instances.msg.config);
+		scroll(0, taget_obj.offsetTop - 120);
+		var formname = 'f = document.ajaxfeedback_'+fid;
+		eval(formname);
+		if(f.validate)
+		{
+			if($DE('vdimg_'+fid)) $DE('vdimg_'+fid).src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+		DedeXHTTP = null;
+	}
+}
+
+
+
+function ajaxQuotePost(fid)
+{
+	var formname = 'f = document.ajaxfeedback_'+fid;
+	eval(formname);
+	//var f = document.formname;
+	//var f = f[0];
+	var nvalidate = '';
+	var nnotuser = '';
+	var nusername = '';
+	var npwd = '';
+	var taget_obj = $DE('commetcontentNew');
+	var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+	eval('var msg = CKEDITOR.instances.msg_'+fid+'.getData()');
+
+	if(f.validate)
+	{
+		if(f.validate.value=='') {
+			alert("请填写验证码！");
+			return;
+		}
+		else {
+			nvalidate = f.validate.value;
+		}
+	}
+	var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+	
+	if(f.notuser.checked) nnotuser = '1';
+	if(f.username) nusername = f.username.value;
+	if(f.pwd) npwd = f.pwd.value;
+	
+	myajax.sendlang = 'gb2312';
+	myajax.AddKeyN('dopost', 'send');
+	myajax.AddKeyN('aid', '150');
+	myajax.AddKeyN('fid', f.fid.value);
+	myajax.AddKeyN('type', 'ajax');
+	myajax.AddKeyN('comtype', f.comtype.value);
+	myajax.AddKeyN('isconfirm','yes');
+	
+	myajax.AddKeyN('typeid', f.typeid.value);
+	myajax.AddKeyN('quotemsg', f.quotemsg.value);
+	myajax.AddKeyN('validate', nvalidate);
+	myajax.AddKeyN('notuser', nnotuser);
+	myajax.AddKeyN('username', nusername);
+	myajax.AddKeyN('pwd', npwd);
+	myajax.AddKeyN('msg', msg);
+	myajax.SendPost2('/plus/feedback_ajax.php');
+	//alert(f.quotemsg.value);
+	if($DE('ajaxfeedback_'+fid).innerHTML != null)
+	{
+		$DE('ajaxfeedback_'+fid).innerHTML = '';
+	}
+	scroll(0, taget_obj.offsetTop);
+}
+LoadCommets(1);
+</script>
+<!-- //评论内容区结束 -->
+
+        
+<a href="/plus/feedback.php?aid=150" class="pinglun-more-a" target="_blank">全部评论</a>            </div>
+            <!-- 评论/ -->
+        </div>
+    </div>
+    <div class="side-container-hx">            
+    <div class="clearfix author-card3">         
+<div class="pull-left author-card-img">
+            <p class="p-1"><a href="localhost/huiyan/member/index.php?uid=lhc" title="古天乐" target="_blank"><img border="0" src="/uploads/userup/6/myface.jpg" /></a></p>
+        </div>
+<div class="author-card-box">
+            <p class="card-name-p"><a class="card-name" href="localhost/huiyan/member/index.php?uid=lhc" target="_blank">古天乐</a></p>
+            <p class="yijuhua" title="一见尼姑，逢赌必输">一见尼姑，逢赌必输</p>
+            <p class="p-btn"><a href="/member/index.php?action=guestbook&uid=lhc" act="add_author" class="dy-btn">给我留言</a>
+                <a href="/member/pm.php?dopost=send&uid=lhc" target="_blank">发送消息</a>
+
+            </p>
+        </div>
+                   
+        <div class="clearfix author-article"><h3><b>Ta的文章(9)</b><a href="/member/index.php?uid=lhc&action=archives" target="_blank">更多</a></h3><ul>
+
+<li><a href="/plus/view.php?aid=150" title="从内购无底线的《植物大战僵尸2》看海外手游的“本土化改造“"  target="_blank">从内购无底线的《植物大战僵尸2》看海外手游的“本土化改造“</a></li><li><a href="/plus/view.php?aid=151" title="那些年，淘宝屏蔽过的宿敌与盟友"  target="_blank">那些年，淘宝屏蔽过的宿敌与盟友</a></li><li><a href="/plus/view.php?aid=152" title="隐藏在淘宝的灰色职业：骗保师"  target="_blank">隐藏在淘宝的灰色职业：骗保师</a></li>        
+        </ul></div>    
+        </div>
+
+    <div class="hot-view">
+        <h3 class="t-h2"><em>热门文章</em></h3>
+        <div class="view-list idx-view">
+        
+      <div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/169.html" target="_blank"><img src="/uploads/allimg/130809/1-130P9115633127-lp.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/169.html" target="_blank">齐齐封杀令背后：阿里与腾讯的“社交电商”博弈</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2016-03-02 13:30</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=169" target="_blank"><script src="/plus/pls.php?aid=169" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/165.html" target="_blank"><img src="/uploads/allimg/130809/5-130P91114330-L.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/165.html" target="_blank">腾讯O2O这些年：做好了入口做好支付，就是缺商户</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2016-03-02 13:32</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=165" target="_blank"><script src="/plus/pls.php?aid=165" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/148.html" target="_blank"><img src="/uploads/allimg/130809/8-130P91016270-L.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/148.html" target="_blank">苹果避税功力不输金融大鳄，亚马逊纳税老实本分？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=wxb" target="_blank">韦小宝</a></span>
+                        <p><time>2013-08-09 10:16</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=148" target="_blank"><script src="/plus/pls.php?aid=148" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/147.html" target="_blank"><img src="/uploads/allimg/130809/8-130P91015090-L.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/147.html" target="_blank">大型日企坠落全因做得太过头？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=wxb" target="_blank">韦小宝</a></span>
+                        <p><time>2013-08-09 10:15</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=147" target="_blank"><script src="/plus/pls.php?aid=147" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/139.html" target="_blank"><img src="/uploads/allimg/130809/1-130PZZ9180-L.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/139.html" target="_blank">80、90后技术宅：网络文化一代崛起，告密时代即将来临？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-09 09:10</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=139" target="_blank"><script src="/plus/pls.php?aid=139" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+
+              
+        </div>
+    </div>
+
+	    <div class="hot-author-face">
+        <h3 class="t-h2"><em>广告位1</em></h3>
+<a href='#'><img src='/dede58/img/ad2.jpg'></a>
+    </div>
+
+
+    <div class="hot-view">
+        <h3 class="t-h2"><em>推荐文章</em></h3>
+        <div class="view-list idx-view">
+      <div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/164.html" target="_blank"><img src="/uploads/allimg/130809/6-130P91055370-L.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/164.html" target="_blank">周鸿祎眼中互联网公司衰落的六大原因</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=lhc" target="_blank">令狐冲</a></span>
+                        <p><time>2016-03-02 13:32</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=164" target="_blank"><script src="/plus/pls.php?aid=164" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/168.html" target="_blank"><img src="/uploads/allimg/130809/5-130P91122040-L.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/168.html" target="_blank">腾讯开放两年都做了啥？看看腾讯的自我表扬贴</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2016-03-02 13:31</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=168" target="_blank"><script src="/plus/pls.php?aid=168" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/169.html" target="_blank"><img src="/uploads/allimg/130809/1-130P9115633127-lp.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/169.html" target="_blank">齐齐封杀令背后：阿里与腾讯的“社交电商”博弈</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2016-03-02 13:30</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=169" target="_blank"><script src="/plus/pls.php?aid=169" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/172.html" target="_blank"><img src="/uploads/allimg/c140820/140U0349A20-34209_lit.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/172.html" target="_blank">传媒政策变革红利已至，视频网站社群化将是大势所趋</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank"></a></span>
+                        <p><time>2016-03-02 13:29</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=172" target="_blank"><script src="/plus/pls.php?aid=172" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/173.html" target="_blank"><img src="/uploads/allimg/c140820/140U034b5P-49C2_lit.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/173.html" target="_blank">目前大多数IP运作都停留在收割变现的初级阶段，而非真正的“运作</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank"></a></span>
+                        <p><time>2016-03-02 13:24</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=173" target="_blank"><script src="/plus/pls.php?aid=173" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+
+              
+        
+          </div>
+    </div>
+    <div class="hot-author-face">
+        <h3 class="t-h2"><em>热门作者</em></h3>
+        <ul class="clearfix author-face-list">
+
+<li><p class="author-img"><a href="/member/index.php?uid=newsche" target="_blank" title="www.moke8.com"><img src="/uploads/userup/1/myface.png"/></a></p><p class="name"><a href="/member/index.php?uid=newsche" target="_blank">www.moke8.com</a></p><li><p class="author-img"><a href="/member/index.php?uid=jay" target="_blank" title="悠悠草"><img src="/uploads/userup/5/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=jay" target="_blank">悠悠草</a></p><li><p class="author-img"><a href="/member/index.php?uid=884358" target="_blank" title="884358"><img src="/uploads/userup/2/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=884358" target="_blank">884358</a></p><li><p class="author-img"><a href="/member/index.php?uid=lhc" target="_blank" title="古天乐"><img src="/uploads/userup/6/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=lhc" target="_blank">古天乐</a></p><li><p class="author-img"><a href="/member/index.php?uid=jtrhb" target="_blank" title="jtrhb"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=jtrhb" target="_blank">jtrhb</a></p><li><p class="author-img"><a href="/member/index.php?uid=wxb" target="_blank" title="康师傅"><img src="/uploads/userup/8/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=wxb" target="_blank">康师傅</a></p><li><p class="author-img"><a href="/member/index.php?uid=lurenjia" target="_blank" title="路人甲"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=lurenjia" target="_blank">路人甲</a></p><li><p class="author-img"><a href="/member/index.php?uid=jason19905" target="_blank" title="测试账号"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=jason19905" target="_blank">测试账号</a></p>
+        </ul>
+    </div>
+
+		    <div class="hot-author-face">
+        <h3 class="t-h2"><em>广告位2</em></h3>
+<a href='#'><img src='/dede58/img/ad2.jpg'></a>
+    </div>
+    </div>
+ </div>
+<footer class="footer">
+    <div class="about-links">
+                    
+    </div>
+            <div class="footer-copy">
+        Copyright &copy; 2002-2014 织梦系统 版权所有 <a href=http://www.moke8.com target='_blank'>Power by moke8</a> ( <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备11000986号</a>)
+    </div>
+    <!-- 返回顶部 -->
+    <div class="go-top">
+        <i class="pos-btn" onclick="window.scrollTo('0', '0')">^</i>
+    </div>
+    <!-- /返回顶部 -->
+
+</footer>
+</div>
+</div>
+</div>
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+
+    <script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript" src="/images/js/j.js" ></script>
+
+
+<div id="lgnModal" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">登录</h3>
+        </div>
+        <div class="float-box">
+            <div class="float-login-box">
+                <div class="login-info">帐号登录：</div>
+                <form id="float_form_lgn" name="userlogin" action="/member/index_do.php" method="POST" class="form-horizontal">
+        <input type="hidden" name="fmdo" value="login" />
+        <input type="hidden" name="dopost" value="login" />
+        <input type="hidden" name="keeptime" value="604800" />                
+                
+                    <div class="control-group control-name">
+                        <label class="control-label" for="inputName">用户名：</label>
+                        <div class="controls">
+                            <input type="text" id="userid" name="userid" tabindex="1">
+                            <span class="help-inline"><a href="/member/index_do.php?fmdo=user&dopost=regnew" target="_blank">还未注册?</a></span>
+                        </div>
+                    </div>
+                    <div class="control-group control-pwd">
+                        <label class="control-label" for="inputPassword">密　码：</label>
+                        <div class="controls">
+                            <input type="password" id="pwd" name="pwd" tabindex="2">
+                            <span class="help-inline"><a href="/member/resetpassword.php" target="_blank">忘记密码?</a></span>
+                        </div>
+                    </div>                  
+                    <div class="control-group control-pwd" style="margin-top:15px;">
+                        <label class="control-label" for="inputName">验证码：</label>
+                        <div class="controls">
+                            <input type="text" id="vdcode" name="vdcode" tabindex="3" size="4" style="text-transform:uppercase;" maxlength="4">
+                            <span class="help-inline"><img id="vdimgck" align="absmiddle" onclick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="../include/vdimgck.php"/></span>
+                        </div>
+                    </div>                    
+                    <div class="control-group" style="margin-top:15px; margin-left:10px;">
+                        <div class="controls">
+                            <button type="submit" class="btn lgn-btn" tabindex="4" onclick="this.form.submit();">登录</button>
+                            <a href="/member/index_do.php?fmdo=user&dopost=regnew" class="lgn-reg-btn">注册</a>
+                            
+                      </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

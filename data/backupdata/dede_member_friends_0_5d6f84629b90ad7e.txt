@@ -1,0 +1,1 @@
+INSERT INTO `dede_member_friends` VALUES('1','1','admin','admin','2','1375670469','0','1','');

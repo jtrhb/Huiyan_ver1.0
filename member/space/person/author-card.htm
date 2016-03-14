@@ -1,0 +1,15 @@
+<div class="clearfix author-card">
+    <div class="pull-left author-card-img">
+        <p>{dede:if $_vars['face']=='' } <img src="space/person/common/images/noavatar.gif" alt="<?php echo $row['uname']; ?>还没设置头像" /> {else} <img src="{dede:var.face/}" alt="{dede:var.uname/}的头像" /> {/dede:if}</p>
+    </div>
+    <div class="author-card-box">
+        <p class="card-name"><span class="name">{dede:var.uname /} </span>
+            <a href="index.php?uid={dede:var.userid/}&action=archives" class="article-num">文章<em>({dede:php}$mid = $_vars['mid'];$row = $dsql->GetOne("select count(id) from dede_archives where mid='$mid'");echo $row['count(id)'];{/dede:php})</em></a>
+            <a href="#" >空间被访问({dede:var.homecount/})</em></a></p>
+        <p class="yijuhua">{dede:php}$mid = $_vars['mid'];$row = $dsql->GetOne("select sign from dede_member_space where mid='$mid'");echo $row['sign'];{/dede:php}</p>        <div class="div-btn">
+                        <a href="index.php?action=guestbook&uid={dede:var.userid/}" class="dy-btn">给我留言</a>
+<a href="pm.php?dopost=send&uid={dede:var.userid/}" class="dy-btn"><span>发送消息</span></a>
+         </div>
+    </div>
+    <i class="i-jiao"></i>
+</div>

@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="gb2312">
+        <title>{dede:global.cfg_webname/}</title>
+        <meta name="description" content="{dede:global.cfg_description/}" />
+        <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+        <meta name="author" content="dede58.com" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <!-- Le styles -->
+        <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/dede58/css/hx-2013.css" rel="stylesheet">
+        <link href="/dede58/css/fancyNav.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">
+        <![endif]-->
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmspath/}/images/js/j.js" ></script>
+<script language="javascript" type="text/javascript" src="dede58/js/classie.js" ></script>
+<script language="javascript" type="text/javascript" src="dede58/js/clipboard.min.js" ></script>
+<script language="javascript" type="text/javascript" src="dede58/js/jquery.min.js" ></script>
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/pic_scroll.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+	$(function(){
+		$("a[_for]").mouseover(function(){
+			$(this).parents().children("a[_for]").removeClass("thisclass").parents().children("dd").hide();
+			$(this).addClass("thisclass").blur();
+			$("#"+$(this).attr("_for")).show();
+		});
+		$("a[_for=uc_member]").mouseover();
+		$("a[_for=flink_1]").mouseover();
+	});
+
+	function CheckLogin(){
+	  var taget_obj = document.getElementById('_userlogin');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("{dede:global.cfg_cmspath/}/member/ajax_loginsta.php");
+	  DedeXHTTP = null;
+	}
+-->
+</script>
+        <script>
+		window.onload = function(){
+			h1 = document.getElementById('top').offsetHeight;
+			h2 = document.getElementById('nav').offsetHeight + h1;
+		}
+        </script>
+    </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+        <div id="top">
+        </div>
+        <div class="container-hx">
+		{dede:include filename="head.htm"/}
+           <div class="row-fluid-wrap-hx">
+                <div class="center-container-hx">
+                    <div class="clearfix row-fluid-hx"><div class="center-ctr-wrap">
+    <div class="center-ctr-box">
+        <div class="biaoqian idx-biaoqian"><font color="#000000">热门TAG：</font>{dede:tag row='10' getall='1' sort='month'}
+            <a href='[field:link/]'>[field:tag /]</a>
+          {/dede:tag}</div>
+
+         {dede:arclist flag='h' limit='0,1' infolen='230'}
+        <div class="toutiao idx-toutiao">
+            <h2><a href="[field:arcurl/]" target="_blank" >[field:fulltitle/]</a></h2>
+            <p>[field:description/]</p>
+            <div class="box-img"><a href="[field:arcurl/]" target="_blank"><img src="[field:litpic/]"></a></div>
+            <div class="box-other">
+                <span class="source-quote">[field:writer/]</span>
+                <time>[field:pubdate function="GetDateTimeMK(@me)"/]</time>
+                <span class="comment-box"><i class="icon-comment"></i><a href="[field:arcurl/]#postform" target="_blank"><script src="/plus/pls.php?aid=[field:id/]" language="javascript"></script></a></span>
+                <span class="tags-box">[field:id function=GetTags(@me)/]</span>
+            </div>
+        </div>
+        {/dede:arclist}
+
+                <div class="article-list idx-list">
+
+    {dede:arclist row=15 titlelen=64 noflag='h'}
+
+            <div class="clearfix article-box ">
+                <a href="[field:arcurl/]" class="a-img" target="_blank"><img src="[field:litpic/]" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="[field:arcurl/]" target="_blank">[field:fulltitle/]</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">[field:writer/]</span>
+                        <time>[field:pubdate function="GetDateTimeMK(@me)"/]</time></div><div class="article-summary">[field:description/]</div><p class="tags-box">[field:id function=GetTags(@me)/]<i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="[field:arcurl/]#odby" target="_blank"><script src="/plus/pls.php?aid=[field:id/]" language="javascript"></script></a></span></div></div></div>
+    {/dede:arclist}
+        <div class="idx-more"><a class="a-more-idx" href="/focus/" target="_blank">更多</a></div>
+        </div>
+    </div>
+</div>
+<div class="side-container-hx">
+    <div id="chartOverview">
+<!--{dede:myad name='index_top'/}--!>
+    </div>
+
+   <hr class="line">
+    <div class="hot-view">
+        <h3 class="t-h2"><em>本月热点</em></h3>
+        <div class="view-list idx-view">
+
+      {dede:arclist sort='hot' subday='30' titlelen=42 row=6}
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="[field:arcurl/]" target="_blank"><img src="[field:litpic/]"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="[field:arcurl/]" target="_blank">[field:fulltitle/]</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">[field:writer/]</span>
+                        <p><time>[field:pubdate function="GetDateTimeMK(@me)"/]</time><span class="comment-box"><i class="icon-comment"></i><a href="[field:arcurl/]#odby" target="_blank"><script src="/plus/pls.php?aid=[field:id/]" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+      {/dede:arclist}
+            </div>
+    </div>
+
+    <div class="wonderful-comment">
+        <h3 class="t-h2"><em>精彩评论</em></h3>
+        <div class="cmt-list idx-comment">
+
+ {dede:php}
+$dsql->SetQuery("SELECT f.aid,f.username,f.arctitle,f.msg,f.good,m.userid,m.face,s.sign FROM dede_feedback f,dede_member m,dede_member_space s where f.username = m.uname and f.mid = s.mid ORDER BY f.good DESC LIMIT 5");
+$dsql->Execute();
+$i=0;
+while($arr = $dsql->getArray()){
+$arcurl = GetOneArchive($arr['aid']);
+$face = $arr['face'];
+if(empty($face)) $face='/member/templets/images/dfboy.png';
+
+echo '<div class="clearfix cmt-box">';
+echo '<h5><a href="'.$arcurl['arcurl'].'" >原文：'.$arr['arctitle'].'</a></h5>';
+echo '<div class="pull-left cmt-img"><a href="/member/index.php?uid='.$arr['userid'].'" class="a-img" target="_blank"><img src="'.$face.'"/></a>
+                  </div>';
+echo '<div class="pull-right cmt-box-ctt">';
+echo '<h4><a href="/member/index.php?uid='.$arr['userid'].'" target="_blank">'.$arr['username'].'</a></h4>';
+echo '<div class="yijuhua">'.$arr['sign'].'</div></div>';
+echo '<div class="cmt-nr"><a href="/plus/feedback.php?aid='.$arcurl['aid'].'">'.$arr['msg'].'</a><i class="icon-arrow-up"></i>
+                </div>
+            </div>';
+}
+{/dede:php}
+
+        </div>
+    </div>
+
+    <div class="hot-author-face">
+        <h3 class="t-h2"><em>热门作者</em></h3>
+        <ul class="clearfix author-face-list">
+
+{dede:php}
+$dsql->SetQuery("SELECT * FROM `#@__member` ORDER BY scores DESC LIMIT 12");
+$dsql->Execute();
+$i=0;
+while($arr = $dsql->getArray()){
+$face = $arr['face'];
+if(empty($face)) $face='/member/templets/images/dfboy.png';
+echo '<li><p class="author-img"><a href="/member/index.php?uid='.$arr['userid'].'" target="_blank" title="'.$arr['uname'].'"><img src="'.$face.'"/></a></p>';
+echo '<p class="name"><a href="/member/index.php?uid='.$arr['userid'].'" target="_blank">'.$arr['uname'].'</a></p>';
+}
+{/dede:php}
+ </ul>
+    </div>
+
+
+    <div class="hot-view">
+        <h3 class="t-h2"><em>编辑推荐</em></h3>
+        <div class="view-list idx-view">
+      {dede:arclist flag='c' titlelen=42 row='5'}
+
+      <div class="clearfix view-box">
+      <div class="view-box-ctt2"><h4>@[field:writer/] <a href="[field:arcurl/]">[field:description/]</a></h4>
+      <div class="box-other">
+      <p><time>[field:pubdate function="MyDate('Y-m-d H:i',@me)"/]</time></p>
+      </div></div></div>
+      {/dede:arclist}
+
+
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+{dede:include filename="footer_index.htm"/}
+</div>
+</div>
+</div>
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+
+    {dede:include filename="login.htm"/}
+ <script language="javascript" type="text/javascript" src="dede58/js/fancyNavFocusShift.js" ></script>
+ <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+ <script type="text/javascript">
+ new TradingView.MiniWidget({
+        "container_id": "chartOverview",
+        "tabs": [
+            "Forex",
+            "Commodities",
+            "Equities"
+        ],
+        "symbols": {
+            "Equities": [
+                [
+                    "S&P500",
+                    "SPX500"
+                ],
+                [
+                    "NQ100",
+                    "NAS100"
+                ],
+                [
+                    "Dow30",
+                    "DOWI"
+                ],
+                [
+                    "Nikkei225",
+                    "JPN225"
+                ],
+                [
+                    "Apple",
+                    "AAPL "
+                ],
+                [
+                    "Google",
+                    "GOOG"
+                ]
+            ],
+            "Commodities": [
+                [
+                    "Emini",
+                    "ES1!"
+                ],
+                [
+                    "Euro",
+                    "E61!"
+                ],
+                [
+                    "Gold",
+                    "GC1!"
+                ],
+                [
+                    "Oil",
+                    "CL1!"
+                ],
+                [
+                    "Gas",
+                    "NG1!"
+                ],
+                [
+                    "Corn",
+                    "ZC1!"
+                ]
+            ],
+            "Forex": [
+                "FX:EURUSD",
+                "FX:GBPUSD",
+                "FX:USDJPY",
+                "FX:USDCHF",
+                "FX:AUDUSD",
+                "FX:USDCAD"
+            ]
+        },
+        "gridLineColor": "#E9E9EA",
+        "fontColor": "#83888D",
+        "underLineColor": "#dbeffb",
+        "trendLineColor": "#4bafe9",
+        "activeTickerBackgroundColor": "#EDF0F3",
+        "large_chart_url": "https://www.tradingview.com/chart/",
+        "noGraph": false,
+        "width": "300px",
+        "height": "400px",
+        "locale": "zh"
+    });
+ </script>
+<script type="text/javascript">
+$(function(){
+	var ss = $(document).scrollTop();
+	$(window).scroll(function(){
+		var s = $(document).scrollTop();
+                var nav = document.getElementById('nav');
+                var nav1 = $('.top');
+
+		if(s< h1){
+			$('.top').removeClass('yya');
+		}if(s > h1){
+			$('.top').addClass('yya');
+		}if(s > h2){
+			$('.top').addClass('gizle');
+			if(s > ss){
+				$('.top').removeClass('sabit');
+			}else{
+				$('.top').addClass('sabit');
+			}
+			ss = s;
+		}
+
+	});
+
+});
+</script>
+</body>
+</html>
+
+<!--<div id="chartView">
+<!-- TradingView Widget BEGIN -->
+<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
+    new TradingView.widget({
+        "autosize": true,
+        "symbol": "FX:EURUSD",
+        "interval": "1",
+        "timezone": "Asia/Shanghai",
+        "theme": "White",
+        "style": "1",
+        "locale": "zh",
+        "toolbar_bg": "rgba(241, 243, 246, 1)",
+        "hide_top_toolbar": true,
+        "allow_symbol_change": true,
+        "save_image": false,
+        "hideideas": true
+    });
+</script>
+<!-- TradingView Widget END -->
+</div>-->

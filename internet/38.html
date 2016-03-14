@@ -1,0 +1,802 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="gb2312">
+        <title>揭秘：你所不了解的苏宁_魔客吧仿虎嗅网</title>
+        <meta name="keywords" content="揭秘,你所,不了解,苏宁,科技,很多人,看好,今天,苏宁,易" />
+        <meta name="description" content="如今不看好苏宁的声音不少于当初的京东，而京东已用实际业绩证明了他当初走的路可行，苏宁可能还需要一段时间。" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <!-- Le styles -->
+        <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/dede58/css/hx-2013.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">
+        <![endif]-->
+        <style>
+		.jiathis_style{
+			margin-top:8px;	
+		}
+		</style>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function CheckLogin(){
+  var taget_obj = document.getElementById('_userlogin');
+  myajax = new DedeAjax(taget_obj,false,false,'','','');
+  myajax.SendGet2("/member/ajax_loginsta.php");
+  DedeXHTTP = null;
+}
+function CheckLogin2(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+	
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>      
+    </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+        <div class="container-hx">
+		            <div class="top">
+    <div class="top-box">
+        <h1 class="logo"><a href="/" target="_blank"><img src="/dede58/img/top_logo.png"></a></h1>
+        <div class="login-box" id="_userlogin">
+            <div class="btn-group">
+                <a href="/member/article_add.php" class="contribute" title="投稿">投稿</a>
+            </div>
+
+            <div class="btn-group">
+                <a href="#lgnModal" data-toggle="modal">登录</a>
+                <a href="/member/index_do.php?fmdo=user&dopost=regnew">注册</a>
+            </div>
+
+            
+            <div class="btn-group">
+                <a href="/rss.php" title="RSS"><i class="icon-rss"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+     <script language="javascript" type="text/javascript">CheckLogin();</script> 
+<div class="side-menu-hx">
+    <div class="side-menu-top">
+        <ul class="side-menu-list">   
+        
+      	<li><a href='/'>首页</a></li>
+        
+      	
+      	<li><a href='/focus/'>看点</a></li>
+      	<li class='active'><a href='/internet/'>互联网</a></li>
+      	<li><a href='/invest/'>创投界</a></li>
+      	
+      	<li><a href='/ec/'>电商圈</a></li>
+      	
+      	<li><a href='/mobile/'>移动库</a></li>
+      	
+      	<li><a href='/photo/'>图说</a></li>
+      	
+            </ul>
+    </div>
+    <div class="search">
+        <form  name="formsearch" action="/plus/search.php" class="form-search">
+        <input type="hidden" name="kwtype" value="0" />
+        
+            <input type="text" name='q' id='s' class="input-text" placeholder="搜索" value="" />
+            <button class="search-btn"><i class="icon-search"></i></button>
+        </form>
+    </div>
+</div>          
+		<div class="row-fluid-wrap-hx">
+                <div class="center-container-hx">
+                    <div class="clearfix row-fluid-hx"><!--<script src="/dede58/js/swplay.js" ></script>-->
+    <div class="center-ctr-wrap">
+        <div class="center-ctr-box">
+                        <div class="clearfix neirong">
+                <h1>揭秘：你所不了解的苏宁</h1>
+                <div class="subtitle-h1">如今不看好苏宁的声音不少于当初的京东，而京东已用实际业绩证明了他当初走的路可行，苏宁可能还需要一段时间。
+</div>
+                <div class="neirong-other">
+                    <span class="recommenders">www.moke8.com</span>
+                    <time>2013-08-06 00:00</time>
+                    <span style="margin-right:10px;"><i class="icon-click"></i><em class="pl-num"><script src="/plus/count.php?view=yes&aid=38&mid=1" type='text/javascript' language="javascript"></script></em></span><a href="#odby" class="pinglun-num"><i class="icon-comment"></i><em class="pl-num"><script src="/plus/pls.php?aid=38" language="javascript"></script></em></a>
+                    <span class="tags">
+                                          </span>
+                </div>
+
+                <div class="neirong-box" id="neirong_box">
+                    <table>
+                        <tr>
+                            <td>
+                                
+        
+
+<p>【最科技讯】很多人不看好今天的苏宁易购，就跟之前很多人不看好京东一样。几年前的京东还没有如今的风光无限，当时还是传统零售业的天下，<a href="http://www.zuitech.com/27913.html" target="_blank">外界对京东模式的批判声</a>不绝于耳，京东也在这一波又一波的骂声中成长起来，如今不看好苏宁的声音不少于当初的京东，而京东已用实际业绩证明了他当初走的路可行，苏宁可能还需要一段时间。</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><a href="http://www.zuitech.com//30926.html"><img class="aligncenter" title="揭秘：你所不了解的苏宁" alt="揭秘：你所不了解的苏宁" src="http://zuikeji.b0.upaiyun.com/chenbo/1371624695870.jpg_a1" width="400" height="300" /></a></p>
+<p>&nbsp;</p>
+<div>
+<p>今日的苏宁正处在当初京东所面对的舆论质疑环境中，当有人认为你做的是错的，无论接下来你做了什么，他都会认为你是错的，因为他需要证明他是对的。同时以批判和包容的心态去看待问题，可以得出不同的结论。目前舆论对苏宁的评论已经够多了，笔者就不凑这个热闹了，笔者还是来说说我所了解的苏宁吧。此文为干货爆料，认为是软文者可关掉走开。</p>
+<p>&nbsp;</p>
+<p><strong>苏宁力推双线同价的背后</strong></p>
+<p>很多人觉得苏宁推出的双线同价策略可能等不到年底就会夭折，认为苏宁股价波动将会迫使苏宁放弃执行双线同价的策略推进，其实这是屁股决定脑袋的言论。苏宁推出双线同价策略并不是一时兴起而为之，是否推双线同价已经在苏宁内部经过6个月反复论证了，最终张近东力主推行双线同价策略。</p>
+<p>&nbsp;</p>
+<p>很多人考虑苏宁推双线同价之后，线下毛利将会下降，之后认定苏宁双线同价不久就会被太监，这是想当然的说法。苏宁推出双线同价的困难可不仅仅是线下毛利问题，与供应商之间的关系处理，线上线下后台系统的整合，快速变动的价格体系等等，其实毛利问题是最不是问题的问题，以此认为苏宁双线同价不会持续的，可以歇歇了。</p>
+<p>&nbsp;</p>
+<p>为什么苏宁会推双线同价，因为电商发展多年一直给消费者灌输线上要比线下便宜的消费认识，而且目前此种消费认识已经深入人心，致使催生了比价族。苏宁要做的就是扭转这种消费观，线下不仅不比线上贵，还要比线上服务好，以此来挽回消费者的流失。这么做可能会损失一定利润，但会留住客户，损失利润最多是少赚点，但流失客户意味着商品卖不出去，少赚点与卖不出去哪个危害更大？苏宁根本无路可退，双线同价必须推行，今天痛苦是为了能看到明天的太阳，今天要是嗨了，估计也就只能嗨这最后一次了。</p>
+<p>&nbsp;</p>
+<p>苏宁早在去年8月就放出了3C产品双线同价的消息，但之后并没有做大肆推行，因为之前的时机还不成熟，在今年初苏宁组织架构大调整之后，苏宁双线同价战略才具备推进的土壤。过去苏宁实际上是线上线下两个渠道是两个公司、两个组织、两个品牌和两个运营的体系，而在今年初苏宁组织架构调整之后，把它们变成一个公司、两个窗口、两个平台，共享后台的存货、物流、信息和服务等后台资源，是按一个公司、两个窗口、两个平台的方式进行打造。</p>
+<p>&nbsp;</p>
+<p>这其中出现的双线融合问题就在价格体系上，苏宁只有解决了线上线下的价格体系才能完成战略调整，实现双线融合。所以双线同价并不是苏宁一时的头脑发胀而做的决定，接下来不到万不得已也不会放弃这一战略，双线同价失败也就意味着苏宁转型第一步失败了。</p>
+<p>&nbsp;</p>
+<p><strong>苏宁正在研制不同于京东与天猫的开放平台</strong></p>
+<p>早在去年7月苏宁开放平台就已上线，之后有关苏宁开放平台的消息陆陆续续，不过很少有消息深入报道过苏宁开放平台情况究竟如何？多数人只知道苏宁易购有开放平台，但还没弄清苏宁易购开放平台究竟是怎样的，到底是苏宁易购开放平台，还是苏宁开放平台，对苏宁易购开放平台了解的只有少数入驻的企业。</p>
+<p>&nbsp;</p>
+<p>苏宁易购开放平台确实于去年7月正式上线，不过那时的开放平台只能算是半开放，入驻的企业大部分是与苏宁有着不错合作关系的大牌企业。开放平台不是一天就能建成的，苏宁在这方面的积累还不足，当时苏宁易购上线开放平台的目的一是积累开放平台的运营经验，二是各大电商都已推出开放平台，苏宁要抢占先机。</p>
+<p>&nbsp;</p>
+<p>苏宁易购开放平台的发展随着苏宁易购的发展需要不断做出调整。上线初时，苏宁易购开放平台的功能并不完善，但到了2012年年底苏宁易购开放平台的基本功能已全部落实，当时已具备全面开放的基础条件。但正式开放之前，还需要一段测试期，苏宁易购选择了多家具备入驻资格的企业进行开放平台测试，据说有百余家企业参与了苏宁易购开放平台的测试。后来由于今年初苏宁集团的组织架构调整，苏宁易购开放平台又出现了变动。</p>
+<p>&nbsp;</p>
+<p>苏宁经过年初的组织架构大调整，苏宁易购开放平台升级为苏宁开放平台，平台建设由电子商务经营总部牵头，商品经营总部负责招商，连锁平台经营总部参与开放平台的线下运营部分，近期密谋已久的苏宁开放平台将会浮出水面。</p>
+<p>&nbsp;</p>
+<p>据笔者了解，在苏宁易购上线开放平台的同时就不停的进行市场调研，而且有众多此前想要入驻苏宁易购开放平台的大卖家曾对苏宁易购表示，因为目前市场上已存在天猫和京东两大开放平台，他们首选的是天猫，其次是京东，很多时候很难同时顾及到两大平台，尤其在一些大型活动上他们更是难做，他们也不想错过苏宁易购这艘大船，但不希望苏宁易购开放平台与其他两大平台没有区别，毕竟两大平台都搞不定，再入驻一个新平台则少不了做出取舍。</p>
+<p>&nbsp;</p>
+<p>以目前的市场情况来看，天猫与京东有着大流量的支撑，做开放平台是水到渠成的事，可以提升流量变现能力，而苏宁易购并不具备流量优势，所以与天猫京东类似的开放平台对卖家的吸引力不大，对自身的发展也可能会出现争夺流量的抑制作用，所以苏宁正在规划一种新型的开放平台模式。</p>
+<p>&nbsp;</p>
+<p>前不久得到消息，苏宁开放平台将会对入驻商家开通线下渠道，既在苏宁易购开店的同时，还可以根据自身需要选择在苏宁全国各地区的门店进行铺货，帮助入驻商家一举完成线上线下双渠道布局。同品类的入驻形式会有差异，不过可以确定的是苏宁将会把线下可利用资源纳入开放平台作为卖点吸引企业入驻，具体的开放平台形式还得等苏宁对外公布。</p>
+<p>&nbsp;</p>
+<p><strong>苏宁线上线下融合已初步完成</strong></p>
+<p>很多人关注苏宁易购线上线下融合是否能成功，笔者了解的情况是目前苏宁线上线下融合已初步完成。这也主要得益于苏宁今年的组织架构大调整，为线上线下融合铺平了路，双线同价的推行就是一个证明。</p>
+<p>&nbsp;</p>
+<p>不过还是有很多“热心”人士担心苏宁的线上线下左右手互博，还有很多人想当然的认为苏宁内部传统与电商两部分存在矛盾，这些担心不能说是多余的，之前一段时间苏宁确实存在过这样一段时期。当时线上与线下还是两个公司，双方对于资源争夺的很厉害，在营销推广上，双方也是分开各自进行，而商品供应上一直由线下掌握主动权，所以苏宁易购的发展初期确实受到过一些内部竞争的掣肘，不过内部并没有出现过矛盾，也不像外界想象的宫心计，只是双方在资源争夺上的较量有些激烈。由于线上与线下团队都是苏宁自己培养起来的内部骨干，虽然在暗中较劲，但并没有出现过矛盾激化，那时苏宁集团整体上支持电商扩张，但也从没放弃过线下连锁发展。</p>
+<p>&nbsp;</p>
+<p>而在经过年初的组织架构大调整之后，苏宁解决了线上线下之间的矛盾，从上半年苏宁对外投放的广告可以明显看到同时出现了线上线下的LOGO，这是外界可以看到苏宁线上线上融合的最直观体现。究竟苏宁如何解决线上线下之间的矛盾冲突呢？</p>
+<p>&nbsp;</p>
+<p>首先苏宁自身并不存在太大的内部矛盾，又在张近东力推主导下苏宁对组织架构进行了重组，之后完成整合了两大渠道的供应链系统，统一的供货系统最大的好处在于线上线下可以统一结算，这是苏宁线上线下融合中的关键一点。由此苏宁易购在全国各地每个地区销售额将会算成对应大区的苏宁连锁平台业绩，这样就不存在所谓的线上线下左右互搏了。即每个苏宁门店的业绩包含“线上和线下”两部分，无论是从线上走货还是从线下走货，销售额都会归属为门店业绩，这样苏宁线上线上被牢牢的绑在了一起。</p>
+<p>&nbsp;</p>
+<p>前几天有苏宁高管在微博上称，“实体门店库存+线上订单地址识别+门店即时配送三公里覆盖范围，这种即时达预期最快送达时间可以达到2小时以内！”苏宁不久将会推出这项服务，其实这个服务必须以线上与线下融合为基础才可以实施，所以可以肯定苏宁线上线下融合已初步完成，接下来就要看如何提升销量了。</p>
+<p>&nbsp;</p>
+<p><strong>关于苏宁盒子的那点事</strong></p>
+<p>可能有些人注意到，前几天在阿里宣布推出阿里盒子和智能电视操作系统后不久，就传出苏宁与乐视合作进军智能电视和机顶盒市场。其实，苏宁已经与乐视前前后后接触过很多次了，去年12月底，苏宁上线视频购物的时候就曾计划联合乐视及其他视频网站共同打造视频购物，不过之后没有收到进一步消息，可能苏宁正在进行研发吧。</p>
+<p>&nbsp;</p>
+<p>有意思的是京东早前一个月与乐视合作推出了视频购物的概念，据说当时苏宁负责视频购物团队非常恼火，之后又对视频购物计划做了调整，好像与盒子团队共同做一些研发。</p>
+<p>&nbsp;</p>
+<p>在苏宁做视频购物项目的同时正直小米盒子被热炒，苏宁发现机会成立了盒子团队开始研发盒子产品，苏宁有很强的硬件制造能力，生产盒子销售不是难事，难就难在内容和与电子商务结合上，所以后来盒子团队与视频购物团队共同对视频购物以及如何向智能电视终端渗透做进一步调研与研发，不过笔者不清楚二者是否有合并成一个团队。</p>
+<p>&nbsp;</p>
+<p>从目前得到的消息来看，苏宁对未来视频购物的发展很有信心，因为买电视机，无论是线上下单还是线下购买，都需要提前到线下体验一下，而初次体验是占领消费者心智的最好时机，首因效应将会对消费者接下来的购买决策起到非常重要的作用。通俗些讲，当消费者在苏宁门店体验了智能电视中的苏宁视频购物方式后，他可能产生习惯，如果此时再让他重新适应另一种视频购物方式，本能上就会产生抵触心理，这就是体验的重要性。</p>
+<p>&nbsp;</p>
+<p>举个例子，当你第一次喝可乐的时候喝是可口可乐，但第二次喝可乐的时候却出现了百事可选，你可能会觉得百事是模仿者，因为第一次喝了可口可乐，心理上倾向继续选择可口可乐。</p>
+<p>&nbsp;</p>
+<p>不过信心不能当饭吃，接下来智能电视的视频购物竞争将会逐渐白热化。阿里选择做智能电视系统来切入视频购物，苏宁可能会选择与合作伙伴共同研发视频购物系统，与视频内容提供方，互联网电视牌照方，智能电视制造方共同合作来开采智能电视的市场价值。不过，这只是笔者根据现有消息做的推测，并没收到确切的消息，关于苏宁视频购物的最新战略可能还要的一段时间才会浮出水面。</p>
+<p>&nbsp;</p>
+<p><strong>苏宁正在积改变改企业文化</strong></p>
+<p>苏宁的企业文化一直被外界诟病，由于苏宁是一家有着23年历史的传统零售企业，互联网突然让他成为了电商，开始与互联网企业为伍，而互联网企业开放、自由、活力的工作方式与苏宁延续了近20年的事业型经理人的工作方式有很大出入，所以外界总拿苏宁的企业文化当笑谈。</p>
+<p>&nbsp;</p>
+<p>近期，笔者得到消息，苏宁已经开始征集各方面意见，重新调整公司企业文化，苏宁易购已经不再要求员工必须西装革履，逐渐放宽公司制度，适应互联网化发展。不过苏宁有16万人不可能一下就全部互联网化，率先适应互联网化的将会是苏宁易购的5000人，苏宁集团已对苏宁易购方面的日常工作要求给予了更宽泛的活动空间。</p>
+<p>&nbsp;</p>
+<p>不过企业文化不是一天形成的，也不是重新制定一些公司规章制度就可以改变的，企业文化是公司中人与人之间的交往，苏宁要想对企业文化作出改变可能还有很多问题需要在实际工作环境中逐渐解决了。</p>
+<p>&nbsp;</p>
+<p><strong>小结</strong></p>
+<p>关于苏宁的一些人，一些事，笔者还有很多故事，这里就不一一说明了，可以说真正了解苏宁的人并不多，电商界人士大多只了解苏宁易购部分，对整个苏宁却是一知半解。以笔者对苏宁的了解，外界有些对苏宁的批判还是一针见血的，当然也有许多捕风捉影无事生非的，也出现了一些人云亦云却不知所云的人。不过阿里、京东哪家不是这样走过来的，互联网企业都是这玩法，反正有则改之无则加勉吧。关于苏宁做电商很多人都发表过个人看法，看好的也有，看空的也有，接下来笔者说说我是怎么看苏宁做电商的问题。</p>
+<p>&nbsp;</p>
+<p><strong>我怎么看苏宁做电商</strong></p>
+<p>很多人喜欢拿京东与苏宁对比，最后得出的结论是<a href="http://www.zuitech.com/30309.html" target="_blank">京东必胜</a>，苏宁将成为零售业变革的牺牲品，其中论据点也头头是道，貌似结论很合理。其实只要稍微用用脑子，就能发现分析的问题出在哪里。首先京东与苏宁确实是竞争关系，但有竞争关系的又不仅仅是他们两家而已。</p>
+<p>&nbsp;</p>
+<p>根据中怡康的监测数据显示，2012年家电行业销售规模为11285亿元，苏宁财报显示其2012年实现营业总收入983亿元，这其中线上苏宁易购实现销售收入152.16亿元，除去苏宁非家电销售额与安装维修费用营收，整个苏宁家电交易额按照950亿计算（此数据根据苏宁财报的细分品类营收业绩粗算得出，并非主观臆断，下文同样。），占比总额为8.4%，；中怡康2011年数据显示，全年中国家电市场销售规模达12030亿元，苏宁财报显示其2011年的营业总收入为938.89亿元，其中苏宁易购59亿，除去非家电交易额与安装维修费用营收，整个苏宁家电交易额以910亿计算，苏宁占比总额7.6%。这么算来，与京东的竞争，让苏宁在家电领域的市场份额进一步扩大，逆势上涨。</p>
+<p>&nbsp;</p>
+<p>那些说京东抢了苏宁饭碗的人，害不害臊呢？京东与苏宁竞争根本不算鱼死网破你死我活，而是阎王打架小鬼遭殃。以苏宁和京东的体量，双方都有足够的实力承担价格战所带来的利润压力，都可通过规模获得利润。那些对京东歌功颂德而对苏宁口诛笔伐的人，视野有些局限在淘宝、京东、苏宁这些电商竞争者身上了，视野扩大些可能会有不同的见解。</p>
+<p>&nbsp;</p>
+<p>我为什么看好苏宁，第一，苏宁的业绩仍然可观。第二，市场不仅只有京东与苏宁，双方之间的激烈拼杀，最终遭殃的却是那些围观企业。第三，苏宁和京东是一条绳子上的蚂蚱，京东业绩的好坏直接关乎苏宁易购的发展。京东与苏宁之间的你死我活只是舆论之争，京东不会死，苏宁也不会倒下。</p>
+<p>&nbsp;</p>
+<p>我看好苏宁是因为我看好京东，看好电商这个行业，苏宁积极求变参与到电商竞争中，比众多传统零售企业做的好很多，反而苏宁得到不少骂声与质疑声，这当然与苏宁易购的系统、物流、售后等配套服务跟不上有关，对于这些问题苏宁易购做的确实不足。淘宝用10年，京东用9年陆续的来完善这些问题，而苏宁易购从上线之初就迎来电商发展的爆发期，所以系统、物流、售后问题频出，这些问题需要一段时间解决，这是苏宁易购的硬伤，苏宁也无法回避，不过从长远来看，这些问题迟早会解决。</p>
+<p>&nbsp;</p>
+<p>第四，苏宁在电商领域的积极尝试值得肯定的，尤其苏宁是颇具代表性的传统零售业转型电商案例，苏宁成功与否关乎接下来传统零售业的转型方式。未来零售模式线上线下必然会共存，这是无可争议的事实，但如何共存就有很多不同的说法了，经过市场竞争的大洗礼之后适者生存。苏宁具备线上线下双渠道，虽然现在还看不出效果，但在零售模式变革过程中，双线渠道迟早会成为苏宁最大的优势。目前，苏宁正处在模式转型、业务转型、文化转型阵痛期，苏宁还有许多问题需要解决。</p>
+<p>&nbsp;</p>
+<p>第五，电商市场足够大，容得下一个阿里，容得下一个京东，还容得下一个苏宁，还容下很多其他电商，目前零售业处在变革的十字路口，谁是最后的胜者还不好说。不过，从宏观市场上看，苏宁肯定不会是最先倒下那批。</p>
+<p>&nbsp;</p>
+<p>当然，笔者看好苏宁是从宏观角度分析，要深究微观因素笔者也对苏宁有很大意见，不过这些基本上都已被批判者们说尽了，我就只说说我的宏观见解了。很多投资机构一般都看短期利益的，媒体舆论的导向型对这些投资机构有很大影响，短期内不看好苏宁属于正常情况。目前苏宁市值与京东估值差不多，不过苏宁的交易规模与营收能力都要强于京东，苏宁目前的股价偏低，根据苏宁目前的成绩和舆论导向来看，苏宁的股价还会持续一段时间，直到京东上市，京东上市后的表现将直接影响到苏宁股价的波动，而未来京东与苏宁两大零售企业将会被舆论市场与资本市场紧密的结合在一起讨论。</p>
+<p>&nbsp;</p>
+<p><strong>结语</strong></p>
+<p>这一篇终于写完了，哥说了太多的苏宁内幕，不知道会不会被追杀，把这当软文的可以不看滚粗绕行，哥这篇写的可都是关于苏宁的干货，是一顿顿饭换来的消息，放到市场上怎么也值2000吧？有谁都知道这些内容么？看完这篇文章是不是对苏宁有了新的认识？是正面认识还是负面认识，我就不管了。</p>
+<p>&nbsp;</p>
+<p>另外，顺便报个料再做个广告，这两天京东POP平台发布会很火，过几天苏宁也将举行开放平台发布会，具体时间笔者还没得到消息，不过应该不会晚于815吧，也可能在9月份。笔者目前在处在创业阶段做O2O项目，年底打算再做苏宁开放平台代运营业务，欢迎提前联系业务，价格从优。<a href="http://www.zuitech.com"><img style="display: inline; margin-left: 5px;" alt="" src="http://zuikeji.b0.upaiyun.com/lijuan/250.jpg" /></a></p>
+<p>&nbsp;</p>
+</div>
+                                                                <!-- 向作者提问-->
+                                <a href="#postform" class="a_self pull-right btn btn-primary askAuthor"  target="_self"><i class="icon-question-sign icon-white"></i>向作者提问</a>
+                                                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="clearfix pages">
+                    <div class="pull-right pgs"></div>                </div>
+                                
+                <!-- 分享 -->
+                <div class="share-wrap" id="share_wrap">
+                    <div class="share-wrap-box">
+    <div class="manage-box1" id="newdigg">
+        <div class="like-box">
+            <i class="pos-btn" title="喜欢" onClick="javascript:postDigg('good',38)">0</i>
+        </div>
+        <div class="favorite-box">
+            <i class="pos-btn" title="收藏" onClick="window.open('/plus/stow.php?aid=38')"><script src="/plus/scs.php?aid=38" language="javascript"></script></i>
+        </div>
+        <div class="nolike-box">
+            <i class="pos-btn" title="没劲" onClick="javascript:postDigg('bad',38)">0</i>
+        </div>
+    </div>
+  <script language="javascript" type="text/javascript">getDigg(38);</script>    
+    <div class="share-box side-share-box">
+        <span class="pos-top">分享：</span>
+         <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_xiaoyou"></a>
+	<a class="jiathis_button_cqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_fav"></a>
+	<a class="jiathis_button_copy"></a>
+	<a class="jiathis_button_print"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1375020427508565" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+    </div>
+</div>                </div>
+
+            </div>
+            
+            <div class="position-wrap" id="position_wrap">
+                            </div>
+            <div class="related-list"><h3 class="t-h2"><em>您可能感兴趣的文章</em></h3><ul>
+                            
+
+            </ul><div id = "interest"></div></div>            <!-- 评论 -->
+            <a name='postform'></a>
+            <div class="pinglun" id="pinglun">
+                        <h3 class="t-h2" id="odby">
+            <a href="#odby" class="a-btn"><i class="icon-comment"></i><em class="pl-num"><script src="/plus/pls.php?aid=38" language="javascript"></script></em></a>
+            <ul class="inline tab-pinglun-box">
+                <li class="active">最新评论</li>
+            </ul>
+        </h3>
+            <!-- 评论框框架 -->
+           
+<div class="pl-kuang-box">
+            <!-- 头像 -->
+            <div class="pull-left pl-img" id="_ajax_feedback">                       
+                <a target="_blank" href="#"><img border="0" src="/member/templets/images/dfboy.png"></a>
+                
+游客    
+                            
+            </div>
+            <!-- 头像/ -->
+            <!-- 评论框 -->
+            <div class="pl-kuang">
+        <form action="#" method="post" name="feedback" onsubmit="return false;">
+          <input type="hidden" name="dopost" value="send" />
+          <input type="hidden" name="comtype" value="comments">
+          <input type="hidden" name="aid" value="38" />
+          <input type="hidden" name="fid" id='feedbackfid' value="0" />
+          <input type="hidden" name="feedbacktype" value="feedback" />          
+			<div class="textarea-box"><textarea class="textarea-txt" id="msg" name="msg"></textarea></div>
+          <!-- /dcmp-content -->
+          <div class="dcmp-post">
+            <!--未登陆-->
+            <div class="dcmp-userinfo" id="_ajax_feedback"> 
+              <input type="hidden" name="username" value="游客"/>
+              验证码:
+              <input type="text" name="validate" size="4" class="ipt-txt" style="text-transform:uppercase;"/>
+              <img src= "/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换图片" alt="点击我更换图片"  class="vdimg"/>
+              <input type="hidden" name="notuser" id="dcmp-submit-guest" />
+
+            </div>
+            
+            <script language="javascript" type="text/javascript">CheckLogin2();</script>
+            
+            <button class="pull-right subscribe-btn" type="button" onClick='PostComment()'>回复</button>
+          </div>
+        </form>
+            </div>
+       <!-- 评论框 -->
+        </div> 
+    <dd id='commetcontentNew'></dd>
+    <div class="pinglun-list" id="commetcontent">
+	</div>
+
+<!--
+//由于评论载入时使用异步传输，因此必须在最后一步加载（DIGG和评论框须放在评论内容前面）
+//如果一定需要提前的把myajax.SendGet改为myajax.SendGet2，但可能会引起页面阻滞
+-->
+<script language='javascript'>
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontent');
+		var waithtml = "<div style='line-height:50px'><img src='/images/loadinglit.gif' />评论加载中...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("/plus/feedback_ajax.php?dopost=getlist&aid=38&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		var f = document.feedback;
+		var msg = document.getElementById("msg").value;
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+		if(msg.length < 10)
+		{
+			alert("请至少输入10个字！");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("请填写验证码！");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(msg.length > 500)
+		{
+			alert("你的评论是不是太长了？请填写500字以内的评论。");
+			return;
+		}
+		if(f.feedbacktype) {
+			for(var i=0; i < f.feedbacktype.length; i++)
+				if(f.feedbacktype[i].checked) nfeedbacktype = f.feedbacktype[i].value;
+		}
+		/*
+		if(f.face) {
+			for(var j=0; j < f.face.length; j++)
+				if(f.face[j].checked) nface = f.face[j].value;
+		}
+		*/
+		if(f.notuser.checked) nnotuser = '1';
+		if(f.username) nusername = f.username.value;
+		if(f.pwd) npwd = f.pwd.value;
+		if(f.msg) msg = f.msg.value;
+		
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'gb2312';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '38');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', msg);
+		myajax.SendPost2('/plus/feedback_ajax.php');
+		//msg = '';
+		CKEDITOR.instances.msg.setData('');
+		//taget_obj.removeAttribute('id');
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+}
+function quoteCommet(fid)
+{
+	    document.feedback.fid.value = fid;
+}
+  
+function ajaxFeedback(aid, fid, type)
+{
+	
+	var taget_obj = $DE('ajaxfeedback_'+fid);
+	if(taget_obj.innerHTML == '')
+	{
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x');
+		myajax.SendGet2("/plus/feedback.php?aid="+aid+"&fid="+fid+"&action=quote&type=ajax");
+		eval('var result = typeof CKEDITOR.instances.msg_'+fid);
+		if(result != 'undefined')
+		{
+			// 删除实例
+			eval('var edit = CKEDITOR.instances.msg_'+fid);
+			CKEDITOR.remove(edit);
+		}
+		CKEDITOR.replace(document.getElementById('msg_'+fid) , CKEDITOR.instances.msg.config);
+		scroll(0, taget_obj.offsetTop - 120);
+		var formname = 'f = document.ajaxfeedback_'+fid;
+		eval(formname);
+		if(f.validate)
+		{
+			if($DE('vdimg_'+fid)) $DE('vdimg_'+fid).src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+		DedeXHTTP = null;
+	}
+}
+
+
+
+function ajaxQuotePost(fid)
+{
+	var formname = 'f = document.ajaxfeedback_'+fid;
+	eval(formname);
+	//var f = document.formname;
+	//var f = f[0];
+	var nvalidate = '';
+	var nnotuser = '';
+	var nusername = '';
+	var npwd = '';
+	var taget_obj = $DE('commetcontentNew');
+	var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+	eval('var msg = CKEDITOR.instances.msg_'+fid+'.getData()');
+
+	if(f.validate)
+	{
+		if(f.validate.value=='') {
+			alert("请填写验证码！");
+			return;
+		}
+		else {
+			nvalidate = f.validate.value;
+		}
+	}
+	var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+	
+	if(f.notuser.checked) nnotuser = '1';
+	if(f.username) nusername = f.username.value;
+	if(f.pwd) npwd = f.pwd.value;
+	
+	myajax.sendlang = 'gb2312';
+	myajax.AddKeyN('dopost', 'send');
+	myajax.AddKeyN('aid', '38');
+	myajax.AddKeyN('fid', f.fid.value);
+	myajax.AddKeyN('type', 'ajax');
+	myajax.AddKeyN('comtype', f.comtype.value);
+	myajax.AddKeyN('isconfirm','yes');
+	
+	myajax.AddKeyN('typeid', f.typeid.value);
+	myajax.AddKeyN('quotemsg', f.quotemsg.value);
+	myajax.AddKeyN('validate', nvalidate);
+	myajax.AddKeyN('notuser', nnotuser);
+	myajax.AddKeyN('username', nusername);
+	myajax.AddKeyN('pwd', npwd);
+	myajax.AddKeyN('msg', msg);
+	myajax.SendPost2('/plus/feedback_ajax.php');
+	//alert(f.quotemsg.value);
+	if($DE('ajaxfeedback_'+fid).innerHTML != null)
+	{
+		$DE('ajaxfeedback_'+fid).innerHTML = '';
+	}
+	scroll(0, taget_obj.offsetTop);
+}
+LoadCommets(1);
+</script>
+<!-- //评论内容区结束 -->
+
+        
+<a href="/plus/feedback.php?aid=38" class="pinglun-more-a" target="_blank">全部评论</a>            </div>
+            <!-- 评论/ -->
+        </div>
+    </div>
+    <div class="side-container-hx">            
+    <div class="clearfix author-card3">         
+<div class="pull-left author-card-img">
+            <p class="p-1"><a href="localhost/huiyan/member/index.php?uid=newsche" title="www.moke8.com" target="_blank"><img border="0" src="/uploads/userup/1/myface.png" /></a></p>
+        </div>
+<div class="author-card-box">
+            <p class="card-name-p"><a class="card-name" href="localhost/huiyan/member/index.php?uid=newsche" target="_blank">www.moke8.com</a></p>
+            <p class="yijuhua" title="稻草 - 专业的织梦模板下载站">稻草 - 专业的织梦模板下载站</p>
+            <p class="p-btn"><a href="/member/index.php?action=guestbook&uid=newsche" act="add_author" class="dy-btn">给我留言</a>
+                <a href="/member/pm.php?dopost=send&uid=newsche" target="_blank">发送消息</a>
+
+            </p>
+        </div>
+                   
+        <div class="clearfix author-article"><h3><b>Ta的文章(143)</b><a href="/member/index.php?uid=newsche&action=archives" target="_blank">更多</a></h3><ul>
+
+<li><a href="/plus/view.php?aid=140" title="杜琪峰电影不够大卖，是犯了电影工业的什么忌？"  target="_blank">杜琪峰电影不够大卖，是犯了电影工业的什么忌？</a></li><li><a href="/plus/view.php?aid=141" title="库克又访华来了！来回顾下他三次访华都给苹果做什么"  target="_blank">库克又访华来了！来回顾下他三次访华都给苹果做什么</a></li><li><a href="/plus/view.php?aid=142" title="拼儿子才是王道：“江南Style”让Psy老爸的股票翻了八倍"  target="_blank">拼儿子才是王道：“江南Style”让Psy老爸的股票翻了八倍</a></li>        
+        </ul></div>    
+        </div>
+
+    <div class="hot-view">
+        <h3 class="t-h2"><em>热门文章</em></h3>
+        <div class="view-list idx-view">
+        
+      <div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/internet/28.html" target="_blank"><img src="/uploads/allimg/130806/20.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/internet/28.html" target="_blank">面对2500万的估值，你淡定一个给我看看？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-06 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=28" target="_blank"><script src="/plus/pls.php?aid=28" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/internet/14.html" target="_blank"><img src="/uploads/allimg/130806/5.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/internet/14.html" target="_blank">淘宝：与其微信 不如微淘</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-06 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=14" target="_blank"><script src="/plus/pls.php?aid=14" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/internet/36.html" target="_blank"><img src="/uploads/allimg/130806/27.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/internet/36.html" target="_blank">Moto X正式发布 创新能否扭转颓势</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-06 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=36" target="_blank"><script src="/plus/pls.php?aid=36" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/internet/17.html" target="_blank"><img src="/uploads/allimg/130806/6.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/internet/17.html" target="_blank">红米手机能为小米带来什么？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-06 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=17" target="_blank"><script src="/plus/pls.php?aid=17" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/internet/38.html" target="_blank"><img src="/uploads/allimg/130806/24.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/internet/38.html" target="_blank">揭秘：你所不了解的苏宁</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-06 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=38" target="_blank"><script src="/plus/pls.php?aid=38" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+
+              
+        </div>
+    </div>
+
+	    <div class="hot-author-face">
+        <h3 class="t-h2"><em>广告位1</em></h3>
+<a href='#'><img src='/dede58/img/ad2.jpg'></a>
+    </div>
+
+
+    <div class="hot-view">
+        <h3 class="t-h2"><em>推荐文章</em></h3>
+        <div class="view-list idx-view">
+      <div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/internet/37.html" target="_blank"><img src="/uploads/141226/1-1412261531123a.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/internet/37.html" target="_blank">魔客吧-建站资源共享学习平台</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">织梦58</a></span>
+                        <p><time>2014-12-26 15:32</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=37" target="_blank"><script src="/plus/pls.php?aid=37" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/internet/10.html" target="_blank"><img src="/uploads/allimg/130806/3.png"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/internet/10.html" target="_blank">Wifi之争，无线之浪潮</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-06 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=10" target="_blank"><script src="/plus/pls.php?aid=10" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/internet/14.html" target="_blank"><img src="/uploads/allimg/130806/5.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/internet/14.html" target="_blank">淘宝：与其微信 不如微淘</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-06 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=14" target="_blank"><script src="/plus/pls.php?aid=14" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/internet/38.html" target="_blank"><img src="/uploads/allimg/130806/24.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/internet/38.html" target="_blank">揭秘：你所不了解的苏宁</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-06 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=38" target="_blank"><script src="/plus/pls.php?aid=38" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+
+              
+        
+          </div>
+    </div>
+    <div class="hot-author-face">
+        <h3 class="t-h2"><em>热门作者</em></h3>
+        <ul class="clearfix author-face-list">
+
+<li><p class="author-img"><a href="/member/index.php?uid=newsche" target="_blank" title="www.moke8.com"><img src="/uploads/userup/1/myface.png"/></a></p><p class="name"><a href="/member/index.php?uid=newsche" target="_blank">www.moke8.com</a></p><li><p class="author-img"><a href="/member/index.php?uid=jay" target="_blank" title="悠悠草"><img src="/uploads/userup/5/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=jay" target="_blank">悠悠草</a></p><li><p class="author-img"><a href="/member/index.php?uid=884358" target="_blank" title="884358"><img src="/uploads/userup/2/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=884358" target="_blank">884358</a></p><li><p class="author-img"><a href="/member/index.php?uid=lhc" target="_blank" title="古天乐"><img src="/uploads/userup/6/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=lhc" target="_blank">古天乐</a></p><li><p class="author-img"><a href="/member/index.php?uid=wxb" target="_blank" title="康师傅"><img src="/uploads/userup/8/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=wxb" target="_blank">康师傅</a></p><li><p class="author-img"><a href="/member/index.php?uid=lurenjia" target="_blank" title="路人甲"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=lurenjia" target="_blank">路人甲</a></p><li><p class="author-img"><a href="/member/index.php?uid=jason19905" target="_blank" title="测试账号"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=jason19905" target="_blank">测试账号</a></p>
+        </ul>
+    </div>
+
+		    <div class="hot-author-face">
+        <h3 class="t-h2"><em>广告位2</em></h3>
+<a href='#'><img src='/dede58/img/ad2.jpg'></a>
+    </div>
+    </div>
+ </div>
+<footer class="footer">
+    <div class="about-links">
+                    
+    </div>
+            <div class="footer-copy">
+        Copyright &copy; 2002-2014 织梦系统 版权所有 <a href=http://www.moke8.com target='_blank'>Power by moke8</a> ( <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备11000986号</a>)
+    </div>
+    <!-- 返回顶部 -->
+    <div class="go-top">
+        <i class="pos-btn" onclick="window.scrollTo('0', '0')">^</i>
+    </div>
+    <!-- /返回顶部 -->
+
+</footer>
+</div>
+</div>
+</div>
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+
+    <script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript" src="/images/js/j.js" ></script>
+
+
+<div id="lgnModal" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">登录</h3>
+        </div>
+        <div class="float-box">
+            <div class="float-login-box">
+                <div class="login-info">帐号登录：</div>
+                <form id="float_form_lgn" name="userlogin" action="/member/index_do.php" method="POST" class="form-horizontal">
+        <input type="hidden" name="fmdo" value="login" />
+        <input type="hidden" name="dopost" value="login" />
+        <input type="hidden" name="keeptime" value="604800" />                
+                
+                    <div class="control-group control-name">
+                        <label class="control-label" for="inputName">用户名：</label>
+                        <div class="controls">
+                            <input type="text" id="userid" name="userid" tabindex="1">
+                            <span class="help-inline"><a href="/member/index_do.php?fmdo=user&dopost=regnew" target="_blank">还未注册?</a></span>
+                        </div>
+                    </div>
+                    <div class="control-group control-pwd">
+                        <label class="control-label" for="inputPassword">密　码：</label>
+                        <div class="controls">
+                            <input type="password" id="pwd" name="pwd" tabindex="2">
+                            <span class="help-inline"><a href="/member/resetpassword.php" target="_blank">忘记密码?</a></span>
+                        </div>
+                    </div>                  
+                    <div class="control-group control-pwd" style="margin-top:15px;">
+                        <label class="control-label" for="inputName">验证码：</label>
+                        <div class="controls">
+                            <input type="text" id="vdcode" name="vdcode" tabindex="3" size="4" style="text-transform:uppercase;" maxlength="4">
+                            <span class="help-inline"><img id="vdimgck" align="absmiddle" onclick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="../include/vdimgck.php"/></span>
+                        </div>
+                    </div>                    
+                    <div class="control-group" style="margin-top:15px; margin-left:10px;">
+                        <div class="controls">
+                            <button type="submit" class="btn lgn-btn" tabindex="4" onclick="this.form.submit();">登录</button>
+                            <a href="/member/index_do.php?fmdo=user&dopost=regnew" class="lgn-reg-btn">注册</a>
+                            
+                      </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

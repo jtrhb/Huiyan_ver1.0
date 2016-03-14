@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="gb2312">
+        <title>评论列表 - {dede:var.spacename /}</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="{dede:var.uname /}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <!-- Le styles -->
+        <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/dede58/css/hx-2013.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">
+        <![endif]-->
+    </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+        <div class="container-hx">
+        <?php include(DEDEMEMBER."/templets/login_box.htm"); ?>     
+                <script src="/plus/mytag_js.php?aid=1" language="javascript"></script>
+            <div class="row-fluid-wrap-hx">
+                <div class="center-container-hx">
+                    <div class="clearfix row-fluid-hx"><div class="center-ctr-wrap">
+    <div class="center-ctr-box">
+        {dede:include file='author-card.htm'/}
+        <div class="personal-homepage">
+            {dede:include file='author-menu.htm'/}
+            <div class="personal-homepage-list">
+            
+                    
+			{dede:datalist}
+
+            <div class="personal-homepage-box  ">
+                                <h5><a href="<?php $arcurl = GetOneArchive($fields['id']);echo $arcurl['arcurl']; ?>">评论文章"{dede:field.arctitle/}"</a></h5><div class="box-other"><time><?php
+$today = Floor(time()/(3600 * 24));
+$senday= Floor($fields['dtime']/(3600 * 24));
+$updays = $today-$senday; if($updays==0) $fields['dtime'] = "今日"; elseif($updays>0 && $updays<=3 ) $fields['dtime'] = $updays."天前"; else $fields['dtime'] = MyDate('Y-m-d H:i',$fields['dtime']);
+echo $fields['dtime'];
+?></time></div><div class="article-summary"><a href="<?php $arcurl = GetOneArchive($fields['id']);echo $arcurl['arcurl'];?>#odby">{dede:field.msg/}</a></div></div>                    
+        {/dede:datalist}
+                    
+                
+              </div>            
+              <div class="clearfix pages">
+                <div class="pull-right pgs">{dede:pagelist/}</div>            </div>
+        </div>
+    </div>
+</div>
+{dede:include file='right.htm'/}
+</div>
+<script src="/plus/mytag_js.php?aid=3" language="javascript"></script></div>
+</div>
+</div>
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+
+
+
+</body>
+</html>

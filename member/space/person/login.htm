@@ -1,0 +1,37 @@
+<div class="login-box">
+		<div class="lgn-user">
+<?php
+//未登录显示的head
+if(!$cfg_ml->IsLogin()) {
+?>
+        <a href="/member/login.php">登录</a><em class="login-box-ico"></em><a href="/member/index_do.php?fmdo=user&dopost=regnew">注册</a>
+<?php
+}
+//登录后显示的head
+else {
+?>
+
+            <a class="lgn-user-face" href="index.php?uid=<?php echo $cfg_ml->M_LoginID?>"><img src="<?php if(empty($cfg_ml->fields['face'])) echo 'templets/images/dfboy.png'; else echo $cfg_ml->fields['face'];?>" alt="<?php echo $cfg_ml->M_UserName?>的头像" /></a>
+            <div class="btn-group">
+                <button class="btn" data-toggle="dropdown"><?php echo $cfg_ml->M_UserName?></button>
+                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="../" class="on">网站主页</a></li>
+                    <li><a href="index.php?uid=<?php echo $cfg_ml->M_LoginID?>">我的空间</a></li>
+                    <li><a href="index.php">会员中心</a></li>
+                    <li><a href="index.php?uid=<?php echo $cfg_ml->M_LoginID?>&action=archives">我的文章</a></li>
+                    <li><a href="index.php?uid=<?php echo $cfg_ml->M_LoginID?>&action=infos">我的资料</a></li>
+                    <li><a href="mystow.php">我的收藏</a></li>
+                    <li><a href="pm.php">消息中心</a></li>
+                                        <li><a href="article_add.php">投稿</a></li>
+                    <li><a href="index_do.php?fmdo=login&dopost=exit" class="logout-btn" >注销登录</a> </li>
+                </ul>
+            </div>
+
+<?php
+}
+?>
+		</div>
+    </div>

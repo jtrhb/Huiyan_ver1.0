@@ -1,0 +1,43 @@
+
+<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]><html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--> <html class="no-js"> <!--
+<![endif]-->
+    <head>    
+    <meta charset="gb2312">   
+    <meta http-equiv="refresh" content="10;url=/index.php"> 
+    <title><?php echo $cfg_webname; ?>- 注册成功</title>  
+    <!-- Le styles -->
+    <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">    <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">    
+    <link href="/dede58/css/hx-2013.css" rel="stylesheet">        
+    <!--[if lt IE 9]>    
+    <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">    
+    <![endif]-->
+<script type="text/javascript">
+var time = 10;
+function returnUrlByTime() {
+   window.setTimeout('returnUrlByTime()', 1000);
+   time = time - 1;
+   document.getElementById("loadtime").innerHTML = time;
+}
+</script>    
+    </head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+<style type="text/css" media="screen">
+    body {}
+    .container-hx {width:1000px;padding-top:0;}
+    .row-fluid-wrap-hx {float:none;overflow:hidden;height: 100%;_zoom: 1;background:url(/dede58/img/login_bg.jpg) no-repeat;}
+    .float-login-box {padding:0;}
+    .float-box {position:static;float:right;box-shadow:0 2px 3px #ccc;margin:50px 30px 80px 0;border:3px solid #d1d1d1;width:388px;background:rgba(255, 255, 255, 0.8);*background:#fff;display:inline;}
+    .float-box .form-horizontal {padding:0;}
+    .float-box .login-info {margin: 0 0 5px;}
+    .float-login-box {padding:0;}
+</style>
+<div class="container-hx">
+        <?php include(DEDEMEMBER."/templets/login_box.htm"); ?>     
+		<script src="/plus/mytag_js.php?aid=1" language="javascript"></script>
+
+	<div class="bor"><div class="<?php echo ($cfg_mb_reginfo == 'Y')? '' : 's';?>tip3"></div>
+  <p class="success" style="margin-top: 25px;">注册成功!<?php echo $uname=empty($uname)? '' : '您的用户名：<font color="#ff6600">'.$uname.'</font>,';?>您已成为本站的正式会员!<br /><?php if($cfg_mb_spacesta=="-10") echo '<font color="#ff6600">由于系统开启了邮件审核机制，因此你的帐号需要审核后才能发信息!</font><br />';?>
+  <font color="#ff6600"><span id="loadtime" style=" font-weight:bold">10</span></font>秒钟后自动转到网站首页！<br />
+<a href="<?php echo $cfg_cmspath; ?>/">返回网站首页</a></p></div>
+    <script src="/plus/mytag_js.php?aid=3" language="javascript"></script></div>
+</body></html>

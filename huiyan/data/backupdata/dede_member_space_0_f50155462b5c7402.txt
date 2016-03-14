@@ -1,0 +1,7 @@
+INSERT INTO `dede_member_space` VALUES('1','10','0','稻草的空间','','person','稻草 - 专业的织梦模板下载站','');
+INSERT INTO `dede_member_space` VALUES('2','10','0','884358的空间','','person','站酷源码 - 专业的织梦模板下载站','');
+INSERT INTO `dede_member_space` VALUES('4','10','0','测试账号的空间','','person','','');
+INSERT INTO `dede_member_space` VALUES('5','10','0','哎哟哥哥的空间','','person','哎哟，不错哦~','');
+INSERT INTO `dede_member_space` VALUES('6','10','0','令狐冲的空间','','person','一见尼姑，逢赌必输','');
+INSERT INTO `dede_member_space` VALUES('8','10','0','韦小宝的空间','','person','我对皇上的景仰之心，有如滔滔江水绵绵不绝，又有如黄河泛滥，一发不可收拾','');
+INSERT INTO `dede_member_space` VALUES('9','10','0','路人甲的空间','','person','','');

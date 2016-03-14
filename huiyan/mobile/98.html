@@ -1,0 +1,770 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="gb2312">
+        <title>为什么手Q做不过微信_魔客吧仿虎嗅网</title>
+        <meta name="keywords" content="为什么,不过,微信,科技,为什么,不过,微信,其实,数据,来" />
+        <meta name="description" content="在舆论热度上手Q要远逊于微信，致使用户普遍出现了手Q不及微信的认知，这就是舆论的作用和用户心理奇特之处。" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <!-- Le styles -->
+        <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/dede58/css/hx-2013.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">
+        <![endif]-->
+        <style>
+		.jiathis_style{
+			margin-top:8px;	
+		}
+		</style>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function CheckLogin(){
+  var taget_obj = document.getElementById('_userlogin');
+  myajax = new DedeAjax(taget_obj,false,false,'','','');
+  myajax.SendGet2("/member/ajax_loginsta.php");
+  DedeXHTTP = null;
+}
+function CheckLogin2(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+	
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>      
+    </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+        <div class="container-hx">
+		            <div class="top">
+    <div class="top-box">
+        <h1 class="logo"><a href="/" target="_blank"><img src="/dede58/img/top_logo.png"></a></h1>
+        <div class="login-box" id="_userlogin">
+            <div class="btn-group">
+                <a href="/member/article_add.php" class="contribute" title="投稿">投稿</a>
+            </div>
+
+            <div class="btn-group">
+                <a href="#lgnModal" data-toggle="modal">登录</a>
+                <a href="/member/index_do.php?fmdo=user&dopost=regnew">注册</a>
+            </div>
+
+            
+            <div class="btn-group">
+                <a href="/rss.php" title="RSS"><i class="icon-rss"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+     <script language="javascript" type="text/javascript">CheckLogin();</script> 
+<div class="side-menu-hx">
+    <div class="side-menu-top">
+        <ul class="side-menu-list">   
+        
+      	<li><a href='/'>首页</a></li>
+        
+      	
+      	<li><a href='/focus/'>看点</a></li>
+      	
+      	<li><a href='/internet/'>互联网</a></li>
+      	
+      	<li><a href='/invest/'>创投界</a></li>
+      	
+      	<li><a href='/ec/'>电商圈</a></li>
+      	<li class='active'><a href='/mobile/'>移动库</a></li>
+      	<li><a href='/photo/'>图说</a></li>
+      	
+            </ul>
+    </div>
+    <div class="search">
+        <form  name="formsearch" action="/plus/search.php" class="form-search">
+        <input type="hidden" name="kwtype" value="0" />
+        
+            <input type="text" name='q' id='s' class="input-text" placeholder="搜索" value="" />
+            <button class="search-btn"><i class="icon-search"></i></button>
+        </form>
+    </div>
+</div>          
+		<div class="row-fluid-wrap-hx">
+                <div class="center-container-hx">
+                    <div class="clearfix row-fluid-hx"><!--<script src="/dede58/js/swplay.js" ></script>-->
+    <div class="center-ctr-wrap">
+        <div class="center-ctr-box">
+                        <div class="clearfix neirong">
+                <h1>为什么手Q做不过微信</h1>
+                <div class="subtitle-h1">在舆论热度上手Q要远逊于微信，致使用户普遍出现了手Q不及微信的认知，这就是舆论的作用和用户心理奇特之处。
+</div>
+                <div class="neirong-other">
+                    <span class="recommenders">admin</span>
+                    <time>2013-08-07 00:00</time>
+                    <span style="margin-right:10px;"><i class="icon-click"></i><em class="pl-num"><script src="/plus/count.php?view=yes&aid=98&mid=5" type='text/javascript' language="javascript"></script></em></span><a href="#odby" class="pinglun-num"><i class="icon-comment"></i><em class="pl-num"><script src="/plus/pls.php?aid=98" language="javascript"></script></em></a>
+                    <span class="tags">
+                                          </span>
+                </div>
+
+                <div class="neirong-box" id="neirong_box">
+                    <table>
+                        <tr>
+                            <td>
+                                
+        
+
+<p>【最科技讯】为什么手Q做不过微信？其实从数据上来看，手Q仍然领先微信很多，根据易观最近发布的2013Q1移动IM市场数据来看，在累计账号数与活跃账号数两项数据上，手Q都遥遥领先于微信（累计账号总数12.2亿，手Q占比38.07%，微信占比27.97%；活跃账号总数6.2亿，手Q占比42.54%，微信占比23.38%）。不过，<a href="http://www.zuitech.com/29971.html" target="_blank">在舆论热度上</a>手Q要远逊于微信，致使用户普遍出现了手Q不及微信的认知，这就是舆论的作用和用户心理奇特之处。</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><a href="http://www.zuitech.com//30513.html"><img class="aligncenter" title="为什么手Q做不过微信" alt="为什么手Q做不过微信" src="http://zuikeji.b0.upaiyun.com/wuyunlian/c2.jpg_a1" width="467" height="266" /></a></p>
+<p>&nbsp;</p>
+<p>为什么手Q做不过微信？第一：微信是移动互联网产品更符合手机用户习惯；第二，微信是新生事物可创富，更吸引眼球；第三，手Q包袱太重，微信品牌形象更贴切；第四，QQ给了微信非常大的成长空间。</p>
+<p>&nbsp;</p>
+<p><strong>微信是手机端产物?即时性要稍强于手Q</strong></p>
+<p>微信是手机端产物，在移动互联网时代应运而生，它起初最大的卖点是以更低的使用费用取代短信而被广泛推崇。</p>
+<p>&nbsp;</p>
+<p>微信的用途是取代短信，实现手机——手机互通，而手Q则是手机——手机/PC相通，如果看交流方式的多样性，手Q要比微信优秀，但问题是这是一款手机IM工具，用户使用它的目的是实现手机之间的直接交流，手机与手机直接交流的最大特征是即时性要比QQ更强。短信是随时发随时到对方手机的，微信也能做到即时发到对方手机上，而如果是手Q发一条信息没，说不准是到对方的手机上还是电脑上了，电脑接收信息的效率要低于手机，这就降低了手Q的即时性。可能这也是微信不急于向PC端迈进的原因，不然微信真成为另一个QQ了，目前的微信网页版足够对PC端做补充了。</p>
+<p>&nbsp;</p>
+<p><strong>微信的产品功能更适合手机端</strong></p>
+<p>QQ手PC时代的产物，手Q是PC端的延伸，由于产品团队在早期发展时就将QQ在PC端的交互设计思维用到了手Q中，所以手Q虽然好用但不太符合一款手机IM的交互形式。微信是从开始就建立在手机之上，而其之前也有模板抄袭，所以在现成的产品借鉴之下，微信的整个交互设计都结合了手机操作习惯，尤其是气泡对话框与苹果安卓机的短信对话框非常相似，这让用户感到亲切，认为是一款可替代短信的手机应用，而手Q之前的产品对话形式是与PC端相类似的，近期产品升级才变得与微信相同。</p>
+<p>&nbsp;</p>
+<p>另外，微信的语音信息功能也是手Q不能轻易模仿的，微信语音信息在手机与手机之间交流非常方便。而手Q的前期产品不具备语音信息功能，就算现在的产品具有了语音信息功能，但就像上文提到的手Q发出语音信息不能确定接收人将会使用哪种终端接收，要是用PC，则语音交流起来就非常不方便。可以看出，微信的很多功能都是围绕手机用户习惯设计的，而现在手Q团队在经过对用户使用习惯市场调研之后选择模仿微信了，这说明微信确实更符合手机使用习惯。</p>
+<p>&nbsp;</p>
+<p><strong>微信众星捧月?手Q习惯成自然</strong></p>
+<p>与手Q相比，微信受到了众星捧月般的待遇，由于是后起之秀，是新鲜话题，所以<a href="http://www.zuitech.com/30051.html" target="_blank">舆论焦点一直围绕微信</a>。而手Q诞生至今已有10年时间了，用户和舆论早已习惯它的存在，没有太多新鲜感可言。</p>
+<p>&nbsp;</p>
+<p>由于是新鲜事物，用户一谈到微信，每个人都能说上两句，介绍微信如何如何，但一谈到手Q，已无需多言了。用户对微信更感兴趣，就像前不久“微信收费”的话题一出，很多用户就像炸了锅似的讨论。有人关注就不缺少话题，微信的约炮、收费、对战运营商、移动支付、公共账号等等，围绕微信的讨论一波接一波，而围绕手Q的话题则是拿来对比微信。微信做到了在舆论与用户关注上超越了手Q，百度指数上手Q与微信早已不在同一量级了。</p>
+<p>&nbsp;</p>
+<p><strong>微信的造富运动更吸引眼球</strong></p>
+<p>做产品需要做品牌，做品牌跟做明星一样需要舆论关注，微信就是移动互联网的明星。同属腾讯公司的微信和手Q，可以明显的感觉到，微信是舆论的宠儿，手Q则逊色太多，这离不开创业者们对微信的支持。蜂拥而至的创业者们选择微信平台去实现创富梦，使微信不在单单是一款移动社交工具，而被想象成一个无所不能的创富平台，以至于微信的一举一动都牵动了众多人的心，舆论媒体也就对微信格外关注，形成一种谁不谈两句都显得落后的风气。</p>
+<p>&nbsp;</p>
+<p>吸引追随者最有效的手段是以利诱之，微信就做到了这一点，微信自上线之初就有无限赚钱的想象空间，所以吸引了大批追随者前来掘金。微信造富运动引来创业者狂欢盛宴，致使微信出现了更多的关注点，赚足了舆论眼球与媒体曝光率。而手Q能给创业者带来的惊喜太少，市场想象空间也非常有限，所以也少有人问津。</p>
+<p>&nbsp;</p>
+<p><strong>手Q承担QQ负担太重?微信轻装上阵</strong></p>
+<p>手Q是QQ在PC端的承接，所以手Q需要承受太多来自PC端的负担。初期手Q只是PC端的衍生品，产品设计需要围绕QQ进行，所以整个手Q就显得非常臃肿，是QQ在移动端的翻版，包袱太重。在没有微信时，用户们也无从对比，只能用手Q，但当微信出现之后，用户发觉微信较为简单产品设计才是用户在移动端上真正想要的。既然微信与QQ都能联系上自己的好友，那为何不选微信呢，既方便又省钱。</p>
+<p>&nbsp;</p>
+<p>不过，现在腾讯要给微信增加包袱了，不断推公众账号，本地生活服务，电商等等业务，让原本一款轻产品越来越重，这并不见得是一件好事。</p>
+<p>&nbsp;</p>
+<p><strong>产品形象也助微信用户飙升</strong></p>
+<p>微信作为一款取代短信的移动产品，其产品形象非常贴近手机用户对移动IM的认知，而QQ的品牌影响太过强大，以至于手Q很难摆脱QQ是PC端IM工具的形象。若果手机用户要选一款移动IM应用来替代短信，微信必然成为首选。QQ有8.5亿用户，手机用户已接近11.5亿，目前微信有4亿用户，手Q有5.5亿多用户，但作为一款取代短信的产品，微信还有7.5亿的手机用户市场可以抢占，手Q只有剩下的那3亿QQ用户了，而微信的移动IM形象比手Q更容易获得手机用户的青睐。</p>
+<p>&nbsp;</p>
+<p>QQ给了微信生存空间</p>
+<p>微信能有今天离不开QQ提供的充足的生长空间，QQ让微信用户把自己在QQ上建立起的好友关系导入微信，这对微信的用户增长起到了非常大的推进作用，这就是自家兄弟之间的情谊。虽然微信和手Q两个自家孩子也会争风吃醋，但腾讯肯还会扶持壮大自己的孩子并打击其他竞争对手。腾讯最强大的地方就在于其QQ上有着其他社交应用不可撼动的社交关系，这是腾讯14年的积累，腾讯愿意把这个关系借给微信，才造就了微信短时间的爆发式发展，米聊的发展证明了这点。</p>
+<p>&nbsp;</p>
+<p>结语</p>
+<p>为什么手Q做不过微信？事实是微信还没超过手Q，举个例子，手Q现在是一个24岁的成年人，他身体发育已经完成，现处在增加阅历的心智磨练阶段；微信是一个12岁的孩子，他正处于生存发育的高峰期，而现在舆论的关注点是他们谁长的快，这当然是微信。但等微信身体发育也完成之后，再对比微信与手Q谁的成就高，那才公平有意义。</p>
+<p>&nbsp;</p>
+<p>最后，研究此问题的价值在于了解在面对腾讯时该如何做社交产品，尤其是在巨头们虎视眈眈的移动社交领域，微信与手Q虽同属腾讯公司，但在内部他们是真正的竞争对手，微信对手Q的逆袭值得其他公司借鉴。<a href="http://www.zuitech.com"><img style="display: inline; margin-left: 5px;" alt="" src="http://zuikeji.b0.upaiyun.com/lijuan/250.jpg" /></a></p>
+<p>&nbsp;</p>
+                                                                <!-- 向作者提问-->
+                                <a href="#postform" class="a_self pull-right btn btn-primary askAuthor"  target="_self"><i class="icon-question-sign icon-white"></i>向作者提问</a>
+                                                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="clearfix pages">
+                    <div class="pull-right pgs"></div>                </div>
+                                
+                <!-- 分享 -->
+                <div class="share-wrap" id="share_wrap">
+                    <div class="share-wrap-box">
+    <div class="manage-box1" id="newdigg">
+        <div class="like-box">
+            <i class="pos-btn" title="喜欢" onClick="javascript:postDigg('good',98)">0</i>
+        </div>
+        <div class="favorite-box">
+            <i class="pos-btn" title="收藏" onClick="window.open('/plus/stow.php?aid=98')"><script src="/plus/scs.php?aid=98" language="javascript"></script></i>
+        </div>
+        <div class="nolike-box">
+            <i class="pos-btn" title="没劲" onClick="javascript:postDigg('bad',98)">0</i>
+        </div>
+    </div>
+  <script language="javascript" type="text/javascript">getDigg(98);</script>    
+    <div class="share-box side-share-box">
+        <span class="pos-top">分享：</span>
+         <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_xiaoyou"></a>
+	<a class="jiathis_button_cqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_fav"></a>
+	<a class="jiathis_button_copy"></a>
+	<a class="jiathis_button_print"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1375020427508565" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+    </div>
+</div>                </div>
+
+            </div>
+            
+            <div class="position-wrap" id="position_wrap">
+                            </div>
+            <div class="related-list"><h3 class="t-h2"><em>您可能感兴趣的文章</em></h3><ul>
+                <li><a href="/mobile/123.html" target="_blank">生活中并不是没微信就不能活了</a></li>
+<li><a href="/mobile/120.html" target="_blank">微信与联通的合作 似命中注定</a></li>
+<li><a href="/mobile/118.html" target="_blank">中国联通和微信合作 看运营商下一步如何走</a></li>
+<li><a href="/mobile/117.html" target="_blank">LINE用户破2亿 微信的未来在哪里？</a></li>
+<li><a href="/mobile/114.html" target="_blank">微信的创业骗局 大部分将沦为炮灰</a></li>
+            
+
+            </ul><div id = "interest"></div></div>            <!-- 评论 -->
+            <a name='postform'></a>
+            <div class="pinglun" id="pinglun">
+                        <h3 class="t-h2" id="odby">
+            <a href="#odby" class="a-btn"><i class="icon-comment"></i><em class="pl-num"><script src="/plus/pls.php?aid=98" language="javascript"></script></em></a>
+            <ul class="inline tab-pinglun-box">
+                <li class="active">最新评论</li>
+            </ul>
+        </h3>
+            <!-- 评论框框架 -->
+           
+<div class="pl-kuang-box">
+            <!-- 头像 -->
+            <div class="pull-left pl-img" id="_ajax_feedback">                       
+                <a target="_blank" href="#"><img border="0" src="/member/templets/images/dfboy.png"></a>
+                
+游客    
+                            
+            </div>
+            <!-- 头像/ -->
+            <!-- 评论框 -->
+            <div class="pl-kuang">
+        <form action="#" method="post" name="feedback" onsubmit="return false;">
+          <input type="hidden" name="dopost" value="send" />
+          <input type="hidden" name="comtype" value="comments">
+          <input type="hidden" name="aid" value="98" />
+          <input type="hidden" name="fid" id='feedbackfid' value="0" />
+          <input type="hidden" name="feedbacktype" value="feedback" />          
+			<div class="textarea-box"><textarea class="textarea-txt" id="msg" name="msg"></textarea></div>
+          <!-- /dcmp-content -->
+          <div class="dcmp-post">
+            <!--未登陆-->
+            <div class="dcmp-userinfo" id="_ajax_feedback"> 
+              <input type="hidden" name="username" value="游客"/>
+              验证码:
+              <input type="text" name="validate" size="4" class="ipt-txt" style="text-transform:uppercase;"/>
+              <img src= "/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换图片" alt="点击我更换图片"  class="vdimg"/>
+              <input type="hidden" name="notuser" id="dcmp-submit-guest" />
+
+            </div>
+            
+            <script language="javascript" type="text/javascript">CheckLogin2();</script>
+            
+            <button class="pull-right subscribe-btn" type="button" onClick='PostComment()'>回复</button>
+          </div>
+        </form>
+            </div>
+       <!-- 评论框 -->
+        </div> 
+    <dd id='commetcontentNew'></dd>
+    <div class="pinglun-list" id="commetcontent">
+	</div>
+
+<!--
+//由于评论载入时使用异步传输，因此必须在最后一步加载（DIGG和评论框须放在评论内容前面）
+//如果一定需要提前的把myajax.SendGet改为myajax.SendGet2，但可能会引起页面阻滞
+-->
+<script language='javascript'>
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontent');
+		var waithtml = "<div style='line-height:50px'><img src='/images/loadinglit.gif' />评论加载中...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("/plus/feedback_ajax.php?dopost=getlist&aid=98&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		var f = document.feedback;
+		var msg = document.getElementById("msg").value;
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+		if(msg.length < 10)
+		{
+			alert("请至少输入10个字！");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("请填写验证码！");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(msg.length > 500)
+		{
+			alert("你的评论是不是太长了？请填写500字以内的评论。");
+			return;
+		}
+		if(f.feedbacktype) {
+			for(var i=0; i < f.feedbacktype.length; i++)
+				if(f.feedbacktype[i].checked) nfeedbacktype = f.feedbacktype[i].value;
+		}
+		/*
+		if(f.face) {
+			for(var j=0; j < f.face.length; j++)
+				if(f.face[j].checked) nface = f.face[j].value;
+		}
+		*/
+		if(f.notuser.checked) nnotuser = '1';
+		if(f.username) nusername = f.username.value;
+		if(f.pwd) npwd = f.pwd.value;
+		if(f.msg) msg = f.msg.value;
+		
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'gb2312';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '98');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', msg);
+		myajax.SendPost2('/plus/feedback_ajax.php');
+		//msg = '';
+		CKEDITOR.instances.msg.setData('');
+		//taget_obj.removeAttribute('id');
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+}
+function quoteCommet(fid)
+{
+	    document.feedback.fid.value = fid;
+}
+  
+function ajaxFeedback(aid, fid, type)
+{
+	
+	var taget_obj = $DE('ajaxfeedback_'+fid);
+	if(taget_obj.innerHTML == '')
+	{
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x');
+		myajax.SendGet2("/plus/feedback.php?aid="+aid+"&fid="+fid+"&action=quote&type=ajax");
+		eval('var result = typeof CKEDITOR.instances.msg_'+fid);
+		if(result != 'undefined')
+		{
+			// 删除实例
+			eval('var edit = CKEDITOR.instances.msg_'+fid);
+			CKEDITOR.remove(edit);
+		}
+		CKEDITOR.replace(document.getElementById('msg_'+fid) , CKEDITOR.instances.msg.config);
+		scroll(0, taget_obj.offsetTop - 120);
+		var formname = 'f = document.ajaxfeedback_'+fid;
+		eval(formname);
+		if(f.validate)
+		{
+			if($DE('vdimg_'+fid)) $DE('vdimg_'+fid).src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+		DedeXHTTP = null;
+	}
+}
+
+
+
+function ajaxQuotePost(fid)
+{
+	var formname = 'f = document.ajaxfeedback_'+fid;
+	eval(formname);
+	//var f = document.formname;
+	//var f = f[0];
+	var nvalidate = '';
+	var nnotuser = '';
+	var nusername = '';
+	var npwd = '';
+	var taget_obj = $DE('commetcontentNew');
+	var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+	eval('var msg = CKEDITOR.instances.msg_'+fid+'.getData()');
+
+	if(f.validate)
+	{
+		if(f.validate.value=='') {
+			alert("请填写验证码！");
+			return;
+		}
+		else {
+			nvalidate = f.validate.value;
+		}
+	}
+	var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+	
+	if(f.notuser.checked) nnotuser = '1';
+	if(f.username) nusername = f.username.value;
+	if(f.pwd) npwd = f.pwd.value;
+	
+	myajax.sendlang = 'gb2312';
+	myajax.AddKeyN('dopost', 'send');
+	myajax.AddKeyN('aid', '98');
+	myajax.AddKeyN('fid', f.fid.value);
+	myajax.AddKeyN('type', 'ajax');
+	myajax.AddKeyN('comtype', f.comtype.value);
+	myajax.AddKeyN('isconfirm','yes');
+	
+	myajax.AddKeyN('typeid', f.typeid.value);
+	myajax.AddKeyN('quotemsg', f.quotemsg.value);
+	myajax.AddKeyN('validate', nvalidate);
+	myajax.AddKeyN('notuser', nnotuser);
+	myajax.AddKeyN('username', nusername);
+	myajax.AddKeyN('pwd', npwd);
+	myajax.AddKeyN('msg', msg);
+	myajax.SendPost2('/plus/feedback_ajax.php');
+	//alert(f.quotemsg.value);
+	if($DE('ajaxfeedback_'+fid).innerHTML != null)
+	{
+		$DE('ajaxfeedback_'+fid).innerHTML = '';
+	}
+	scroll(0, taget_obj.offsetTop);
+}
+LoadCommets(1);
+</script>
+<!-- //评论内容区结束 -->
+
+        
+<a href="/plus/feedback.php?aid=98" class="pinglun-more-a" target="_blank">全部评论</a>            </div>
+            <!-- 评论/ -->
+        </div>
+    </div>
+    <div class="side-container-hx">            
+    <div class="clearfix author-card3">         
+<div class="pull-left author-card-img">
+            <p class="p-1"><a href="localhost/huiyan/member/index.php?uid=jay" title="悠悠草" target="_blank"><img border="0" src="/uploads/userup/5/myface.jpg" /></a></p>
+        </div>
+<div class="author-card-box">
+            <p class="card-name-p"><a class="card-name" href="localhost/huiyan/member/index.php?uid=jay" target="_blank">悠悠草</a></p>
+            <p class="yijuhua" title="哎哟，不错哦~">哎哟，不错哦~</p>
+            <p class="p-btn"><a href="/member/index.php?action=guestbook&uid=jay" act="add_author" class="dy-btn">给我留言</a>
+                <a href="/member/pm.php?dopost=send&uid=jay" target="_blank">发送消息</a>
+
+            </p>
+        </div>
+                   
+        <div class="clearfix author-article"><h3><b>Ta的文章(143)</b><a href="/member/index.php?uid=jay&action=archives" target="_blank">更多</a></h3><ul>
+
+<li><a href="/plus/view.php?aid=140" title="杜琪峰电影不够大卖，是犯了电影工业的什么忌？"  target="_blank">杜琪峰电影不够大卖，是犯了电影工业的什么忌？</a></li><li><a href="/plus/view.php?aid=141" title="库克又访华来了！来回顾下他三次访华都给苹果做什么"  target="_blank">库克又访华来了！来回顾下他三次访华都给苹果做什么</a></li><li><a href="/plus/view.php?aid=142" title="拼儿子才是王道：“江南Style”让Psy老爸的股票翻了八倍"  target="_blank">拼儿子才是王道：“江南Style”让Psy老爸的股票翻了八倍</a></li>        
+        </ul></div>    
+        </div>
+
+    <div class="hot-view">
+        <h3 class="t-h2"><em>热门文章</em></h3>
+        <div class="view-list idx-view">
+        
+      <div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/mobile/102.html" target="_blank"><img src="/uploads/allimg/130807/64.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/mobile/102.html" target="_blank">腾讯低调推出微信公众平台第三方接口平台风铃</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=102" target="_blank"><script src="/plus/pls.php?aid=102" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/mobile/113.html" target="_blank"><img src="/uploads/allimg/130807/73.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/mobile/113.html" target="_blank">谷歌步快播“后尘”推Chromecast，巧合?OR?抄袭？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=113" target="_blank"><script src="/plus/pls.php?aid=113" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/mobile/103.html" target="_blank"><img src="/uploads/allimg/130807/65.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/mobile/103.html" target="_blank">【微观察】移动互联的8大未来趋势</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=103" target="_blank"><script src="/plus/pls.php?aid=103" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/mobile/107.html" target="_blank"><img src="/uploads/allimg/130807/69.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/mobile/107.html" target="_blank">微信5.0八月来袭，你准备好了吗？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=107" target="_blank"><script src="/plus/pls.php?aid=107" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/mobile/114.html" target="_blank"><img src="/uploads/allimg/130807/84.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/mobile/114.html" target="_blank">微信的创业骗局 大部分将沦为炮灰</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=114" target="_blank"><script src="/plus/pls.php?aid=114" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+
+              
+        </div>
+    </div>
+
+	    <div class="hot-author-face">
+        <h3 class="t-h2"><em>广告位1</em></h3>
+<a href='#'><img src='/dede58/img/ad2.jpg'></a>
+    </div>
+
+
+    <div class="hot-view">
+        <h3 class="t-h2"><em>推荐文章</em></h3>
+        <div class="view-list idx-view">
+      <div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/mobile/126.html" target="_blank"><img src="/uploads/allimg/130807/89.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/mobile/126.html" target="_blank">黑客袭击 苹果开发者网站大换血</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=126" target="_blank"><script src="/plus/pls.php?aid=126" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/mobile/119.html" target="_blank"><img src="/uploads/allimg/130807/77.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/mobile/119.html" target="_blank">谷歌Chromecast电视棒 又一神器诞生</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=119" target="_blank"><script src="/plus/pls.php?aid=119" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/mobile/108.html" target="_blank"><img src="/uploads/allimg/130807/80.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/mobile/108.html" target="_blank">电信、网易同推叮叮 8月上线抗微信</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=108" target="_blank"><script src="/plus/pls.php?aid=108" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/mobile/103.html" target="_blank"><img src="/uploads/allimg/130807/65.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/mobile/103.html" target="_blank">【微观察】移动互联的8大未来趋势</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=103" target="_blank"><script src="/plus/pls.php?aid=103" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/mobile/99.html" target="_blank"><img src="/uploads/allimg/130807/61.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/mobile/99.html" target="_blank">谷歌发布Android 4.3系统 诸多升级改动</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=99" target="_blank"><script src="/plus/pls.php?aid=99" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+
+              
+        
+          </div>
+    </div>
+    <div class="hot-author-face">
+        <h3 class="t-h2"><em>热门作者</em></h3>
+        <ul class="clearfix author-face-list">
+
+<li><p class="author-img"><a href="/member/index.php?uid=newsche" target="_blank" title="www.moke8.com"><img src="/uploads/userup/1/myface.png"/></a></p><p class="name"><a href="/member/index.php?uid=newsche" target="_blank">www.moke8.com</a></p><li><p class="author-img"><a href="/member/index.php?uid=jay" target="_blank" title="悠悠草"><img src="/uploads/userup/5/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=jay" target="_blank">悠悠草</a></p><li><p class="author-img"><a href="/member/index.php?uid=884358" target="_blank" title="884358"><img src="/uploads/userup/2/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=884358" target="_blank">884358</a></p><li><p class="author-img"><a href="/member/index.php?uid=lhc" target="_blank" title="古天乐"><img src="/uploads/userup/6/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=lhc" target="_blank">古天乐</a></p><li><p class="author-img"><a href="/member/index.php?uid=wxb" target="_blank" title="康师傅"><img src="/uploads/userup/8/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=wxb" target="_blank">康师傅</a></p><li><p class="author-img"><a href="/member/index.php?uid=lurenjia" target="_blank" title="路人甲"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=lurenjia" target="_blank">路人甲</a></p><li><p class="author-img"><a href="/member/index.php?uid=jason19905" target="_blank" title="测试账号"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=jason19905" target="_blank">测试账号</a></p>
+        </ul>
+    </div>
+
+		    <div class="hot-author-face">
+        <h3 class="t-h2"><em>广告位2</em></h3>
+<a href='#'><img src='/dede58/img/ad2.jpg'></a>
+    </div>
+    </div>
+ </div>
+<footer class="footer">
+    <div class="about-links">
+                    
+    </div>
+            <div class="footer-copy">
+        Copyright &copy; 2002-2014 织梦系统 版权所有 <a href=http://www.moke8.com target='_blank'>Power by moke8</a> ( <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备11000986号</a>)
+    </div>
+    <!-- 返回顶部 -->
+    <div class="go-top">
+        <i class="pos-btn" onclick="window.scrollTo('0', '0')">^</i>
+    </div>
+    <!-- /返回顶部 -->
+
+</footer>
+</div>
+</div>
+</div>
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+
+    <script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript" src="/images/js/j.js" ></script>
+
+
+<div id="lgnModal" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">登录</h3>
+        </div>
+        <div class="float-box">
+            <div class="float-login-box">
+                <div class="login-info">帐号登录：</div>
+                <form id="float_form_lgn" name="userlogin" action="/member/index_do.php" method="POST" class="form-horizontal">
+        <input type="hidden" name="fmdo" value="login" />
+        <input type="hidden" name="dopost" value="login" />
+        <input type="hidden" name="keeptime" value="604800" />                
+                
+                    <div class="control-group control-name">
+                        <label class="control-label" for="inputName">用户名：</label>
+                        <div class="controls">
+                            <input type="text" id="userid" name="userid" tabindex="1">
+                            <span class="help-inline"><a href="/member/index_do.php?fmdo=user&dopost=regnew" target="_blank">还未注册?</a></span>
+                        </div>
+                    </div>
+                    <div class="control-group control-pwd">
+                        <label class="control-label" for="inputPassword">密　码：</label>
+                        <div class="controls">
+                            <input type="password" id="pwd" name="pwd" tabindex="2">
+                            <span class="help-inline"><a href="/member/resetpassword.php" target="_blank">忘记密码?</a></span>
+                        </div>
+                    </div>                  
+                    <div class="control-group control-pwd" style="margin-top:15px;">
+                        <label class="control-label" for="inputName">验证码：</label>
+                        <div class="controls">
+                            <input type="text" id="vdcode" name="vdcode" tabindex="3" size="4" style="text-transform:uppercase;" maxlength="4">
+                            <span class="help-inline"><img id="vdimgck" align="absmiddle" onclick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="../include/vdimgck.php"/></span>
+                        </div>
+                    </div>                    
+                    <div class="control-group" style="margin-top:15px; margin-left:10px;">
+                        <div class="controls">
+                            <button type="submit" class="btn lgn-btn" tabindex="4" onclick="this.form.submit();">登录</button>
+                            <a href="/member/index_do.php?fmdo=user&dopost=regnew" class="lgn-reg-btn">注册</a>
+                            
+                      </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

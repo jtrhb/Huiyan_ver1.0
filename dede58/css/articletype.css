@@ -1,0 +1,10 @@
+.articletype{position: absolute;z-index: 999;color: white;padding: 2px 10px;}
+.arc-type-in{background-color: #0bbc6b}
+.arc-type-v{background-color: #f45170}
+.arc-type-di{background-color: #1da8fe}
+.arc-type-etc{background-color: #ff9600}
+
+#tabIN>a:hover{background-color: #0bbc6b}
+#tabV>a:hover{background-color: #f45170}
+#tabDI>a:hover{background-color: #1da8fe}
+#tabETC>a:hover{background-color: #ff9600}

@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="gb2312">
+        <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+        <meta name="keywords" content="{dede:field.keywords/}" />
+        <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <!-- Le styles -->
+        <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/dede58/css/hx-2013.css" rel="stylesheet">
+        
+         <script language="javascript" type="text/javascript" src="/dede58/js/jquery.ad-gallery.js"></script>
+        <style>
+		.jiathis_style{
+			margin-top:8px;	
+		}
+		</style>
+        <script>
+			var count_article_id;
+            var cookiepre;
+        </script>
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+  var taget_obj = document.getElementById('_userlogin');
+  myajax = new DedeAjax(taget_obj,false,false,'','','');
+  myajax.SendGet2("{dede:global.cfg_cmspath/}/member/ajax_loginsta.php");
+  DedeXHTTP = null;
+}
+function CheckLogin2(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("{dede:global.cfg_cmsurl/}/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function checkSubmit(){
+	if(document.feedback.msg.value!='') document.feedback.submit();
+	else alert("评论内容不能为空！");
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("{dede:field name='phpurl'/}/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+	DedeXHTTP = null;
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "{dede:global.cfg_phpurl/}/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+	DedeXHTTP = null;
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("{dede:global.cfg_phpurl/}/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+
+
+-->
+</script>        
+        <!--[if lt IE 9]>
+        <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">
+        <![endif]-->
+    </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+        <div class="container-hx">
+            <div class="top">
+    <div class="top-box">
+        <h1 class="logo"><a href="/" target="_blank"><img src="/dede58/img/top_logo.png"></a></h1>
+        <div class="login-box" id="_userlogin">
+            <div class="btn-group">
+                <a href="/member/article_add.php" class="contribute" title="投稿">投稿</a>
+            </div>
+
+            <div class="btn-group">
+                <a href="/member/login.php">登录</a>
+                <a href="/member/index_do.php?fmdo=user&dopost=regnew">注册</a>
+            </div>
+
+            
+            <div class="btn-group">
+                <a href="/rss.php" title="RSS"><i class="icon-rss"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+     <script language="javascript" type="text/javascript">CheckLogin();</script>         
+ 		{dede:include filename="head2.htm"/}
+            <div class="row-fluid-wrap-hx">
+                <div class="center-container-hx">
+                    <div class="clearfix row-fluid-hx"><script src="/dede58/js/swplay.js" ></script>
+    <div class="center-ctr-wrap">
+        <div class="center-ctr-box">
+            <div class="clearfix tushuo-neirong">
+                <h1>{dede:field.title/}</h1>
+                <div class="neirong-other">
+                    <span class="recommenders">推荐者：{dede:memberinfos}<a href="[field:spaceurl /]" target="_blank">[field:uname/]</a>{/dede:memberinfos}</span>
+                    <time>{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</time>
+                    <a href="#odby" class="pinglun-num"><i class="icon-comment"></i><em class="pl-num"><script src="/plus/pls.php?aid={dede:field.id/}" language="javascript"></script></em></a>
+                </div>
+                <div class="tushuo-nr-wrap">
+                    
+                <div id="gallery" class="ad-gallery">
+                    <div class="ad-controls"></div>
+                    <div class="ad-image-wrapper"></div>
+                    <div class="ad-text">
+                            <div class="ad-img-num"></div>
+                            <div class="ad-img-text"></div>
+                    </div>
+                    <div class="ad-nav">
+                        <div class="ad-thumbs">
+                            <ul class="inline ad-thumb-list">
+                          
+						 <style>
+                         .ad-thumb-list img{max-width:600px;}
+						 .ad-thumb-list li{ margin-bottom:10px;}
+						  </style>  
+             {dede:field name='imgurls' alt='图片输出区'}
+
+<li><a href="[field:imgsrc/]">
+                                        <img border="0" src="[field:imgsrc/]" alt="[field:alttext /]" class="image1" /></a><br>[field:alttext /]</li>
+             {/dede:field}
+                                         
+                                
+                              </ul>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- 管理2 -->
+                        <!-- /管理2 -->
+            <!-- 分享 -->
+            <div class="share-wrap" id="share_wrap">
+                <div class="share-wrap-box">
+    <div class="manage-box1" id="newdigg">
+        <div class="like-box">
+            <i class="pos-btn" title="喜欢" onClick="javascript:postDigg('good',{dede:field.id/})">{dede:field.goodpost/}</i>
+        </div>
+        <div class="favorite-box">
+            <i class="pos-btn" title="收藏" onClick="window.open('{dede:field name='phpurl'/}/stow.php?aid={dede:field.id/}')"><script src="/plus/scs.php?aid={dede:field.id/}" language="javascript"></script></i>
+        </div>
+        <div class="nolike-box">
+            <i class="pos-btn" title="没劲" onClick="javascript:postDigg('bad',{dede:field.id/})">{dede:field.badpost/}</i>
+        </div>
+    </div>
+      <script language="javascript" type="text/javascript">getDigg({dede:field.id/});</script>  
+
+    <div class="share-box side-share-box">
+        <span class="pos-top">分享：</span>
+         <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_xiaoyou"></a>
+	<a class="jiathis_button_cqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_fav"></a>
+	<a class="jiathis_button_copy"></a>
+	<a class="jiathis_button_print"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1375020427508565" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+    </div>
+
+</div>            </div>
+            <!-- /分享 -->
+            <!-- 管理 -->
+            <div class="position-wrap" id="position_wrap">
+                            </div>
+            <!-- /管理 -->
+            <!-- 评论 -->
+            <div class="pinglun" id="pinglun">
+                        <h3 class="t-h2" id="odby">
+                        <a href="#odby" class="a-btn"><i class="icon-comment"></i><em class="pl-num"><script src="/plus/pls.php?aid={dede:field.id/}" language="javascript"></script></em></a>
+            <ul class="inline tab-pinglun-box">
+                <li class="active">最新评论</li>
+            </ul>
+        </h3>
+            <!-- 评论框框架 -->
+           
+{dede:include file='ajaxfeedback.htm' /}
+        
+<a href="{dede:field name='phpurl'/}/feedback.php?aid={dede:field.id/}" class="pinglun-more-a" target="_blank">全部评论</a>            </div>
+            <!-- 评论/ -->
+        </div>
+    </div>
+    <div class="side-container-hx">
+
+{dede:include filename="right2.htm"/}
+    </div>
+ 
+</div>
+{dede:include filename="footer.htm"/}</div>
+</div>
+</div>
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+
+
+
+
+
+</body>
+</html>

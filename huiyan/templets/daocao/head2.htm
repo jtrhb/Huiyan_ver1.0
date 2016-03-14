@@ -1,0 +1,20 @@
+ 
+<div class="side-menu-hx">
+    <div class="side-menu-top">
+        <ul class="side-menu-list">            
+      	<li><a href='/'>Ê×Ò³</a></li>
+        
+      	{dede:channel type='top' row='10' currentstyle="<li class='active'><a href='~typelink~'>~typename~</a></li>"}
+      	<li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+      	{/dede:channel}       
+            </ul>
+    </div>
+    <div class="search">
+        <form  name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php" class="form-search">
+        <input type="hidden" name="kwtype" value="0" />
+        
+            <input type="text" name='q' id='s' class="input-text" placeholder="ËÑË÷" value="" />
+            <button class="search-btn"><i class="icon-search"></i></button>
+        </form>
+    </div>
+</div> 

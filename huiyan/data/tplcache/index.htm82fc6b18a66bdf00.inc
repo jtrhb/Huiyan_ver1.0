@@ -1,0 +1,48 @@
+<?php
+$z[0]=Array("global","",356,382);
+$z[0][4]['name']="cfg_webname";
+$z[1]=Array("global","",434,464);
+$z[1][4]['name']="cfg_description";
+$z[2]=Array("global","",509,536);
+$z[2][4]['name']="cfg_keywords";
+$z[3]=Array("global","",1111,1136);
+$z[3][4]['name']="cfg_cmsurl";
+$z[4]=Array("global","",1228,1254);
+$z[4][4]['name']="cfg_cmspath";
+$z[5]=Array("global","",1341,1373);
+$z[5][4]['name']="cfg_templets_skin";
+$z[6]=Array("global","",1955,1981);
+$z[6][4]['name']="cfg_cmspath";
+$z[7]=Array("include","",2173,2208);
+$z[7][4]['filename']="head.htm";
+$z[8]=Array("tag","\r\n            <a href='[field:link/]'>[field:tag /]</a>\r\n          ",2506,2627);
+$z[8][4]['row']="10";
+$z[8][4]['getall']="1";
+$z[8][4]['sort']="month";
+$z[9]=Array("arclist","\r\n        <div class=\"toutiao idx-toutiao\">\r\n            <h2><a href=\"[field:arcurl/]\" target=\"_blank\" >[field:fulltitle/]</a></h2>\r\n            <p>[field:description/]</p>\r\n            <div class=\"box-img\"><a href=\"[field:arcurl/]\" target=\"_blank\"><img src=\"[field:litpic/]\"></a></div>\r\n            <div class=\"box-other\">\r\n                <span class=\"source-quote\">[field:writer/]</span>\r\n                <time>[field:pubdate function=\"GetDateTimeMK(@me)\"/]</time>\r\n                <span class=\"comment-box\"><i class=\"icon-comment\"></i><a href=\"[field:arcurl/]#postform\" target=\"_blank\"><script src=\"/plus/pls.php?aid=[field:id/]\" language=\"javascript\"></script></a></span>\r\n                <span class=\"tags-box\">[field:id function=GetTags(@me)/]</span>\r\n            </div>\r\n        </div>\r\n        ",2646,3513);
+$z[9][4]['flag']="h";
+$z[9][4]['limit']="0,1";
+$z[9][4]['infolen']="230";
+$z[10]=Array("arclist","\r\n\r\n            <div class=\"clearfix article-box \">\r\n                <a href=\"[field:arcurl/]\" class=\"a-img\" target=\"_blank\"><img src=\"[field:litpic/]\" width=\"220\" height=\"146\"/></a>\r\n                <div class=\"article-box-ctt\">\r\n                    <h4><a href=\"[field:arcurl/]\" target=\"_blank\">[field:fulltitle/]</a></h4>\r\n                    <div class=\"box-other\">\r\n                        <span class=\"source-quote\">[field:writer/]</span>\r\n                        <time>[field:pubdate function=\"GetDateTimeMK(@me)\"/]</time></div><div class=\"article-summary\">[field:description/]</div><p class=\"tags-box\">[field:id function=GetTags(@me)/]<i class=\"i-icon-bottom\"></i></p></div><div class=\"idx-hldj\"><div class=\"article-icon\"><span class=\"comment-box\"><i class=\"icon-comment\"></i><a href=\"[field:arcurl/]#odby\" target=\"_blank\"><script src=\"/plus/pls.php?aid=[field:id/]\" language=\"javascript\"></script></a></span></div></div></div>    \r\n    ",3600,4604);
+$z[10][4]['row']="15";
+$z[10][4]['titlelen']="64";
+$z[10][4]['noflag']="h";
+$z[11]=Array("myad","",4815,4844);
+$z[11][4]['name']="index_top";
+$z[12]=Array("arclist","\r\n<div class=\"clearfix view-box\">\r\n                <div class=\"pull-left img-box\">\r\n                    <p><a href=\"[field:arcurl/]\" target=\"_blank\"><img src=\"[field:litpic/]\"/></a></p></div>\r\n                <div class=\"view-box-ctt\">\r\n                    <h4><a href=\"[field:arcurl/]\" target=\"_blank\">[field:fulltitle/]</a></h4>\r\n                    <div class=\"box-other\">\r\n                        <span class=\"source-quote\">[field:writer/]</span>\r\n                        <p><time>[field:pubdate function=\"GetDateTimeMK(@me)\"/]</time><span class=\"comment-box\"><i class=\"icon-comment\"></i><a href=\"[field:arcurl/]#odby\" target=\"_blank\"><script src=\"/plus/pls.php?aid=[field:id/]\" language=\"javascript\"></script></a></span></p>\r\n                    </div>\r\n                </div>\r\n            </div>                  \r\n      ",5017,5914);
+$z[12][4]['sort']="hot";
+$z[12][4]['subday']="30";
+$z[12][4]['titlelen']="42";
+$z[12][4]['row']="6";
+$z[13]=Array("php","\r\n\$dsql->SetQuery(\"SELECT f.aid,f.username,f.arctitle,f.msg,f.good,m.userid,m.face,s.sign FROM dede_feedback f,dede_member m,dede_member_space s where f.username = m.uname and f.mid = s.mid ORDER BY f.good DESC LIMIT 5\");\r\n\$dsql->Execute();\r\n\$i=0;\r\nwhile(\$arr = \$dsql->getArray()){\r\n\$arcurl = GetOneArchive(\$arr['aid']);\r\n\$face = \$arr['face'];\r\nif(empty(\$face)) \$face='/member/templets/images/dfboy.png';\r\n\r\necho '<div class=\"clearfix cmt-box\">';\r\necho '<h5><a href=\"'.\$arcurl['arcurl'].'\" >Ô­ÎÄ£º'.\$arr['arctitle'].'</a></h5>';\r\necho '<div class=\"pull-left cmt-img\"><a href=\"/member/index.php?uid='.\$arr['userid'].'\" class=\"a-img\" target=\"_blank\"><img src=\"'.\$face.'\"/></a>\r\n                  </div>';\r\necho '<div class=\"pull-right cmt-box-ctt\">';\r\necho '<h4><a href=\"/member/index.php?uid='.\$arr['userid'].'\" target=\"_blank\">'.\$arr['username'].'</a></h4>';\r\necho '<div class=\"yijuhua\">'.\$arr['sign'].'</div></div>';\r\necho '<div class=\"cmt-nr\"><a href=\"/plus/feedback.php?aid='.\$arcurl['aid'].'\">'.\$arr['msg'].'</a><i class=\"icon-arrow-up\"></i>\r\n                </div>\r\n            </div>';\r\n}\r\n",6083,7200);
+$z[14]=Array("php","\r\n\$dsql->SetQuery(\"SELECT * FROM `#@__member` ORDER BY scores DESC LIMIT 12\");\r\n\$dsql->Execute();\r\n\$i=0;\r\nwhile(\$arr = \$dsql->getArray()){\r\n\$face = \$arr['face'];\r\nif(empty(\$face)) \$face='/member/templets/images/dfboy.png';\r\necho '<li><p class=\"author-img\"><a href=\"/member/index.php?uid='.\$arr['userid'].'\" target=\"_blank\" title=\"'.\$arr['uname'].'\"><img src=\"'.\$face.'\"/></a></p>';\r\necho '<p class=\"name\"><a href=\"/member/index.php?uid='.\$arr['userid'].'\" target=\"_blank\">'.\$arr['uname'].'</a></p>';\r\n}\r\n",7386,7911);
+$z[15]=Array("arclist","\r\n\r\n      <div class=\"clearfix view-box\">\r\n      <div class=\"view-box-ctt2\"><h4>@[field:writer/] <a href=\"[field:arcurl/]\">[field:description/]</a></h4>\r\n      <div class=\"box-other\">\r\n      <p><time>[field:pubdate function=\"MyDate('Y-m-d H:i',@me)\"/]</time></p>\r\n      </div></div></div>\r\n      ",8070,8424);
+$z[15][4]['flag']="c";
+$z[15][4]['titlelen']="42";
+$z[15][4]['row']="5";
+$z[16]=Array("include","",8505,8548);
+$z[16][4]['filename']="footer_index.htm";
+$z[17]=Array("include","",8639,8675);
+$z[17][4]['filename']="login.htm";
+
+?>

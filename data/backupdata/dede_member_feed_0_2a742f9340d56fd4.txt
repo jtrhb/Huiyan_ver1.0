@@ -1,0 +1,13 @@
+INSERT INTO `dede_member_feed` VALUES('1','2','884358','884358','add','6','1375668421',' 成功发布了 &lt;a href=&#039;/plus/view.php?aid=6&#039;&gt;投稿测试文章&lt;/a&gt;','投稿测试文章投稿测试文章','1');
+INSERT INTO `dede_member_feed` VALUES('2','2','884358','884358','add','7','1375668464',' 成功发布了 &lt;a href=&#039;/plus/view.php?aid=7&#039;&gt;测试投稿2&lt;/a&gt;','测试投稿2测试投稿2测试投稿2测试投稿2','1');
+INSERT INTO `dede_member_feed` VALUES('3','2','884358','884358','add','8','1375668565',' 成功发布了 &lt;a href=&#039;/plus/view.php?aid=8&#039;&gt;884358&lt;/a&gt;','测试投稿3测试投稿3','1');
+INSERT INTO `dede_member_feed` VALUES('4','2','884358','884358','addfriends','0','1375670469',' 与 &lt;a href=&#039;/member/index.php?uid=admin&#039;&gt;admin&lt;/a&gt;成为好友','','1');
+INSERT INTO `dede_member_feed` VALUES('5','1','ezhanku','站酷源码','feedback','169','1376036748',' 评论了文章 &lt;a href=&#039;/plus/view.php?aid=169&#039;&gt;齐齐封杀令背后：阿里与腾讯的“社交电商”博弈&lt;/a&gt;','dsdsadsdsadsdsdsdsadasdsad','1');
+INSERT INTO `dede_member_feed` VALUES('6','1','ezhanku','站酷源码','feedback','169','1376040358',' 评论了文章 &lt;a href=&#039;/plus/view.php?aid=169&#039;&gt;齐齐封杀令背后：阿里与腾讯的“社交电商”博弈&lt;/a&gt;','dsdasdsdsads','1');
+INSERT INTO `dede_member_feed` VALUES('7','1','ezhanku','站酷源码','feedback','169','1376043380',' 评论了文章 &lt;a href=&#039;/plus/view.php?aid=169&#039;&gt;齐齐封杀令背后：阿里与腾讯的“社交电商”博弈&lt;/a&gt;','dsaddddddddddddddddd','1');
+INSERT INTO `dede_member_feed` VALUES('8','1','ezhanku','站酷源码','feedback','169','1376045077',' 评论了文章 &lt;a href=&#039;/plus/view.php?aid=169&#039;&gt;齐齐封杀令背后：阿里与腾讯的“社交电商”博弈&lt;/a&gt;','321323232132132132','1');
+INSERT INTO `dede_member_feed` VALUES('9','1','ezhanku','站酷源码','feedback','169','1376045238',' 评论了文章 &lt;a href=&#039;/plus/view.php?aid=169&#039;&gt;齐齐封杀令背后：阿里与腾讯的“社交电商”博弈&lt;/a&gt;','微信借着自己拿着现在在移动端最稳的半张船票，就想通过5.0把整个互联网的需求涵盖了，这也太一厢情愿了，场子铺那么大拉的来客么~~什么微信不是营销工具，微信5.0公众平台付费版的，比现在公众平台的营销性强太多了，微信这产品真的是太急了，生态哪有这么好弄得~~','1');
+INSERT INTO `dede_member_feed` VALUES('10','1','ezhanku','站酷源码','add','170','1376107305',' 成功发布了 &lt;a href=&#039;/plus/view.php?aid=170&#039;&gt;站酷源码&lt;/a&gt;','投稿的内容测试！','1');
+INSERT INTO `dede_member_feed` VALUES('11','1','ezhanku','站酷源码','add','171','1376108688',' 成功发布了 &lt;a href=&#039;/plus/view.php?aid=171&#039;&gt;再次投稿测试！&lt;/a&gt;','再次投稿测试！再次投稿测试！再次投稿测试！再次投稿测试！','1');
+INSERT INTO `dede_member_feed` VALUES('12','1','ezhanku','站酷源码','add','172','1376108789',' 成功发布了 &lt;a href=&#039;/plus/view.php?aid=172&#039;&gt;投稿测试三&lt;/a&gt;','投稿测试三投稿测试三投稿测试三','1');
+INSERT INTO `dede_member_feed` VALUES('13','1','ezhanku','站酷源码','add','173','1376109002',' 成功发布了 &lt;a href=&#039;/plus/view.php?aid=173&#039;&gt;投稿测试四&lt;/a&gt;','投稿测试四投稿测试四投稿测试四投稿测试四','1');

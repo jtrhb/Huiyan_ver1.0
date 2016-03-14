@@ -1,0 +1,65 @@
+<div class="side-container-hx">
+    <div class="huxiu-author-face">
+        <h3 class="t-h2"><em>热门作者</em></h3>
+        <ul class="clearfix author-face-list">                       
+            <?php
+            
+        $sql = "SELECT * FROM `#@__member` ORDER BY scores DESC LIMIT 12";
+        $newfriends = array();
+        $dsql->SetQuery($sql);
+        $dsql->Execute();
+        while ($row = $dsql->GetArray()) {
+            $newfriends[] = $row;
+        }            
+				foreach ($newfriends as $newfriend)
+				{
+			 ?>
+             <li><p class="author-img"><a href="<?php echo $cfg_cmsurl;?>/member/index.php?uid=<?php echo $newfriend['userid'];?>" target="_blank" title="<?php echo $newfriend['uname'];?>">
+
+            <?php
+            if(!$newfriend['face']==""){
+             echo "<img src=".$newfriend['face']." width='50' height='50' />";
+            }else{
+             if($newfriend['sex']=='女') echo "<img src='templets/images/dfgirl.png' width='50' height='50' />";
+             else echo "<img src='templets/images/dfboy.png' width='50' height='50' />";
+            }
+            ?>
+            </a></p> <p class="name"><a href="<?php echo $cfg_cmsurl;?>/member/index.php?uid=<?php echo $newfriend['userid'];?>" target="_blank"><?php echo $newfriend['uname'];?></a></p>
+                </li>
+
+             <?php
+                }
+              ?>
+                          
+ </ul>
+    </div>
+    
+    <div class="hot-view">
+        <h3 class="t-h2"><em>热门文章</em></h3>
+        <div class="view-list idx-view">
+{dede:php}
+$dsql->SetQuery("select id,litpic,title,writer,pubdate,click from dede_archives order by click desc limit 8");
+$dsql->Execute();
+while($arr = $dsql->getArray()){
+
+$writer = $arr['writer'];
+$row = $dsql->GetOne("Select userid from `dede_member` where uname= '$writer'");
+$arr['title'] = cn_substr($arr['title'],16);
+$arr['pubdate'] = MyDate('Y-m-d H:i',$arr['pubdate']);
+$arcurl = GetOneArchive($arr['id']);
+if(empty($arr['litpic'])) $arr['litpic']='/images/defaultpic.gif';
+echo '<div class="clearfix view-box"><div class="pull-left img-box">';
+echo '<p><a href="'.$arcurl['arcurl'].'" target="_blank"><img src="'.$arr['litpic'].'" width="100px" height="66px"/></a></p></div>';
+echo '<div class="view-box-ctt">';
+echo '<h4><a href="'.$arcurl['arcurl'].'" target="_blank">'.$arr['title'].'</a></h4>';
+echo '<div class="box-other">';
+echo '<span class="source-quote"><a href="index.php?uid='.$row['userid'].'" target="_blank">'.$arr['writer'].'</a></span>';
+echo '<p><time>'.$arr['pubdate'].'</time><span class="comment-box"><i class="icon-click"></i><a href="'.$arcurl['arcurl'].'" target="_blank">'.$arr['click'].'</a></span></p>';
+echo '</div></div></div>';
+
+}
+{/dede:php}
+             </div>
+    </div>
+
+</div>

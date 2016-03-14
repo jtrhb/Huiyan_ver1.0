@@ -1,0 +1,72 @@
+    <div class="hot-view">
+        <h3 class="t-h2"><em>热门文章</em></h3>
+        <div class="view-list idx-view">
+        
+      {dede:arclist row=5 orderby=click}
+
+      <div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="[field:arcurl/]" target="_blank"><img src="[field:litpic/]"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="[field:arcurl/]" target="_blank">[field:fulltitle/]</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=[field:mid runphp='yes']global $dsql;$sql='SELECT userid FROM dede_member WHERE mid='.@me;$spaceurl = $dsql->GetOne($sql);@me=$spaceurl['userid'];[/field:mid]" target="_blank">[field:writer/]</a></span>
+                        <p><time>[field:pubdate function="MyDate('Y-m-d H:i',@me)"/]</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=[field:id/]" target="_blank"><script src="/plus/pls.php?aid=[field:id/]" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+      {/dede:arclist}
+              
+        </div>
+    </div>
+
+	    <div class="hot-author-face">
+        <h3 class="t-h2"><em>广告位1</em></h3>
+{dede:myad name='ad1'/}
+    </div>
+
+
+    <div class="hot-view">
+        <h3 class="t-h2"><em>推荐文章</em></h3>
+        <div class="view-list idx-view">
+      {dede:arclist row=5 flag='c'}
+
+      <div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="[field:arcurl/]" target="_blank"><img src="[field:litpic/]"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="[field:arcurl/]" target="_blank">[field:fulltitle/]</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=[field:mid runphp='yes']global $dsql;$sql='SELECT userid FROM dede_member WHERE mid='.@me;$spaceurl = $dsql->GetOne($sql);@me=$spaceurl['userid'];[/field:mid]" target="_blank">[field:writer/]</a></span>
+                        <p><time>[field:pubdate function="MyDate('Y-m-d H:i',@me)"/]</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=[field:id/]" target="_blank"><script src="/plus/pls.php?aid=[field:id/]" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+      {/dede:arclist}
+              
+        
+          </div>
+    </div>
+    <div class="hot-author-face">
+        <h3 class="t-h2"><em>热门作者</em></h3>
+        <ul class="clearfix author-face-list">
+
+{dede:php}
+$dsql->SetQuery("SELECT * FROM `#@__member` ORDER BY scores DESC LIMIT 12");
+$dsql->Execute();
+$i=0;
+while($arr = $dsql->getArray()){
+$face = $arr['face'];
+if(empty($face)) $face='/member/templets/images/dfboy.png';
+echo '<li><p class="author-img"><a href="/member/index.php?uid='.$arr['userid'].'" target="_blank" title="'.$arr['uname'].'"><img src="'.$face.'"/></a></p>';
+echo '<p class="name"><a href="/member/index.php?uid='.$arr['userid'].'" target="_blank">'.$arr['uname'].'</a></p>';
+echo '';
+}
+{/dede:php}
+        </ul>
+    </div>
+
+		    <div class="hot-author-face">
+        <h3 class="t-h2"><em>广告位2</em></h3>
+{dede:myad name='ad2'/}
+    </div>

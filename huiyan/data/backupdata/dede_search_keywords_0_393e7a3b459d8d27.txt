@@ -1,0 +1,2 @@
+INSERT INTO `dede_search_keywords` VALUES('1','微信','微信','17','31','1376219267','0','0');
+INSERT INTO `dede_search_keywords` VALUES('2','腾讯','腾讯','1','10','1376126741','0','0');

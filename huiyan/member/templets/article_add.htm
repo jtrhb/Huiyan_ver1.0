@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="gb2312">
+        <title>会员投稿 - <?php echo $cfg_webname; ?></title>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <!-- Le styles -->
+        <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/dede58/css/hx-2013.css" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+        <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">
+        <![endif]-->
+    </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+        <div class="container-hx">
+        <?php include(DEDEMEMBER."/templets/login_box.htm"); ?>
+             
+		<script src="/plus/mytag_js.php?aid=1" language="javascript"></script>
+            <div class="row-fluid-wrap-hx">
+                <div class="center-container-hx">
+                    <div class="clearfix row-fluid-hx">
+<div class="clearfix row-fluid-hx">
+    <div class="tougao-box">
+        <h1>投稿</h1>
+    </div>
+   <!-- 投稿开始-->
+   <div class="tougao-box-ctt">
+      <form name="addcontent" action="article_add.php" method="post" enctype="multipart/form-data" onsubmit="return checkSubmit();">
+          <input type="hidden" name="dopost" value="save" />
+          <input type="hidden" name="channelid" value="<?php echo $channelid; ?>" />
+        <div class="tougao-msg">
+            <dl style="margin-bottom:0;">
+                <dt>
+                    <span class="tg-s1">标题：</span>
+                    <input name="title" id="title" class="px" value="" placeholder="感谢你的投稿，你的投稿将在我们审核后呈现在网站" size="80" type="text">
+                </dt>
+                <dt>
+                    <span class="tg-s1">作者：</span>
+                    <input name="writer" id="writer" class="px" value="<?php echo $cfg_ml->M_UserName?>" size="80" type="text" style="width:219px">
+                </dt>                
+                <dd class="tougao-class">
+                    <span class="tg-s1">投稿类别：</span>
+            <?php
+				$typeOptions = GetOptionList(0,$channelid);
+				echo "<select name='typeid' size='1' class='span2'>\r\n";
+				echo "<option value='0' selected>请选择栏目...</option>\r\n";
+				echo $typeOptions;
+				echo "</select>";
+			?>                    
+                </dd>
+            </dl>
+            
+      <?php
+       //自定义字段
+       PrintAutoFieldsAdd($cInfos['fieldset'],'autofield');
+      ?>            
+
+        </div>
+        <?php GetEditor("body","",350,"Member"); ?>
+                <dt>
+                    <span class="tg-s1">验证码：</span>
+                    <input name="vdcode" type="text" id="vdcode" maxlength="100" class="px" style='width:50px;text-transform:uppercase;' />
+            <img src="../include/vdimgck.php" alt="看不清？点击更换" align="absmiddle" style="cursor:pointer" onclick="this.src=this.src+'?'" />
+                </dt> 
+        <button type="submit" class="btn" id ="submit_btn" onclick ="return sent_reg()">提交</button>
+    </form>
+   </div>
+</div>
+
+</div>
+ 
+<script src="/plus/mytag_js.php?aid=3" language="javascript"></script>
+</div>
+</div>
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+
+
+
+</body>
+</html>

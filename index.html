@@ -1,0 +1,1207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="gb2312">
+        <title>汇眼网</title>
+        <meta name="description" content="致力于打造外汇行业第一媒体" />
+        <meta name="keywords" content="织梦源码,织梦模板,dede源码,dede模板下载" />
+        <meta name="author" content="dede58.com" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <!-- Le styles -->
+        <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/dede58/css/hx-2013.css" rel="stylesheet">
+        <link href="/dede58/css/fancyNav.css" rel="stylesheet">
+        <link href="/dede58/css/articletype.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">
+        <![endif]-->
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript" src="/images/js/j.js" ></script>
+<script language="javascript" type="text/javascript" src="dede58/js/classie.js" ></script>
+<script language="javascript" type="text/javascript" src="dede58/js/clipboard.min.js" ></script>
+<script language="javascript" type="text/javascript" src="dede58/js/jquery.min.js" ></script>
+<script language="javascript" type="text/javascript" src="dede58/js/bootstrap.min.js" ></script>
+<script language="javascript" type="text/javascript" src="/templets/daocao/js/pic_scroll.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+	$(function(){
+		$("a[_for]").mouseover(function(){
+			$(this).parents().children("a[_for]").removeClass("thisclass").parents().children("dd").hide();
+			$(this).addClass("thisclass").blur();
+			$("#"+$(this).attr("_for")).show();
+		});
+		$("a[_for=uc_member]").mouseover();
+		$("a[_for=flink_1]").mouseover();
+	});
+	
+	function CheckLogin(){
+	  var taget_obj = document.getElementById('_userlogin');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_loginsta.php");
+	  DedeXHTTP = null;
+	}
+-->
+</script>
+        <script>
+		window.onload = function(){
+			h1 = document.getElementById('specialTopicTop').offsetHeight;
+			h2 = document.getElementById('horizontalMenuOuterContainer').offsetHeight + h1;
+		}
+        </script>
+    </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+        <div class="container-hx">
+		<!--
+<div id="myCarousel" class="carousel slide">
+   
+   <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+   </ol>   
+   
+   <div id="chartCarousel" class="carousel-inner">
+      <div class="item active">
+         <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+           <script type="text/javascript">
+         new TradingView.widget({
+        "autosize": true,
+        "symbol": "FX:EURUSD",
+        "interval": "1",
+        "timezone": "Asia/Shanghai",
+        "theme": "White",
+        "style": "1",
+        "locale": "zh",
+        "toolbar_bg": "rgba(241, 243, 246, 1)",
+        "hide_top_toolbar": true,
+        "allow_symbol_change": true,
+        "save_image": false,
+        "hideideas": true
+    });
+          </script>
+      </div>
+      <div class="item">
+         <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
+    new TradingView.widget({
+        "autosize": true,
+        "symbol": "FX:USDCHF",
+        "interval": "1",
+        "timezone": "Asia/Shanghai",
+        "theme": "White",
+        "style": "1",
+        "locale": "zh",
+        "toolbar_bg": "rgba(241, 243, 246, 1)",
+        "hide_top_toolbar": true,
+        "allow_symbol_change": true,
+        "save_image": false,
+        "hideideas": true
+    });
+</script>
+      </div>
+      <div class="item">
+         <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
+    new TradingView.widget({
+        "autosize": true,
+        "symbol": "FX:USDJPY",
+        "interval": "1",
+        "timezone": "Asia/Shanghai",
+        "theme": "White",
+        "style": "1",
+        "locale": "zh",
+        "toolbar_bg": "rgba(241, 243, 246, 1)",
+        "hide_top_toolbar": true,
+        "allow_symbol_change": true,
+        "save_image": false,
+        "hideideas": true
+    });
+</script>
+      </div>
+   </div>
+   
+   <a class="carousel-control left" href="#myCarousel" 
+      data-slide="prev">&#8249;</a>
+   <a class="carousel-control right" href="#myCarousel" 
+      data-slide="next">&#8250;</a>
+</div>
+-->            
+<div class="top" id="nav">
+    <div class="top-box">
+        <h1 class="logo"><a href="/" target="_blank"><img src="/dede58/img/top_logo.png"></a></h1>
+        <div class="login-box" id="_userlogin">
+            <div class="btn-group">
+                <a href="/member/article_add.php" class="contribute" title="投稿">投稿</a>
+            </div>
+
+            <div class="btn-group">
+                <a href="#lgnModal" data-toggle="modal">登录</a>
+                <a href="/member/index_do.php?fmdo=user&dopost=regnew">注册</a>
+            </div>
+
+            
+            <div class="btn-group">
+                <a href="/rss.php" title="RSS"><i class="icon-rss"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+     <script language="javascript" type="text/javascript">CheckLogin();</script>
+<div class="special-topic" id="specialTopicTop">
+</div>
+<div class="side-menu-outer-container" id="horizontalMenuOuterContainer">
+<div class="side-menu-hx">
+    <div class="side-menu-top">
+      <nav class="menu menu--valentine">
+        <ul class='side-menu-list'>   
+        
+      	<li class='menu__item menu__item--current'><a href='/' class='menu__link'>首页</a></li>
+        
+      	
+      	<li class='menu__item'><a href='/focus/' class='menu__link'>资讯</a></li>
+      	
+      	<li class='menu__item'><a href='/mobile/' class='menu__link'>移动库</a></li>
+      	
+      	<li class='menu__item'><a href='/photo/' class='menu__link'>专题</a></li>
+      	
+      	<li class='menu__item'><a href='/jingjishangshujuku/' class='menu__link'>经纪商数据库</a></li>
+      	
+            </ul>
+       </nav>
+    </div>
+    <!--
+    <div class="search">
+        <form  name="formsearch" action="/plus/search.php" class="form-search">
+        <input type="hidden" name="kwtype" value="0" />
+        
+            <input type="text" name='q' id='s' class="input-text" placeholder="搜索" value="" />
+            <button class="search-btn"><i class="icon-search"></i></button>
+        </form>
+    </div>
+    -->
+</div>
+</div>
+        </div>
+        <div class="container-hx-main">
+           <div class="row-fluid-wrap-hx">
+                <div class="center-container-hx">
+                    <div class="clearfix row-fluid-hx"><div class="center-ctr-wrap">
+    <div class="center-ctr-box">
+        <div class="biaoqian idx-biaoqian"><font color="#000000">热门TAG：</font>
+            <a href='/tags.php?/58%CD%AC%B3%C7/'>58同城</a>
+          
+            <a href='/tags.php?/%B1%B4%CB%F7%CB%B9/'>贝索斯</a>
+          
+            <a href='/tags.php?/%CC%DA%D1%B6/'>腾讯</a>
+          
+            <a href='/tags.php?/O2O/'>O2O</a>
+          
+            <a href='/tags.php?/%CD%C1%B6%B9/'>土豆</a>
+          
+            <a href='/tags.php?/%D3%C5%BF%E1/'>优酷</a>
+          
+            <a href='/tags.php?/%CE%A2%D0%C5/'>微信</a>
+          
+            <a href='/tags.php?/%BE%A9%B6%AB/'>京东</a>
+          
+            <a href='/tags.php?/%BF%C6%BC%BC/'>科技</a>
+          
+            <a href='/tags.php?/%B0%A2%C0%EF%B0%CD%B0%CD/'>阿里巴巴</a>
+          </div>
+
+<!-- JQuery Carousel 头条们 -->
+<div id="myCarousel" class="carousel slide">
+   <!-- 轮播（Carousel）指标 -->
+   <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+   </ol>
+   <!-- 轮播（Carousel）项目 -->
+   <div class="carousel-inner">
+      <div class="item active">
+        <a href="/focus/180.html">
+         <img src="/uploads/allimg/c140820/140U03515H0-19556_lit.jpg">
+        </a>
+        <div class="carousel-caption">信奉平等主义的人，大概不会赞赏这种高调而另类的慈善主张</div>
+
+      </div>
+      <div class="item">
+         <a href="/focus/181.html">
+         <img src="/uploads/allimg/130807/1.jpg">
+        </a>
+        <div class="carousel-caption">投稿测试</div>
+
+      </div>
+      <div class="item">
+         <a href="/focus/168.html">
+         <img src="/uploads/allimg/130809/5-130P91122040-L.jpg">
+        </a>
+        <div class="carousel-caption">腾讯开放两年都做了啥？看看腾讯的自我表扬贴</div>
+
+      </div>
+   </div>
+   <!-- 轮播（Carousel）导航
+   <a class="carousel-control left" href="#myCarousel" 
+      data-slide="prev">&#8249;</a>
+   <a class="carousel-control right" href="#myCarousel" 
+      data-slide="next">&#8250;</a>
+-->
+</div>
+<!--
+         <div class="toutiao idx-toutiao">
+            <h2><a href="/focus/180.html" target="_blank" >信奉平等主义的人，大概不会赞赏这种高调而另类的慈善主张</a></h2>
+            <p>所谓“诸恶莫作，众善奉行”，如果能够将善意以非理性但无害同时成本低廉的手段传递，那么偶尔也不要那么认真，则又何妨？</p>
+            <div class="box-img"><a href="/focus/180.html" target="_blank"><img src="/uploads/allimg/c140820/140U03515H0-19556_lit.jpg"></a></div>
+            <div class="box-other">
+                <span class="source-quote"></span>
+                <time>2016-03-09 15:39:32</time>
+                <span class="comment-box"><i class="icon-comment"></i><a href="/focus/180.html#postform" target="_blank"><script src="/plus/pls.php?aid=180" language="javascript"></script></a></span>
+                <span class="tags-box"></span>
+            </div>
+        </div>
+<div class="toutiao idx-toutiao">
+            <h2><a href="/focus/181.html" target="_blank" >投稿测试</a></h2>
+            <p>testtesttesttesttesttesttesttesttesttesttesttest</p>
+            <div class="box-img"><a href="/focus/181.html" target="_blank"><img src="/uploads/allimg/130807/1.jpg"></a></div>
+            <div class="box-other">
+                <span class="source-quote">jtrhb</span>
+                <time>2016-03-09 15:39:08</time>
+                <span class="comment-box"><i class="icon-comment"></i><a href="/focus/181.html#postform" target="_blank"><script src="/plus/pls.php?aid=181" language="javascript"></script></a></span>
+                <span class="tags-box"></span>
+            </div>
+        </div>
+
+-->  
+     <ul class="nav nav-tabs" id="myTab">
+                        <li class="active"><a href="#latestArticle" data-toggle="tab">最新文章</a></li>
+                        <li id="tabIN"><a href="#industryNews" data-toggle="tab">产业新闻</a></li>
+                        <li id="tabV"><a href="#view" data-toggle="tab">观点</a></li>
+                        <li id="tabDI"><a href="#deepInsight" data-toggle="tab">深度测评</a></li>
+                        <li id="tabETC"><a href="#others" data-toggle="tab">其他</a></li>
+    </ul>
+<div id="myTabContent" class="tab-content">
+    <div class="article-list idx-list tab-pane fade in active" id="latestArticle">       
+    <div class="clearfix article-box ">
+                <span class='articletype arc-type-in'>产业新闻</span>
+                <a href="/focus/179.html" class="a-img" target="_blank"><img src="/uploads/allimg/c140820/140U0351340-93122_lit.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/179.html" target="_blank">转型三年，苏宁陷入“好大喜功”的困境</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"></span>
+                        <time>2016-03-09 15:39:46</time></div><div class="article-summary">难看的数据与连连不断的大动作让我们不得不感慨，苏宁的转型显得太过好大喜功，苏宁已然陷入僵局</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/179.html#odby" target="_blank"><script src="/plus/pls.php?aid=179" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-di'>深度测评</span>
+                <a href="/focus/149.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/8-130P9101G90-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/149.html" target="_blank">大数据告诉我们：《小时代》是属于谁的小时代？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">韦小宝</span>
+                        <time>2016-03-02 13:38:28</time></div><div class="article-summary">对新浪微博9万余用户近期约900万条有效微博的分析表明：该片观众平均年龄20.3岁，其中女性占八成以上；湖北、四川、浙江、江苏、江西的舆情参与度排前5位</div><p class="tags-box"><a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <a href='/tags.php?/%D3%E9%C0%D6%D2%B5/' target='_blank'>娱乐业</a> <a href='/tags.php?/%CD%B7%CC%F5/' target='_blank'>头条</a> <a href='/tags.php?/%B4%F3%CA%FD%BE%DD/' target='_blank'>大数据</a> <a href='/tags.php?/%B5%E7%D3%B0/' target='_blank'>电影</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/149.html#odby" target="_blank"><script src="/plus/pls.php?aid=149" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-etc'>其他</span>
+                <a href="/focus/150.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/6-130P91031060-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/150.html" target="_blank">从内购无底线的《植物大战僵尸2》看海外手游的“本土化改造“</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">令狐冲</span>
+                        <time>2016-03-02 13:38:01</time></div><div class="article-summary">一款来自海外的游戏，为适应中国市场的特殊环境而进行本土化改造——按照常理这对中国的消费者来说是一件好事——但是宝开（PopCap）这次对《植物大战僵尸2》的本土化改造已经超越了"常理"的下限</div><p class="tags-box"><a href='/tags.php?/%D3%CE%CF%B7/' target='_blank'>游戏</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/150.html#odby" target="_blank"><script src="/plus/pls.php?aid=150" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-in'>产业新闻</span>
+                <a href="/focus/151.html" class="a-img" target="_blank"><img src="/uploads/130809/6-130P9103549118.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/151.html" target="_blank">那些年，淘宝屏蔽过的宿敌与盟友</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">令狐冲</span>
+                        <time>2016-03-02 13:37:43</time></div><div class="article-summary">互联网三年河东，三年河西，巨头今天的开放是为了明天的闭环，今天的盟友可能是明天的宿敌。电商牢记：不要养成背靠大树好乘凉的恶习，那只是发展初始阶段的权宜之计</div><p class="tags-box"><a href='/tags.php?/%B5%E7%D7%D3%C9%CC%CE%F1/' target='_blank'>电子商务</a> <a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <a href='/tags.php?/%CC%D4%B1%A6/' target='_blank'>淘宝</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/151.html#odby" target="_blank"><script src="/plus/pls.php?aid=151" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-di'>深度测评</span>
+                <a href="/focus/152.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/6-130P91033450-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/152.html" target="_blank">隐藏在淘宝的灰色职业：骗保师</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">令狐冲</span>
+                        <time>2016-03-02 13:37:21</time></div><div class="article-summary">笔者一直在犹豫要不要写这篇文章，后来犹豫很久，还是写了下来。揭露出来，也许会引起平台注意，早日埋平死角，健全规则。</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/152.html#odby" target="_blank"><script src="/plus/pls.php?aid=152" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-v'>观点</span>
+                <a href="/focus/153.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/6-130P91035200-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/153.html" target="_blank">阿里，请你对新浪微博悠着点儿！</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">令狐冲</span>
+                        <time>2016-03-02 13:37:01</time></div><div class="article-summary">围绕微博，改变才是阿里和微博彼此的出路。首先，把更多的关注点，放到关注用户社交需求的角度来吧。社交是生活，生活才是人的根本</div><p class="tags-box"><a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <a href='/tags.php?/%D0%C2%C0%CB%CE%A2%B2%A9/' target='_blank'>新浪微博</a> <a href='/tags.php?/%B0%A2%C0%EF%B0%CD%B0%CD/' target='_blank'>阿里巴巴</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/153.html#odby" target="_blank"><script src="/plus/pls.php?aid=153" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-in'>产业新闻</span>
+                <a href="/focus/154.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/6-130P9103F20-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/154.html" target="_blank">优土合并17月后，原土豆高管大多出局</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">令狐冲</span>
+                        <time>2016-03-02 13:36:41</time></div><div class="article-summary">京东出售好药师股份套现逾4亿：与九州通分手；土豆被并购一年：原高管全部出局 移动端停滞；微信和手Q即将上线游戏中心对接腾讯移动游戏平台；融360再获3000万美元融资 要做金融版“去哪儿”</div><p class="tags-box"><a href='/tags.php?/%BF%C6%BC%BC/' target='_blank'>科技</a> <a href='/tags.php?/%BE%A9%B6%AB/' target='_blank'>京东</a> <a href='/tags.php?/%CE%A2%D0%C5/' target='_blank'>微信</a> <a href='/tags.php?/%D3%C5%BF%E1/' target='_blank'>优酷</a> <a href='/tags.php?/%CD%C1%B6%B9/' target='_blank'>土豆</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/154.html#odby" target="_blank"><script src="/plus/pls.php?aid=154" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-in'>产业新闻</span>
+                <a href="/focus/155.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/6-130P9103P90-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/155.html" target="_blank">微信5.0上线前夜，开放的困与厄</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">令狐冲</span>
+                        <time>2016-03-02 13:36:17</time></div><div class="article-summary">微信5.0上线后，服务号与订阅号之间的划分，公众账号注册认证门槛的提高，是否预示着微信接下来开放的力度会加大，开放的对象会定向？无论如何，微信必须加快开放的步伐，否则其他平台野蛮...</div><p class="tags-box"><a href='/tags.php?/%CE%A2%D0%C5/' target='_blank'>微信</a> <a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/155.html#odby" target="_blank"><script src="/plus/pls.php?aid=155" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-etc'>其他</span>
+                <a href="/focus/156.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/6-130P91039300-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/156.html" target="_blank">微信支付能闭环O2O吗？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">令狐冲</span>
+                        <time>2016-03-02 13:35:59</time></div><div class="article-summary">在微信里，支付是不是一项必须的功能？从目前微信支付的应用场景看来，这个答案是否定的。在不掌握支付场景的时候，微信很可能沦为了类似于美丽说的流量导入工具。</div><p class="tags-box"><a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <a href='/tags.php?/%CE%A2%D0%C5/' target='_blank'>微信</a> <a href='/tags.php?/O2O/' target='_blank'>O2O</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/156.html#odby" target="_blank"><script src="/plus/pls.php?aid=156" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-v'>观点</span>
+                <a href="/focus/157.html" class="a-img" target="_blank"><img src="/uploads/130809/1-130P9104621c6.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/157.html" target="_blank">微信5.0助推腾讯股价，9年股价100倍</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2016-03-02 13:35:38</time></div><div class="article-summary">微信5.0发布，腾讯股价再创历史新高，昨日收盘价达到其2004年上市发行价的100倍；杰夫·贝索斯已同意以2.5亿美元的价格收购华盛顿邮报公司的报纸资产</div><p class="tags-box"><a href='/tags.php?/%CC%DA%D1%B6/' target='_blank'>腾讯</a> <a href='/tags.php?/%B1%B4%CB%F7%CB%B9/' target='_blank'>贝索斯</a> <a href='/tags.php?/%C8%FD%D0%C7/' target='_blank'>三星</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/157.html#odby" target="_blank"><script src="/plus/pls.php?aid=157" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-v'>观点</span>
+                <a href="/focus/158.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/1-130P91043060-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/158.html" target="_blank">360和有道，在一起，真的有意义？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2016-03-02 13:35:21</time></div><div class="article-summary">有道与360合作，从资金、渠道和技术上来看并无太大意义。有道之于网易形同鸡肋，而且并没有完全开放给360。至于后者，一味强调流量和渠道，既不治标，也不治本。</div><p class="tags-box"><a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <a href='/tags.php?/%C6%E6%BB%A2360/' target='_blank'>奇虎360</a> <a href='/tags.php?/%D3%D0%B5%C0/' target='_blank'>有道</a> <a href='/tags.php?/%CD%F8%D2%D7/' target='_blank'>网易</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/158.html#odby" target="_blank"><script src="/plus/pls.php?aid=158" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-etc'>其他</span>
+                <a href="/focus/159.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/1-130P91044370-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/159.html" target="_blank">为什么英特尔要在电视交互功能上小心翼翼？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2016-03-02 13:35:02</time></div><div class="article-summary">英特尔决定将智能电视产品的前置摄像头去掉，除了技术方面的考虑，用户隐私的担忧尤其是 NSA 窃听事件的影响扮演了很重要的角色。交互新技术的推广成为所有厂商都要谨慎面对的一个课题。</div><p class="tags-box"><a href='/tags.php?/%D6%C7%C4%DC%B5%E7%CA%D3/' target='_blank'>智能电视</a> <a href='/tags.php?/%CE%A2%C8%ED/' target='_blank'>微软</a> <a href='/tags.php?/%D3%A2%CC%D8%B6%FB/' target='_blank'>英特尔</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/159.html#odby" target="_blank"><script src="/plus/pls.php?aid=159" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-etc'>其他</span>
+                <a href="/focus/160.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/1-130P91050000-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/160.html" target="_blank">七匹狼电商的线下线上融合实践要素</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2016-03-02 13:34:25</time></div><div class="article-summary">原来依靠大量线下分销商模式的传统企业，做电商会碰到两大问题：线下经销商反对，因为线上模式对他们造成产品和价格的冲击；或是线下经销商也纷纷踏足电商分销，造成价格失控。</div><p class="tags-box"><a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <a href='/tags.php?/%B5%E7%D7%D3%C9%CC%CE%F1/' target='_blank'>电子商务</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/160.html#odby" target="_blank"><script src="/plus/pls.php?aid=160" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-in'>产业新闻</span>
+                <a href="/focus/161.html" class="a-img" target="_blank"><img src="/uploads/130809/1-130P9142523c6.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/161.html" target="_blank">PC游戏转手游，实战案例分析</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2016-03-02 13:34:06</time></div><div class="article-summary">“灵魂先行”是必要条件：能不能突破PC端产品设计的惯性思维？能不能放下一手遮天、通吃所有利润的大牌架子？</div><p class="tags-box"><a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <a href='/tags.php?/%D3%CE%CF%B7/' target='_blank'>游戏</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/161.html#odby" target="_blank"><script src="/plus/pls.php?aid=161" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-v'>观点</span>
+                <a href="/focus/162.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/1-130P91052470-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/162.html" target="_blank">三星真正的死穴是什么？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2016-03-02 13:33:39</time></div><div class="article-summary">三星不仅学习了日企的垂直整合，而且学习了综合商社模式，在营销和研发上的投入都很大。最重要的是把握了数字技术改变消费电子格局的机会。三星未来最有可能导致失败的症结，就是接班人不够给力。</div><p class="tags-box"><a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <a href='/tags.php?/%C8%FD%D0%C7/' target='_blank'>三星</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/162.html#odby" target="_blank"><script src="/plus/pls.php?aid=162" language="javascript"></script></a></span></div></div></div>
+
+        <div class="idx-more"><a class="a-more-idx" href="/focus/" target="_blank">更多</a></div>
+     </div>
+<div class="article-list idx-list tab-pane fade" id="industryNews">
+    <div class="clearfix article-box ">
+                <span class='articletype arc-type-in'>产业新闻</span>
+                <a href="/focus/179.html" class="a-img" target="_blank"><img src="/uploads/allimg/c140820/140U0351340-93122_lit.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/179.html" target="_blank">转型三年，苏宁陷入“好大喜功”的困境</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"></span>
+                        <time>2016-03-09 15:39:46</time></div><div class="article-summary">难看的数据与连连不断的大动作让我们不得不感慨，苏宁的转型显得太过好大喜功，苏宁已然陷入僵局</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/179.html#odby" target="_blank"><script src="/plus/pls.php?aid=179" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-in'>产业新闻</span>
+                <a href="/focus/151.html" class="a-img" target="_blank"><img src="/uploads/130809/6-130P9103549118.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/151.html" target="_blank">那些年，淘宝屏蔽过的宿敌与盟友</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">令狐冲</span>
+                        <time>2016-03-02 13:37:43</time></div><div class="article-summary">互联网三年河东，三年河西，巨头今天的开放是为了明天的闭环，今天的盟友可能是明天的宿敌。电商牢记：不要养成背靠大树好乘凉的恶习，那只是发展初始阶段的权宜之计</div><p class="tags-box"><a href='/tags.php?/%B5%E7%D7%D3%C9%CC%CE%F1/' target='_blank'>电子商务</a> <a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <a href='/tags.php?/%CC%D4%B1%A6/' target='_blank'>淘宝</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/151.html#odby" target="_blank"><script src="/plus/pls.php?aid=151" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-in'>产业新闻</span>
+                <a href="/focus/154.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/6-130P9103F20-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/154.html" target="_blank">优土合并17月后，原土豆高管大多出局</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">令狐冲</span>
+                        <time>2016-03-02 13:36:41</time></div><div class="article-summary">京东出售好药师股份套现逾4亿：与九州通分手；土豆被并购一年：原高管全部出局 移动端停滞；微信和手Q即将上线游戏中心对接腾讯移动游戏平台；融360再获3000万美元融资 要做金融版“去哪儿”</div><p class="tags-box"><a href='/tags.php?/%BF%C6%BC%BC/' target='_blank'>科技</a> <a href='/tags.php?/%BE%A9%B6%AB/' target='_blank'>京东</a> <a href='/tags.php?/%CE%A2%D0%C5/' target='_blank'>微信</a> <a href='/tags.php?/%D3%C5%BF%E1/' target='_blank'>优酷</a> <a href='/tags.php?/%CD%C1%B6%B9/' target='_blank'>土豆</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/154.html#odby" target="_blank"><script src="/plus/pls.php?aid=154" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-in'>产业新闻</span>
+                <a href="/focus/155.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/6-130P9103P90-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/155.html" target="_blank">微信5.0上线前夜，开放的困与厄</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">令狐冲</span>
+                        <time>2016-03-02 13:36:17</time></div><div class="article-summary">微信5.0上线后，服务号与订阅号之间的划分，公众账号注册认证门槛的提高，是否预示着微信接下来开放的力度会加大，开放的对象会定向？无论如何，微信必须加快开放的步伐，否则其他平台野蛮...</div><p class="tags-box"><a href='/tags.php?/%CE%A2%D0%C5/' target='_blank'>微信</a> <a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/155.html#odby" target="_blank"><script src="/plus/pls.php?aid=155" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-in'>产业新闻</span>
+                <a href="/focus/161.html" class="a-img" target="_blank"><img src="/uploads/130809/1-130P9142523c6.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/161.html" target="_blank">PC游戏转手游，实战案例分析</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2016-03-02 13:34:06</time></div><div class="article-summary">“灵魂先行”是必要条件：能不能突破PC端产品设计的惯性思维？能不能放下一手遮天、通吃所有利润的大牌架子？</div><p class="tags-box"><a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <a href='/tags.php?/%D3%CE%CF%B7/' target='_blank'>游戏</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/161.html#odby" target="_blank"><script src="/plus/pls.php?aid=161" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-in'>产业新闻</span>
+                <a href="/focus/167.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/5-130P9111J10-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/167.html" target="_blank">比尔盖茨：谷歌别光演戏，干点儿实在的</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2016-03-02 13:31:35</time></div><div class="article-summary">盖茨表示，“谷歌一开始说要做很多事情，做了很多宣传，然后就彻底关闭了。他们现在只是在做自己的老本行而已。但光做自己本行的演员帮不了穷人。”</div><p class="tags-box"><a href='/tags.php?/%CE%A2%C8%ED/' target='_blank'>微软</a> <a href='/tags.php?/%B8%C7%B4%C4/' target='_blank'>盖茨</a> <a href='/tags.php?/%B9%C8%B8%E8/' target='_blank'>谷歌</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/167.html#odby" target="_blank"><script src="/plus/pls.php?aid=167" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-in'>产业新闻</span>
+                <a href="/focus/172.html" class="a-img" target="_blank"><img src="/uploads/allimg/c140820/140U0349A20-34209_lit.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/172.html" target="_blank">传媒政策变革红利已至，视频网站社群化将是大势所趋</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"></span>
+                        <time>2016-03-02 13:29:13</time></div><div class="article-summary">政策机遇可遇不可求，于传媒人而言，幸福来的太突然；于具有互联网化属性的视频产品而言，最棒的时代开启；而于用户而言，欢聚的时刻，到了。</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/172.html#odby" target="_blank"><script src="/plus/pls.php?aid=172" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-in'>产业新闻</span>
+                <a href="/focus/174.html" class="a-img" target="_blank"><img src="/uploads/allimg/c140820/140U03502020-a311_lit.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/174.html" target="_blank">价格全面低于京东？国美在线这次食言了</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"></span>
+                        <time>2016-03-02 13:21:00</time></div><div class="article-summary">记者随机选取20款主流商品对比发现，国美在线仅有8款商品价格低于京东。</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/174.html#odby" target="_blank"><script src="/plus/pls.php?aid=174" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-in'>产业新闻</span>
+                <a href="/focus/139.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/1-130PZZ9180-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/139.html" target="_blank">80、90后技术宅：网络文化一代崛起，告密时代即将来临？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-09 09:10:20</time></div><div class="article-summary">像斯诺登一样有原则的殉难者将会抓住大众想象，并可能会有更多的泄密事件。在网络年轻人的社区里，新的反权威、信息自由的意识形态正在强化。信息公开化是他们的共识之一。</div><p class="tags-box"><a href='/tags.php?/%D2%FE%CB%BD/' target='_blank'>隐私</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/139.html#odby" target="_blank"><script src="/plus/pls.php?aid=139" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-in'>产业新闻</span>
+                <a href="/focus/138.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/1-130PZZH10-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/138.html" target="_blank">58同城再曝上市传闻：筹资至少1亿美元</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-09 09:06:38</time></div><div class="article-summary">匿名消息人士称，58同城正在与瑞士信贷和摩根士丹利展开合作，筹备IPO交易。</div><p class="tags-box"><a href='/tags.php?/58%CD%AC%B3%C7/' target='_blank'>58同城</a> <a href='/tags.php?/IPO/' target='_blank'>IPO</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/138.html#odby" target="_blank"><script src="/plus/pls.php?aid=138" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-in'>产业新闻</span>
+                <a href="/mobile/98.html" class="a-img" target="_blank"><img src="/uploads/allimg/130807/60.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/mobile/98.html" target="_blank">为什么手Q做不过微信</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-07 00:00:00</time></div><div class="article-summary">在舆论热度上手Q要远逊于微信，致使用户普遍出现了手Q不及微信的认知，这就是舆论的作用和用户心理奇特之处。
+</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/mobile/98.html#odby" target="_blank"><script src="/plus/pls.php?aid=98" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-in'>产业新闻</span>
+                <a href="/mobile/107.html" class="a-img" target="_blank"><img src="/uploads/allimg/130807/69.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/mobile/107.html" target="_blank">微信5.0八月来袭，你准备好了吗？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-07 00:00:00</time></div><div class="article-summary">微信5.0的到来让众多平台开发者焦躁不安，订阅号和服务号的抉择更让不少从业者措手不及，大多数人主要还是纠结推送的问题，好像不能推送消息就无法做活动做营销。
+</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/mobile/107.html#odby" target="_blank"><script src="/plus/pls.php?aid=107" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-in'>产业新闻</span>
+                <a href="/mobile/122.html" class="a-img" target="_blank"><img src="/uploads/allimg/130807/79.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/mobile/122.html" target="_blank">小米荣登探花 让三星和苹果情何以堪</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-07 00:00:00</time></div><div class="article-summary">小米的品牌影响力已开始由一线城市向二、三线及以下城市的渗透，更趋成熟的供应链、产能持续攀升、仓储物流体系等因素成为不可磨灭的功臣。
+</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/mobile/122.html#odby" target="_blank"><script src="/plus/pls.php?aid=122" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-in'>产业新闻</span>
+                <a href="/mobile/125.html" class="a-img" target="_blank"><img src="/uploads/allimg/130807/85.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/mobile/125.html" target="_blank">谷歌新品发布会：Nexus7、Android 4.3冰火两重天</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-07 00:00:00</time></div><div class="article-summary">谷歌的Android操作系统在4.x时代走了将近两年，各品牌的旗舰机不断推出让人垂涎的硬件优势，用户也越来越期待传闻中的Android5.0。
+</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/mobile/125.html#odby" target="_blank"><script src="/plus/pls.php?aid=125" language="javascript"></script></a></span></div></div></div>
+
+    <div class="idx-more"><a class="a-more-idx" href="/focus/" target="_blank">更多</a></div>
+</div>
+
+
+<div class="article-list idx-list tab-pane fade" id="view">       
+    <div class="clearfix article-box ">
+                <span class='articletype arc-type-v'>观点</span>
+                <a href="/focus/180.html" class="a-img" target="_blank"><img src="/uploads/allimg/c140820/140U03515H0-19556_lit.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/180.html" target="_blank">信奉平等主义的人，大概不会赞赏这种高调而另类的慈善主张</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"></span>
+                        <time>2016-03-09 15:39:32</time></div><div class="article-summary">所谓“诸恶莫作，众善奉行”，如果能够将善意以非理性但无害同时成本低廉的手段传递，那么偶尔也不要那么认真，则又何妨？</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/180.html#odby" target="_blank"><script src="/plus/pls.php?aid=180" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-v'>观点</span>
+                <a href="/focus/153.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/6-130P91035200-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/153.html" target="_blank">阿里，请你对新浪微博悠着点儿！</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">令狐冲</span>
+                        <time>2016-03-02 13:37:01</time></div><div class="article-summary">围绕微博，改变才是阿里和微博彼此的出路。首先，把更多的关注点，放到关注用户社交需求的角度来吧。社交是生活，生活才是人的根本</div><p class="tags-box"><a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <a href='/tags.php?/%D0%C2%C0%CB%CE%A2%B2%A9/' target='_blank'>新浪微博</a> <a href='/tags.php?/%B0%A2%C0%EF%B0%CD%B0%CD/' target='_blank'>阿里巴巴</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/153.html#odby" target="_blank"><script src="/plus/pls.php?aid=153" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-v'>观点</span>
+                <a href="/focus/157.html" class="a-img" target="_blank"><img src="/uploads/130809/1-130P9104621c6.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/157.html" target="_blank">微信5.0助推腾讯股价，9年股价100倍</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2016-03-02 13:35:38</time></div><div class="article-summary">微信5.0发布，腾讯股价再创历史新高，昨日收盘价达到其2004年上市发行价的100倍；杰夫·贝索斯已同意以2.5亿美元的价格收购华盛顿邮报公司的报纸资产</div><p class="tags-box"><a href='/tags.php?/%CC%DA%D1%B6/' target='_blank'>腾讯</a> <a href='/tags.php?/%B1%B4%CB%F7%CB%B9/' target='_blank'>贝索斯</a> <a href='/tags.php?/%C8%FD%D0%C7/' target='_blank'>三星</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/157.html#odby" target="_blank"><script src="/plus/pls.php?aid=157" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-v'>观点</span>
+                <a href="/focus/158.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/1-130P91043060-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/158.html" target="_blank">360和有道，在一起，真的有意义？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2016-03-02 13:35:21</time></div><div class="article-summary">有道与360合作，从资金、渠道和技术上来看并无太大意义。有道之于网易形同鸡肋，而且并没有完全开放给360。至于后者，一味强调流量和渠道，既不治标，也不治本。</div><p class="tags-box"><a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <a href='/tags.php?/%C6%E6%BB%A2360/' target='_blank'>奇虎360</a> <a href='/tags.php?/%D3%D0%B5%C0/' target='_blank'>有道</a> <a href='/tags.php?/%CD%F8%D2%D7/' target='_blank'>网易</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/158.html#odby" target="_blank"><script src="/plus/pls.php?aid=158" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-v'>观点</span>
+                <a href="/focus/162.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/1-130P91052470-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/162.html" target="_blank">三星真正的死穴是什么？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2016-03-02 13:33:39</time></div><div class="article-summary">三星不仅学习了日企的垂直整合，而且学习了综合商社模式，在营销和研发上的投入都很大。最重要的是把握了数字技术改变消费电子格局的机会。三星未来最有可能导致失败的症结，就是接班人不够给力。</div><p class="tags-box"><a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <a href='/tags.php?/%C8%FD%D0%C7/' target='_blank'>三星</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/162.html#odby" target="_blank"><script src="/plus/pls.php?aid=162" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-v'>观点</span>
+                <a href="/focus/163.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/6-130P91054220-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/163.html" target="_blank">Facebook对用户接受信息的算法规则进行了重大调整</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">令狐冲</span>
+                        <time>2016-03-02 13:32:51</time></div><div class="article-summary">在新调整之后，用户如果返回Facebook，那么Facebook在进行信息评分和评级运算时，将考虑用户从未浏览过的所有信息，而不仅仅是用户上次访问之后所建立的信息</div><p class="tags-box"><a href='/tags.php?/Facebook/' target='_blank'>Facebook</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/163.html#odby" target="_blank"><script src="/plus/pls.php?aid=163" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-v'>观点</span>
+                <a href="/focus/166.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/5-130P91115450-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/166.html" target="_blank">乐视面前的三座大山</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2016-03-02 13:31:50</time></div><div class="article-summary">乐视自称颠覆者。但用中国人的话来讲，步子大了容易扯着蛋。我们来看下乐视都面临着哪几座大山。目前全国宽带的均速为2M，如果下载一部2G大小的电影，需要用时3小时，这对于乐视觉而言无疑是一种掣肘。</div><p class="tags-box"><a href='/tags.php?/%C0%D6%CA%D3/' target='_blank'>乐视</a> <a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/166.html#odby" target="_blank"><script src="/plus/pls.php?aid=166" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-v'>观点</span>
+                <a href="/focus/170.html" class="a-img" target="_blank"><img src="/uploads/allimg/c140820/140U03493460-15a1_lit.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/170.html" target="_blank">手机不是你想做，想做就能做</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"></span>
+                        <time>2016-03-02 13:30:08</time></div><div class="article-summary">手机端做视频最赚钱的公司是哪一家？不是视频网站，不是什么网络公司，却是三大运营商！现在看似稳固的三大运营商，一旦出现政策方面的变动了呢？</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/170.html#odby" target="_blank"><script src="/plus/pls.php?aid=170" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-v'>观点</span>
+                <a href="/focus/171.html" class="a-img" target="_blank"><img src="/uploads/allimg/c140820/140U03494950-22649_lit.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/171.html" target="_blank">习近平亲手操刀媒体变革？传媒酝酿大变局</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"></span>
+                        <time>2016-03-02 13:29:51</time></div><div class="article-summary">无论是名噪一时的澎湃新闻，还是传闻中的几个大的新媒体项目，都出现于今年，绝非偶然。今年被称作“媒体融合年”。关于媒体，应该还会有不少好戏等待上演。</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/171.html#odby" target="_blank"><script src="/plus/pls.php?aid=171" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-v'>观点</span>
+                <a href="/focus/176.html" class="a-img" target="_blank"><img src="/uploads/allimg/c140820/140U03505020-25b7_lit.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/176.html" target="_blank">拉勾网创立一年估值过亿美金：背后那些“道道”</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"></span>
+                        <time>2016-03-02 13:20:27</time></div><div class="article-summary">从拉勾网建立的第一天开始，马德龙要求所有产品的设计和服务都是围绕着求职者来展开的，这彻底的颠覆了传统招聘的游戏规则</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/176.html#odby" target="_blank"><script src="/plus/pls.php?aid=176" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-v'>观点</span>
+                <a href="/focus/178.html" class="a-img" target="_blank"><img src="/uploads/allimg/c140820/140U0350U60-44V9_lit.png" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/178.html" target="_blank">京东面临的两大挑战</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"></span>
+                        <time>2016-03-02 13:18:58</time></div><div class="article-summary">如果不能成功应对两大挑战，多年来依靠自营、自建（物流）树立的口碑遭到蚕食，京东将会失去自我</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/178.html#odby" target="_blank"><script src="/plus/pls.php?aid=178" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-v'>观点</span>
+                <a href="/focus/145.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/8-130P9100Q70-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/145.html" target="_blank">成立四年的Pinterest走过怎样的发展之路，未来路线图又是如何？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">韦小宝</span>
+                        <time>2013-08-09 10:07:42</time></div><div class="article-summary">Pinterest全球月独立用户访问已达4870万，为全美前15强，总共获得3.38亿美元的投资。未来该公司将在“兴趣图谱”、大数据、内容价值、移动端设计呈现和API方面做出改进。</div><p class="tags-box"><a href='/tags.php?/%B5%E7%D7%D3%C9%CC%CE%F1/' target='_blank'>电子商务</a> <a href='/tags.php?/Pinterest/' target='_blank'>Pinterest</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/145.html#odby" target="_blank"><script src="/plus/pls.php?aid=145" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-v'>观点</span>
+                <a href="/focus/144.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/8-130P91006250-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/144.html" target="_blank">标杆产品Surface完败，混合本市场基本无望？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">韦小宝</span>
+                        <time>2013-08-09 10:06:13</time></div><div class="article-summary">微软希望用Surface引导PC厂商一同探索混合本市场，但是旗舰产品Surface的大溃败显然已经说明这个市场没有前景。微软已经尽力了，别忘了，去年至今的广告费已经花掉了数十亿美元。</div><p class="tags-box"><a href='/tags.php?/%CE%A2%C8%ED/' target='_blank'>微软</a> <a href='/tags.php?/%C6%BD%B0%E5%B5%E7%C4%D4/' target='_blank'>平板电脑</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/144.html#odby" target="_blank"><script src="/plus/pls.php?aid=144" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-v'>观点</span>
+                <a href="/focus/143.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/1-130P91003430-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/143.html" target="_blank">MOTO X：我们即将见证谷歌125亿美元收购摩托罗拉的成效</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-09 10:03:40</time></div><div class="article-summary">摩托罗拉需要通过MOTO X证明自己，高端智能机市场接近饱和，MOTO X将主攻低端市场。从目前的情况来看，显然摩托罗拉所做的一切并不值125亿美元，可能所有专利加起来也没有这么多。</div><p class="tags-box"><a href='/tags.php?/%B9%C8%B8%E8/' target='_blank'>谷歌</a> <a href='/tags.php?/%C4%A6%CD%D0%C2%DE%C0%AD/' target='_blank'>摩托罗拉</a> <a href='/tags.php?/%D6%C7%C4%DC%CA%D6%BB%FA/' target='_blank'>智能手机</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/143.html#odby" target="_blank"><script src="/plus/pls.php?aid=143" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-v'>观点</span>
+                <a href="/focus/142.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/1-130PZ952340-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/142.html" target="_blank">拼儿子才是王道：“江南Style”让Psy老爸的股票翻了八倍</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-09 09:52:31</time></div><div class="article-summary">DI Corp是韩国一家为半导体行业制造测试设备的公司，这家公司的股票去年暴涨。原因是什么？是营收业绩还是分析师报告？都不是。</div><p class="tags-box"><a href='/tags.php?/%D3%E9%C0%D6%D2%B5/' target='_blank'>娱乐业</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/142.html#odby" target="_blank"><script src="/plus/pls.php?aid=142" language="javascript"></script></a></span></div></div></div>
+
+        <div class="idx-more"><a class="a-more-idx" href="/focus/" target="_blank">更多</a></div>
+</div>
+
+
+<div class="article-list idx-list tab-pane fade" id="deepInsight">       
+    <div class="clearfix article-box ">
+                <span class='articletype arc-type-di'>深度测评</span>
+                <a href="/focus/181.html" class="a-img" target="_blank"><img src="/uploads/allimg/130807/1.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/181.html" target="_blank">投稿测试</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">jtrhb</span>
+                        <time>2016-03-09 15:39:08</time></div><div class="article-summary">testtesttesttesttesttesttesttesttesttesttesttest</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/181.html#odby" target="_blank"><script src="/plus/pls.php?aid=181" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-di'>深度测评</span>
+                <a href="/focus/149.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/8-130P9101G90-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/149.html" target="_blank">大数据告诉我们：《小时代》是属于谁的小时代？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">韦小宝</span>
+                        <time>2016-03-02 13:38:28</time></div><div class="article-summary">对新浪微博9万余用户近期约900万条有效微博的分析表明：该片观众平均年龄20.3岁，其中女性占八成以上；湖北、四川、浙江、江苏、江西的舆情参与度排前5位</div><p class="tags-box"><a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <a href='/tags.php?/%D3%E9%C0%D6%D2%B5/' target='_blank'>娱乐业</a> <a href='/tags.php?/%CD%B7%CC%F5/' target='_blank'>头条</a> <a href='/tags.php?/%B4%F3%CA%FD%BE%DD/' target='_blank'>大数据</a> <a href='/tags.php?/%B5%E7%D3%B0/' target='_blank'>电影</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/149.html#odby" target="_blank"><script src="/plus/pls.php?aid=149" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-di'>深度测评</span>
+                <a href="/focus/152.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/6-130P91033450-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/152.html" target="_blank">隐藏在淘宝的灰色职业：骗保师</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">令狐冲</span>
+                        <time>2016-03-02 13:37:21</time></div><div class="article-summary">笔者一直在犹豫要不要写这篇文章，后来犹豫很久，还是写了下来。揭露出来，也许会引起平台注意，早日埋平死角，健全规则。</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/152.html#odby" target="_blank"><script src="/plus/pls.php?aid=152" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-di'>深度测评</span>
+                <a href="/focus/165.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/5-130P91114330-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/165.html" target="_blank">腾讯O2O这些年：做好了入口做好支付，就是缺商户</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2016-03-02 13:32:08</time></div><div class="article-summary">微信作为移动端的入口级产品，其目标是打造生活服务O2O大平台；腾讯并不具备强大的线下能力，微信平台发展需要点评网站的消费信息和团购网站的商务拓展做支撑</div><p class="tags-box"><a href='/tags.php?/%CC%DA%D1%B6/' target='_blank'>腾讯</a> <a href='/tags.php?/O2O/' target='_blank'>O2O</a> <a href='/tags.php?/%CE%A2%D0%C5/' target='_blank'>微信</a> <a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/165.html#odby" target="_blank"><script src="/plus/pls.php?aid=165" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-di'>深度测评</span>
+                <a href="/focus/168.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/5-130P91122040-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/168.html" target="_blank">腾讯开放两年都做了啥？看看腾讯的自我表扬贴</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2016-03-02 13:31:14</time></div><div class="article-summary">是否有新的商业模式出现，让非游戏应用能依靠自身的应用直接获利？而且，传统的非互联网企业，甚至更多垂直领域，是否可以通过O2O移动互联网化并创造出新的商机？</div><p class="tags-box"><a href='/tags.php?/%CC%DA%D1%B6/' target='_blank'>腾讯</a> <a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/168.html#odby" target="_blank"><script src="/plus/pls.php?aid=168" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-di'>深度测评</span>
+                <a href="/focus/169.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/1-130P9115633127-lp.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/169.html" target="_blank">齐齐封杀令背后：阿里与腾讯的“社交电商”博弈</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2016-03-02 13:30:53</time></div><div class="article-summary">阿里在焦虑状态下，社交化电商之路更急迫一些。腾讯君，快来接招吧！</div><p class="tags-box"><a href='/tags.php?/%B0%A2%C0%EF%B0%CD%B0%CD/' target='_blank'>阿里巴巴</a> <a href='/tags.php?/%CC%DA%D1%B6/' target='_blank'>腾讯</a> <a href='/tags.php?/%B5%E7%D7%D3%C9%CC%CE%F1/' target='_blank'>电子商务</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/169.html#odby" target="_blank"><script src="/plus/pls.php?aid=169" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-di'>深度测评</span>
+                <a href="/focus/173.html" class="a-img" target="_blank"><img src="/uploads/allimg/c140820/140U034b5P-49C2_lit.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/173.html" target="_blank">目前大多数IP运作都停留在收割变现的初级阶段，而非真正的“运作</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"></span>
+                        <time>2016-03-02 13:24:59</time></div><div class="article-summary">IP并不仅仅是一种耗材。为了长久的市场考虑，真正要做的是系统化地考虑IP生态，持久建构其影响力，并通过自身具备的音乐、游戏、影视、动漫等原创能力，二次改造IP或是将原始IP变为高能化产品</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/173.html#odby" target="_blank"><script src="/plus/pls.php?aid=173" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-di'>深度测评</span>
+                <a href="/focus/175.html" class="a-img" target="_blank"><img src="/uploads/allimg/c140820/140U03504340-14125_lit.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/175.html" target="_blank">解读MIUI 6背后四大布局，三层风险</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"></span>
+                        <time>2016-03-02 13:20:48</time></div><div class="article-summary">对于雷军来说，如果来衡量自身迅速成长与业界黑洞这个平衡点呢？</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/175.html#odby" target="_blank"><script src="/plus/pls.php?aid=175" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-di'>深度测评</span>
+                <a href="/focus/177.html" class="a-img" target="_blank"><img src="/uploads/140820/1-140R0110200M8.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/177.html" target="_blank">妖股背后，唯品会的势头应该怎样持续下去？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"></span>
+                        <time>2016-03-02 13:19:19</time></div><div class="article-summary">上周，唯品会发布了其2014Q2财报，报告显示，唯品会在2014Q2中总净营收为8.294亿美元，同比增长136.1%；净利润为2640万美元，同比增长192.1%。 对于这一只上市两年多涨幅已超30倍的妖股，这种情况下，投资者愿意相信其是国内可能会在电商行业内获取相对优势</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/177.html#odby" target="_blank"><script src="/plus/pls.php?aid=177" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-di'>深度测评</span>
+                <a href="/focus/148.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/8-130P91016270-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/148.html" target="_blank">苹果避税功力不输金融大鳄，亚马逊纳税老实本分？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">韦小宝</span>
+                        <time>2013-08-09 10:16:08</time></div><div class="article-summary">一项研究显示，美国前100名上市公司当中的82家公司在海外设立的避税分公司总共多达2686家，帐面总共有1.17万亿美元的营收。苹果在离岸避税地的帐面资产最多，但避税分公司数量很少。</div><p class="tags-box"><a href='/tags.php?/%C6%BB%B9%FB/' target='_blank'>苹果</a> <a href='/tags.php?/%D1%C7%C2%ED%D1%B7/' target='_blank'>亚马逊</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/148.html#odby" target="_blank"><script src="/plus/pls.php?aid=148" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-di'>深度测评</span>
+                <a href="/mobile/112.html" class="a-img" target="_blank"><img src="/uploads/allimg/130807/72.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/mobile/112.html" target="_blank">雷电搜索  周鸿祎想怎么玩</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-07 00:00:00</time></div><div class="article-summary">【最科技讯】昨天下午，360推出了雷电搜索，你能联想到什么呢？肯定是百度花19亿美元高价拿下91无线，其核心就是91手机助手，说白了就是iOS和Android的资源下载入口。91手机助手的竞争对手360手机助手，他们的定位完全相同。如今的雷电搜索，360自称是“中...</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/mobile/112.html#odby" target="_blank"><script src="/plus/pls.php?aid=112" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-di'>深度测评</span>
+                <a href="/mobile/113.html" class="a-img" target="_blank"><img src="/uploads/allimg/130807/73.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/mobile/113.html" target="_blank">谷歌步快播“后尘”推Chromecast，巧合?OR?抄袭？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-07 00:00:00</time></div><div class="article-summary">谷歌最近在新品发布会上正式推出的Chromecast电视棒引发了用户的强烈反响，发布之后，Chromecast很快就在亚马逊和Google Play商店脱销。
+</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/mobile/113.html#odby" target="_blank"><script src="/plus/pls.php?aid=113" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-di'>深度测评</span>
+                <a href="/mobile/115.html" class="a-img" target="_blank"><img src="/uploads/allimg/130807/74.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/mobile/115.html" target="_blank">中国电信4G也来了</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-07 00:00:00</time></div><div class="article-summary">【最科技讯】昨日，中国电信首个天翼4G试验网在南京开通，首期规划站点以亚青、青奥场馆为主线，覆盖全部竞赛场馆与非竞赛场馆；以交通、服务为补充，覆盖机场、火车站和交通主干道；以历史、文化交流为延伸，覆盖南京主要风景区和高校。还将覆盖900多辆亚...</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/mobile/115.html#odby" target="_blank"><script src="/plus/pls.php?aid=115" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-di'>深度测评</span>
+                <a href="/mobile/117.html" class="a-img" target="_blank"><img src="/uploads/allimg/130807/86.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/mobile/117.html" target="_blank">LINE用户破2亿 微信的未来在哪里？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-07 00:00:00</time></div><div class="article-summary">正值马化腾凭借467亿元财富取代梁稳根，登顶《3000中国家族财富榜》首富宝座，故而不少网友调侃说微信乐“坏”了，激动到崩溃。
+</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/mobile/117.html#odby" target="_blank"><script src="/plus/pls.php?aid=117" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-di'>深度测评</span>
+                <a href="/mobile/118.html" class="a-img" target="_blank"><img src="/uploads/allimg/130807/76.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/mobile/118.html" target="_blank">中国联通和微信合作 看运营商下一步如何走</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-07 00:00:00</time></div><div class="article-summary">【最科技讯】运营商最担心什么？你用我的通话服务不给钱、发短信不给钱，手机号码形同虚设。微信、Skype和Line的异军突起，致使运营商通话时间下降，数据通话时间上升，短信更不用说，花一毛钱去发条短信才是傻子，社交通话软件正在逐步代替传统的信息交流...</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/mobile/118.html#odby" target="_blank"><script src="/plus/pls.php?aid=118" language="javascript"></script></a></span></div></div></div>
+
+        <div class="idx-more"><a class="a-more-idx" href="/focus/" target="_blank">更多</a></div>
+</div>
+
+
+<div class="article-list idx-list tab-pane fade" id="others">       
+    <div class="clearfix article-box ">
+                <span class='articletype arc-type-etc'>其他</span>
+                <a href="/focus/150.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/6-130P91031060-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/150.html" target="_blank">从内购无底线的《植物大战僵尸2》看海外手游的“本土化改造“</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">令狐冲</span>
+                        <time>2016-03-02 13:38:01</time></div><div class="article-summary">一款来自海外的游戏，为适应中国市场的特殊环境而进行本土化改造——按照常理这对中国的消费者来说是一件好事——但是宝开（PopCap）这次对《植物大战僵尸2》的本土化改造已经超越了"常理"的下限</div><p class="tags-box"><a href='/tags.php?/%D3%CE%CF%B7/' target='_blank'>游戏</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/150.html#odby" target="_blank"><script src="/plus/pls.php?aid=150" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-etc'>其他</span>
+                <a href="/focus/156.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/6-130P91039300-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/156.html" target="_blank">微信支付能闭环O2O吗？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">令狐冲</span>
+                        <time>2016-03-02 13:35:59</time></div><div class="article-summary">在微信里，支付是不是一项必须的功能？从目前微信支付的应用场景看来，这个答案是否定的。在不掌握支付场景的时候，微信很可能沦为了类似于美丽说的流量导入工具。</div><p class="tags-box"><a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <a href='/tags.php?/%CE%A2%D0%C5/' target='_blank'>微信</a> <a href='/tags.php?/O2O/' target='_blank'>O2O</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/156.html#odby" target="_blank"><script src="/plus/pls.php?aid=156" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-etc'>其他</span>
+                <a href="/focus/159.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/1-130P91044370-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/159.html" target="_blank">为什么英特尔要在电视交互功能上小心翼翼？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2016-03-02 13:35:02</time></div><div class="article-summary">英特尔决定将智能电视产品的前置摄像头去掉，除了技术方面的考虑，用户隐私的担忧尤其是 NSA 窃听事件的影响扮演了很重要的角色。交互新技术的推广成为所有厂商都要谨慎面对的一个课题。</div><p class="tags-box"><a href='/tags.php?/%D6%C7%C4%DC%B5%E7%CA%D3/' target='_blank'>智能电视</a> <a href='/tags.php?/%CE%A2%C8%ED/' target='_blank'>微软</a> <a href='/tags.php?/%D3%A2%CC%D8%B6%FB/' target='_blank'>英特尔</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/159.html#odby" target="_blank"><script src="/plus/pls.php?aid=159" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-etc'>其他</span>
+                <a href="/focus/160.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/1-130P91050000-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/160.html" target="_blank">七匹狼电商的线下线上融合实践要素</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2016-03-02 13:34:25</time></div><div class="article-summary">原来依靠大量线下分销商模式的传统企业，做电商会碰到两大问题：线下经销商反对，因为线上模式对他们造成产品和价格的冲击；或是线下经销商也纷纷踏足电商分销，造成价格失控。</div><p class="tags-box"><a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <a href='/tags.php?/%B5%E7%D7%D3%C9%CC%CE%F1/' target='_blank'>电子商务</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/160.html#odby" target="_blank"><script src="/plus/pls.php?aid=160" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-etc'>其他</span>
+                <a href="/focus/164.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/6-130P91055370-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/164.html" target="_blank">周鸿祎眼中互联网公司衰落的六大原因</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">令狐冲</span>
+                        <time>2016-03-02 13:32:32</time></div><div class="article-summary">互联网在中国发展了不到二十年，公司出现了不少，留下来的不多。我没事有时候就琢磨，这些衰落的互联网公司到底有哪些共性呢？总结了一下，大家看一看说得对不对。</div><p class="tags-box"><a href='/tags.php?/%D6%DC%BA%E8%B5t/' target='_blank'>周鸿祎</a> <a href='/tags.php?/%D2%C6%B6%AF%BB%A5%C1%AA%CD%F8/' target='_blank'>移动互联网</a> <a href='/tags.php?/%BE%AD%D1%E9%BD%CC%D1%B5/' target='_blank'>经验教训</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/164.html#odby" target="_blank"><script src="/plus/pls.php?aid=164" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-etc'>其他</span>
+                <a href="/focus/147.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/8-130P91015090-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/147.html" target="_blank">大型日企坠落全因做得太过头？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">韦小宝</span>
+                        <time>2013-08-09 10:15:06</time></div><div class="article-summary">虽然日元贬值使得索尼(Sony)等企业近期转亏为盈，但日企整体竞争力陨落已是事实。我们在此要讨论的是，过去30年，日本企业用的管理模式并未改变，为何以前行得通，但现在却不行？</div><p class="tags-box"><a href='/tags.php?/%B9%DC%C0%ED/' target='_blank'>管理</a> <a href='/tags.php?/%C8%D5%B1%BE/' target='_blank'>日本</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/147.html#odby" target="_blank"><script src="/plus/pls.php?aid=147" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-etc'>其他</span>
+                <a href="/focus/146.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/8-130P91012310-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/146.html" target="_blank">799元的红米，雷军又支了一顶大帐篷</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">韦小宝</span>
+                        <time>2013-08-09 10:12:00</time></div><div class="article-summary">用某项略微领先的产品做棚顶，其他都采用普通的甚至是相对落后的部件，这是某些山寨手机做帐篷型产品的传统玩法</div><p class="tags-box"><a href='/tags.php?/%D0%A1%C3%D7/' target='_blank'>小米</a> <a href='/tags.php?/%D6%C7%C4%DC%CA%D6%BB%FA/' target='_blank'>智能手机</a> <a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/146.html#odby" target="_blank"><script src="/plus/pls.php?aid=146" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-etc'>其他</span>
+                <a href="/focus/141.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/1-130PZ913130-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/141.html" target="_blank">库克又访华来了！来回顾下他三次访华都给苹果做什么</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-09 09:13:05</time></div><div class="article-summary">7月30日苹果CEO库克又访华了，密会中国电信高层。库克自成为苹果CEO以来，这已经是第三次访华了。来回顾一下他三次访华都是什么市场背景、做了些什么</div><p class="tags-box"><a href='/tags.php?/%C6%BB%B9%FB/' target='_blank'>苹果</a> <a href='/tags.php?/%B5%D9%C4%B7%A1%A4%BF%E2%BF%CB/' target='_blank'>蒂姆·库克</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/141.html#odby" target="_blank"><script src="/plus/pls.php?aid=141" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-etc'>其他</span>
+                <a href="/focus/140.html" class="a-img" target="_blank"><img src="/uploads/allimg/130809/1-130PZ911030-L.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/focus/140.html" target="_blank">杜琪峰电影不够大卖，是犯了电影工业的什么忌？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-09 09:12:22</time></div><div class="article-summary">乔布斯在重掌苹果后将Apple的价值重新定义为Think Different，从此，苹果旗下的所有产品都有了同宗同祖的可识别特征。类似于这样的标识，也应该先行于电影，为风格定下基调</div><p class="tags-box"><a href='/tags.php?/%D3%E9%C0%D6%D2%B5/' target='_blank'>娱乐业</a> <a href='/tags.php?/%D3%AA%CF%FA/' target='_blank'>营销</a> <a href='/tags.php?/%CD%B7%CC%F5/' target='_blank'>头条</a> <a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a> <a href='/tags.php?/%B5%E7%D3%B0/' target='_blank'>电影</a> <i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/focus/140.html#odby" target="_blank"><script src="/plus/pls.php?aid=140" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-etc'>其他</span>
+                <a href="/mobile/102.html" class="a-img" target="_blank"><img src="/uploads/allimg/130807/64.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/mobile/102.html" target="_blank">腾讯低调推出微信公众平台第三方接口平台风铃</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-07 00:00:00</time></div><div class="article-summary">腾讯风铃的最大卖点就是通过各种模块的选择快速的生成属于企业或者个人自己的微信APP。
+</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/mobile/102.html#odby" target="_blank"><script src="/plus/pls.php?aid=102" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-etc'>其他</span>
+                <a href="/mobile/103.html" class="a-img" target="_blank"><img src="/uploads/allimg/130807/65.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/mobile/103.html" target="_blank">【微观察】移动互联的8大未来趋势</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-07 00:00:00</time></div><div class="article-summary">未来移动互联网将更多基于云的应用和云计算上，当终端，应用，平台，技术以及网络在技术和速度提升之后，将有更多具有创意和实用性的应用出现。
+</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/mobile/103.html#odby" target="_blank"><script src="/plus/pls.php?aid=103" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-etc'>其他</span>
+                <a href="/mobile/106.html" class="a-img" target="_blank"><img src="/uploads/allimg/130807/68.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/mobile/106.html" target="_blank">Android阵营：三星的另一个劫数</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-07 00:00:00</time></div><div class="article-summary">三星的竞争者除却苹果大亨外，还有数以百计的Android后继模仿者，当下三星接受的最大挑战可能是如何在新兴市场对抗那些无名的Android厂商。
+</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/mobile/106.html#odby" target="_blank"><script src="/plus/pls.php?aid=106" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-etc'>其他</span>
+                <a href="/mobile/111.html" class="a-img" target="_blank"><img src="/uploads/allimg/130807/82.png" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/mobile/111.html" target="_blank">“微信”故障 “微米”火了</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-07 00:00:00</time></div><div class="article-summary">在产品定位上，他们要做的是基于兴趣和 LBS 的群组社交，解决群组沟通中的各种需求和问题，帮助大家更方便的找到志同道合的朋友，开拓和管理自己的圈子。
+</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/mobile/111.html#odby" target="_blank"><script src="/plus/pls.php?aid=111" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-etc'>其他</span>
+                <a href="/mobile/114.html" class="a-img" target="_blank"><img src="/uploads/allimg/130807/84.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/mobile/114.html" target="_blank">微信的创业骗局 大部分将沦为炮灰</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-07 00:00:00</time></div><div class="article-summary">疯了！彻底都疯了！现在创业者、投资界、舆论界对微信的关注无微不至，一提微信，立马就硬，这让苍老师情何以堪？
+</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/mobile/114.html#odby" target="_blank"><script src="/plus/pls.php?aid=114" language="javascript"></script></a></span></div></div></div>
+<div class="clearfix article-box ">
+                <span class='articletype arc-type-etc'>其他</span>
+                <a href="/mobile/127.html" class="a-img" target="_blank"><img src="/uploads/allimg/130807/83.jpg" width="220" height="146"/></a>
+                <div class="article-box-ctt">
+                    <h4><a href="/mobile/127.html" target="_blank">iOS版首年免费 WhatsApp或将开启应用新模式</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">dede58.com</span>
+                        <time>2013-08-07 00:00:00</time></div><div class="article-summary">【最科技讯】随着时间的推移，越来越多的应用程序开始转向“免费+付费增值”的服务模式，以往那些单纯的付费应用模式好像逐渐成为了旧时代的产物。
+&nbsp;
+面对势如破竹的免费即时通讯应用，以“一次付费，终生无广告”为最大卖点的WhatsApp，此前在App?Store</div><p class="tags-box"><i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="/mobile/127.html#odby" target="_blank"><script src="/plus/pls.php?aid=127" language="javascript"></script></a></span></div></div></div>
+
+        <div class="idx-more"><a class="a-more-idx" href="/focus/" target="_blank">更多</a></div>
+     </div> 
+</div> 
+  </div>
+</div>
+
+<div class="side-container-hx">
+    <div id="chartOverview">
+<!--<a href='#'><img src='/dede58/img/adv_idx_top.jpg'></a>-->
+    </div>
+
+   <hr class="line">
+    <div class="hot-view">
+        <h3 class="t-h2"><em>本月热点</em></h3>
+        <div class="view-list idx-view">
+        
+      <div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/181.html" target="_blank"><img src="/uploads/allimg/130807/1.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/181.html" target="_blank">投稿测试</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote">jtrhb</span>
+                        <p><time>2016-03-09 15:39:08</time><span class="comment-box"><i class="icon-comment"></i><a href="/focus/181.html#odby" target="_blank"><script src="/plus/pls.php?aid=181" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+    </div>
+
+    <div class="wonderful-comment">
+        <h3 class="t-h2"><em>精彩评论</em></h3>
+        <div class="cmt-list idx-comment">
+
+ <div class="clearfix cmt-box"><h5><a href="/focus/169.html" >原文：齐齐封杀令背后：阿里与腾讯的“社交电商”博弈</a></h5><div class="pull-left cmt-img"><a href="/member/index.php?uid=lurenjia" class="a-img" target="_blank"><img src="/member/templets/images/dfboy.png"/></a>
+                  </div><div class="pull-right cmt-box-ctt"><h4><a href="/member/index.php?uid=lurenjia" target="_blank">路人甲</a></h4><div class="yijuhua"></div></div><div class="cmt-nr"><a href="/plus/feedback.php?aid=169">未来人们的互联网中心移到手机上之后，我更期待的是移动的社交化电商和更本地化生活化的电商，不知道微信上电商未来会发展成什么样，不过应该会会比较大的改变淘宝的模式。不论，谁抓住了未来微信上社交化电商的机会，只要能给人们带来更多的购物方便和更好的用户体验，就是英雄。。。。</a><i class="icon-arrow-up"></i>
+                </div>
+            </div>
+      
+        </div>
+    </div>
+    
+    <div class="hot-author-face">
+        <h3 class="t-h2"><em>热门作者</em></h3>
+        <ul class="clearfix author-face-list">
+        
+<li><p class="author-img"><a href="/member/index.php?uid=newsche" target="_blank" title="huiyan"><img src="/uploads/userup/1/myface.png"/></a></p><p class="name"><a href="/member/index.php?uid=newsche" target="_blank">huiyan</a></p><li><p class="author-img"><a href="/member/index.php?uid=jay" target="_blank" title="悠悠草"><img src="/uploads/userup/5/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=jay" target="_blank">悠悠草</a></p><li><p class="author-img"><a href="/member/index.php?uid=884358" target="_blank" title="884358"><img src="/uploads/userup/2/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=884358" target="_blank">884358</a></p><li><p class="author-img"><a href="/member/index.php?uid=lhc" target="_blank" title="古天乐"><img src="/uploads/userup/6/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=lhc" target="_blank">古天乐</a></p><li><p class="author-img"><a href="/member/index.php?uid=jtrhb" target="_blank" title="jtrhb"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=jtrhb" target="_blank">jtrhb</a></p><li><p class="author-img"><a href="/member/index.php?uid=wxb" target="_blank" title="康师傅"><img src="/uploads/userup/8/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=wxb" target="_blank">康师傅</a></p><li><p class="author-img"><a href="/member/index.php?uid=lurenjia" target="_blank" title="路人甲"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=lurenjia" target="_blank">路人甲</a></p><li><p class="author-img"><a href="/member/index.php?uid=jason19905" target="_blank" title="测试账号"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=jason19905" target="_blank">测试账号</a></p>
+ </ul>
+    </div>
+        
+
+    <div class="hot-view">
+        <h3 class="t-h2"><em>编辑推荐</em></h3>
+        <div class="view-list idx-view">
+      <div class="clearfix view-box">
+      <div class="view-box-ctt2"><h4>@ <a href="/focus/180.html">所谓“诸恶莫作，众善奉行”，如果能够将善意以非理性但无害同时成本低廉的手段传递，那么偶尔也不要那么认真，则又何妨？</a></h4>
+      <div class="box-other">
+      <p><time>2016-03-09 15:39</time></p>
+      </div></div></div>
+<div class="clearfix view-box">
+      <div class="view-box-ctt2"><h4>@韦小宝 <a href="/focus/149.html">对新浪微博9万余用户近期约900万条有效微博的分析表明：该片观众平均年龄20.3岁，其中女性占八成以上；湖北、四川、浙江、江苏、江西的舆情参与度排前5位</a></h4>
+      <div class="box-other">
+      <p><time>2016-03-02 13:38</time></p>
+      </div></div></div>
+<div class="clearfix view-box">
+      <div class="view-box-ctt2"><h4>@令狐冲 <a href="/focus/164.html">互联网在中国发展了不到二十年，公司出现了不少，留下来的不多。我没事有时候就琢磨，这些衰落的互联网公司到底有哪些共性呢？总结了一下，大家看一看说得对不对。</a></h4>
+      <div class="box-other">
+      <p><time>2016-03-02 13:32</time></p>
+      </div></div></div>
+<div class="clearfix view-box">
+      <div class="view-box-ctt2"><h4>@dede58.com <a href="/focus/168.html">是否有新的商业模式出现，让非游戏应用能依靠自身的应用直接获利？而且，传统的非互联网企业，甚至更多垂直领域，是否可以通过O2O移动互联网化并创造出新的商机？</a></h4>
+      <div class="box-other">
+      <p><time>2016-03-02 13:31</time></p>
+      </div></div></div>
+<div class="clearfix view-box">
+      <div class="view-box-ctt2"><h4>@dede58.com <a href="/focus/169.html">阿里在焦虑状态下，社交化电商之路更急迫一些。腾讯君，快来接招吧！</a></h4>
+      <div class="box-other">
+      <p><time>2016-03-02 13:30</time></p>
+      </div></div></div>
+
+     
+      
+              
+        </div>
+    </div>
+
+</div>
+</div>
+
+<footer class="footer">
+    <div class="about-links">
+                
+                <a href="/about/">关于我们</a>|
+                
+                <a href="/joinus/">加入我们</a>|
+                
+                <a href="/ad/">广告及服务</a>|
+                
+                <a href="/help/">常见问题解答</a>|
+                  
+    </div>
+                <div class="links">
+            <h3><a href="/links" target="_blank">合作伙伴</a></h3>
+            <ul class = "inline"><li><a href='http://www.moke8.com/' target='_blank'>魔客吧</a> </li><li><a href='http://www.moke8.com/' target='_blank'>网站模板</a> </li><li><a href='http://www.moke8.com/dedecms/' target='_blank'>织梦模板</a> </li></ul>
+            
+</div>
+            <div class="footer-copy">
+        Copyright &copy; 2015-2016 汇眼网 版权所有 <a href=http://www.moke8.com target='_blank'>Power by moke8</a> ( <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备11000986号</a>)
+    </div>
+    <!-- 返回顶部 -->
+    <div class="go-top">
+        <i class="pos-btn" onclick="window.scrollTo('0', '0')">^</i>
+    </div>
+    <!-- /返回顶部 -->
+
+</footer>
+</div>
+</div>
+</div>
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+
+    <script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript" src="/images/js/j.js" ></script>
+
+
+<div id="lgnModal" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">登录</h3>
+        </div>
+        <div class="float-box">
+            <div class="float-login-box">
+                <div class="login-info">帐号登录：</div>
+                <form id="float_form_lgn" name="userlogin" action="/member/index_do.php" method="POST" class="form-horizontal">
+        <input type="hidden" name="fmdo" value="login" />
+        <input type="hidden" name="dopost" value="login" />
+        <input type="hidden" name="keeptime" value="604800" />                
+                
+                    <div class="control-group control-name">
+                        <label class="control-label" for="inputName">用户名：</label>
+                        <div class="controls">
+                            <input type="text" id="userid" name="userid" tabindex="1">
+                            <span class="help-inline"><a href="/member/index_do.php?fmdo=user&dopost=regnew" target="_blank">还未注册?</a></span>
+                        </div>
+                    </div>
+                    <div class="control-group control-pwd">
+                        <label class="control-label" for="inputPassword">密　码：</label>
+                        <div class="controls">
+                            <input type="password" id="pwd" name="pwd" tabindex="2">
+                            <span class="help-inline"><a href="/member/resetpassword.php" target="_blank">忘记密码?</a></span>
+                        </div>
+                    </div>                  
+                    <div class="control-group control-pwd" style="margin-top:15px;">
+                        <label class="control-label" for="inputName">验证码：</label>
+                        <div class="controls">
+                            <input type="text" id="vdcode" name="vdcode" tabindex="3" size="4" style="text-transform:uppercase;" maxlength="4">
+                            <span class="help-inline"><img id="vdimgck" align="absmiddle" onclick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="../include/vdimgck.php"/></span>
+                        </div>
+                    </div>                    
+                    <div class="control-group" style="margin-top:15px; margin-left:10px;">
+                        <div class="controls">
+                            <button type="submit" class="btn lgn-btn" tabindex="4" onclick="this.form.submit();">登录</button>
+                            <a href="/member/index_do.php?fmdo=user&dopost=regnew" class="lgn-reg-btn">注册</a>
+                            
+                      </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+ <script language="javascript" type="text/javascript" src="dede58/js/fancyNavFocusShift.js" ></script>
+ <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+ <script type="text/javascript">
+ new TradingView.MiniWidget({
+        "container_id": "chartOverview",
+        "tabs": [
+            "Forex",
+            "Commodities",
+            "Equities"
+        ],
+        "symbols": {
+            "Equities": [
+                [
+                    "S&P500",
+                    "SPX500"
+                ],
+                [
+                    "NQ100",
+                    "NAS100"
+                ],
+                [
+                    "Dow30",
+                    "DOWI"
+                ],
+                [
+                    "Nikkei225",
+                    "JPN225"
+                ],
+                [
+                    "Apple",
+                    "AAPL "
+                ],
+                [
+                    "Google",
+                    "GOOG"
+                ]
+            ],
+            "Commodities": [
+                [
+                    "Emini",
+                    "ES1!"
+                ],
+                [
+                    "Euro",
+                    "E61!"
+                ],
+                [
+                    "Gold",
+                    "GC1!"
+                ],
+                [
+                    "Oil",
+                    "CL1!"
+                ],
+                [
+                    "Gas",
+                    "NG1!"
+                ],
+                [
+                    "Corn",
+                    "ZC1!"
+                ]
+            ],
+            "Forex": [
+                "FX:EURUSD",
+                "FX:GBPUSD",
+                "FX:USDJPY",
+                "FX:USDCHF",
+                "FX:AUDUSD",
+                "FX:USDCAD"
+            ]
+        },
+        "gridLineColor": "#E9E9EA",
+        "fontColor": "#83888D",
+        "underLineColor": "#dbeffb",
+        "trendLineColor": "#4bafe9",
+        "activeTickerBackgroundColor": "#EDF0F3",
+        "large_chart_url": "https://www.tradingview.com/chart/",
+        "noGraph": false,
+        "width": "300px",
+        "height": "400px",
+        "locale": "zh"
+    });
+ </script>
+<script type="text/javascript">
+$(function(){
+	var ss = $(document).scrollTop();
+	$(window).scroll(function(){
+		var s = $(document).scrollTop();
+
+		if(s< h1){
+			$('.side-menu-outer-container').removeClass('yya');
+		}if(s > h1){
+			$('.side-menu-outer-container').addClass('yya');
+		}if(s > h2){
+			$('.side-menu-outer-container').addClass('gizle');
+			if(s > ss){
+				$('.side-menu-outer-container').removeClass('sabit');
+			}else{
+				$('.side-menu-outer-container').addClass('sabit');
+			}
+			ss = s;
+		}
+
+	});
+	
+});
+</script>
+<script>
+   $(function () {
+      $('#myTab a:first').tab('show');
+   });
+</script>
+</body>
+</html>

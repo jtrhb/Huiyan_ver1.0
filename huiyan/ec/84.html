@@ -1,0 +1,813 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="gb2312">
+        <title>细数国内团购行业的奇葩网站_魔客吧仿虎嗅网</title>
+        <meta name="keywords" content="细数,国内,团购,行业,奇葩,网站,科技,国内,团购,网站," />
+        <meta name="description" content="【最科技讯】国内团购网站一直在吹捧，贬低和唏嘘声中生存，本文不谈那些逝去的团购网站，只谈那些现阶段生存下来，而且还有希望的公司。这些公司在这三年里给我们带来很多惊喜和想象，下面一一表述：一、 美团：“美团”这个网站是." />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <!-- Le styles -->
+        <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/dede58/css/hx-2013.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">
+        <![endif]-->
+        <style>
+		.jiathis_style{
+			margin-top:8px;	
+		}
+		</style>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function CheckLogin(){
+  var taget_obj = document.getElementById('_userlogin');
+  myajax = new DedeAjax(taget_obj,false,false,'','','');
+  myajax.SendGet2("/member/ajax_loginsta.php");
+  DedeXHTTP = null;
+}
+function CheckLogin2(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+	
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>      
+    </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+        <div class="container-hx">
+		            <div class="top">
+    <div class="top-box">
+        <h1 class="logo"><a href="/" target="_blank"><img src="/dede58/img/top_logo.png"></a></h1>
+        <div class="login-box" id="_userlogin">
+            <div class="btn-group">
+                <a href="/member/article_add.php" class="contribute" title="投稿">投稿</a>
+            </div>
+
+            <div class="btn-group">
+                <a href="#lgnModal" data-toggle="modal">登录</a>
+                <a href="/member/index_do.php?fmdo=user&dopost=regnew">注册</a>
+            </div>
+
+            
+            <div class="btn-group">
+                <a href="/rss.php" title="RSS"><i class="icon-rss"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+     <script language="javascript" type="text/javascript">CheckLogin();</script> 
+<div class="side-menu-hx">
+    <div class="side-menu-top">
+        <ul class="side-menu-list">   
+        
+      	<li><a href='/'>首页</a></li>
+        
+      	
+      	<li><a href='/focus/'>看点</a></li>
+      	
+      	<li><a href='/internet/'>互联网</a></li>
+      	
+      	<li><a href='/invest/'>创投界</a></li>
+      	<li class='active'><a href='/ec/'>电商圈</a></li>
+      	<li><a href='/mobile/'>移动库</a></li>
+      	
+      	<li><a href='/photo/'>图说</a></li>
+      	
+            </ul>
+    </div>
+    <div class="search">
+        <form  name="formsearch" action="/plus/search.php" class="form-search">
+        <input type="hidden" name="kwtype" value="0" />
+        
+            <input type="text" name='q' id='s' class="input-text" placeholder="搜索" value="" />
+            <button class="search-btn"><i class="icon-search"></i></button>
+        </form>
+    </div>
+</div>          
+		<div class="row-fluid-wrap-hx">
+                <div class="center-container-hx">
+                    <div class="clearfix row-fluid-hx"><!--<script src="/dede58/js/swplay.js" ></script>-->
+    <div class="center-ctr-wrap">
+        <div class="center-ctr-box">
+                        <div class="clearfix neirong">
+                <h1>细数国内团购行业的奇葩网站</h1>
+                <div class="subtitle-h1">【最科技讯】国内团购网站一直在吹捧，贬低和唏嘘声中生存，本文不谈那些逝去的团购网站，只谈那些现阶段生存下来，而且还有希望的公司。这些公司在这三年里给我们带来很多惊喜和想象，下面一一表述：
+&nbsp;
+
+&nbsp;
+一、 美团：
+&nbsp;
+“美团”这个网站是.</div>
+                <div class="neirong-other">
+                    <span class="recommenders">admin</span>
+                    <time>2013-08-07 00:00</time>
+                    <span style="margin-right:10px;"><i class="icon-click"></i><em class="pl-num"><script src="/plus/count.php?view=yes&aid=84&mid=5" type='text/javascript' language="javascript"></script></em></span><a href="#odby" class="pinglun-num"><i class="icon-comment"></i><em class="pl-num"><script src="/plus/pls.php?aid=84" language="javascript"></script></em></a>
+                    <span class="tags">
+                                          </span>
+                </div>
+
+                <div class="neirong-box" id="neirong_box">
+                    <table>
+                        <tr>
+                            <td>
+                                
+        
+
+<p>【最科技讯】国内团购网站一直在吹捧，贬低和唏嘘声中生存，本文不谈那些逝去的团购网站，只谈那些现阶段生存下来，而且还有希望的公司。这些公司在这三年里给我们带来很多惊喜和想象，下面一一表述：</p>
+<p>&nbsp;</p>
+<p><img class="aligncenter" alt="" src="http://zuikeji.b0.upaiyun.com/wuyunlian/i.png_a1" width="641" height="271" /></p>
+<p>&nbsp;</p>
+<h2>一、 美团：</h2>
+<p>&nbsp;</p>
+<p>“美团”这个网站是顶着创业者楷模的光环诞生的，王兴是这个网站的标签，校内网、饭否网是美团的历史。美团最奇葩之处在于没有做过任何传统媒体广告（除地推），而且自有流量是整个团购行业其他竞争对手所羡慕嫉妒恨的。</p>
+<p>&nbsp;</p>
+<p><img class="aligncenter" alt="" src="http://zuikeji.b0.upaiyun.com/wuyunlian/m.jpg_a1" width="387" height="238" /></p>
+<p>&nbsp;</p>
+<p>美团能够成为现阶段的行业霸主，得益于他们在团购行业的三年做了三件事：</p>
+<p>&nbsp;</p>
+<p><strong>第一个提倡“随时退”的功能：</strong></p>
+<p>&nbsp;</p>
+<p>这个功能一经推出，在行业内产生轩然大波，当时其他的团购网站大多数都是利用消费者的沉淀资金作为利润的，沉淀时间越长，对公司周转越有利，详情你们可以问问身边的CFO（首席财务官）就了解了。但是这个举措对于消费者是拍手称快，网站的自有流量及用户粘度绝对有了很大的提升，这种“欲练神功，挥刀自宫”的气魄只有王兴这类奇葩敢于尝试。</p>
+<p>&nbsp;</p>
+<p><strong>第一个使用“商家自动化结算”体系：</strong></p>
+<p>&nbsp;</p>
+<p>王兴深知团购网站是平台的特点，是消费者和商家的桥梁，如果说第一点是为消费者谋福利，提高网站自有流量和用户粘度，而使用商家自动化结算系统不仅仅是为了商家方便结算，最大的好处是节省财务的人力成本，这应该算是精细化运营当中的范畴了。</p>
+<p>&nbsp;</p>
+<p><strong>农村包围城市的战略：</strong></p>
+<p>&nbsp;</p>
+<p>这应该算是美团整体扩张战略中的核心，那些所谓大型的网站在北上广深一线城市死磕，拼命的时候，美团则反其道而行之，深刻的运用了“瞒天过海”，“围魏救赵”和“调虎离山”等连环计，大力开拓2,3,4线城市，而且迅速的成为当地的霸主，例如：邯郸等城市。如果我们仔细观察美团的销售业绩报表，那他的70%以上的销售额来自于这些“农村”城市，而一线城市位列于其他网站之后，例如：上海的点评，北京的糯米。这种“声东击西”袭扰的战术发挥的淋漓尽致。</p>
+<p>&nbsp;</p>
+<p>上述三点只是美团的过程，而真正的核心是来自于阿里巴巴的投资，大家都知道，阿里巴巴是一个以销售为主导的互联网公司，所以在阿里巴巴副总裁 成为美团COO（首席运营官）之后，注定美团会成为该行业的霸主，因为O2O的第二个O是线下（第一个O是线上），是基于庞大的线下团队而产生的价值，如果管理，优化，精细化运营庞大的线下销售团队这是阿里巴巴的强项和核心。</p>
+<p>&nbsp;</p>
+<p>总结一句话：<strong>低调的美团，战略的清晰，精细的运营。</strong></p>
+<p>称之为奇葩事能在单一，垂直的模式下生存，而且取得这么牛逼的战绩，确实很奇葩，期待美团真正的盈利（不是毛利润，而是净利润。）</p>
+<p>&nbsp;</p>
+<h2>二、 糯米</h2>
+<p>&nbsp;</p>
+<p><img class="aligncenter" alt="" src="http://zuikeji.b0.upaiyun.com/wuyunlian/n.jpg_a1" width="500" height="333" /></p>
+<p>&nbsp;</p>
+<p>“糯米网”是顶着当时风靡一时，优质的亲爹“人人网”诞生的。它的报表最具有实效性，真实性，谁让人家是上市公司呢。</p>
+<p>&nbsp;</p>
+<p>“糯米网”是带着“SNS社交+O2O模式”美丽的神话出现在公众面前，给资本，消费者+自媒体人带来了一个美好的愿景。可以理想很美好，现实很骨感，它每次公开的财务报表（亏损）都会成为团购行业的风向标。</p>
+<p>&nbsp;</p>
+<p>糯米称之为奇葩可用四点阐述：</p>
+<p>&nbsp;</p>
+<p><strong>牛X的模仿：</strong>无论网站风格，网站功能，后台功能等基本都是模仿或者说是抄袭；</p>
+<p>&nbsp;</p>
+<p><strong>流程混乱：</strong>从糯米网的员工口中得知，该公司的销售流程绝对奇葩，无论何时只要明天商家想上线，基本就能上，没有排期，没有选单，同时也没有审核。这种混乱程度对于公司整体带来的是无法精细化运营，人力成本居高不下。</p>
+<p>&nbsp;</p>
+<p><strong>“帝都”是核心：</strong>身为在帝都做过团购业务员的人都流行一句话：左手人人，右手分众，浑身上下全是人民币。优质商家自要是合作，上面一套硬推广全部奉上，牛X之程度史无前例。估计人人的陈一舟只看帝都的销售报表，因为其他城市的市场占有率，销售额绝对是一塌糊涂，基本上属于2流网站的水平。</p>
+<p>&nbsp;</p>
+<p><strong>挖角的继承者：</strong>去年年底-今年年初，拉手，58的很多原来的地区高层都被挖角到糯米，看来沈博洋终于看到其他城市的弱势了，就算是挖角到糯米，能够发挥出多少作用呢？这就要看CEO如何布局和对待这些2,3线城市的态度了。如何改变2,3线城市商家和消费者对待美团的依赖，这是今年糯米是否能够突围的重点。</p>
+<p>&nbsp;</p>
+<p>上述所讲的还是这三年糯米的过程，称之为奇葩也用一句话概括：<strong>陈一舟的耐心，糯米网的前程。</strong></p>
+<p>&nbsp;</p>
+<h2>三、 窝窝：</h2>
+<p>&nbsp;</p>
+<p><img class="aligncenter" alt="" src="http://zuikeji.b0.upaiyun.com/wuyunlian/o.jpg_a1" width="249" height="170" /></p>
+<p>&nbsp;</p>
+<p>窝窝团他是一直在风口浪尖上的网站，原因最根本出自于老板 徐茂栋，这位靠“垃圾短信”起家的高科技人才，绝对給窝窝团的企业文化带来不小的影响。</p>
+<p>&nbsp;</p>
+<p>窝窝团称之为奇葩也可用三点来阐述：</p>
+<p>&nbsp;</p>
+<p><strong>被死亡的传说：</strong>2011年开始疯狂裁员开始，窝窝团被死亡的消息不径传出，但是他的生命力绝对够顽强，很多人都在讨论谁是下一个“团宝”，谁是下一个“24券”，但是过了这么长的时间它依然存活，我只能说：窝窝团是一个有着顽强生命力的小强。</p>
+<p>&nbsp;</p>
+<p><strong>窝窝团高管人员的能力有待考究：</strong></p>
+<p>&nbsp;</p>
+<p>一位朋友面试窝窝团销售管理部高级经理一职：与其销售管理部总监进行复试的时候，那位亲爱的领导说出一句话：EXCLE和PPT运用的熟练比制定战术，打法，城市管理等能力要好，为什么呢？！因为我们的老板喜欢看华丽的报表。当时朋友很简单的一句话：XX总，您好！报表找助理或者优秀的应届生可以胜任，但是战术，打法，城市管理才是核心。最后朋友闪人了，这是一个真实的事情。</p>
+<p>&nbsp;</p>
+<p>所以基于此点可以看出：老徐真应该考虑一下中层领导的能力了。</p>
+<p>&nbsp;</p>
+<p><strong>窝窝商城的业务模式：</strong>我相信老徐已经对团购模式的盈利单一性产生怀疑了，所以在2012年开始大力推广窝窝商城，这个思路本人认为是对的，必须要用流量进行变现，这是首要任务，生活服务类商城以后就是团购网站的终极模式，这一点毋庸置疑的。</p>
+<p>&nbsp;</p>
+<p>我相信以徐茂栋的性格，窝窝团能够越走越远，只要是在商城内做足文章，利用团购模式进行流量拉取，商城模式进行利润增值，窝窝团这个业内奇葩还能够活的更好。</p>
+<p>&nbsp;</p>
+<p>还是用总结一句话总结：<strong>你的奇葩不是在于创新，是在于承认失败。</strong></p>
+<p>&nbsp;</p>
+<h2>四、 高朋（与F团并购之后时期）：</h2>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img class="aligncenter" alt="" src="http://zuikeji.b0.upaiyun.com/wuyunlian/p.jpg_a1" width="570" height="160" /></p>
+<p>&nbsp;</p>
+<p>高朋，这个名字在中国绝对是一个奇葩，这里不谈与F团并购之前，只谈并购期间和之后的事情。</p>
+<p>&nbsp;</p>
+<p>F团，高朋在行业内的排名基本是3线选手，一直被一线选手所忽略，他们的合并，在于我来看是负负得正的结果终于在2013年合并之后挤入到行业排名前十了，这还是在“团宝”和“24券”光荣牺牲之后的时期了。</p>
+<p>&nbsp;</p>
+<p>两个奇葩的网站在企鹅的牵线下终于形成了弱弱联合的趋势，而且还推出了“微团购”这个鸡肋的产品，在大肆宣扬之后，“微团购”的销售额一直很弱小，基本连5%的销售份额都没有达到，我可以想象为：这是为微信讲一个美丽的故事。</p>
+<p>&nbsp;</p>
+<p>下面综述4点可以体现出新高朋的奇葩，因为他没有死亡，但是他离死亡是最近的：</p>
+<p>&nbsp;</p>
+<p><strong>管理的混乱：</strong>自从F团和高朋合并开始，管理的混乱就开始迅速的蔓延，双方高管互掐，最后导致有能力的人员全部被干掉，留下的全部都是他们所谓的心腹，或者说是“有能力”的人。F团的高管基本都被FIRE掉了，中层干部也被FIRE掉了，分站大面积的关站，难道这就能拯救新高朋吗？！就能带来盈利和市场份额嘛？！基于此点：个人感觉是邪恶的企鹅做的一个陷阱，让F团和高朋坠入到深渊当中。</p>
+<p>&nbsp;</p>
+<p><strong>没有核心战术，KPI随时都在变动：</strong>经过很长时间的观察，新高朋的奇葩之处在于没有任何核心战术，中层员工不知道目标，方向，既没有区域性作战方案，也没有行业性质的策略方案，送给新高朋的高管一句话：四拍之 拍脑门子定事儿，拍胸脯子保事儿，拍大腿出事儿，拍屁股走人。</p>
+<p>&nbsp;</p>
+<p><strong>工作职责不能清晰化：</strong>举个例子：在高朋的销售团队当中，销售管理团队没有任何实权，只是负责市场销售团队监督，而“实权”（指的是战术制定，打法核心等）都是由那些所谓的销售运营部来进行策划制定，销售运营部的人员基本上都是工作一、两年的小屁孩，没有任何的销售经验及制定策略，让他们去定制KPI，战术，是否觉得可笑？！可是高朋确实是这么做的。包括现阶段编辑部的人员负责销售运营，这有多么的无知。</p>
+<p>&nbsp;</p>
+<p><strong>技术之硬伤：</strong>新高朋的技术本身就是一个硬伤，技术的傻X使线下销售人员无可奈何，分店库存设定是一个非常普通的技术，但是就这个技术解决了8个月之久，导致连锁商家上线占据页面位置多达10多个。后台ERP的功能设计是出自于产品经理的脑淫的结果。</p>
+<p>&nbsp;</p>
+<p>上述只是举几个例子来表述新高朋的奇葩，它能够活到现在，不仅仅是奇葩，还有很多运气成分在里面。还是一句话总结：邪恶的企鹅，愚蠢的高朋，死是最好的结局。</p>
+<p>&nbsp;</p>
+<p>上述称之为奇葩的团购网站，他们确实有自己的特点，有些会活的更好，有些是需要改变的，有些是濒临死亡的。</p>
+<p>&nbsp;</p>
+                                                                <!-- 向作者提问-->
+                                <a href="#postform" class="a_self pull-right btn btn-primary askAuthor"  target="_self"><i class="icon-question-sign icon-white"></i>向作者提问</a>
+                                                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="clearfix pages">
+                    <div class="pull-right pgs"></div>                </div>
+                                
+                <!-- 分享 -->
+                <div class="share-wrap" id="share_wrap">
+                    <div class="share-wrap-box">
+    <div class="manage-box1" id="newdigg">
+        <div class="like-box">
+            <i class="pos-btn" title="喜欢" onClick="javascript:postDigg('good',84)">0</i>
+        </div>
+        <div class="favorite-box">
+            <i class="pos-btn" title="收藏" onClick="window.open('/plus/stow.php?aid=84')"><script src="/plus/scs.php?aid=84" language="javascript"></script></i>
+        </div>
+        <div class="nolike-box">
+            <i class="pos-btn" title="没劲" onClick="javascript:postDigg('bad',84)">0</i>
+        </div>
+    </div>
+  <script language="javascript" type="text/javascript">getDigg(84);</script>    
+    <div class="share-box side-share-box">
+        <span class="pos-top">分享：</span>
+         <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_xiaoyou"></a>
+	<a class="jiathis_button_cqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_fav"></a>
+	<a class="jiathis_button_copy"></a>
+	<a class="jiathis_button_print"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1375020427508565" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+    </div>
+</div>                </div>
+
+            </div>
+            
+            <div class="position-wrap" id="position_wrap">
+                            </div>
+            <div class="related-list"><h3 class="t-h2"><em>您可能感兴趣的文章</em></h3><ul>
+                <li><a href="/ec/72.html" target="_blank">细数国内团购行业的奇葩网站（二)</a></li>
+            
+
+            </ul><div id = "interest"></div></div>            <!-- 评论 -->
+            <a name='postform'></a>
+            <div class="pinglun" id="pinglun">
+                        <h3 class="t-h2" id="odby">
+            <a href="#odby" class="a-btn"><i class="icon-comment"></i><em class="pl-num"><script src="/plus/pls.php?aid=84" language="javascript"></script></em></a>
+            <ul class="inline tab-pinglun-box">
+                <li class="active">最新评论</li>
+            </ul>
+        </h3>
+            <!-- 评论框框架 -->
+           
+<div class="pl-kuang-box">
+            <!-- 头像 -->
+            <div class="pull-left pl-img" id="_ajax_feedback">                       
+                <a target="_blank" href="#"><img border="0" src="/member/templets/images/dfboy.png"></a>
+                
+游客    
+                            
+            </div>
+            <!-- 头像/ -->
+            <!-- 评论框 -->
+            <div class="pl-kuang">
+        <form action="#" method="post" name="feedback" onsubmit="return false;">
+          <input type="hidden" name="dopost" value="send" />
+          <input type="hidden" name="comtype" value="comments">
+          <input type="hidden" name="aid" value="84" />
+          <input type="hidden" name="fid" id='feedbackfid' value="0" />
+          <input type="hidden" name="feedbacktype" value="feedback" />          
+			<div class="textarea-box"><textarea class="textarea-txt" id="msg" name="msg"></textarea></div>
+          <!-- /dcmp-content -->
+          <div class="dcmp-post">
+            <!--未登陆-->
+            <div class="dcmp-userinfo" id="_ajax_feedback"> 
+              <input type="hidden" name="username" value="游客"/>
+              验证码:
+              <input type="text" name="validate" size="4" class="ipt-txt" style="text-transform:uppercase;"/>
+              <img src= "/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换图片" alt="点击我更换图片"  class="vdimg"/>
+              <input type="hidden" name="notuser" id="dcmp-submit-guest" />
+
+            </div>
+            
+            <script language="javascript" type="text/javascript">CheckLogin2();</script>
+            
+            <button class="pull-right subscribe-btn" type="button" onClick='PostComment()'>回复</button>
+          </div>
+        </form>
+            </div>
+       <!-- 评论框 -->
+        </div> 
+    <dd id='commetcontentNew'></dd>
+    <div class="pinglun-list" id="commetcontent">
+	</div>
+
+<!--
+//由于评论载入时使用异步传输，因此必须在最后一步加载（DIGG和评论框须放在评论内容前面）
+//如果一定需要提前的把myajax.SendGet改为myajax.SendGet2，但可能会引起页面阻滞
+-->
+<script language='javascript'>
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontent');
+		var waithtml = "<div style='line-height:50px'><img src='/images/loadinglit.gif' />评论加载中...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("/plus/feedback_ajax.php?dopost=getlist&aid=84&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		var f = document.feedback;
+		var msg = document.getElementById("msg").value;
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+		if(msg.length < 10)
+		{
+			alert("请至少输入10个字！");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("请填写验证码！");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(msg.length > 500)
+		{
+			alert("你的评论是不是太长了？请填写500字以内的评论。");
+			return;
+		}
+		if(f.feedbacktype) {
+			for(var i=0; i < f.feedbacktype.length; i++)
+				if(f.feedbacktype[i].checked) nfeedbacktype = f.feedbacktype[i].value;
+		}
+		/*
+		if(f.face) {
+			for(var j=0; j < f.face.length; j++)
+				if(f.face[j].checked) nface = f.face[j].value;
+		}
+		*/
+		if(f.notuser.checked) nnotuser = '1';
+		if(f.username) nusername = f.username.value;
+		if(f.pwd) npwd = f.pwd.value;
+		if(f.msg) msg = f.msg.value;
+		
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'gb2312';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '84');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', msg);
+		myajax.SendPost2('/plus/feedback_ajax.php');
+		//msg = '';
+		CKEDITOR.instances.msg.setData('');
+		//taget_obj.removeAttribute('id');
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+}
+function quoteCommet(fid)
+{
+	    document.feedback.fid.value = fid;
+}
+  
+function ajaxFeedback(aid, fid, type)
+{
+	
+	var taget_obj = $DE('ajaxfeedback_'+fid);
+	if(taget_obj.innerHTML == '')
+	{
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x');
+		myajax.SendGet2("/plus/feedback.php?aid="+aid+"&fid="+fid+"&action=quote&type=ajax");
+		eval('var result = typeof CKEDITOR.instances.msg_'+fid);
+		if(result != 'undefined')
+		{
+			// 删除实例
+			eval('var edit = CKEDITOR.instances.msg_'+fid);
+			CKEDITOR.remove(edit);
+		}
+		CKEDITOR.replace(document.getElementById('msg_'+fid) , CKEDITOR.instances.msg.config);
+		scroll(0, taget_obj.offsetTop - 120);
+		var formname = 'f = document.ajaxfeedback_'+fid;
+		eval(formname);
+		if(f.validate)
+		{
+			if($DE('vdimg_'+fid)) $DE('vdimg_'+fid).src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+		DedeXHTTP = null;
+	}
+}
+
+
+
+function ajaxQuotePost(fid)
+{
+	var formname = 'f = document.ajaxfeedback_'+fid;
+	eval(formname);
+	//var f = document.formname;
+	//var f = f[0];
+	var nvalidate = '';
+	var nnotuser = '';
+	var nusername = '';
+	var npwd = '';
+	var taget_obj = $DE('commetcontentNew');
+	var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+	eval('var msg = CKEDITOR.instances.msg_'+fid+'.getData()');
+
+	if(f.validate)
+	{
+		if(f.validate.value=='') {
+			alert("请填写验证码！");
+			return;
+		}
+		else {
+			nvalidate = f.validate.value;
+		}
+	}
+	var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+	
+	if(f.notuser.checked) nnotuser = '1';
+	if(f.username) nusername = f.username.value;
+	if(f.pwd) npwd = f.pwd.value;
+	
+	myajax.sendlang = 'gb2312';
+	myajax.AddKeyN('dopost', 'send');
+	myajax.AddKeyN('aid', '84');
+	myajax.AddKeyN('fid', f.fid.value);
+	myajax.AddKeyN('type', 'ajax');
+	myajax.AddKeyN('comtype', f.comtype.value);
+	myajax.AddKeyN('isconfirm','yes');
+	
+	myajax.AddKeyN('typeid', f.typeid.value);
+	myajax.AddKeyN('quotemsg', f.quotemsg.value);
+	myajax.AddKeyN('validate', nvalidate);
+	myajax.AddKeyN('notuser', nnotuser);
+	myajax.AddKeyN('username', nusername);
+	myajax.AddKeyN('pwd', npwd);
+	myajax.AddKeyN('msg', msg);
+	myajax.SendPost2('/plus/feedback_ajax.php');
+	//alert(f.quotemsg.value);
+	if($DE('ajaxfeedback_'+fid).innerHTML != null)
+	{
+		$DE('ajaxfeedback_'+fid).innerHTML = '';
+	}
+	scroll(0, taget_obj.offsetTop);
+}
+LoadCommets(1);
+</script>
+<!-- //评论内容区结束 -->
+
+        
+<a href="/plus/feedback.php?aid=84" class="pinglun-more-a" target="_blank">全部评论</a>            </div>
+            <!-- 评论/ -->
+        </div>
+    </div>
+    <div class="side-container-hx">            
+    <div class="clearfix author-card3">         
+<div class="pull-left author-card-img">
+            <p class="p-1"><a href="localhost/huiyan/member/index.php?uid=jay" title="悠悠草" target="_blank"><img border="0" src="/uploads/userup/5/myface.jpg" /></a></p>
+        </div>
+<div class="author-card-box">
+            <p class="card-name-p"><a class="card-name" href="localhost/huiyan/member/index.php?uid=jay" target="_blank">悠悠草</a></p>
+            <p class="yijuhua" title="哎哟，不错哦~">哎哟，不错哦~</p>
+            <p class="p-btn"><a href="/member/index.php?action=guestbook&uid=jay" act="add_author" class="dy-btn">给我留言</a>
+                <a href="/member/pm.php?dopost=send&uid=jay" target="_blank">发送消息</a>
+
+            </p>
+        </div>
+                   
+        <div class="clearfix author-article"><h3><b>Ta的文章(143)</b><a href="/member/index.php?uid=jay&action=archives" target="_blank">更多</a></h3><ul>
+
+<li><a href="/plus/view.php?aid=140" title="杜琪峰电影不够大卖，是犯了电影工业的什么忌？"  target="_blank">杜琪峰电影不够大卖，是犯了电影工业的什么忌？</a></li><li><a href="/plus/view.php?aid=141" title="库克又访华来了！来回顾下他三次访华都给苹果做什么"  target="_blank">库克又访华来了！来回顾下他三次访华都给苹果做什么</a></li><li><a href="/plus/view.php?aid=142" title="拼儿子才是王道：“江南Style”让Psy老爸的股票翻了八倍"  target="_blank">拼儿子才是王道：“江南Style”让Psy老爸的股票翻了八倍</a></li>        
+        </ul></div>    
+        </div>
+
+    <div class="hot-view">
+        <h3 class="t-h2"><em>热门文章</em></h3>
+        <div class="view-list idx-view">
+        
+      <div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/ec/97.html" target="_blank"><img src="/uploads/allimg/130807/59.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/ec/97.html" target="_blank">三四线城市的最后一公里</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=97" target="_blank"><script src="/plus/pls.php?aid=97" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/ec/71.html" target="_blank"><img src="/uploads/allimg/130807/32.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/ec/71.html" target="_blank">垂直化妆品B2C电商格局分析</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=71" target="_blank"><script src="/plus/pls.php?aid=71" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/ec/86.html" target="_blank"><img src="/uploads/allimg/130807/55.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/ec/86.html" target="_blank">还在淘宝上苦苦挣扎的小商家们赶紧放弃吧</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=86" target="_blank"><script src="/plus/pls.php?aid=86" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/ec/94.html" target="_blank"><img src="/uploads/allimg/130807/53.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/ec/94.html" target="_blank">百度收购91，影响了谁？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=94" target="_blank"><script src="/plus/pls.php?aid=94" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/ec/69.html" target="_blank"><img src="/uploads/allimg/130807/31.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/ec/69.html" target="_blank">传统中小企业进入移动互联网的路线图</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=69" target="_blank"><script src="/plus/pls.php?aid=69" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+
+              
+        </div>
+    </div>
+
+	    <div class="hot-author-face">
+        <h3 class="t-h2"><em>广告位1</em></h3>
+<a href='#'><img src='/dede58/img/ad2.jpg'></a>
+    </div>
+
+
+    <div class="hot-view">
+        <h3 class="t-h2"><em>推荐文章</em></h3>
+        <div class="view-list idx-view">
+      <div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/ec/78.html" target="_blank"><img src="/uploads/allimg/130807/39.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/ec/78.html" target="_blank">网店宝贝定价七重奏</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=78" target="_blank"><script src="/plus/pls.php?aid=78" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/ec/84.html" target="_blank"><img src="/uploads/allimg/130807/42.png"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/ec/84.html" target="_blank">细数国内团购行业的奇葩网站</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=84" target="_blank"><script src="/plus/pls.php?aid=84" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/ec/85.html" target="_blank"><img src="/uploads/allimg/130807/45.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/ec/85.html" target="_blank">京东亚洲一号完成封顶 自建物流成趋势</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=85" target="_blank"><script src="/plus/pls.php?aid=85" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/ec/90.html" target="_blank"><img src="/uploads/allimg/130807/46.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/ec/90.html" target="_blank">阿里巴巴第一季度净利润6.69亿美元 同比增长两倍</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-07 00:00</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=90" target="_blank"><script src="/plus/pls.php?aid=90" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+
+              
+        
+          </div>
+    </div>
+    <div class="hot-author-face">
+        <h3 class="t-h2"><em>热门作者</em></h3>
+        <ul class="clearfix author-face-list">
+
+<li><p class="author-img"><a href="/member/index.php?uid=newsche" target="_blank" title="www.moke8.com"><img src="/uploads/userup/1/myface.png"/></a></p><p class="name"><a href="/member/index.php?uid=newsche" target="_blank">www.moke8.com</a></p><li><p class="author-img"><a href="/member/index.php?uid=jay" target="_blank" title="悠悠草"><img src="/uploads/userup/5/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=jay" target="_blank">悠悠草</a></p><li><p class="author-img"><a href="/member/index.php?uid=884358" target="_blank" title="884358"><img src="/uploads/userup/2/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=884358" target="_blank">884358</a></p><li><p class="author-img"><a href="/member/index.php?uid=lhc" target="_blank" title="古天乐"><img src="/uploads/userup/6/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=lhc" target="_blank">古天乐</a></p><li><p class="author-img"><a href="/member/index.php?uid=wxb" target="_blank" title="康师傅"><img src="/uploads/userup/8/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=wxb" target="_blank">康师傅</a></p><li><p class="author-img"><a href="/member/index.php?uid=lurenjia" target="_blank" title="路人甲"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=lurenjia" target="_blank">路人甲</a></p><li><p class="author-img"><a href="/member/index.php?uid=jason19905" target="_blank" title="测试账号"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=jason19905" target="_blank">测试账号</a></p>
+        </ul>
+    </div>
+
+		    <div class="hot-author-face">
+        <h3 class="t-h2"><em>广告位2</em></h3>
+<a href='#'><img src='/dede58/img/ad2.jpg'></a>
+    </div>
+    </div>
+ </div>
+<footer class="footer">
+    <div class="about-links">
+                    
+    </div>
+            <div class="footer-copy">
+        Copyright &copy; 2002-2014 织梦系统 版权所有 <a href=http://www.moke8.com target='_blank'>Power by moke8</a> ( <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备11000986号</a>)
+    </div>
+    <!-- 返回顶部 -->
+    <div class="go-top">
+        <i class="pos-btn" onclick="window.scrollTo('0', '0')">^</i>
+    </div>
+    <!-- /返回顶部 -->
+
+</footer>
+</div>
+</div>
+</div>
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+
+    <script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript" src="/images/js/j.js" ></script>
+
+
+<div id="lgnModal" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">登录</h3>
+        </div>
+        <div class="float-box">
+            <div class="float-login-box">
+                <div class="login-info">帐号登录：</div>
+                <form id="float_form_lgn" name="userlogin" action="/member/index_do.php" method="POST" class="form-horizontal">
+        <input type="hidden" name="fmdo" value="login" />
+        <input type="hidden" name="dopost" value="login" />
+        <input type="hidden" name="keeptime" value="604800" />                
+                
+                    <div class="control-group control-name">
+                        <label class="control-label" for="inputName">用户名：</label>
+                        <div class="controls">
+                            <input type="text" id="userid" name="userid" tabindex="1">
+                            <span class="help-inline"><a href="/member/index_do.php?fmdo=user&dopost=regnew" target="_blank">还未注册?</a></span>
+                        </div>
+                    </div>
+                    <div class="control-group control-pwd">
+                        <label class="control-label" for="inputPassword">密　码：</label>
+                        <div class="controls">
+                            <input type="password" id="pwd" name="pwd" tabindex="2">
+                            <span class="help-inline"><a href="/member/resetpassword.php" target="_blank">忘记密码?</a></span>
+                        </div>
+                    </div>                  
+                    <div class="control-group control-pwd" style="margin-top:15px;">
+                        <label class="control-label" for="inputName">验证码：</label>
+                        <div class="controls">
+                            <input type="text" id="vdcode" name="vdcode" tabindex="3" size="4" style="text-transform:uppercase;" maxlength="4">
+                            <span class="help-inline"><img id="vdimgck" align="absmiddle" onclick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="../include/vdimgck.php"/></span>
+                        </div>
+                    </div>                    
+                    <div class="control-group" style="margin-top:15px; margin-left:10px;">
+                        <div class="controls">
+                            <button type="submit" class="btn lgn-btn" tabindex="4" onclick="this.form.submit();">登录</button>
+                            <a href="/member/index_do.php?fmdo=user&dopost=regnew" class="lgn-reg-btn">注册</a>
+                            
+                      </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

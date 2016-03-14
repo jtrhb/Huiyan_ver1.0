@@ -1,0 +1,932 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="gb2312">
+        <title>微信5.0上线前夜，开放的困与厄_魔客吧仿虎嗅网</title>
+        <meta name="keywords" content="微信,投稿" />
+        <meta name="description" content="微信5.0上线后，服务号与订阅号之间的划分，公众账号注册认证门槛的提高，是否预示着微信接下来开放的力度会加大，开放的对象会定向？无论如何，微信必须加快开放的步伐，否则其他平台野蛮..." />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <!-- Le styles -->
+        <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/dede58/css/hx-2013.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">
+        <![endif]-->
+        <style>
+		.jiathis_style{
+			margin-top:8px;	
+		}
+		</style>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+
+function CheckLogin(){
+  var taget_obj = document.getElementById('_userlogin');
+  myajax = new DedeAjax(taget_obj,false,false,'','','');
+  myajax.SendGet2("/member/ajax_loginsta.php");
+  DedeXHTTP = null;
+}
+function CheckLogin2(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+	
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>      
+    </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+        <div class="container-hx">
+		<!--
+<div id="myCarousel" class="carousel slide">
+   
+   <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+   </ol>   
+   
+   <div id="chartCarousel" class="carousel-inner">
+      <div class="item active">
+         <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+           <script type="text/javascript">
+         new TradingView.widget({
+        "autosize": true,
+        "symbol": "FX:EURUSD",
+        "interval": "1",
+        "timezone": "Asia/Shanghai",
+        "theme": "White",
+        "style": "1",
+        "locale": "zh",
+        "toolbar_bg": "rgba(241, 243, 246, 1)",
+        "hide_top_toolbar": true,
+        "allow_symbol_change": true,
+        "save_image": false,
+        "hideideas": true
+    });
+          </script>
+      </div>
+      <div class="item">
+         <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
+    new TradingView.widget({
+        "autosize": true,
+        "symbol": "FX:USDCHF",
+        "interval": "1",
+        "timezone": "Asia/Shanghai",
+        "theme": "White",
+        "style": "1",
+        "locale": "zh",
+        "toolbar_bg": "rgba(241, 243, 246, 1)",
+        "hide_top_toolbar": true,
+        "allow_symbol_change": true,
+        "save_image": false,
+        "hideideas": true
+    });
+</script>
+      </div>
+      <div class="item">
+         <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
+    new TradingView.widget({
+        "autosize": true,
+        "symbol": "FX:USDJPY",
+        "interval": "1",
+        "timezone": "Asia/Shanghai",
+        "theme": "White",
+        "style": "1",
+        "locale": "zh",
+        "toolbar_bg": "rgba(241, 243, 246, 1)",
+        "hide_top_toolbar": true,
+        "allow_symbol_change": true,
+        "save_image": false,
+        "hideideas": true
+    });
+</script>
+      </div>
+   </div>
+   
+   <a class="carousel-control left" href="#myCarousel" 
+      data-slide="prev">&#8249;</a>
+   <a class="carousel-control right" href="#myCarousel" 
+      data-slide="next">&#8250;</a>
+</div>
+-->            
+<div class="top" id="nav">
+    <div class="top-box">
+        <h1 class="logo"><a href="/" target="_blank"><img src="/dede58/img/top_logo.png"></a></h1>
+        <div class="login-box" id="_userlogin">
+            <div class="btn-group">
+                <a href="/member/article_add.php" class="contribute" title="投稿">投稿</a>
+            </div>
+
+            <div class="btn-group">
+                <a href="#lgnModal" data-toggle="modal">登录</a>
+                <a href="/member/index_do.php?fmdo=user&dopost=regnew">注册</a>
+            </div>
+
+            
+            <div class="btn-group">
+                <a href="/rss.php" title="RSS"><i class="icon-rss"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+     <script language="javascript" type="text/javascript">CheckLogin();</script>
+<div class="special-topic" id="specialTopicTop">
+</div>
+<div class="side-menu-outer-container" id="horizontalMenuOuterContainer">
+<div class="side-menu-hx">
+    <div class="side-menu-top">
+      <nav class="menu menu--valentine">
+        <ul class='side-menu-list'>   
+        
+      	<li class='menu__item menu__item--current'><a href='/' class='menu__link'>首页</a></li>
+        
+      	<li class='active'><a href='/focus/'>资讯</a></li>
+      	<li class='menu__item'><a href='/mobile/' class='menu__link'>移动库</a></li>
+      	
+      	<li class='menu__item'><a href='/photo/' class='menu__link'>专题</a></li>
+      	
+            </ul>
+       </nav>
+    </div>
+    <!--
+    <div class="search">
+        <form  name="formsearch" action="/plus/search.php" class="form-search">
+        <input type="hidden" name="kwtype" value="0" />
+        
+            <input type="text" name='q' id='s' class="input-text" placeholder="搜索" value="" />
+            <button class="search-btn"><i class="icon-search"></i></button>
+        </form>
+    </div>
+    -->
+</div>
+</div>         
+		<div class="row-fluid-wrap-hx">
+                <div class="center-container-hx">
+                    <div class="clearfix row-fluid-hx"><!--<script src="/dede58/js/swplay.js" ></script>-->
+    <div class="center-ctr-wrap">
+        <div class="center-ctr-box">
+                        <div class="clearfix neirong">
+                <h1>微信5.0上线前夜，开放的困与厄</h1>
+                <div class="subtitle-h1">微信5.0上线后，服务号与订阅号之间的划分，公众账号注册认证门槛的提高，是否预示着微信接下来开放的力度会加大，开放的对象会定向？无论如何，微信必须加快开放的步伐，否则其他平台野蛮...</div>
+                <div class="neirong-other">
+                    <span class="recommenders">www.moke8.com</span>
+                    <time>2016-03-02 13:36</time>
+                    <span style="margin-right:10px;"><i class="icon-click"></i><em class="pl-num"><script src="/plus/count.php?view=yes&aid=155&mid=6" type='text/javascript' language="javascript"></script></em></span><a href="#odby" class="pinglun-num"><i class="icon-comment"></i><em class="pl-num"><script src="/plus/pls.php?aid=155" language="javascript"></script></em></a>
+                    <span class="tags">
+                       <a href='/tags.php?/%CE%A2%D0%C5/' target='_blank'>微信</a> <a href='/tags.php?/%CD%B6%B8%E5/' target='_blank'>投稿</a>                    </span>
+                </div>
+
+                <div class="neirong-box" id="neirong_box">
+                    <table>
+                        <tr>
+                            <td>
+                                <span class="span-img" style="word-wrap: break-word; float: none; min-height: 1px; margin: 5px auto 15px; text-align: center; display: block; overflow: hidden; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei', '冬青黑体简体中文 w3', 宋体; font-size: 16px; line-height: 26px; background-color: rgb(250, 250, 252);"><img alt="微信5.0上线前夜，开放的困与厄" data-pinit="registered" src="/uploads/allimg/160302/1336223291-0.jpg" style="word-wrap: break-word; max-width: 628px; vertical-align: middle; border: 0px;" /></span>
+<div style="word-wrap: break-word; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei', '冬青黑体简体中文 w3', 宋体; font-size: 16px; line-height: 26px; background-color: rgb(250, 250, 252);">
+	昨天（8月4日）下午从深圳返京，遭遇北京恶劣天气迫降天津，一路颠簸流离浑身湿透，路上断断续续写下这些文字，也算为这个雷鸣电闪，狂风暴雨的难忘夜晚留下点纪念。
+	<div style="word-wrap: break-word;">
+		&nbsp;</div>
+	<div style="word-wrap: break-word;">
+		<div style="word-wrap: break-word;">
+			2013年8月5日，它注定将成为一个特殊的日子，还有不到24个小时，微信5.0正式版将向世人揭开其神秘的面纱，之前围绕着它的所有传言、谣言都将尘埃落定，那些求内测资格、关心上线档期的朋友们，你们终于可以不捉急了&hellip;&hellip;</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			同时联通微信合作的&ldquo;微信沃卡&rdquo;将在易迅网上开启预定，更巧合的是阿里与微博两者爱情的结晶&ldquo;淘宝微博版&rdquo;也将同天隆重登场，如果前者是预先设定的双喜临门，那么后者挑这个日子打得是啥算盘捏&hellip;&hellip;</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			其实老贼我从来就不关心微信5.0什么时候上线，也从来没有拿到内测资格，到现在为止我手机装的微信依然是4.5版，我考虑更多的是<b style="word-wrap: break-word;">微信公众平台诞生已经整整一年，这个搅动整个移动互联网引诸侯模仿，整合线上线下给人无限想象的产品，除了区分订阅号与服务号以外，在微信5.0以后会有些什么变化？</b>开放的政策会有什么调整？第三方开发者面临的问题如何解决？</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			<b style="word-wrap: break-word;">自定义菜单开不开放？</b></div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			<span style="word-wrap: break-word; line-height: 1.8em;">这是一个所有人最关心的事情，为了这个目前看起来很装逼、一般实用的功能，花重金找关系的企业不在少数，据说最高的炒到过8万，然而对于更多的公众账号来说，只有苦苦等待官方重启开放申请。</span></div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			在很多人包括我看来这个自定义菜单只是一个快捷入口，其形式大于实际，如果开放也不太会产生一些不良的后果，但为什么微信官方却迟迟不愿放开？从我个人理解来看，是微信官方害怕一些未知的使用方法会伤害用户体验，就如同被封闭的一键转发和一键关注，你只有感慨群众的智慧是无穷的。</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			但是别失望，我这里默默透露一个小道消息，那就是<b style="word-wrap: break-word;">自定义菜单申请5.0上线后即将重新开启，申请的首要条件是该公众账号为服务号，而服务号每个月只能群发一次</b>，你们懂得，鱼和熊掌不能兼得。</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			不过老贼我还是推荐一些企业选择服务号，因为从自定义菜单申请资格来看，服务号虽然损失了每天群发的功能，但是未来将在公众账号的开发接口上获得更多特权，我还可以大胆预测微信支付也只会向服务号开放，企业将通过服务号为用户提供更多服务，从而产生创造更多价值。</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			<b style="word-wrap: break-word;">公众账号管理细则何时出台？</b></div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			在过去一年里公众账号在官方各种引导下运营逐渐规范，但是群发消息失败的几率之高依然经常困扰着大家，我的内容有什么敏感词？没人知道&hellip;&hellip;虽然各种民间大师有所心得，但有时也会失灵。</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			<span style="word-wrap: break-word; line-height: 1.8em;">除了内容运营问题，公众平台规则多变不确定也是大问题，最早注册时一个身份证可以注册5个账号，后来变2个也没有个说明，最近注册又开始分个人、企业、媒体、政府等类型，这几个类型的账号会有什么不同也没说明，另外一个企业注册最多可以注册几个公众号也不知道。</span></div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			其他不明确的还有很多，如何认证微博不同名的公众账号？如何修改公众账号的名称？如何申请高级开发接口权限？没有指引也没人知道&hellip;&hellip;大部分公众账号的运营者都在抱怨，甚至有了所谓的靠关系就可以如何如何的传言。</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			互联网本身是来解决信息不对称问题，但事实上也会产生很多新的信息不对称问题，即便是号称最牛逼的沟通工具微信也依然如此，这些声音我相信微信官方应该有所耳闻，也不会熟视无睹，但为什么微信公众平台的管理细则迟迟未能出台？</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			在我看来首先是微信发展的太快了，快到无论是微信团队的成长，还是目前互联网开放平台上的已有经验案例，都无法适应和满足，说白了微信官方也是在摸着石头过河，什么该放什么该收大家的心里都没底，规则不方便出台书面的，因为一旦公布就很难收回，所以就干脆小心试错小心验证了，我有时候觉得微信当前面临的开放尺度问题不亚于中国搞改革开放啊。</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			另一个方面来看，早期违规被封的那些账号玩法太野也让微信官方心有余悸，曾经有位微信官方的朋友这样感慨，&ldquo;没想到啊，投机取巧的人太多了&rdquo;。所以微信从当初的每天可以发三次到后来每天发一次，到如今的服务号与订阅号，很大程度也是无奈之举。</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			微信5.0以后微信公众平台将迎来一次彻底的改版，微信官方是否已经准备好面对即将发生的新问题，公众账号管理细则会出台么？相关业务申请流程是否会透明化流程化？拭目以待！</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			<b style="word-wrap: break-word;">有喜有忧的第三方开发者</b></div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			微信方面的第三方开发者有两类，一类是APP开发者利用微信开放平台，通过朋友圈、微信群等获取新流量，另一类是从事公众平台应用开发的，主要是为一些企业提供订制或者通用软件。</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			<span style="word-wrap: break-word; line-height: 1.8em;">APP应用开发者在微信上的成功案例不少，比如天气相机、百度魔图、疯狂猜图这些，通过朋友圈分享获得了大量的新用户，也说明了在微信官方规则允许下，开发者使用适当的引导让用户做分享操作可以的，同时我们也可以预见到伴随微信5.0上线的微信游戏平台，也将通过这种朋友圈传播的方式开启腾讯手游掘金之路。</span></div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			与之相比公众平台上的第三方开发者就是另外一番景象，由于公众平台接口权限获取困难，单靠目前开放的接口无法完成一些复杂的功能，大部分开发者为企业提供的仅仅是一些简单的WAP建站而已，有限的互动也都是通过HTML5来完成，也有不少冒险者通过模拟登陆等手段获取一些权限完成一些功能。</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			<b style="word-wrap: break-word;">同时腾讯其他BG也在陆续推出一些微信相关产品，并且拥有一些内部接口权限，与开发者产生直接竞争关系</b>，这让很多开发者对微信开放有所怀疑和担心，微信5.0上线后的开放政策会如何变化更让开发者疑虑。</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			在我看来首先微信肯定是坚持开放的，但是接口权限必定是和企业的公众账号绑定的，需要企业自己去申请的，也就是第三方开发者很难一手包办到底。</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			其次腾讯其他BG的竞争在长时间内肯定是存在的，但是腾讯自己是无法把每个行业都覆盖都做透，有这个技术也没这个资源，因此市场空间还是很大的，开发者必须坚持垂直化细分化，把某个行业做透做深。</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			再者微信官方一直是把自己定位在管道和平台的角色，也就是说微信官方只会做榜样树标杆，而不会自己去从事具体事务，目前的成功案例都是企业与第三方开发者共同努力的成果，带动的其实是整个行业在微信公众平台方面的开发需求。</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			<span style="word-wrap: break-word; line-height: 1.8em;">最后开发者必须明白微信公众账号并不适合做营销传播，单纯为企业提供公众平台开发势必单薄无力，如何将其他社会化媒体平台与微信公众平台有效结合起来，为企业提供完整的服务将是接下去的方向。</span></div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			<b style="word-wrap: break-word;">微信开放的脚步是否太慢？</b></div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			淘宝微博版上线在即，据说也会有第三方开发接口，淘宝微淘的后台更是微信公众平台的翻版，也就是说移动互联网上的类公众平台会越来越多，众多开发者可选择范围也越来越大。</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			微信能够到今天的量级，与企业、开发者有着必然的关系，虽然淘微和微淘的开放平台刚刚起步，但可以肯定的是一旦企业商家和第三方开发者开始聚集在某个平台，势必削弱其他平台对用户的吸引力。</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			<span style="word-wrap: break-word; line-height: 1.8em;">只有大量的企业在线下推广，只有大量的开发者在线上为企业和用户提供服务，才有可能把平台生态建立起来，微信现在虽然占领先机，<b style="word-wrap: break-word;">但是目前有点投鼠忌器，搞得当前局面是微信想开放不敢开放，开发者求开放但拿不到接口，</b>这个问题必须尽快解决。</span></div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			微信5.0上线后，服务号与订阅号之间的划分，公众账号注册认证门槛的提高，是否预示着微信接下来开放的力度会加大，开放的对象会定向？但无论如何，微信必须加快开放的步伐，一旦其他平台野蛮生长起来，必定会影响到微信公众平台的发展。</div>
+		<div style="word-wrap: break-word;">
+			&nbsp;</div>
+		<div style="word-wrap: break-word;">
+			互联网的发展在于开放，微信的未来也在于开放，我之前提过没有绝对开放的平台，但是如何在不伤及用户不损害自身的前提下，打造一个开放的平台，让更多的第三方进来繁荣生态，这是微信当前的困境，也是公众账号们的困境。脱困的办法在微信手里，也在第三方的手里。</div>
+	</div>
+</div>
+<br />
+                                                                <!-- 向作者提问-->
+                                <a href="#postform" class="a_self pull-right btn btn-primary askAuthor"  target="_self"><i class="icon-question-sign icon-white"></i>向作者提问</a>
+                                                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="clearfix pages">
+                    <div class="pull-right pgs"></div>                </div>
+                                
+                <!-- 分享 -->
+                <div class="share-wrap" id="share_wrap">
+                    <div class="share-wrap-box">
+    <div class="manage-box1" id="newdigg">
+        <div class="like-box">
+            <i class="pos-btn" title="喜欢" onClick="javascript:postDigg('good',155)">0</i>
+        </div>
+        <div class="favorite-box">
+            <i class="pos-btn" title="收藏" onClick="window.open('/plus/stow.php?aid=155')"><script src="/plus/scs.php?aid=155" language="javascript"></script></i>
+        </div>
+        <div class="nolike-box">
+            <i class="pos-btn" title="没劲" onClick="javascript:postDigg('bad',155)">0</i>
+        </div>
+    </div>
+  <script language="javascript" type="text/javascript">getDigg(155);</script>    
+    <div class="share-box side-share-box">
+        <span class="pos-top">分享：</span>
+         <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_xiaoyou"></a>
+	<a class="jiathis_button_cqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_fav"></a>
+	<a class="jiathis_button_copy"></a>
+	<a class="jiathis_button_print"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1375020427508565" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+    </div>
+</div>                </div>
+
+            </div>
+            
+            <div class="position-wrap" id="position_wrap">
+                            </div>
+            <div class="related-list"><h3 class="t-h2"><em>您可能感兴趣的文章</em></h3><ul>
+                <li><a href="/focus/181.html" target="_blank">投稿测试</a></li>
+<li><a href="/focus/168.html" target="_blank">腾讯开放两年都做了啥？看看腾讯的自我表扬贴</a></li>
+<li><a href="/focus/166.html" target="_blank">乐视面前的三座大山</a></li>
+<li><a href="/focus/165.html" target="_blank">腾讯O2O这些年：做好了入口做好支付，就是缺商户</a></li>
+<li><a href="/focus/162.html" target="_blank">三星真正的死穴是什么？</a></li>
+            
+
+            </ul><div id = "interest"></div></div>            <!-- 评论 -->
+            <a name='postform'></a>
+            <div class="pinglun" id="pinglun">
+                        <h3 class="t-h2" id="odby">
+            <a href="#odby" class="a-btn"><i class="icon-comment"></i><em class="pl-num"><script src="/plus/pls.php?aid=155" language="javascript"></script></em></a>
+            <ul class="inline tab-pinglun-box">
+                <li class="active">最新评论</li>
+            </ul>
+        </h3>
+            <!-- 评论框框架 -->
+           
+<div class="pl-kuang-box">
+            <!-- 头像 -->
+            <div class="pull-left pl-img" id="_ajax_feedback">                       
+                <a target="_blank" href="#"><img border="0" src="/member/templets/images/dfboy.png"></a>
+                
+游客    
+                            
+            </div>
+            <!-- 头像/ -->
+            <!-- 评论框 -->
+            <div class="pl-kuang">
+        <form action="#" method="post" name="feedback" onsubmit="return false;">
+          <input type="hidden" name="dopost" value="send" />
+          <input type="hidden" name="comtype" value="comments">
+          <input type="hidden" name="aid" value="155" />
+          <input type="hidden" name="fid" id='feedbackfid' value="0" />
+          <input type="hidden" name="feedbacktype" value="feedback" />          
+			<div class="textarea-box"><textarea class="textarea-txt" id="msg" name="msg"></textarea></div>
+          <!-- /dcmp-content -->
+          <div class="dcmp-post">
+            <!--未登陆-->
+            <div class="dcmp-userinfo" id="_ajax_feedback"> 
+              <input type="hidden" name="username" value="游客"/>
+              验证码:
+              <input type="text" name="validate" size="4" class="ipt-txt" style="text-transform:uppercase;"/>
+              <img src= "/include/vdimgck.php" id="validateimg" style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换图片" alt="点击我更换图片"  class="vdimg"/>
+              <input type="hidden" name="notuser" id="dcmp-submit-guest" />
+
+            </div>
+            
+            <script language="javascript" type="text/javascript">CheckLogin2();</script>
+            
+            <button class="pull-right subscribe-btn" type="button" onClick='PostComment()'>回复</button>
+          </div>
+        </form>
+            </div>
+       <!-- 评论框 -->
+        </div> 
+    <dd id='commetcontentNew'></dd>
+    <div class="pinglun-list" id="commetcontent">
+	</div>
+
+<!--
+//由于评论载入时使用异步传输，因此必须在最后一步加载（DIGG和评论框须放在评论内容前面）
+//如果一定需要提前的把myajax.SendGet改为myajax.SendGet2，但可能会引起页面阻滞
+-->
+<script language='javascript'>
+function LoadCommets(page)
+{
+		var taget_obj = document.getElementById('commetcontent');
+		var waithtml = "<div style='line-height:50px'><img src='/images/loadinglit.gif' />评论加载中...</div>";
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x', waithtml);
+		myajax.SendGet2("/plus/feedback_ajax.php?dopost=getlist&aid=155&page="+page);
+		DedeXHTTP = null;
+}
+function PostComment()
+{
+		var f = document.feedback;
+		var msg = document.getElementById("msg").value;
+		var nface = '6';
+		var nfeedbacktype = 'feedback';
+		var nvalidate = '';
+		var nnotuser = '';
+		var nusername = '';
+		var npwd = '';
+		var taget_obj = $DE('commetcontentNew');
+		var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+		if(msg.length < 10)
+		{
+			alert("请至少输入10个字！");
+			return;
+		}
+		if(f.validate)
+		{
+			if(f.validate.value=='') {
+				alert("请填写验证码！");
+				return;
+			}
+			else {
+				nvalidate = f.validate.value;
+			}
+		}
+		if(msg.length > 500)
+		{
+			alert("你的评论是不是太长了？请填写500字以内的评论。");
+			return;
+		}
+		if(f.feedbacktype) {
+			for(var i=0; i < f.feedbacktype.length; i++)
+				if(f.feedbacktype[i].checked) nfeedbacktype = f.feedbacktype[i].value;
+		}
+		/*
+		if(f.face) {
+			for(var j=0; j < f.face.length; j++)
+				if(f.face[j].checked) nface = f.face[j].value;
+		}
+		*/
+		if(f.notuser.checked) nnotuser = '1';
+		if(f.username) nusername = f.username.value;
+		if(f.pwd) npwd = f.pwd.value;
+		if(f.msg) msg = f.msg.value;
+		
+		var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+		myajax.sendlang = 'gb2312';
+		myajax.AddKeyN('dopost', 'send');
+		myajax.AddKeyN('aid', '155');
+		myajax.AddKeyN('fid', f.fid.value);
+		myajax.AddKeyN('face', nface);
+		myajax.AddKeyN('feedbacktype', nfeedbacktype);
+		myajax.AddKeyN('validate', nvalidate);
+		myajax.AddKeyN('notuser', nnotuser);
+		myajax.AddKeyN('username', nusername);
+		myajax.AddKeyN('pwd', npwd);
+		myajax.AddKeyN('msg', msg);
+		myajax.SendPost2('/plus/feedback_ajax.php');
+		//msg = '';
+		CKEDITOR.instances.msg.setData('');
+		//taget_obj.removeAttribute('id');
+		f.fid.value = 0;
+		if(f.validate)
+		{
+			if($DE('validateimg')) $DE('validateimg').src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+}
+function quoteCommet(fid)
+{
+	    document.feedback.fid.value = fid;
+}
+  
+function ajaxFeedback(aid, fid, type)
+{
+	
+	var taget_obj = $DE('ajaxfeedback_'+fid);
+	if(taget_obj.innerHTML == '')
+	{
+		var myajax = new DedeAjax(taget_obj, true, true, '', 'x');
+		myajax.SendGet2("/plus/feedback.php?aid="+aid+"&fid="+fid+"&action=quote&type=ajax");
+		eval('var result = typeof CKEDITOR.instances.msg_'+fid);
+		if(result != 'undefined')
+		{
+			// 删除实例
+			eval('var edit = CKEDITOR.instances.msg_'+fid);
+			CKEDITOR.remove(edit);
+		}
+		CKEDITOR.replace(document.getElementById('msg_'+fid) , CKEDITOR.instances.msg.config);
+		scroll(0, taget_obj.offsetTop - 120);
+		var formname = 'f = document.ajaxfeedback_'+fid;
+		eval(formname);
+		if(f.validate)
+		{
+			if($DE('vdimg_'+fid)) $DE('vdimg_'+fid).src = "/include/vdimgck.php?"+f.validate.value;
+			f.validate.value = '';
+		}
+		
+		DedeXHTTP = null;
+	}
+}
+
+
+
+function ajaxQuotePost(fid)
+{
+	var formname = 'f = document.ajaxfeedback_'+fid;
+	eval(formname);
+	//var f = document.formname;
+	//var f = f[0];
+	var nvalidate = '';
+	var nnotuser = '';
+	var nusername = '';
+	var npwd = '';
+	var taget_obj = $DE('commetcontentNew');
+	var waithtml = "<div style='line-height:30px'><img src='/images/loadinglit.gif' />正在发送中...</div>";
+	eval('var msg = CKEDITOR.instances.msg_'+fid+'.getData()');
+
+	if(f.validate)
+	{
+		if(f.validate.value=='') {
+			alert("请填写验证码！");
+			return;
+		}
+		else {
+			nvalidate = f.validate.value;
+		}
+	}
+	var myajax = new DedeAjax(taget_obj, false, true, '', '', waithtml);
+	
+	if(f.notuser.checked) nnotuser = '1';
+	if(f.username) nusername = f.username.value;
+	if(f.pwd) npwd = f.pwd.value;
+	
+	myajax.sendlang = 'gb2312';
+	myajax.AddKeyN('dopost', 'send');
+	myajax.AddKeyN('aid', '155');
+	myajax.AddKeyN('fid', f.fid.value);
+	myajax.AddKeyN('type', 'ajax');
+	myajax.AddKeyN('comtype', f.comtype.value);
+	myajax.AddKeyN('isconfirm','yes');
+	
+	myajax.AddKeyN('typeid', f.typeid.value);
+	myajax.AddKeyN('quotemsg', f.quotemsg.value);
+	myajax.AddKeyN('validate', nvalidate);
+	myajax.AddKeyN('notuser', nnotuser);
+	myajax.AddKeyN('username', nusername);
+	myajax.AddKeyN('pwd', npwd);
+	myajax.AddKeyN('msg', msg);
+	myajax.SendPost2('/plus/feedback_ajax.php');
+	//alert(f.quotemsg.value);
+	if($DE('ajaxfeedback_'+fid).innerHTML != null)
+	{
+		$DE('ajaxfeedback_'+fid).innerHTML = '';
+	}
+	scroll(0, taget_obj.offsetTop);
+}
+LoadCommets(1);
+</script>
+<!-- //评论内容区结束 -->
+
+        
+<a href="/plus/feedback.php?aid=155" class="pinglun-more-a" target="_blank">全部评论</a>            </div>
+            <!-- 评论/ -->
+        </div>
+    </div>
+    <div class="side-container-hx">            
+    <div class="clearfix author-card3">         
+<div class="pull-left author-card-img">
+            <p class="p-1"><a href="localhost/huiyan/member/index.php?uid=lhc" title="古天乐" target="_blank"><img border="0" src="/uploads/userup/6/myface.jpg" /></a></p>
+        </div>
+<div class="author-card-box">
+            <p class="card-name-p"><a class="card-name" href="localhost/huiyan/member/index.php?uid=lhc" target="_blank">古天乐</a></p>
+            <p class="yijuhua" title="一见尼姑，逢赌必输">一见尼姑，逢赌必输</p>
+            <p class="p-btn"><a href="/member/index.php?action=guestbook&uid=lhc" act="add_author" class="dy-btn">给我留言</a>
+                <a href="/member/pm.php?dopost=send&uid=lhc" target="_blank">发送消息</a>
+
+            </p>
+        </div>
+                   
+        <div class="clearfix author-article"><h3><b>Ta的文章(9)</b><a href="/member/index.php?uid=lhc&action=archives" target="_blank">更多</a></h3><ul>
+
+<li><a href="/plus/view.php?aid=150" title="从内购无底线的《植物大战僵尸2》看海外手游的“本土化改造“"  target="_blank">从内购无底线的《植物大战僵尸2》看海外手游的“本土化改造“</a></li><li><a href="/plus/view.php?aid=151" title="那些年，淘宝屏蔽过的宿敌与盟友"  target="_blank">那些年，淘宝屏蔽过的宿敌与盟友</a></li><li><a href="/plus/view.php?aid=152" title="隐藏在淘宝的灰色职业：骗保师"  target="_blank">隐藏在淘宝的灰色职业：骗保师</a></li>        
+        </ul></div>    
+        </div>
+
+    <div class="hot-view">
+        <h3 class="t-h2"><em>热门文章</em></h3>
+        <div class="view-list idx-view">
+        
+      <div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/169.html" target="_blank"><img src="/uploads/allimg/130809/1-130P9115633127-lp.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/169.html" target="_blank">齐齐封杀令背后：阿里与腾讯的“社交电商”博弈</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2016-03-02 13:30</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=169" target="_blank"><script src="/plus/pls.php?aid=169" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/165.html" target="_blank"><img src="/uploads/allimg/130809/5-130P91114330-L.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/165.html" target="_blank">腾讯O2O这些年：做好了入口做好支付，就是缺商户</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2016-03-02 13:32</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=165" target="_blank"><script src="/plus/pls.php?aid=165" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/148.html" target="_blank"><img src="/uploads/allimg/130809/8-130P91016270-L.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/148.html" target="_blank">苹果避税功力不输金融大鳄，亚马逊纳税老实本分？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=wxb" target="_blank">韦小宝</a></span>
+                        <p><time>2013-08-09 10:16</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=148" target="_blank"><script src="/plus/pls.php?aid=148" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/147.html" target="_blank"><img src="/uploads/allimg/130809/8-130P91015090-L.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/147.html" target="_blank">大型日企坠落全因做得太过头？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=wxb" target="_blank">韦小宝</a></span>
+                        <p><time>2013-08-09 10:15</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=147" target="_blank"><script src="/plus/pls.php?aid=147" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/139.html" target="_blank"><img src="/uploads/allimg/130809/1-130PZZ9180-L.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/139.html" target="_blank">80、90后技术宅：网络文化一代崛起，告密时代即将来临？</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2013-08-09 09:10</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=139" target="_blank"><script src="/plus/pls.php?aid=139" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+
+              
+        </div>
+    </div>
+
+	    <div class="hot-author-face">
+        <h3 class="t-h2"><em>广告位1</em></h3>
+<a href='#'><img src='/dede58/img/ad2.jpg'></a>
+    </div>
+
+
+    <div class="hot-view">
+        <h3 class="t-h2"><em>推荐文章</em></h3>
+        <div class="view-list idx-view">
+      <div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/164.html" target="_blank"><img src="/uploads/allimg/130809/6-130P91055370-L.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/164.html" target="_blank">周鸿祎眼中互联网公司衰落的六大原因</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=lhc" target="_blank">令狐冲</a></span>
+                        <p><time>2016-03-02 13:32</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=164" target="_blank"><script src="/plus/pls.php?aid=164" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/168.html" target="_blank"><img src="/uploads/allimg/130809/5-130P91122040-L.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/168.html" target="_blank">腾讯开放两年都做了啥？看看腾讯的自我表扬贴</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=jay" target="_blank">dede58.com</a></span>
+                        <p><time>2016-03-02 13:31</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=168" target="_blank"><script src="/plus/pls.php?aid=168" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/169.html" target="_blank"><img src="/uploads/allimg/130809/1-130P9115633127-lp.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/169.html" target="_blank">齐齐封杀令背后：阿里与腾讯的“社交电商”博弈</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank">dede58.com</a></span>
+                        <p><time>2016-03-02 13:30</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=169" target="_blank"><script src="/plus/pls.php?aid=169" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/172.html" target="_blank"><img src="/uploads/allimg/c140820/140U0349A20-34209_lit.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/172.html" target="_blank">传媒政策变革红利已至，视频网站社群化将是大势所趋</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank"></a></span>
+                        <p><time>2016-03-02 13:29</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=172" target="_blank"><script src="/plus/pls.php?aid=172" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+<div class="clearfix view-box">
+                <div class="pull-left img-box">
+                    <p><a href="/focus/173.html" target="_blank"><img src="/uploads/allimg/c140820/140U034b5P-49C2_lit.jpg"/></a></p></div>
+                <div class="view-box-ctt">
+                    <h4><a href="/focus/173.html" target="_blank">目前大多数IP运作都停留在收割变现的初级阶段，而非真正的“运作</a></h4>
+                    <div class="box-other">
+                        <span class="source-quote"><a href="/member/index.php?uid=newsche" target="_blank"></a></span>
+                        <p><time>2016-03-02 13:24</time><span class="comment-box"><i class="icon-comment"></i><a href="/plus/feedback.php?aid=173" target="_blank"><script src="/plus/pls.php?aid=173" language="javascript"></script></a></span></p>
+                    </div>
+                </div>
+            </div>
+
+              
+        
+          </div>
+    </div>
+    <div class="hot-author-face">
+        <h3 class="t-h2"><em>热门作者</em></h3>
+        <ul class="clearfix author-face-list">
+
+<li><p class="author-img"><a href="/member/index.php?uid=newsche" target="_blank" title="www.moke8.com"><img src="/uploads/userup/1/myface.png"/></a></p><p class="name"><a href="/member/index.php?uid=newsche" target="_blank">www.moke8.com</a></p><li><p class="author-img"><a href="/member/index.php?uid=jay" target="_blank" title="悠悠草"><img src="/uploads/userup/5/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=jay" target="_blank">悠悠草</a></p><li><p class="author-img"><a href="/member/index.php?uid=884358" target="_blank" title="884358"><img src="/uploads/userup/2/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=884358" target="_blank">884358</a></p><li><p class="author-img"><a href="/member/index.php?uid=lhc" target="_blank" title="古天乐"><img src="/uploads/userup/6/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=lhc" target="_blank">古天乐</a></p><li><p class="author-img"><a href="/member/index.php?uid=jtrhb" target="_blank" title="jtrhb"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=jtrhb" target="_blank">jtrhb</a></p><li><p class="author-img"><a href="/member/index.php?uid=wxb" target="_blank" title="康师傅"><img src="/uploads/userup/8/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=wxb" target="_blank">康师傅</a></p><li><p class="author-img"><a href="/member/index.php?uid=lurenjia" target="_blank" title="路人甲"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=lurenjia" target="_blank">路人甲</a></p><li><p class="author-img"><a href="/member/index.php?uid=jason19905" target="_blank" title="测试账号"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=jason19905" target="_blank">测试账号</a></p>
+        </ul>
+    </div>
+
+		    <div class="hot-author-face">
+        <h3 class="t-h2"><em>广告位2</em></h3>
+<a href='#'><img src='/dede58/img/ad2.jpg'></a>
+    </div>
+    </div>
+ </div>
+<footer class="footer">
+    <div class="about-links">
+                    
+    </div>
+            <div class="footer-copy">
+        Copyright &copy; 2002-2014 织梦系统 版权所有 <a href=http://www.moke8.com target='_blank'>Power by moke8</a> ( <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备11000986号</a>)
+    </div>
+    <!-- 返回顶部 -->
+    <div class="go-top">
+        <i class="pos-btn" onclick="window.scrollTo('0', '0')">^</i>
+    </div>
+    <!-- /返回顶部 -->
+
+</footer>
+</div>
+</div>
+</div>
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+
+    <script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript" src="/images/js/j.js" ></script>
+
+
+<div id="lgnModal" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">登录</h3>
+        </div>
+        <div class="float-box">
+            <div class="float-login-box">
+                <div class="login-info">帐号登录：</div>
+                <form id="float_form_lgn" name="userlogin" action="/member/index_do.php" method="POST" class="form-horizontal">
+        <input type="hidden" name="fmdo" value="login" />
+        <input type="hidden" name="dopost" value="login" />
+        <input type="hidden" name="keeptime" value="604800" />                
+                
+                    <div class="control-group control-name">
+                        <label class="control-label" for="inputName">用户名：</label>
+                        <div class="controls">
+                            <input type="text" id="userid" name="userid" tabindex="1">
+                            <span class="help-inline"><a href="/member/index_do.php?fmdo=user&dopost=regnew" target="_blank">还未注册?</a></span>
+                        </div>
+                    </div>
+                    <div class="control-group control-pwd">
+                        <label class="control-label" for="inputPassword">密　码：</label>
+                        <div class="controls">
+                            <input type="password" id="pwd" name="pwd" tabindex="2">
+                            <span class="help-inline"><a href="/member/resetpassword.php" target="_blank">忘记密码?</a></span>
+                        </div>
+                    </div>                  
+                    <div class="control-group control-pwd" style="margin-top:15px;">
+                        <label class="control-label" for="inputName">验证码：</label>
+                        <div class="controls">
+                            <input type="text" id="vdcode" name="vdcode" tabindex="3" size="4" style="text-transform:uppercase;" maxlength="4">
+                            <span class="help-inline"><img id="vdimgck" align="absmiddle" onclick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="../include/vdimgck.php"/></span>
+                        </div>
+                    </div>                    
+                    <div class="control-group" style="margin-top:15px; margin-left:10px;">
+                        <div class="controls">
+                            <button type="submit" class="btn lgn-btn" tabindex="4" onclick="this.form.submit();">登录</button>
+                            <a href="/member/index_do.php?fmdo=user&dopost=regnew" class="lgn-reg-btn">注册</a>
+                            
+                      </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
