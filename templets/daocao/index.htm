@@ -126,15 +126,16 @@
         {/dede:arclist}
 -->  
      <ul class="nav nav-tabs" id="myTab">
-                        <li class="active"><a href="#latestArticle" data-toggle="tab">最新文章</a></li>
+                        <li class="active"><a href="#latestArticles" data-toggle="tab">最新文章</a></li>
                         <li id="tabIN"><a href="#industryNews" data-toggle="tab">产业新闻</a></li>
                         <li id="tabV"><a href="#view" data-toggle="tab">观点</a></li>
                         <li id="tabDI"><a href="#deepInsight" data-toggle="tab">深度测评</a></li>
-                        <li id="tabETC"><a href="#others" data-toggle="tab">其他</a></li>
+                        <li id="tabETC"><a href="#etc" data-toggle="tab">其他</a></li>
     </ul>
 <div id="myTabContent" class="tab-content">
-    <div class="article-list idx-list tab-pane fade in active" id="latestArticle">       
-    {dede:arclist row=15 titlelen=64 noflag='h' addfields='articletype' channelid='1'}
+    <div class="article-container tab-pane fade in active" id="latestArticles">
+    <div class="article-list idx-list">
+    {dede:arclist row=15 orderby='pubdate' titlelen=64  addfields='articletype' channelid='1'}
             <div class="clearfix article-box ">
                 [field:articletype runphp='yes']
                 switch(@me)
@@ -161,12 +162,14 @@
                     <h4><a href="[field:arcurl/]" target="_blank">[field:fulltitle/]</a></h4>
                     <div class="box-other">
                         <span class="source-quote">[field:writer/]</span>
-                        <time>[field:pubdate function="GetDateTimeMK(@me)"/]</time></div><div class="article-summary">[field:description/]</div><p class="tags-box">[field:id function=GetTags(@me)/]<i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="[field:arcurl/]#odby" target="_blank"><script src="/plus/pls.php?aid=[field:id/]" language="javascript"></script></a></span></div></div></div>    
+                        <time>[field:pubdate function="GetDateTimeMK(@me)"/]</time></div><div class="article-summary">[field:description/]</div><p class="tags-box">[field:id function=GetTags(@me)/]<i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="[field:arcurl/]#odby" target="_blank"><!--<script src="/plus/pls.php?aid=[field:id/]" language="javascript"></script>--></a></span></div></div></div>
     {/dede:arclist}
-        <div class="idx-more"><a class="a-more-idx" href="/focus/" target="_blank">更多</a></div>
+    </div>
+        <div class="idx-more"><a class="a-more-idx" onclick="loadDataToDom()">更多</a></div>
      </div>
-<div class="article-list idx-list tab-pane fade" id="industryNews">
-    {dede:arclist row=15 titlelen=64 nofalg='h' addfields='articletype' channelid='1' articletype='industryNews'}
+    <div class="article-container tab-pane fade" id="industryNews">
+    <div class="article-list idx-list">
+    {dede:arclist row=15 orderby='pubdate' titlelen=64  addfields='articletype' channelid='1' articletype='industryNews'}
             <div class="clearfix article-box ">
                 <span class='articletype arc-type-in'>产业新闻</span>
                 <a href="[field:arcurl/]" class="a-img" target="_blank"><img src="[field:litpic/]" width="220" height="146"/></a>
@@ -174,14 +177,15 @@
                     <h4><a href="[field:arcurl/]" target="_blank">[field:fulltitle/]</a></h4>
                     <div class="box-other">
                         <span class="source-quote">[field:writer/]</span>
-                        <time>[field:pubdate function="GetDateTimeMK(@me)"/]</time></div><div class="article-summary">[field:description/]</div><p class="tags-box">[field:id function=GetTags(@me)/]<i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="[field:arcurl/]#odby" target="_blank"><script src="/plus/pls.php?aid=[field:id/]" language="javascript"></script></a></span></div></div></div>
+                        <time>[field:pubdate function="GetDateTimeMK(@me)"/]</time></div><div class="article-summary">[field:description/]</div><p class="tags-box">[field:id function=GetTags(@me)/]<i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="[field:arcurl/]#odby" target="_blank"><!--<script src="/plus/pls.php?aid=[field:id/]" language="javascript"></script>--></a></span></div></div></div>
     {/dede:arclist}
-    <div class="idx-more"><a class="a-more-idx" href="/focus/" target="_blank">更多</a></div>
-</div>
+    </div>
+    <div class="idx-more"><a class="a-more-idx" onclick="loadDataToDom()">更多</a></div>
+    </div>
 
-
-<div class="article-list idx-list tab-pane fade" id="view">       
-    {dede:arclist row=15 titlelen=64 nofalg='h' addfields='articletype' channelid='1' articletype='view'}
+    <div class="article-container tab-pane fade" id="view">
+    <div class="article-list idx-list">
+    {dede:arclist row=15 orderby='pubdate' titlelen=64  addfields='articletype' channelid='1' articletype='view'}
             <div class="clearfix article-box ">
                 <span class='articletype arc-type-v'>观点</span>
                 <a href="[field:arcurl/]" class="a-img" target="_blank"><img src="[field:litpic/]" width="220" height="146"/></a>
@@ -189,14 +193,15 @@
                     <h4><a href="[field:arcurl/]" target="_blank">[field:fulltitle/]</a></h4>
                     <div class="box-other">
                         <span class="source-quote">[field:writer/]</span>
-                        <time>[field:pubdate function="GetDateTimeMK(@me)"/]</time></div><div class="article-summary">[field:description/]</div><p class="tags-box">[field:id function=GetTags(@me)/]<i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="[field:arcurl/]#odby" target="_blank"><script src="/plus/pls.php?aid=[field:id/]" language="javascript"></script></a></span></div></div></div>
+                        <time>[field:pubdate function="GetDateTimeMK(@me)"/]</time></div><div class="article-summary">[field:description/]</div><p class="tags-box">[field:id function=GetTags(@me)/]<i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="[field:arcurl/]#odby" target="_blank"><!--<script src="/plus/pls.php?aid=[field:id/]" language="javascript"></script>--></a></span></div></div></div>
     {/dede:arclist}
-        <div class="idx-more"><a class="a-more-idx" href="/focus/" target="_blank">更多</a></div>
-</div>
+    </div>
+        <div class="idx-more"><a class="a-more-idx" onclick="loadDataToDom()">更多</a></div>
+    </div>
 
-
-<div class="article-list idx-list tab-pane fade" id="deepInsight">       
-    {dede:arclist row=15 titlelen=64 nofalg='h' addfields='articletype' channelid='1' articletype='deepInsight'}
+    <div class="article-container tab-pane fade" id="deepInsight">
+    <div class="article-list idx-list">
+    {dede:arclist row=15 orderby='pubdate' titlelen=64  addfields='articletype' channelid='1' articletype='deepInsight'}
             <div class="clearfix article-box ">
                 <span class='articletype arc-type-di'>深度测评</span>
                 <a href="[field:arcurl/]" class="a-img" target="_blank"><img src="[field:litpic/]" width="220" height="146"/></a>
@@ -204,14 +209,15 @@
                     <h4><a href="[field:arcurl/]" target="_blank">[field:fulltitle/]</a></h4>
                     <div class="box-other">
                         <span class="source-quote">[field:writer/]</span>
-                        <time>[field:pubdate function="GetDateTimeMK(@me)"/]</time></div><div class="article-summary">[field:description/]</div><p class="tags-box">[field:id function=GetTags(@me)/]<i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="[field:arcurl/]#odby" target="_blank"><script src="/plus/pls.php?aid=[field:id/]" language="javascript"></script></a></span></div></div></div>    
+                        <time>[field:pubdate function="GetDateTimeMK(@me)"/]</time></div><div class="article-summary">[field:description/]</div><p class="tags-box">[field:id function=GetTags(@me)/]<i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="[field:arcurl/]#odby" target="_blank"><!--<script src="/plus/pls.php?aid=[field:id/]" language="javascript"></script>--></a></span></div></div></div>
     {/dede:arclist}
-        <div class="idx-more"><a class="a-more-idx" href="/focus/" target="_blank">更多</a></div>
-</div>
+    </div>
+        <div class="idx-more"><a class="a-more-idx" onclick="loadDataToDom()">更多</a></div>
+    </div>
 
-
-<div class="article-list idx-list tab-pane fade" id="others">       
-    {dede:arclist row=15 titlelen=64 nofalg='h' addfields='articletype' channelid='1' articletype='etc'}
+    <div class="article-container tab-pane fade" id="etc">
+    <div class="article-list idx-list">
+    {dede:arclist row=15 orderby='pubdate' titlelen=64  addfields='articletype' channelid='1' articletype='etc'}
             <div class="clearfix article-box ">
                 <span class='articletype arc-type-etc'>其他</span>
                 <a href="[field:arcurl/]" class="a-img" target="_blank"><img src="[field:litpic/]" width="220" height="146"/></a>
@@ -219,9 +225,10 @@
                     <h4><a href="[field:arcurl/]" target="_blank">[field:fulltitle/]</a></h4>
                     <div class="box-other">
                         <span class="source-quote">[field:writer/]</span>
-                        <time>[field:pubdate function="GetDateTimeMK(@me)"/]</time></div><div class="article-summary">[field:description/]</div><p class="tags-box">[field:id function=GetTags(@me)/]<i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="[field:arcurl/]#odby" target="_blank"><script src="/plus/pls.php?aid=[field:id/]" language="javascript"></script></a></span></div></div></div>    
+                        <time>[field:pubdate function="GetDateTimeMK(@me)"/]</time></div><div class="article-summary">[field:description/]</div><p class="tags-box">[field:id function=GetTags(@me)/]<i class="i-icon-bottom"></i></p></div><div class="idx-hldj"><div class="article-icon"><span class="comment-box"><i class="icon-comment"></i><a href="[field:arcurl/]#odby" target="_blank"><!--<script src="/plus/pls.php?aid=[field:id/]" language="javascript"></script>--></a></span></div></div></div>
     {/dede:arclist}
-        <div class="idx-more"><a class="a-more-idx" href="/focus/" target="_blank">更多</a></div>
+    </div>
+        <div class="idx-more"><a class="a-more-idx" onclick="loadDataToDom()">更多</a></div>
      </div> 
 </div> 
   </div>
@@ -441,5 +448,7 @@ $(function(){
       $('#myTab a:first').tab('show');
    });
 </script>
+
+        <script language="javascript" type="text/javascript" src="dede58/js/AjaxLoading.js" ></script>
 </body>
 </html>

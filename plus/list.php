@@ -10,8 +10,70 @@
  * @link           http://www.dedecms.com
  */
 require_once(dirname(__FILE__)."/../include/common.inc.php");
+//Ajax实现无限加载
+if(isset($_GET['ajax'])) {
+    $typeid = isset($_GET['typeid']) ? intval($_GET['typeid']) : 0;//传递过来的分类ID
+    $page = isset($_GET['page']) ? intval($_GET['page']) : 0;//页码
+    $pagesize = isset($_GET['pagesize']) ? intval($_GET['pagesize']) : 15;//每页多少条，也就是一次加载多少条数据
+    $articletype = isset($_GET['articletype'])?($_GET['articletype']):'';//文章类型
+    $start = $page > 0 ? ($page - 1) * $pagesize : 0;//数据获取的起始位置。即limit条件的第一个参数。
+    $typesql = $typeid ? "typeid='$typeid'" : '';//这个是用于首页实现瀑布流加载，因为首页加载数据是无需分类的，所以要加以判断，如果无需
+    $arctypesql = ($articletype == 'latestArticles')?'':"addf.articletype='$articletype'";
+    $whereclause = ($arctypesql == '')?'':$arctypesql;
+    $whereclause = ($typesql == '')?$whereclause:$whereclause.' AND '.$typesql;
+    $whereclause = ($whereclause == '')?'':"WHERE $whereclause";
+    $total_sql = "SELECT COUNT(a.id) as num FROM `#@__archives` AS a  LEFT JOIN `#@__addonarticle` AS addf ON a.id=addf.aid  $whereclause";
+    $temp = $dsql->GetOne($total_sql);
+    $total = 0;//数据总数
+    $load_num = 0;
+    if (is_array($temp)) {
+        $load_num = round(($temp['num'] - 15) / $pagesize);//要加载的次数,因为默认已经加载了
+        $total = $temp['num'];
+    }
+    $sql = "SELECT a.*,t.typedir,t.typename,t.isdefault,t.defaultname,t.namerule,t.namerule2,t.ispart, t.moresite,t.siteurl,t.sitepath, addf.articletype FROM `#@__archives` as a JOIN `#@__arctype` AS t ON a.typeid=t.id LEFT JOIN `#@__addonarticle` AS addf ON a.id=addf.aid  $whereclause ORDER BY sortrank  DESC LIMIT $start,$pagesize";
+    $dsql->SetQuery($sql);
+    $dsql->Execute('list');
+    $statu = 0;//是否有数据，默认没有数据
+    $data = array();
+    $index = 0;
+    while ($row = $dsql->GetArray("list")) {
+        $row['info'] = $row['info'] = $row['infos'] = cn_substr($row['description'], 160);
+        $row['info'] = iconv("GBK","UTF-8//IGNORE",$row['info']);//转换GBK编码中文字符为UTF-8，json_encode无法识别GBK编码的中文，为配合前端Javascript接收数据
+        $row['id'] = $row['id'];
+        $row['filename'] = $row['arcurl'] = GetFileUrl($row['id'], $row['typeid'], $row['senddate'], $row['title'], $row['ismake'],
+            $row['arcrank'], $row['namerule'], $row['typedir'], $row['money'], $row['filename'], $row['moresite'], $row['siteurl'], $row['sitepath']);
+        $row['typeurl'] = GetTypeUrl($row['typeid'], $row['typedir'], $row['isdefault'], $row['defaultname'], $row['ispart'],
+            $row['namerule2'], $row['moresite'], $row['siteurl'], $row['sitepath']);
+        if ($row['litpic'] == '-' || $row['litpic'] == '') {
+            $row['litpic'] = $GLOBALS['cfg_cmspath'] . '/images/defaultpic.gif';
+        }
+        if (!preg_match("#^http:\/\/#i", $row['litpic']) && $GLOBALS['cfg_multi_site'] == 'Y') {
+            $row['litpic'] = $GLOBALS['cfg_mainsite'] . $row['litpic'];
+        }
+        $row['picname'] = $row['litpic'];//缩略图
+        $row['stime'] = GetDateTimeMK($row['pubdate']);//只要日期的话用GetDateMK();
+        $row['tagsById'] = GetTags($row['id']);
+        $row['tagsById'] = iconv("GBK","UTF-8//IGNORE",$row['tagsById']);
+        $row['typelink'] = "<a href='" . $row['typeurl'] . "'>" . $row['typename'] . "</a>";//分类链
+        $row['fulltitle'] = $row['title'];//完整的标题
+        $row['fulltitle'] = iconv("GBK","UTF-8//IGNORE",$row['fulltitle']);
+        $row['keywords'] = iconv("GBK","UTF-8//IGNORE",$row['keywords']);
+        $row['writer'] = iconv("GBK","UTF-8//IGNORE",$row['writer']);
+        $row['description'] = iconv("GBK","UTF-8//IGNORE",$row['description']);
+        $row['title'] = iconv("GBK","UTF-8",cn_substr($row['title'], 60));//截取后的标题
+        $data[$index] = $row;
+        $index++;
+    }
+    if (!empty($data)) {
+        $statu = 1;//有数据
+    }
+    $result = array('statu' => $statu, 'list' => $data, 'total' => $total, 'load_num' => $load_num);
+    echo json_encode($result);//返回数据
+    exit();
+}
 
 //$t1 = ExecTime();
+
 
 $tid = (isset($tid) && is_numeric($tid) ? $tid : 0);
 
