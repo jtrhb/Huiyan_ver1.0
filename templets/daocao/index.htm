@@ -9,9 +9,9 @@
         <title>{dede:global.cfg_webname/}</title>
         <meta name="description" content="{dede:global.cfg_description/}" />
         <meta name="keywords" content="{dede:global.cfg_keywords/}" />
-        <meta name="author" content="dede58.com" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <meta name="author" content="hui-yan.com" />
+        <link rel="shortcut icon" href="/icon/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/icon/favicon.ico" type="image/x-icon" />
         <!-- Le styles -->
         <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
         <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -48,17 +48,22 @@
 	}
 -->
 </script>
+        <!--上滚鼠标滚轮出现导航栏菜单
         <script>
 		window.onload = function(){
 			h1 = document.getElementById('specialTopicTop').offsetHeight;
 			h2 = document.getElementById('horizontalMenuOuterContainer').offsetHeight + h1;
 		}
         </script>
+        -->
     </head>
     <body data-spy="scroll" data-target=".bs-docs-sidebar">
         <div class="container-hx">
 		{dede:include filename="head.htm"/}
         </div>
+        <!--导航栏特效-->
+        <script language="javascript" type="text/javascript" src="dede58/js/fancyNavFocusShift.js" ></script>
+        <script language="javascript" type="text/javascript" src="dede58/js/navAppearScrollUp.js" ></script>
         <div class="container-hx-main">
            <div class="row-fluid-wrap-hx">
                 <div class="center-container-hx">
@@ -335,7 +340,6 @@ echo '<p class="name"><a href="/member/index.php?uid='.$arr['userid'].'" target=
 <div id="append_parent"></div><div id="ajaxwaitid"></div>
 
     {dede:include filename="login.htm"/}
- <script language="javascript" type="text/javascript" src="dede58/js/fancyNavFocusShift.js" ></script>
  <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
  <script type="text/javascript">
  new TradingView.MiniWidget({
@@ -419,30 +423,7 @@ echo '<p class="name"><a href="/member/index.php?uid='.$arr['userid'].'" target=
         "locale": "zh"
     });
  </script>
-<script type="text/javascript">
-$(function(){
-	var ss = $(document).scrollTop();
-	$(window).scroll(function(){
-		var s = $(document).scrollTop();
 
-		if(s< h1){
-			$('.side-menu-outer-container').removeClass('yya');
-		}if(s > h1){
-			$('.side-menu-outer-container').addClass('yya');
-		}if(s > h2){
-			$('.side-menu-outer-container').addClass('gizle');
-			if(s > ss){
-				$('.side-menu-outer-container').removeClass('sabit');
-			}else{
-				$('.side-menu-outer-container').addClass('sabit');
-			}
-			ss = s;
-		}
-
-	});
-	
-});
-</script>
 <script>
    $(function () {
       $('#myTab a:first').tab('show');

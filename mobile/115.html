@@ -7,15 +7,16 @@
 <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="gb2312">
-        <title>中国电信4G也来了_魔客吧仿虎嗅网</title>
+        <title>中国电信4G也来了_汇眼网</title>
         <meta name="keywords" content="中国,电信,也来,科技,昨日,中国,电信,首个,天翼,试验," />
         <meta name="description" content="【最科技讯】昨日，中国电信首个天翼4G试验网在南京开通，首期规划站点以亚青、青奥场馆为主线，覆盖全部竞赛场馆与非竞赛场馆；以交通、服务为补充，覆盖机� ⒒鸪嫡竞徒煌ㄖ鞲傻溃灰岳贰⑽幕涣魑由欤哺悄暇┲饕缇扒透咝！；菇哺�900多辆亚..." />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/icon/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/icon/favicon.ico" type="image/x-icon" />
         <!-- Le styles -->
         <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
         <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
-        <link href="/dede58/css/hx-2013.css" rel="stylesheet">
+        <link href="/dede58/css/fancyNav.css" rel="stylesheet">
+        <link href="/dede58/css/hx-article.css" rel="stylesheet">
         <!--[if lt IE 9]>
         <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">
         <![endif]-->
@@ -24,7 +25,11 @@
 			margin-top:8px;	
 		}
 		</style>
-<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+        <script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+        <script language="javascript" type="text/javascript" src="/dede58/js/classie.js" ></script>
+        <script language="javascript" type="text/javascript" src="/dede58/js/clipboard.min.js" ></script>
+        <script language="javascript" type="text/javascript" src="/dede58/js/jquery.min.js" ></script>
+        <script language="javascript" type="text/javascript" src="/dede58/js/bootstrap.min.js" ></script>
 <script language="javascript" type="text/javascript">
 <!--
 
@@ -118,7 +123,82 @@ function getDigg(aid)
     </head>
     <body data-spy="scroll" data-target=".bs-docs-sidebar">
         <div class="container-hx">
-		            <div class="top">
+		<!--
+<div id="myCarousel" class="carousel slide">
+   
+   <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+   </ol>   
+   
+   <div id="chartCarousel" class="carousel-inner">
+      <div class="item active">
+         <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+           <script type="text/javascript">
+         new TradingView.widget({
+        "autosize": true,
+        "symbol": "FX:EURUSD",
+        "interval": "1",
+        "timezone": "Asia/Shanghai",
+        "theme": "White",
+        "style": "1",
+        "locale": "zh",
+        "toolbar_bg": "rgba(241, 243, 246, 1)",
+        "hide_top_toolbar": true,
+        "allow_symbol_change": true,
+        "save_image": false,
+        "hideideas": true
+    });
+          </script>
+      </div>
+      <div class="item">
+         <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
+    new TradingView.widget({
+        "autosize": true,
+        "symbol": "FX:USDCHF",
+        "interval": "1",
+        "timezone": "Asia/Shanghai",
+        "theme": "White",
+        "style": "1",
+        "locale": "zh",
+        "toolbar_bg": "rgba(241, 243, 246, 1)",
+        "hide_top_toolbar": true,
+        "allow_symbol_change": true,
+        "save_image": false,
+        "hideideas": true
+    });
+</script>
+      </div>
+      <div class="item">
+         <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
+    new TradingView.widget({
+        "autosize": true,
+        "symbol": "FX:USDJPY",
+        "interval": "1",
+        "timezone": "Asia/Shanghai",
+        "theme": "White",
+        "style": "1",
+        "locale": "zh",
+        "toolbar_bg": "rgba(241, 243, 246, 1)",
+        "hide_top_toolbar": true,
+        "allow_symbol_change": true,
+        "save_image": false,
+        "hideideas": true
+    });
+</script>
+      </div>
+   </div>
+   
+   <a class="carousel-control left" href="#myCarousel" 
+      data-slide="prev">&#8249;</a>
+   <a class="carousel-control right" href="#myCarousel" 
+      data-slide="next">&#8250;</a>
+</div>
+-->            
+<div class="top" id="nav">
     <div class="top-box">
         <h1 class="logo"><a href="/" target="_blank"><img src="/dede58/img/top_logo.png"></a></h1>
         <div class="login-box" id="_userlogin">
@@ -138,26 +218,30 @@ function getDigg(aid)
         </div>
     </div>
 </div>
-     <script language="javascript" type="text/javascript">CheckLogin();</script> 
+     <script language="javascript" type="text/javascript">CheckLogin();</script>
+<div class="special-topic" id="specialTopicTop">
+</div>
+<div class="side-menu-outer-container" id="horizontalMenuOuterContainer">
 <div class="side-menu-hx">
     <div class="side-menu-top">
-        <ul class="side-menu-list">   
+      <nav class="menu menu--valentine">
+        <ul class='side-menu-list'>   
         
-      	<li><a href='/'>首页</a></li>
+      	<li class='menu__item menu__item--current'><a href='/' class='menu__link'>首页</a></li>
         
       	
-      	<li><a href='/focus/'>看点</a></li>
+      	<li class='menu__item'><a href='/focus/' class='menu__link'>资讯</a></li>
       	
-      	<li><a href='/internet/'>互联网</a></li>
+      	<li class='menu__item'><a href='/mobile/' class='menu__link'>移动库</a></li>
       	
-      	<li><a href='/invest/'>创投界</a></li>
+      	<li class='menu__item'><a href='/photo/' class='menu__link'>专题</a></li>
       	
-      	<li><a href='/ec/'>电商圈</a></li>
-      	<li class='active'><a href='/mobile/'>移动库</a></li>
-      	<li><a href='/photo/'>图说</a></li>
+      	<li class='menu__item'><a href='/jingjishangshujuku/' class='menu__link'>经纪商数据库</a></li>
       	
             </ul>
+       </nav>
     </div>
+    <!--
     <div class="search">
         <form  name="formsearch" action="/plus/search.php" class="form-search">
         <input type="hidden" name="kwtype" value="0" />
@@ -166,7 +250,12 @@ function getDigg(aid)
             <button class="search-btn"><i class="icon-search"></i></button>
         </form>
     </div>
-</div>          
+    -->
+</div>
+</div>
+        </div>
+            <script language="javascript" type="text/javascript" src="/dede58/js/fancyNavFocusShift.js" ></script>
+            <script language="javascript" type="text/javascript" src="/dede58/js/navAppearScrollUp.js" ></script>
 		<div class="row-fluid-wrap-hx">
                 <div class="center-container-hx">
                     <div class="clearfix row-fluid-hx"><!--<script src="/dede58/js/swplay.js" ></script>-->
@@ -494,10 +583,10 @@ LoadCommets(1);
     <div class="side-container-hx">            
     <div class="clearfix author-card3">         
 <div class="pull-left author-card-img">
-            <p class="p-1"><a href="localhost/huiyan/member/index.php?uid=jay" title="悠悠草" target="_blank"><img border="0" src="/uploads/userup/5/myface.jpg" /></a></p>
+            <p class="p-1"><a href="/member/index.php?uid=jay" title="悠悠草" target="_blank"><img border="0" src="/uploads/userup/5/myface.jpg" /></a></p>
         </div>
 <div class="author-card-box">
-            <p class="card-name-p"><a class="card-name" href="localhost/huiyan/member/index.php?uid=jay" target="_blank">悠悠草</a></p>
+            <p class="card-name-p"><a class="card-name" href="/member/index.php?uid=jay" target="_blank">悠悠草</a></p>
             <p class="yijuhua" title="哎哟，不错哦~">哎哟，不错哦~</p>
             <p class="p-btn"><a href="/member/index.php?action=guestbook&uid=jay" act="add_author" class="dy-btn">给我留言</a>
                 <a href="/member/pm.php?dopost=send&uid=jay" target="_blank">发送消息</a>
@@ -505,7 +594,7 @@ LoadCommets(1);
             </p>
         </div>
                    
-        <div class="clearfix author-article"><h3><b>Ta的文章(143)</b><a href="/member/index.php?uid=jay&action=archives" target="_blank">更多</a></h3><ul>
+        <div class="clearfix author-article"><h3><b>Ta的文章(55)</b><a href="/member/index.php?uid=jay&action=archives" target="_blank">更多</a></h3><ul>
 
 <li><a href="/plus/view.php?aid=140" title="杜琪峰电影不够大卖，是犯了电影工业的什么忌？"  target="_blank">杜琪峰电影不够大卖，是犯了电影工业的什么忌？</a></li><li><a href="/plus/view.php?aid=141" title="库克又访华来了！来回顾下他三次访华都给苹果做什么"  target="_blank">库克又访华来了！来回顾下他三次访华都给苹果做什么</a></li><li><a href="/plus/view.php?aid=142" title="拼儿子才是王道：“江南Style”让Psy老爸的股票翻了八倍"  target="_blank">拼儿子才是王道：“江南Style”让Psy老爸的股票翻了八倍</a></li>        
         </ul></div>    
@@ -648,7 +737,7 @@ LoadCommets(1);
         <h3 class="t-h2"><em>热门作者</em></h3>
         <ul class="clearfix author-face-list">
 
-<li><p class="author-img"><a href="/member/index.php?uid=newsche" target="_blank" title="www.moke8.com"><img src="/uploads/userup/1/myface.png"/></a></p><p class="name"><a href="/member/index.php?uid=newsche" target="_blank">www.moke8.com</a></p><li><p class="author-img"><a href="/member/index.php?uid=jay" target="_blank" title="悠悠草"><img src="/uploads/userup/5/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=jay" target="_blank">悠悠草</a></p><li><p class="author-img"><a href="/member/index.php?uid=884358" target="_blank" title="884358"><img src="/uploads/userup/2/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=884358" target="_blank">884358</a></p><li><p class="author-img"><a href="/member/index.php?uid=lhc" target="_blank" title="古天乐"><img src="/uploads/userup/6/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=lhc" target="_blank">古天乐</a></p><li><p class="author-img"><a href="/member/index.php?uid=wxb" target="_blank" title="康师傅"><img src="/uploads/userup/8/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=wxb" target="_blank">康师傅</a></p><li><p class="author-img"><a href="/member/index.php?uid=lurenjia" target="_blank" title="路人甲"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=lurenjia" target="_blank">路人甲</a></p><li><p class="author-img"><a href="/member/index.php?uid=jason19905" target="_blank" title="测试账号"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=jason19905" target="_blank">测试账号</a></p>
+<li><p class="author-img"><a href="/member/index.php?uid=newsche" target="_blank" title="huiyan"><img src="/uploads/userup/1/myface.png"/></a></p><p class="name"><a href="/member/index.php?uid=newsche" target="_blank">huiyan</a></p><li><p class="author-img"><a href="/member/index.php?uid=jay" target="_blank" title="悠悠草"><img src="/uploads/userup/5/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=jay" target="_blank">悠悠草</a></p><li><p class="author-img"><a href="/member/index.php?uid=884358" target="_blank" title="884358"><img src="/uploads/userup/2/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=884358" target="_blank">884358</a></p><li><p class="author-img"><a href="/member/index.php?uid=lhc" target="_blank" title="古天乐"><img src="/uploads/userup/6/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=lhc" target="_blank">古天乐</a></p><li><p class="author-img"><a href="/member/index.php?uid=jtrhb" target="_blank" title="jtrhb"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=jtrhb" target="_blank">jtrhb</a></p><li><p class="author-img"><a href="/member/index.php?uid=wxb" target="_blank" title="康师傅"><img src="/uploads/userup/8/myface.jpg"/></a></p><p class="name"><a href="/member/index.php?uid=wxb" target="_blank">康师傅</a></p><li><p class="author-img"><a href="/member/index.php?uid=lurenjia" target="_blank" title="路人甲"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=lurenjia" target="_blank">路人甲</a></p><li><p class="author-img"><a href="/member/index.php?uid=jason19905" target="_blank" title="测试账号"><img src="/member/templets/images/dfboy.png"/></a></p><p class="name"><a href="/member/index.php?uid=jason19905" target="_blank">测试账号</a></p>
         </ul>
     </div>
 
@@ -663,7 +752,7 @@ LoadCommets(1);
                     
     </div>
             <div class="footer-copy">
-        Copyright &copy; 2002-2014 织梦系统 版权所有 <a href=http://www.moke8.com target='_blank'>Power by moke8</a> ( <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备11000986号</a>)
+        Copyright &copy; 2015-2016 汇眼网 版权所有 <a href=http://www.moke8.com target='_blank'>Power by moke8</a> ( <a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备11000986号</a>)
     </div>
     <!-- 返回顶部 -->
     <div class="go-top">

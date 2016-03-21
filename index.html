@@ -8,10 +8,10 @@
         <meta charset="gb2312">
         <title>汇眼网</title>
         <meta name="description" content="致力于打造外汇行业第一媒体" />
-        <meta name="keywords" content="织梦源码,织梦模板,dede源码,dede模板下载" />
-        <meta name="author" content="dede58.com" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <meta name="keywords" content="外汇,测评,新媒体" />
+        <meta name="author" content="hui-yan.com" />
+        <link rel="shortcut icon" href="/icon/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/icon/favicon.ico" type="image/x-icon" />
         <!-- Le styles -->
         <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
         <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -48,12 +48,14 @@
 	}
 -->
 </script>
+        <!--上滚鼠标滚轮出现导航栏菜单
         <script>
 		window.onload = function(){
 			h1 = document.getElementById('specialTopicTop').offsetHeight;
 			h2 = document.getElementById('horizontalMenuOuterContainer').offsetHeight + h1;
 		}
         </script>
+        -->
     </head>
     <body data-spy="scroll" data-target=".bs-docs-sidebar">
         <div class="container-hx">
@@ -188,6 +190,9 @@
 </div>
 </div>
         </div>
+        <!--导航栏特效-->
+        <script language="javascript" type="text/javascript" src="dede58/js/fancyNavFocusShift.js" ></script>
+        <script language="javascript" type="text/javascript" src="dede58/js/navAppearScrollUp.js" ></script>
         <div class="container-hx-main">
            <div class="row-fluid-wrap-hx">
                 <div class="center-container-hx">
@@ -939,18 +944,7 @@
         <h3 class="t-h2"><em>本月热点</em></h3>
         <div class="view-list idx-view">
         
-      <div class="clearfix view-box">
-                <div class="pull-left img-box">
-                    <p><a href="/focus/181.html" target="_blank"><img src="/uploads/allimg/130807/1.jpg"/></a></p></div>
-                <div class="view-box-ctt">
-                    <h4><a href="/focus/181.html" target="_blank">投稿测试</a></h4>
-                    <div class="box-other">
-                        <span class="source-quote">jtrhb</span>
-                        <p><time>2016-03-09 15:39:08</time><span class="comment-box"><i class="icon-comment"></i><a href="/focus/181.html#odby" target="_blank"><script src="/plus/pls.php?aid=181" language="javascript"></script></a></span></p>
-                    </div>
-                </div>
-            </div>
-
+      
             </div>
     </div>
 
@@ -1097,7 +1091,6 @@
 
 
 
- <script language="javascript" type="text/javascript" src="dede58/js/fancyNavFocusShift.js" ></script>
  <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
  <script type="text/javascript">
  new TradingView.MiniWidget({
@@ -1181,30 +1174,7 @@
         "locale": "zh"
     });
  </script>
-<script type="text/javascript">
-$(function(){
-	var ss = $(document).scrollTop();
-	$(window).scroll(function(){
-		var s = $(document).scrollTop();
 
-		if(s< h1){
-			$('.side-menu-outer-container').removeClass('yya');
-		}if(s > h1){
-			$('.side-menu-outer-container').addClass('yya');
-		}if(s > h2){
-			$('.side-menu-outer-container').addClass('gizle');
-			if(s > ss){
-				$('.side-menu-outer-container').removeClass('sabit');
-			}else{
-				$('.side-menu-outer-container').addClass('sabit');
-			}
-			ss = s;
-		}
-
-	});
-	
-});
-</script>
 <script>
    $(function () {
       $('#myTab a:first').tab('show');
