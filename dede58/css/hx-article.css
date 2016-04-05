@@ -95,36 +95,36 @@ img {}
 *  by????
 *  13.07.29
 */
-.top {width:100%;left:0;top:0;text-align:center;float:left;background: rgba(151, 151, 151, 1);
+.topsec {width:100%;left:0;top:0;text-align:center;float:left;background: rgba(151, 151, 151, 1);
     box-shadow: rgba(0,0,0,0.1) 0 1px 2px;opacity: 0.5;}/*tradingView chart has an z-index=10*/
-.top-box {width:1000px;height:54px;margin:0 auto;opacity:1;}
+.topsec-box {width:1000px;height:54px;margin:0 auto;opacity:1;}
 .logo {float:left;position:absolute;margin:0 0 0 -17px;padding:0 17px;
     z-index:99;
     opacity:1;}
 .logo img {float:left;border-top:2px solid #1d95d9;}
-.top-box .login-box {}
-.top-box .login-box .num {font-size:12px;color:#f60;}
-.top-box .login-box .num sup {padding:1px 4px;background:#f60;color:#fff;margin-left:5px;border-radius:8px;font-size:9px;font-family:"Arial";box-shadow:0 0 1px #333;text-shadow:0 0 1px #999;}
-.top-box .login-box .open .num {box-shadow:none;background:#f4f4f4;border-radius:0;text-decoration:none;}
-.top-box .login-box .num-dropdown {min-width:80px;}
-.top-box .login-box .lgn-user-face{color: #ccc;
+.topsec-box .login-box {}
+.topsec-box .login-box .num {font-size:12px;color:#f60;}
+.topsec-box .login-box .num sup {padding:1px 4px;background:#f60;color:#fff;margin-left:5px;border-radius:8px;font-size:9px;font-family:"Arial";box-shadow:0 0 1px #333;text-shadow:0 0 1px #999;}
+.topsec-box .login-box .open .num {box-shadow:none;background:#f4f4f4;border-radius:0;text-decoration:none;}
+.topsec-box .login-box .num-dropdown {min-width:80px;}
+.topsec-box .login-box .lgn-user-face{color: #ccc;
     height: 40px;
     line-height: 40px;
     display: inline-block;
     padding: 0 8px;
     float: left;
     font-size: 12px;}
-.top-box .login-box .lgn-user-face img {height:24px;margin-top:-2px;box-shadow:1px 1px 1px #333}
-.top-box .login-box .icon-envelope {background:url(../img/btn_bg.png?data=20130730) no-repeat -111px -713px;width:16px;}
-.top-box .login-box .open .icon-envelope {background-position:-91px -713px;}
-.top-box .login-box .icon-cog {background:url(../img/btn_bg.png?data=20130730) no-repeat -111px -755px;width:16px;}
-.top-box .login-box .open .icon-cog {background-position:-91px -755px;}
-.top-box .login-box .icon-star-empty {background:url(../img/btn_bg.png?data=20130730) no-repeat -111px -797px;width:16px;}
-.top-box .login-box .open .icon-star-empty {background-position:-91px -797px;}
-.top-box .login-box .icon-rss {background:url(../img/btn_bg.png?data=20130730) no-repeat -111px -839px;width:16px;}
+.topsec-box .login-box .lgn-user-face img {height:24px;margin-top:-2px;box-shadow:1px 1px 1px #333}
+.topsec-box .login-box .icon-envelope {background:url(../img/btn_bg.png?data=20130730) no-repeat -111px -713px;width:16px;}
+.topsec-box .login-box .open .icon-envelope {background-position:-91px -713px;}
+.topsec-box .login-box .icon-cog {background:url(../img/btn_bg.png?data=20130730) no-repeat -111px -755px;width:16px;}
+.topsec-box .login-box .open .icon-cog {background-position:-91px -755px;}
+.topsec-box .login-box .icon-star-empty {background:url(../img/btn_bg.png?data=20130730) no-repeat -111px -797px;width:16px;}
+.topsec-box .login-box .open .icon-star-empty {background-position:-91px -797px;}
+.topsec-box .login-box .icon-rss {background:url(../img/btn_bg.png?data=20130730) no-repeat -111px -839px;width:16px;}
 .login-box .btn-group+.btn-group {margin-left:-5px;}
-.top-box .login-box .dropdown-toggle {border-radius:0;}
-.top-box .login-box .contribute {padding:0 12px;background:#1d95d9;color: #fff;}
+.topsec-box .login-box .dropdown-toggle {border-radius:0;}
+.topsec-box .login-box .contribute {padding:0 12px;background:#1d95d9;color: #fff;}
 /*
 *  ?§Ó?????
 *  by????

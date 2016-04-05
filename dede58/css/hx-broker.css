@@ -6,38 +6,60 @@
  */
 @charset "gb2312";
 * {word-wrap:break-word;}
-body{font:normal 14px/24px "Microsoft Yahei","�������������� w3","����";background-color:#f0f0f0;}
+body{font:normal 14px/24px "Microsoft Yahei","?????????????? w3","????";background-color:#f0f0f0;}
 h1,h2,h3,h4,h5,h6,h7 {font-weight:normal;}
 a {text-decoration:none;color:#000;}
 a:hover {text-decoration:none;}
 .container-hx {width:100%;margin:0 auto;z-index:10;height:100%;text-align:left;}
 .container-hx-main {width:1000px;margin:0 auto;z-index:10;height:100%;text-align:left;}
 .yya{
-	position:fixed;
-	left:0;
-	top:0;
+    position:fixed;
+    left:0;
+    top:0;
 }
 .gizle{top:-90px;}
 .sabit{top:0;z-index:9999;}
 img {}
 .row-fluid-wrap-hx {float:left;width:100%;height:100%;}
 .center-container-hx {height:100%;background-color:#FAFAFC;
-_zoom:1;
+    _zoom:1;
 }
 .center-container-hx,
 .footer {
-box-shadow: 2px 0 5px rgba(214, 214, 215, 0.9), -2px 0 5px rgba(214, 214, 215, 0.9);
+    box-shadow: 2px 0 5px rgba(214, 214, 215, 0.9), -2px 0 5px rgba(214, 214, 215, 0.9);
 }
 
 
 .ml-3 {margin-left:20px;float:left;}
 
 .center-ctr-wrap {width:100%;height:100%;float:left;}
-.center-ctr-box {margin-left:30px;margin-right:340px;}
+.broker-database-filter {margin-left:30px;margin-right:740px;margin-top: 20px;}
 .center-ctr-box2 {margin-left:30px;}
-.side-container-hx {float:right;margin-left:-100%;
-		width:280px;
-		margin-right:30px;}
+.broker-database-main {float:right;margin-left:-100%;width:680px;margin-right:30px;margin-top: 20px;}
+/*#test {width:100%;height:150px;background-color: #1b7e5a}*/
+#broker-info-show{margin-top:10px;margin-bottom:15px;width:200px;}
+.broker-info-list{width:100%;}
+/*.broker-info-list>th{border:solid;border-width: 1px;border-color: #000000}*/
+.header-broker{width:25%;text-align: left;font-size: larger;}
+.header-license{width:20%;text-align: center}
+.header-cp{width:10%;text-align: center}
+.header-gold{width:15%;text-align: center}
+.header-apply{width:30%;text-align: center}
+
+/*.cell-with-border{border-right-width: 1px;border-right-color: #dddddd;border-right-style: solid;}*/
+.cell-with-border div{margin-bottom:10px;}
+.brokerinfo-col-1{padding-top: 15px;padding-left: 5px;}
+.brokerinfo-col-1 b{font-size:17px;}
+.brokerinfo-logo{margin-bottom:15px;margin-left:5px;border-style:solid;border-color: #dddddd;border-width:2px;margin-top:10px;}
+.brokerinfo-logo:hover{border-color:#008c23;}
+.broker-logo{width:100%;height:50px;}
+#col-2-anchor{margin-top:10px;}
+.broker-info-col-2 div{padding-bottom:7.5px;padding-left:40px;}
+.broker-info-col-2 b{color:#006CD8}
+.broker-info-col-3 b{color:#006CD8}
+#col-3-header{color:#000000}
+.broker-info-col-3 div{padding-top:10px;}
+.broker-info-col-4 div{padding-left:80px;padding-top:10px;}
 
 .app-ad {position:relative;}
 .app-ad a {position:absolute;display:block;text-indent:-9999px;overflow:hidden;background:url(../img/btn_bg.png?data=20130730) no-repeat -9999px 0;}
@@ -62,12 +84,12 @@ box-shadow: 2px 0 5px rgba(214, 214, 215, 0.9), -2px 0 5px rgba(214, 214, 215, 0
 .a-sohu .png-box {height:133px;}
 
 #chartOverview{
-	width:280px;
-	height:400px;
+    width:280px;
+    height:400px;
 }
 /*
-*  �ײ�
-*  by����
+*  ???
+*  by????
 *  13.04.16
 */
 
@@ -91,8 +113,8 @@ box-shadow: 2px 0 5px rgba(214, 214, 215, 0.9), -2px 0 5px rgba(214, 214, 215, 0
 .carousel-inner>div{height:300px;}
 .special-topic{top:0px;width:100%;height:300px;background-image: url("/dede58/img/specialTopic1.jpg");background-size: 100% 100%;border:3px solid black;}
 /*
-*  top�˵�
-*  by����
+*  top???
+*  by????
 *  13.07.29
 */
 .topsec {width:100%;left:0;top:0;text-align:center;float:left;background: rgba(151, 151, 151, 1);
@@ -108,12 +130,12 @@ box-shadow: 2px 0 5px rgba(214, 214, 215, 0.9), -2px 0 5px rgba(214, 214, 215, 0
 .topsec-box .login-box .open .num {box-shadow:none;background:#f4f4f4;border-radius:0;text-decoration:none;}
 .topsec-box .login-box .num-dropdown {min-width:80px;}
 .topsec-box .login-box .lgn-user-face{color: #ccc;
-height: 40px;
-line-height: 40px;
-display: inline-block;
-padding: 0 8px;
-float: left;
-font-size: 12px;}
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    padding: 0 8px;
+    float: left;
+    font-size: 12px;}
 .topsec-box .login-box .lgn-user-face img {height:24px;margin-top:-2px;box-shadow:1px 1px 1px #333}
 .topsec-box .login-box .icon-envelope {background:url(../img/btn_bg.png?data=20130730) no-repeat -111px -713px;width:16px;}
 .topsec-box .login-box .open .icon-envelope {background-position:-91px -713px;}
@@ -126,8 +148,8 @@ font-size: 12px;}
 .topsec-box .login-box .dropdown-toggle {border-radius:0;}
 .topsec-box .login-box .contribute {padding:0 12px;background:#1d95d9;color: #fff;}
 /*
-*  �в�����
-*  by����
+*  ?��?????
+*  by????
 *  13.04.16
 */
 .side-menu-outer-container{width:100%;background-color: #131313;}
@@ -151,8 +173,8 @@ font-size: 12px;}
 
 
 /*
-*  ���˵�
-*  by����
+*  ?????
+*  by????
 *  13.07.29
 */
 .nav-menu-hx {width:80px;position:fixed;margin-left:-81px;top:120px;overflow:hidden;}
@@ -164,8 +186,8 @@ font-size: 12px;}
 .nav-ul li a {display:block;height:28px;line-height:28px;background:#ccc;overflow:hidden;border-radius:2px 0 0 2px;color:#fff;font-size:12px;text-align:center;}
 .nav-ul li a:hover {background:#1d95d9}
 /*
-*  ����
-*  by����
+*  ????
+*  by????
 *  13.04.16
 */
 .search {position:relative;float:right;margin:10px 0 0 0;padding:0 0 0 30px;}
@@ -175,8 +197,8 @@ font-size: 12px;}
 
 
 /*
-*  ��ǩ
-*  by����
+*  ???
+*  by????
 *  13.04.16
 */
 .biaoqian {background-color:#eef3fb;line-height:14px;border-left:1px solid #e7ecf4;border-top:1px solid #dbe0e7;color:#dde1e7;margin:30px 0 23px;padding:14px 0 17px;}
@@ -184,8 +206,8 @@ font-size: 12px;}
 
 
 /*
-*  ͷ��
-*  by����
+*  ???
+*  by????
 *  13.04.16
 */
 .toutiao {border-bottom:1px dashed #ddd;}
@@ -218,8 +240,8 @@ font-size: 12px;}
 */
 
 /*
-*  �����б�
-*  by����
+*  ?????��?
+*  by????
 *  13.04.16
 */
 .article-box {padding:15px 0;border-bottom:1px dashed #ddd}
@@ -238,8 +260,8 @@ font-size: 12px;}
 .idx-list .article-box .a-img img {width:220px;height:146px;}
 .idx-list .article-on .a-img img {width:350px;height:196px;}
 /*
-*  �����㾦
-*  by����
+*  ??????
+*  by????
 *  13.06.25
 */
 .idx-list .idx-hldj {width:100%;float:left;position:relative;}
@@ -261,8 +283,8 @@ font-size: 12px;}
 .idx-list .hldj-box img {margin:0 5px 0 0;width:40px;float:left;}
 
 /*
-*  ��¼ע��
-*  by����
+*  ??????
+*  by????
 *  13.04.16
 */
 .login-box  {color:#fcecbe;float:right;margin:0 8px 0 0;text-align:right;}
@@ -272,7 +294,7 @@ font-size: 12px;}
 .login-box-ico {width:2px;background:#ccc;}
 #report_brn2 {padding:0 12px;background:#1d95d9;color: #fff;}
 
-/*�ѵ�¼*/
+/*????*/
 .lgn-user-face img {height:29px;height:29px;}
 .lgn-user .dropdown-menu {text-align:left;}
 .lgn-user .btn-group .btn {background:#999;border-color:#999;border-radius:0;color:#fff;text-shadow:none;box-shadow:none;padding-bottom:3px;}
@@ -286,8 +308,8 @@ font-size: 12px;}
 .i-red {color:#f00;font-style:normal;}
 
 /*
-*  ��ҳrss
-*  by����
+*  ???rss
+*  by????
 *  13.04.16
 */
 .idx-rss-a {margin-left:54px;color:#b1b1b1;}
@@ -307,8 +329,8 @@ body .no-bdr {border-bottom:none;}
 
 
 /*
-*  ͼƬ�ֲ�
-*  by����
+*  ?????
+*  by????
 *  13.04.16
 */
 .t-h3 {font-size:14px;line-height:24px;padding:6px 0;}
@@ -333,8 +355,8 @@ body .no-bdr {border-bottom:none;}
 
 
 /*
-*  ���Ź۵�
-*  by����
+*  ??????
+*  by????
 *  13.04.16
 */
 .view-list {}
@@ -350,8 +372,8 @@ body .no-bdr {border-bottom:none;}
 
 
 /*
-*  ����ͷ���б�
-*  by����
+*  ????????��?
+*  by????
 *  13.04.16
 */
 .author-face-list {margin:0;padding:0;}
@@ -364,8 +386,8 @@ body .no-bdr {border-bottom:none;}
 
 
 /*
-*  ���������б�
-*  by����
+*  ?????????��?
+*  by????
 *  13.04.16
 */
 .author-list,
@@ -383,8 +405,8 @@ body .no-bdr {border-bottom:none;}
 .author-ul a {font-size:14px;color:#666;}
 
 /*
-*  ��������
-*  by����
+*  ????????
+*  by????
 *  13.04.16
 */
 .cmt-box {border-bottom:1px dashed #ccc;padding:10px 0 30px;}
@@ -402,8 +424,8 @@ body .no-bdr {border-bottom:none;}
 .cmt-nr .icon-arrow-up {background-position:-145px -169px;width:18px;left:15px;top:-9px;position:absolute;}
 
 /*
-*  ÿ�ռ���
-*  by����
+*  ??????
+*  by????
 *  13.04.16
 */
 .book-box {border-bottom:1px dashed #ccc;padding:10px 0;}
@@ -420,10 +442,10 @@ body .no-bdr {border-bottom:none;}
 
 
 /*
-*  ��Ƭ0
-*  by����
-*  13.05.11ȡ��
-*  13.06.06����
+*  ???0
+*  by????
+*  13.05.11???
+*  13.06.06????
 */
 .author-card {margin-top:20px;padding:10px;background-color:#fff;box-shadow:1px 1px 3px #ccc;position:relative;border-left:5px solid #999;}
 .author-card .author-card-img {width:100px;text-align:center;font-size:12px;}
@@ -451,8 +473,8 @@ body .no-bdr {border-bottom:none;}
 
 
 /*
-*  ͷ����Ƭ
-*  by����
+*  ??????
+*  by????
 *  13.05.11
 */
 .author-card1 {margin-top:20px;padding:15px 20px;background-color:#fff;box-shadow:0 0 1px #f0f0f0;position:relative;border-left:5px solid #999;font-size:12px;}
@@ -469,8 +491,8 @@ body .no-bdr {border-bottom:none;}
 
 
 /*
-*  �ײ���Ƭ
-*  by����
+*  ??????
+*  by????
 *  13.05.11
 */
 .author-card2 {margin-top:20px;padding:15px 20px;background-color:#fff;box-shadow:0 0 1px #f0f0f0;position:relative;border-left:5px solid #f63;font-size:12px;}
@@ -486,7 +508,7 @@ body .no-bdr {border-bottom:none;}
 .author-card2 .author-btm {border-top:1px dashed #999;padding:10px 0;}
 .author-card2 .dy-btn,
 .author-card2 .sx-btn {float:left;height:24px;line-height:24px;background-color:#f60;display:block;color:#ffece0;width:60px;text-align:center;margin:0 15px 0 0;}
-.author-card2 .sx-btn {background-color:#39c;display:none;/*��ʱ����*/}
+.author-card2 .sx-btn {background-color:#39c;display:none;/*???????*/}
 .author-card2 .weibo-btn,
 .author-card2 .weixin-btn {float:right;line-height:23px;vertical-align:middle;overflow:hidden;font-size:14px;position:relative;top:-3px;margin-left:10px;}
 .author-card2 .i-weibo {background-position:0 -714px;width:23px;height:23px;}
@@ -494,13 +516,13 @@ body .no-bdr {border-bottom:none;}
 
 
 /*
-*  ��Ƭ3
-*  by����
-*  13.05.11ȡ��
+*  ???3
+*  by????
+*  13.05.11???
 */
 
 .author-card3 {margin:10px 0 0;padding:5px 10px 10px;background-color:#fefefe;box-shadow:1px 1px 1px #f3f3f3;position:relative;font-size:12px;border-top:2px solid #f60;}
-.author-card3:after {content:'��';position:absolute;right:5px;top:10px;color:#eee;font-size:20px;text-shadow:0 0 1px #fff;}
+.author-card3:after {content:'??';position:absolute;right:5px;top:10px;color:#eee;font-size:20px;text-shadow:0 0 1px #fff;}
 .author-card3 p {margin:0;}
 .author-card3 .author-card-img {width:60px;text-align:center;margin-top:5px;}
 .author-card3 .author-card-img img {width:60px;height:60px;border-radius:2px;border-shadow:1px 1px 1px #ccc;}
@@ -529,8 +551,8 @@ body .no-bdr {border-bottom:none;}
 
 
 /*
-*  ��ҳ����ҳ
-*  by����
+*  ????????
+*  by????
 *  13.04.16
 */
 
@@ -578,8 +600,8 @@ body .no-bdr {border-bottom:none;}
 
 
 /*
-*  ����˵�
-*  by����
+*  ??????
+*  by????
 *  13.05.01
 */
 .share-wrap {background:#f5f6f7;padding-right:10px;border-radius:2px 2px 0 0;margin:10px 0 0;height:32px;z-index:1;position:relative;}
@@ -624,8 +646,8 @@ body .no-bdr {border-bottom:none;}
 
 
 /*
-*  ��ҳ
-*  by����
+*  ???
+*  by????
 *  13.04.16
 */
 .pages {padding:20px 0 10px;}
@@ -659,8 +681,8 @@ body .no-bdr {border-bottom:none;}
 .pages-nav li.active {color:#39f}
 
 /*
-*  ������
-*  by����
+*  ??????
+*  by????
 *  13.04.16
 */
 .float-box {padding:25px 30px;}
@@ -705,8 +727,8 @@ body .no-bdr {border-bottom:none;}
 
 
 /*
-*  ����ҳ
-*  by����
+*  ?????
+*  by????
 *  13.04.16
 */
 .neirong {margin-top:10px;word-break:break-all;}
@@ -715,11 +737,11 @@ body .no-bdr {border-bottom:none;}
 .neirong-box {margin-top:10px;font-size:16px;line-height:26px;}
 .neirong-box .span-img {margin:5px auto 15px;text-indent:0;float:none;text-align:center;display:block;overflow:hidden;}
 .neirong table .span-img img {
-		max-width: 628px;
-		width: expression(this.offsetWidth >= 628 ? 628:'auto');}
+    max-width: 628px;
+    width: expression(this.offsetWidth >= 628 ? 628:'auto');}
 .neirong table img {
-		max-width: 537px;
-		width: expression(this.offsetWidth >= 537 ? 537:'auto');}
+    max-width: 537px;
+    width: expression(this.offsetWidth >= 537 ? 537:'auto');}
 .neirong-box div {}
 .neirong-box div a {color:#08c;}
 .neirong-box a.askAuthor {color:#fff;margin-top:10px;font-size:12px; width:80px;}
@@ -739,11 +761,11 @@ body .no-bdr {border-bottom:none;}
 .pinglun-all-subtitle {font-size:14px;}
 .pinglun-all-subtitle a {color:#006cd8;margin:0 10px;}
 .pinglun-more-a,
-#pinglun .pinglun-more-a:hover{display:block;height:30px;line-height:30px;text-align:center;color:#fff;background:#666;} 
-.neirong-shouquan {font-size:14px;font-family:'����';padding-top:30px;}
+#pinglun .pinglun-more-a:hover{display:block;height:30px;line-height:30px;text-align:center;color:#fff;background:#666;}
+.neirong-shouquan {font-size:14px;font-family:'????';padding-top:30px;}
 .neirong-shouquan span {}
 .neirong-shouquan span a {color:#333;}
-.neirong-shouquan span a.askAuthor {color:#08c;font-size:14px;font-family:'����';padding-top:30px;}
+.neirong-shouquan span a.askAuthor {color:#08c;font-size:14px;font-family:'????';padding-top:30px;}
 .neirong-title3 {color:#800000;line-height:1.4;}
 
 #loginpeople {margin-left:48px;}
@@ -761,8 +783,8 @@ body .no-bdr {border-bottom:none;}
 .book-reader ul li {margin:0 15px;}
 
 /*
-*  �������ҳ
-*  by����
+*  ????????
+*  by????
 *  13.05.12
 */
 .books-neirong-xq h1 {font-size:26px;line-height:36px;border-bottom:1px dashed #ccc;padding-bottom:10px;}
@@ -795,8 +817,8 @@ body .no-bdr {border-bottom:none;}
 .go-back a {color:#09c;margin:0 5px;}
 
 /*
-*  ����ͼ��
-*  by����
+*  ???????
+*  by????
 *  13.05.12
 */
 .buy-book {color:#999;}
@@ -809,8 +831,8 @@ body .no-bdr {border-bottom:none;}
 
 
 /*
-*  ��չ�Ķ�
-*  by����
+*  ??????
+*  by????
 *  13.04.16
 */
 .related-list {color:#4da6ff;background-color:#f5f6f7;padding-bottom:10px;}
@@ -822,8 +844,8 @@ body .no-bdr {border-bottom:none;}
 
 
 /*
-*  ����
-*  by����
+*  ????
+*  by????
 *  13.04.16
 */
 .hide {display:none;}
@@ -870,11 +892,11 @@ body .no-bdr {border-bottom:none;}
 .view-set-s .view-delete-btn {top:60px;}
 .pinglun-box-youliao-mark {width:40px;height:55px;display:block;position:absolute;right:0;top:-6px;background:url(../img/youliao_bg.png) no-repeat;padding-left:24px;color:#fff;font-size:14px;letter-spacing: 0.3em;z-index:2;}
 .pinglun-box-youliao-mark span{display:block;position:relative;left:5px;top:5px;
-   -moz-transform: rotate(35deg);
-   -webkit-transform: rotate(35deg);
-   -o-transform: rotate(35deg);
-   -ms-transform: rotate(35deg);
-   transform: rotate(35deg);
+    -moz-transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    -o-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    transform: rotate(35deg);
 }
 .pinglun-box .dianjing-mak {background:url(../img/dianjing_bg.png) no-repeat;}
 
@@ -944,7 +966,7 @@ html .dianping-list {display:none;}
 html .show {display:block;}
 
 /**
-*	����mini
+*	????mini
 **/
 .dianping-mini-list {margin-top:8px;}
 .dianping-mini-box {position:relative;text-align:right;padding:8px 10px;background-color:#fff;cursor:pointer;box-shadow:1px 1px 1px #ccc;}
@@ -953,10 +975,10 @@ html .show {display:block;}
 .dianping-mini-box .no-img {width:auto;border:none;color:#666;font-size:12px;}
 .dianping-mini-box .a-more {margin-right:0;color: #666;border:none;text-align: center;font-size: 18px;position: relative;top: -5px;}
 .i-dianping-list-jiao {position:absolute;width:18px;height:10px;background:url(../img/btn_bg.png?data=20130730) no-repeat -19px -84px;display:block;overflow:hidden;top:-10px;right:20px;}
-	
+
 /*
-*  �۵��б�ҳ
-*  by����
+*  ????��??
+*  by????
 *  13.04.21
 */
 .opinions-list {margin-top:30px;}
@@ -972,10 +994,10 @@ html .show {display:block;}
 .opinions-box .view-box .img-box img {width:167px;box-shadow:1px 1px 1px #ccc;border-radius:2px;}
 .opinions-box .view-box .tags-box {margin-left:-10px;}
 .opinions-box .view-box .article-summary {font-size:14px;margin-left:214px;}
-	
+
 /*
-*  �۵��б�ҳ
-*  by����
+*  ????��??
+*  by????
 *  13.04.21
 */
 .opinions-box2 {background-color:#f4f4f4;margin-bottom:20px;}
@@ -994,8 +1016,8 @@ html .show {display:block;}
 .opinions-box2 .view-box-ctt {margin-left:138px;}
 .opinions-box2 .view-box-ctt p {margin-bottom:0;}
 /*
-*  �����б�ҳ
-*  by����
+*  ?????��??
+*  by????
 *  13.04.21
 */
 .author-page {margin-top:30px;border-bottom:1px dashed #ccc;}
@@ -1015,8 +1037,8 @@ html .show {display:block;}
 
 
 /*
-*  ����ҳ��
-*  by����
+*  ???????
+*  by????
 *  13.04.22
 */
 .books-category {font-size:12px;padding:17px 0;line-height:38px;}
@@ -1047,8 +1069,8 @@ html .show {display:block;}
 
 
 /*
-*  ����ҳ��
-*  by����
+*  ???????
+*  by????
 *  13.04.22
 */
 .search-wrap {}
@@ -1079,8 +1101,8 @@ html .show {display:block;}
 .search-list .author-img img {width:50px;height:50px;padding:1px;border:1px solid #ccc;border-radius:2px;box-shadow:1px 1px 1px #ccc;}
 
 /*
-*  ͼ˵
-*  by����
+*  ??
+*  by????
 *  13.04.22
 */
 .tushuo-list dl {border-bottom:1px dashed #ccc;padding-bottom:10px;}
@@ -1122,9 +1144,9 @@ html .show {display:block;}
 .tushuo-pages-box ul {margin:0;position:relative;left:0;}
 .tushuo-pages-box ul:before,
 .tushuo-pages-box ul:after {display:block;width:100px;position:absolute;top:0;height:57px;line-height:57px;color:#fff;}
-.tushuo-pages-box ul:before {content:'û����';left:-80px;}
+.tushuo-pages-box ul:before {content:'?????';left:-80px;}
 .tushuo-pages-box ul:after {content:'';right:-120px;}
-.tushuo-pages-box .end:after {content:'û����';}
+.tushuo-pages-box .end:after {content:'?????';}
 .tushuo-pages-box ul li {width:100px;height:55px;overflow:hidden;padding:0;margin:0 4px;float:left;border:1px solid #333;}
 .tushuo-pages-box li img {width:100px;}
 .tushuo-pages-box li.active {border:1px solid #aaa;}
@@ -1137,8 +1159,8 @@ html .show {display:block;}
 .tushuo-top .neirong-other .pinglun-num .icon-comment {background-position: -168px -167px;}
 .tushuo-top .login-box {position:absolute;right:25px;top:5px;}
 /*
-*  ��������
-*  by����
+*  ????????
+*  by????
 *  13.04.22
 */
 .jingcaipinglun-page {margin-top:30px;}
@@ -1155,8 +1177,8 @@ html .show {display:block;}
 .zylpl-list .a-img img {width:80px;height:80px;}
 
 /*
-*  ע��
-*  by����
+*  ???
+*  by????
 *  13.04.22
 */
 .reg-wrap-title {width:690px;height:28px;overflow:hidden;background:url(../img/reg-wrap-title.png) no-repeat;}
@@ -1206,8 +1228,8 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 #user_memo dd {margin:5px 0;font-size:12px;}
 
 /*
-*  Ͷ��
-*  by����
+*  ???
+*  by????
 *  13.04.22
 *  updata 13.07.03
 */
@@ -1230,8 +1252,8 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 .tougao-box-ctt .dd-bookjianjie .div-textarea textarea {margin-left:4px;}
 
 /*
-*  Ͷ�ݻ
-*  by����
+*  ????
+*  by????
 *  13.07.04
 */
 #toudihuodong {width:100%;display:block;}
@@ -1241,8 +1263,8 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 #toudihuodong .div-hdjs .div-textarea textarea {margin-left:4px;width:400px;height:60px;}
 
 /*
-*  ������ҳ
-*  by����
+*  ???????
+*  by????
 *  13.04.22
 */
 .personal-homepage {margin-top:30px;}
@@ -1263,8 +1285,8 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 .personal-homepage .book-box-ctt h4 a {font-size:14px;color:#111;}
 
 /*
-*  �ȴ�
-*  by����
+*  ???
+*  by????
 *  13.04.22
 */
 .reci-top {position:relative;}
@@ -1301,7 +1323,7 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 .reci-biaoqian {margin:0;}
 
 /*
-*	�������
+*	???????
 */
 .side-pinglun {}
 .side-pinglun {}
@@ -1313,7 +1335,7 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 
 
 /*
-*	at�û�
+*	at???
 */
 #at-view {position:absolute;top: 0;left: 0;display: none;margin-top: 18px;background: white;border: 1px solid #DDD;border-radius: 3px;box-shadow: 0 0 5px rgba(0,0,0,0.1);min-width: 120px;}
 #at-view .cur {background: #3366FF;color: white;}
@@ -1326,8 +1348,8 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 
 
 /*
-*  ��������
-*  by����
+*  ????????
+*  by????
 *  13.04.22
 */
 .individual-center {}
@@ -1394,7 +1416,7 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 .personal-dingyue-biaoqian li a {color:#006cd8;margin:0 10px;}
 .personal-dingyue-biaoqian .close-ico {width:13px;height:13px;display:block;position:absolute;right:5px;top:2px;background:url(../img/btn_bg.png?data=20130730) no-repeat -91px -336px;cursor:pointer;}
 .personal-dingyue-biaoqian li a:hover .close-ico {background-position:-105px -336px;}
-.personal-dingyue-biaoqian li p.author-img,  
+.personal-dingyue-biaoqian li p.author-img,
 .personal-dingyue-biaoqian li p.name {overflow:hidden;text-align:center;}
 .personal-dingyue-biaoqian li p.author-img {width:80px;height:50px;}
 .personal-dingyue-biaoqian li p.name {width:80px;height:20px;line-height:20px;}
@@ -1481,7 +1503,7 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 
 #tags_list {width:510px;margin:30px 0 0 65px;border-left:1px solid #ccc;padding:0 0 30px 40px;}
 #tags_list .daytitle {font-size:14px;margin:0 0 -30px -100px;}
-#tags_list .box-tag {font:14px/30px '΢���ź�';position:relative;}
+#tags_list .box-tag {font:14px/30px '??????';position:relative;}
 #tags_list .box-tag a {padding:2px 4px;background-color:#56aaff;color:#fff;border-radius:1px;font-size:16px;}
 #tags_list .box-tag a:hover {text-decoration:none;background-color:#39f}
 #tags_list .box-tag a.add-tag {display:inline-block;height:12px;line-height:12px;overflow:hidden;position:relative;padding:0;top:-7px;left:5px;}
@@ -1571,14 +1593,14 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 .tags-img-list li .p-2 {height:20px;line-height:20px;overflow:hidden;}
 
 /*
-*  �Ƽ���˾
-*  by����
+*  ??????
+*  by????
 *  13.05.05
 */
 .recommend-tags-gs {}
 /*
-*  �Ƽ���˾2
-*  by����
+*  ??????2
+*  by????
 *  13.05.05
 */
 .recommend-tags-gs2 {}
@@ -1602,8 +1624,8 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 
 
 /*
-*  ��ҵ������
-*  by����
+*  ?????????
+*  by????
 *  13.05.24
 */
 .recommend-tags-rw  li .p-1 img {border-radius:30px;}
@@ -1614,8 +1636,8 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 .tagnr-3346-1 .t-h2 {background-color: #eee;}
 .tagnr-3346-3 .p-2 a {width:100%;height:30px;line-height:30px;text-align:center;display:block;overflow:hidden;background-color:#cb8ea9;color:#fff;}
 /*
-*  ��������
-*  by����
+*  ????????
+*  by????
 *  13.05.07
 */
 .about-box {position:relative;padding:30px;}
@@ -1627,14 +1649,14 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 .about-box .links h3 {text-align:left;font-size:16px;padding:20px 0 10px;}
 
 /*
-*  ����
-*  by����
+*  ????
+*  by????
 *  13.05.07
 */
 #gl_set_iframe_wrap {position:fixed;left:50%;top:50%;margin:-337px 0 0 -230px;width:675px;height:460px;overflow-x:hidden;overflow-y:auto;background-color:#fff;padding:40px 10px 10px;border:5px solid #666;box-shadow:1px 1px 1px #ccc;z-index:999;}
 #gl_set_iframe_wrap .close {position:absolute;right:10px;top:10px;font-size:18px;font-style:normal;z-index:3;}
 #gl_set_iframe {width:100%;height:100%;}
-/*��������϶�*/
+/*??????????*/
 #tuodong {position:absolute;top:0;height:0;width:688px;height:25px;line-height:25px;background:#ccc;font-size:14px;text-indent:10px;z-index:2;}
 
 .guanli-wrap {margin:15px 0;background:#eee;padding:5px 0;height:20px;}
@@ -1645,8 +1667,8 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 .guanli-wrap li.pos-t a {color:#999;}
 
 /*
-*  ������
-*  by����
+*  ??????
+*  by????
 *  13.05.09
 */
 
@@ -1677,8 +1699,8 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 .fwin_dialog_cover {}
 
 /*
-*  �ύ����
-*  by����
+*  ??????
+*  by????
 *  13.05.09
 */
 .float-report-box {width:300px;border:4px solid rgba(224,224,224,0.6);box-shadow:1px 1px 1px rgba(0,0,0,0.6);position:absolute;background:#fff;z-index:999;}
@@ -1691,7 +1713,7 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 
 /*
 *  404
-*  by����
+*  by????
 *  13.05.09
 */
 .box-404 {height:600px;background:url(../img/404.jpg) no-repeat 130px 180px;padding:80px 0 0  200px;}
@@ -1699,8 +1721,8 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 .box-404 h2 {font-size: 24px;}
 
 /*
-*  rss����
-*  by����
+*  rss????
+*  by????
 *  13.05.09
 */
 .rss-wrap {padding:30px 0;}
@@ -1717,8 +1739,8 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 
 
 /*
-*  rss����
-*  by����
+*  rss????
+*  by????
 *  13.05.09
 */
 .system-msg {padding:60px 0 0 60px;min-height:500px;}
@@ -1729,8 +1751,8 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 
 
 /*
-*  �õ�
-*  by����
+*  ???
+*  by????
 *  13.07.15
 */
 .yongdian {margin-top:30px;}
@@ -1775,8 +1797,8 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 #myTab>.active>a{border-color:#5ecaff; border-bottom-color: transparent;}
 .nav-tabs{border-bottom-color: #5ecaff;}
 /*
-*  �Ƽ��õ�
-*  by����
+*  ??????
+*  by????
 *  13.07.15
 */
 .recommend-yongdian {margin:0 0 20px;}
@@ -1796,20 +1818,20 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 .yongdian-tags a {color: #5ecaff;}
 .yongdian-tags .title a {color: #444;}
 /*
-*  rss����
-*  by����
+*  rss????
+*  by????
 *  13.05.09
 */
 
 /**
-*	+1��ʽ
-*  by����
+*	+1???
+*  by????
 *  13.07.16
 **/
 .voteAni {position:absolute;}
 
 /**
-*	��չ�Ķ�
+*	??????
 **/
 #extra_read {position:relative;padding:20px 10px 0;overflow:hidden;font-size:14px;line-height:26px;}
 #extra_read_close {background:url(../img/new_icon.png) no-repeat -263px -369px;display:block;width:17px;height:17px;overflow:hidden;right:10px;top:25px;position:absolute;cursor:pointer;}
@@ -1869,7 +1891,7 @@ ul.reg-wrap-title li {width:230px;line-height:28px;text-align:center;float:left;
 #baidu_clb_slot_702804 {width:280px;margin:0 auto;}
 
 /*
-* ��Ļ1024
+* ???1024
 */
 @media screen and (max-width:1152px) {
 

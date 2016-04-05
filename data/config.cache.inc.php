@@ -1,7 +1,7 @@
 <?php
 $cfg_disable_funs = 'phpinfo,eval,exec,passthru,shell_exec,system,proc_open,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source,file_put_contents';
 $cfg_disable_tags = '';
-$cfg_basehost = '';
+$cfg_basehost = 'http://192.168.31.243';
 $cfg_cmspath = '';
 $cfg_cookie_encode = 'osdSxk1M9y2ttBoRrwfUbaH9DXTvKlW';
 $cfg_indexurl = '/';
