@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="gb2312">
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <meta name="author" content="hui-yan.com" />
+    <link rel="shortcut icon" href="/icon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/icon/favicon.ico" type="image/x-icon" />
+    <!-- Le styles -->
+    <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/dede58/css/fancyNav.css" rel="stylesheet">
+    <link href="/dede58/css/articletype.css" rel="stylesheet">
+    <link href="/dede58/css/radar-chart.css" rel="stylesheet">
+    <!--<link href="/dede58/Flat-UI/dist/css/flat-ui.css" rel="stylesheet">-->
+    <link href="/dede58/icheck/skins/square/green.css" rel="stylesheet">
+    <link href="/dede58/css/bootstrap-slider.css" rel="stylesheet">
+    <link href="/dede58/css/hx-broker.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">
+    <![endif]-->
+    <script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/dede58/js/js/j.js" ></script>
+    <script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/dede58/js/classie.js" ></script>
+    <script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/dede58/js/clipboard.min.js" ></script>
+    <script language="javascript" type="text/javascript" src="/dede58/js/jquery.min.js" ></script>
+    <script language="javascript" type="text/javascript" src="/dede58/js/bootstrap.min.js" ></script>
+    <script language="javascript" type="text/javascript" src="/dede58/js/bootstrap-slider.js"></script>
+    <script language="javascript" type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/pic_scroll.js"></script>
+    <script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+    <script src="/dede58/icheck/icheck.js"></script>
+    <script src="/dede58/js/d3.v3.min.js"></script>
+    <script src="/dede58/js/radar-chart.js"></script>
+    <script language="javascript" type="text/javascript">
+        <!--
+        $(function(){
+            $("a[_for]").mouseover(function(){
+                $(this).parents().children("a[_for]").removeClass("thisclass").parents().children("dd").hide();
+                $(this).addClass("thisclass").blur();
+                $("#"+$(this).attr("_for")).show();
+            });
+            $("a[_for=uc_member]").mouseover();
+            $("a[_for=flink_1]").mouseover();
+        });
+
+        function CheckLogin(){
+            var taget_obj = document.getElementById('_userlogin');
+            myajax = new DedeAjax(taget_obj,false,false,'','','');
+            myajax.SendGet2("{dede:global.cfg_cmspath/}/member/ajax_loginsta.php");
+            DedeXHTTP = null;
+        }
+        -->
+    </script>
+    <!--上滚鼠标滚轮出现导航栏菜单-->
+    <script>
+        window.onload = function(){
+            h1 = document.getElementById('specialTopicTop').offsetHeight;
+            h2 = document.getElementById('horizontalMenuOuterContainer').offsetHeight + h1;
+        }
+    </script>
+    <script>
+        $(function() {
+            var elm = $('.broker-database-filter');
+            var startPos = $(elm).offset().top-parseInt($(elm).css("margin-top"));
+            $.event.add(window, "scroll", function() {
+                var p = $(window).scrollTop();
+                //var test = parseInt($(elm).css("margin-top"));
+                //startPos =  startPos - $(elm).css("margin-top");
+                $(elm).css('position',((p) > startPos) ? 'fixed' : 'static');
+                $(elm).css('top',((p) > startPos) ? '0px' : '');
+            });
+        });
+    </script>
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+  <div class="container-hx">
+      {dede:include filename="head.htm"/}
+  </div>
+  <div class="container-hx-main">
+      <div class="row-fluid-wrap-hx">
+          <div class="center-container-hx">
+              <div class="clearfix row-fluid-hx">
+                  <div class="center-ctr-wrap">
+                      <div class="broker-database-filter">
+                          <h4>
+                              监管
+                          </h4>
+                          <div class="filter-group">
+                              <ul class="filter-list">
+                                  <li>
+                                      <input type="checkbox" id="lic1">
+                                      <label for="lic1">NFA</label>
+                                  </li>
+                                  <li>
+                                      <input type="checkbox" id="lic2">
+                                      <label for="lic2">FCA</label>
+                                  </li>
+                                  <li>
+                                      <input type="checkbox" id="lic3">
+                                      <label for="lic3">ASIC</label>
+                                  </li>
+                                  <li>
+                                      <input type="checkbox" id="lic4">
+                                      <label for="lic4">CYSEC</label>
+                                  </li>
+                                  <li>
+                                      <input type="checkbox" id="lic5">
+                                      <label for="lic5">FMA</label>
+                                  </li>
+                                  <li>
+                                      <input type="checkbox" id="lic6">
+                                      <label for="lic6">其他监管</label>
+                                  </li>
+                              </ul>
+                          </div>
+                          <h4>
+                              总部所在地
+                          </h4>
+                          <ul class="filter-list">
+                              <li>
+                                  <input type="checkbox" id="hq1">
+                                  <label for="hq1">欧洲</label>
+                              </li>
+                              <li>
+                                  <input type="checkbox" id="hq2">
+                                  <label for="hq2">亚洲</label>
+                              </li>
+                              <li>
+                                  <input type="checkbox" id="hq3">
+                                  <label for="hq3">美洲</label>
+                              </li>
+                              <li>
+                                  <input type="checkbox" id="hq4">
+                                  <label for="hq3">大洋洲</label>
+                              </li>
+                              <li>
+                                  <input type="checkbox" id="hq5">
+                                  <label for="hq3">中东</label>
+                              </li>
+                              <li>
+                                  <input type="checkbox" id="hq6">
+                                  <label for="hq3">俄罗斯</label>
+                              </li>
+                              <li>
+                                  <input type="checkbox" id="hq7">
+                                  <label for="hq3">非洲</label>
+                              </li>
+                          </ul>
+                          <h4>
+                              在大陆是否有办公室
+                          </h4>
+                          <ul class="filter-list">
+                              <li>
+                                  <input type="checkbox" id="officeY">
+                                  <label for="officeY">是</label>
+                              </li>
+                              <li>
+                                  <input type="checkbox" id="officeN">
+                                  <label for="officeN">否</label>
+                              </li>
+                          </ul>
+                          <h4>
+                              最大杠杆
+                          </h4>
+                          <b>1 </b>
+                          <input id="maxlev" type="text" class="span2" value="" data-slider-min="0" data-slider-max="1000" data-slider-step="10"
+                                 data-slider-value="30" data-slider-handle="square"/>
+                          <b>  1000</b>
+                          <h4>
+                              入金方式
+                          </h4>
+                          <ul class="filter-list">
+                              <li>
+                                  <input type="checkbox" id="pd-unipay">
+                                  <label for="pd-unipay">中国银联</label>
+                              </li>
+                              <li>
+                                  <input type="checkbox" id="pd-credit">
+                                  <label for="pd-credit">信用卡</label>
+                              </li>
+                          </ul>
+                          <h4>
+                              出金方式
+                          </h4>
+                          <ul class="filter-list">
+                              <li>
+                                  <input type="checkbox" id="pw-unipay">
+                                  <label for="pw-unipay">中国银联</label>
+                              </li>
+                              <li>
+                                  <input type="checkbox" id="pw-credit">
+                                  <label for="pw-credit">信用卡</label>
+                              </li>
+                          </ul>
+                          <h4>
+                              交易商模式
+                          </h4>
+                          <ul class="filter-list">
+                              <li>
+                                  <input type="checkbox" id="mode-book">
+                                  <label for="mode-book">做市商</label>
+                              </li>
+                              <li>
+                                  <input type="checkbox" id="mode-stp">
+                                  <label for="mode-stp">交易商</label>
+                              </li>
+                              <li>
+                                  <input type="checkbox" id="mode-ecn">
+                                  <label for="mode-ecn">经济商</label>
+                              </li>
+                          </ul>
+                          <button type="submit" id="broker-info-show" onclick="loadBrokerInfo()">确认</button>
+                      </div>
+                  </div>
+                  <div class="broker-database-main">
+                      <div id="test">
+                          <table class="table table-boarded">
+                              <thead>
+                              <tr>
+                                  <th class="header-broker">
+                                      汇商基本信息
+                                  </th>
+                                  <th class="header-license">
+
+                                  </th>
+                                  <th class="header-cp">
+
+                                  </th>
+                                  <th class="header-gold">
+
+                                  </th>
+                                  <th class="header-apply">
+
+                                  </th>
+                              </tr>
+                              </thead>
+                              <tbody id="broker-info-main">
+                                  {dede:sql sql="SELECT broker_id,broker_name,operation_mode_cn,broker_name_cn,headquarter,main_license,date_founded,broker_logo,main_license_href,main_license_logo,deposit_mode,withdraw_mode,eurusd,gold,trading_env_score,depo_with_score,service_score,prom_score,regu_score FROM dede_broker"}
+                                  <tr>
+                                      <td class="cell-with-border">
+                                          <div class="brokerinfo-col-1">
+                                              <b>[field:broker_name_cn/][field:broker_name/]</b>
+                                          </div>
+                                          <div class="brokerinfo-logo">
+                                              <img src="[field:broker_logo/]" class="broker-logo"/>
+                                          </div>
+                                      </td>
+                                      <td colspan="2" class="broker-info-col-2">
+                                          <div id="col-2-anchor">
+                                              <b>所属国家：</b>
+                                              [field:headquarter/]
+                                          </div>
+                                          <div>
+                                              <b>成立时间：</b>
+                                              [field:date_founded/]
+                                          </div>
+                                          <div>
+                                              <b>经营模式：</b>
+                                              [field:operation_mode_cn/]
+                                          </div>
+                                          <div>
+                                              <b>监管机构：</b>
+                                              <a href="[field:main_license_href/]">[field:main_license/]</a>
+                                          </div>
+                                          <div>
+                                              <b>平均点差：</b>
+                                              欧美[field:eurusd/]
+                                          </div>
+                                      </td>
+                                      <!--
+                                      <td class="broker-info-col-3">
+                                          <div>
+
+                                              <div>
+                                                  <b id="col-3-header">平均点差</b>
+                                              </div>
+                                              <div>
+                                                  <b>欧美：</b>
+                                                  [field:eurusd/]
+                                              </div>
+                                              <div>
+                                                  <b>黄金：</b>
+                                                  [field:gold/]
+                                              </div>
+
+                                          </div>
+                                      </td>
+                                      -->
+                                      <td class="broker-info-col-4" colspan="2">
+                                          <div id="Chart[field:broker_id/]">
+                                              <!--
+                                              <button type="submit">
+                                                  立即开户
+                                              </button>
+                                              -->
+                                              <script>
+                                                  var data = [
+                                                      [
+                                                          {axis: "交易环境", value: "[field:trading_env_score/]"},
+                                                          {axis: "出入金", value: "[field:depo_with_score/]",yOffset:-5},
+                                                          {axis: "服务", value: "[field:service_score/]"},
+                                                          {axis: "活动", value: "[field:prom_score/]"},
+                                                          {axis: "监管", value: "[field:regu_score/]",yOffset:-5}
+                                                      ]
+                                                  ];
+                                                  RadarChart.draw("#Chart[field:broker_id/]", data);
+                                              </script>
+                                          </div>
+                                      </td>
+                                  </tr>
+                                  {/dede:sql}
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <script>
+              $(document).ready(function(){
+                  $('input').iCheck({
+                      checkboxClass: 'icheckbox_square-green',
+                      radioClass: 'iradio_square-green',
+                      increaseArea: '20%' // optional
+                  });
+              });
+              $("#maxlev").slider({
+                  tooptip:'hide'
+              });
+          </script>
+
+          <div>
+          {dede:include filename="footer_index.htm"/}
+          </div>
+      </div>
+  </div>
+  <script language="javascript" type="text/javascript" src="/dede58/js/brokerInfoAjaxLoad.js" ></script>
+</body>
+</html>

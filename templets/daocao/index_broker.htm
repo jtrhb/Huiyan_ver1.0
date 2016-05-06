@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="gb2312">
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <meta name="author" content="hui-yan.com" />
+    <link rel="shortcut icon" href="/icon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/icon/favicon.ico" type="image/x-icon" />
+    <!-- Le styles -->
+    <link href="/dede58/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/dede58/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/dede58/css/hx-2013.css" rel="stylesheet">
+    <link href="/dede58/css/fancyNav.css" rel="stylesheet">
+    <link href="/dede58/css/articletype.css" rel="stylesheet">
+    <link href="/dede58/Flat-UI/dist/css/flat-ui.css" rel="stylesheet">
+    <link href="/dede58/icheck/skins/square/green.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <link href="/dede58/css/hx-2013-ie5.css" rel="stylesheet">
+    <![endif]-->
+    <script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+    <script language="javascript" type="text/javascript" src="{dede:global.cfg_cmspath/}/images/js/j.js" ></script>
+    <script language="javascript" type="text/javascript" src="dede58/js/classie.js" ></script>
+    <script language="javascript" type="text/javascript" src="dede58/js/clipboard.min.js" ></script>
+    <script language="javascript" type="text/javascript" src="dede58/js/jquery.min.js" ></script>
+    <script language="javascript" type="text/javascript" src="dede58/js/bootstrap.min.js" ></script>
+    <script language="javascript" type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/pic_scroll.js"></script>
+    <script src="/dede58/icheck/jquery.icheck.js"></script>
+    <script language="javascript" type="text/javascript">
+        <!--
+        $(function(){
+            $("a[_for]").mouseover(function(){
+                $(this).parents().children("a[_for]").removeClass("thisclass").parents().children("dd").hide();
+                $(this).addClass("thisclass").blur();
+                $("#"+$(this).attr("_for")).show();
+            });
+            $("a[_for=uc_member]").mouseover();
+            $("a[_for=flink_1]").mouseover();
+        });
+
+        function CheckLogin(){
+            var taget_obj = document.getElementById('_userlogin');
+            myajax = new DedeAjax(taget_obj,false,false,'','','');
+            myajax.SendGet2("{dede:global.cfg_cmspath/}/member/ajax_loginsta.php");
+            DedeXHTTP = null;
+        }
+        -->
+    </script>
+    <!--上滚鼠标滚轮出现导航栏菜单-->
+    <script>
+        window.onload = function(){
+            h1 = document.getElementById('specialTopicTop').offsetHeight;
+            h2 = document.getElementById('horizontalMenuOuterContainer').offsetHeight + h1;
+        }
+    </script>
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+  <div class="container-hx">
+      {dede:include filename="head.htm"/}
+  </div>
+
+  <div class="broker-database-container">
+      <div class="broker-database-filter">
+          <label>
+              监管
+          </label>
+          <div class="btn-group">
+              <button class="btn btn-inverse dropdown-toggle" type="button" data-toggle="dropdown">
+                  Large button <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-inverse" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+              </ul>
+          </div>
+          <label>
+              总部所在地
+          </label>
+          <label for="hq1">欧洲</label>
+          <input type="checkbox" id="hq1">
+          <label for="hq2">亚洲</label>
+          <input type="checkbox" id="hq2">
+          <label for="hq3">美洲</label>
+          <input type="checkbox" id="hq3">
+
+      </div>
+
+      <div class="broker-database-main">
+
+      </div>
+  </div>
+  <script>
+      $(document).ready(function(){
+          $('input').iCheck({
+              checkboxClass: 'icheckbox_square-green',
+              radioClass: 'iradio_square-green',
+              increaseArea: '20%' // optional
+          });
+      });
+  </script>
+
+  <div>
+      {dede:include filename="footer_index.htm"/}
+  </div>
+</body>
+</html>
