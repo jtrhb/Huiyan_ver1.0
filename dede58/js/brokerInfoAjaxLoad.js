@@ -3,6 +3,7 @@
  */
 function loadBrokerInfo(){
     var url='http://192.168.31.243/plus/brokerinfo.php';
+    //var url='http://localhost/plus/brokerinfo.php';
     var shouldLoad=0;
     var lic=[0,0,0,0,0,0];
     var hq=[0,0,0,0,0,0];
@@ -10,7 +11,7 @@ function loadBrokerInfo(){
     var maxLev;
     var deposit=[0,0];
     var withdraw=[0,0];
-    var mode=[0,0];
+    var mode=[0,0,0];
     if($('#lic1').is(':checked')){
         lic[0]=1;
         shouldLoad=1;
@@ -63,34 +64,43 @@ function loadBrokerInfo(){
         hq[6]=1;
         shouldLoad=1;
     }
-    if($('#pd_unipay').is(':checked')){
+    if($('#pd-unipay').is(':checked')){
         deposit[0]=1;
         shouldLoad=1;
     }
-    if($('#pd_credit').is(':checked')){
+    if($('#pd-credit').is(':checked')){
         deposit[1]=1;
         shouldLoad=1;
     }
-    if($('#pw_unipay').is(':checked')){
+    if($('#pw-unipay').is(':checked')){
         withdraw[0]=1;
         shouldLoad=1;
     }
-    if($('#pw_credit').is(':checked')){
+    if($('#pw-credit').is(':checked')){
         withdraw[1]=1;
         shouldLoad=1;
     }
     maxLev=$('#maxlev').val();
+    shouldLoad=1;
     if($('#officeY').is(':checked')){
         office[0]=1;
+        shouldLoad=1;
     }
     if($('#officeN').is(':checked')){
         office[1]=1;
+        shouldLoad=1;
     }
     if($('#mode-book').is(':checked')){
         mode[0]=1;
+        shouldLoad=1;
     }
     if($('#mode-stp').is(':checked')){
         mode[1]=1;
+        shouldLoad=1;
+    }
+    if($('#mode-ecn').is(':checked')){
+        mode[2]=1;
+        shouldLoad=1;
     }
     var data={ajax:'pullload',lic:lic,hq:hq,deposit:deposit,withdraw:withdraw,maxLev:maxLev,office:office,mode:mode};
     if(shouldLoad){
