@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta charset="gb2312">
+    <title>Title</title>
+</head>
+<body class="index">
+{dede:include filename="head.htm"/}
+<div class="main">
+    <div class="list-zone">
+        {dede:arclist row="15" imgwidth='80' imgheight='60' titlelen='60' orderby="id" orderway="DESC"}
+        <a href="[field:arcurl/]" class="list-item-box" title="[field:title/]">
+            <dl class="list-item">
+                <dt class="pic">[field:image/]</dt>
+                <dd><div class="news-info">
+                    <div class="news-title">[field:title/]</div>
+                    <div class="news-info-bottom">
+                        <span>[field:typename/]</span><span class="news-date">[field:pubdate function="MyDate('m月d日 H:s',@me)"/]</span>
+                    </div>
+                </div>
+                </dd>
+            </dl>
+        </a>
+        {/dede:arclist}
+    </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

@@ -47,6 +47,10 @@ img {}
 #scoreTable td{padding-top:20px;padding-bottom:20px;padding-left:50px;}
 #serviceTable{width:100%;}
 #serviceTable td{padding-top:20px;padding-bottom:20px;padding-left:50px;}
+#qrCodeCanvas{position:absolute;left:10%;top:30%;height:167px;background-color: #3bb4f2;display:none;}
+#shareColumn{position:fixed;left:5%;top:30%;width:48px;height:auto;padding:0;}
+#shareColumn li{width:48px;height:48px;list-style-type: none;}
+#weixin{background:url('/dede58/img/wechat.svg') no-repeat center;z-index:99;width:48px;height:48px;}
 /*.broker-info-list>th{border:solid;border-width: 1px;border-color: #000000}*/
 .header-broker{width:25%;text-align: left;font-size: larger;}
 .header-license{width:20%;text-align: center}
